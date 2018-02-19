@@ -63,6 +63,7 @@ public class Ship {
                         if (board[row][col + i + 1] == 3) canPlace = false;
                     } catch (Exception e) {
                     }
+
                 } else if (orientation == 'V') {
                     try {
                         if (board[row + i][col] == 3) canPlace = false;

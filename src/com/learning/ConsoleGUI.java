@@ -47,7 +47,7 @@ public class ConsoleGUI {
             int col = reader.nextInt();
             ship.placeShip(board.getPlayBoard(), row, col, board.getBoardRows(), board.getBoardCols(), 'V');
             shipsCount--;
-            board.printPlayBoard();
+            board.printPlayBoard(0);
             ships.add(ship);
             shipNumber++;
         }
@@ -58,22 +58,44 @@ public class ConsoleGUI {
      * Put ships into playing board randomly.
      */
     public void setUpBoardRandom() {
-        int[] shipSize = {2, 3, 4, 3, 2, 1 ,1};
+        int[] shipSize = {2, 4 ,2 ,3 ,1, 3, 2, 4};
         int shipNumber = 0;
         int shipsCount = shipSize.length;
+        char orientation = 'H';
 
         while (shipsCount != 0) {
             Ship ship = new Ship(shipSize[shipNumber]);
-            while (!ship.placeShip(board.getPlayBoard(), rand.nextInt(10), rand.nextInt(10),
-                    board.getBoardRows(), board.getBoardCols(), 'V')) {
 
+            //try to place ship while true
+            while (!ship.placeShip(board.getPlayBoard(), rand.nextInt(10), rand.nextInt(10),
+                    board.getBoardRows(), board.getBoardCols(), orientation)) {
+            }
+            if(shipsCount%2 == 0){
+                orientation = 'V';
+            }else{
+                orientation = 'H';
             }
 
             shipsCount--;
             ships.add(ship);
             shipNumber++;
         }
-        board.printPlayBoard();
+        board.printPlayBoard(1);
+    }
+
+    /**
+     * Ask user if he want to step back.
+     *
+     * @return true if he wants.
+     */
+    private boolean askForUndo() {
+        System.out.println("Step back ? (Y/N)");
+        if (reader.next().charAt(0) == 'Y') {
+            board.oneStepBack();
+            board.printPlayBoard(1);
+            return true;
+        }
+        return false;
     }
 
 
@@ -83,18 +105,21 @@ public class ConsoleGUI {
     public void startGame() {
         int shots = 0;
         while (!isGameVon()) {
-            System.out.println("-------ROUND " + shots + "-------");
-            board.printPlayBoard();
-            System.out.println("Enter row number: ");
-            int row = reader.nextInt();
-            System.out.println("Enter col number: ");
-            int col = reader.nextInt();
-            player.shoot(board.getPlayBoard(), row, col);
-            shots++;
+            if(!askForUndo()) {
+                System.out.println("-------ROUND " + shots + "-------");
+                board.printPlayBoard(0);
+                System.out.println("Enter row number: ");
+                int row = reader.nextInt();
+                System.out.println("Enter col number: ");
+                int col = reader.nextInt();
+                player.shoot(board.getPlayBoard(), row, col);
+                shots++;
+            }
         }
         reader.close();
         System.out.println("Congratulations you won with only " + shots + " shots");
     }
+
 
     /**
      * Write to console positions where ship is placed.
