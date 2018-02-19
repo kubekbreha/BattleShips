@@ -24,8 +24,9 @@ public class Ship {
      * @param row         coordinate of start ship on board.
      * @param col         coordinate of start ship on board.
      * @param orientation (V/H) vertical or horizontal orientation of ship on play-board.
+     * @return is ship placed successfully.
      */
-    public void placeShip(int[][] board, int row, int col, int maxRow, int maxCol, char orientation) {
+    public boolean placeShip(int[][] board, int row, int col, int maxRow, int maxCol, char orientation) {
         boolean canPlace = true;
         shipPositions = new int[shipSize][2];
 
@@ -37,7 +38,18 @@ public class Ship {
             canPlace = false;
         }
 
-        //place ship to play-board
+        //check if ship will be placed over other ship
+        if (canPlace) {
+            for (int i = 0; i < shipSize; i++) {
+                if (orientation == 'H') {
+                    if (board[row][col + i] == 3) canPlace = false;
+                } else if (orientation == 'V') {
+                    if (board[row + 1][col] == 3) canPlace = false;
+                }
+            }
+        }
+
+        //place ship to play-board or return false
         if (canPlace) {
             for (int i = 0; i < shipSize; i++) {
                 if (orientation == 'H') {
@@ -50,6 +62,9 @@ public class Ship {
                     shipPositions[i][1] = col;
                 }
             }
+            return true;
+        } else {
+            return false;
         }
     }
 

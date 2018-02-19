@@ -33,7 +33,7 @@ public class Board {
      * Print playBoard to console.
      */
     public void printPlayBoard() {
-        System.out.print("  ");
+        System.out.print(Util.ANSI_CYAN + "* "+ Util.ANSI_RESET);
         for (int i = 0; i < 10; i++) {
             System.out.print(Util.ANSI_CYAN + i+" "+ Util.ANSI_RESET);
         }
@@ -42,7 +42,13 @@ public class Board {
         for (int i = 0; i < boardCols; i++) {
             System.out.print(Util.ANSI_CYAN + (char) (i + 65) + " " + Util.ANSI_RESET);
             for (int j = 0; j < boardRows; j++) {
-                System.out.print(playBoard[i][j] + " ");
+                if(playBoard[i][j] == 3){
+                    System.out.print(Util.ANSI_RED + playBoard[i][j] + " " + Util.ANSI_RESET);
+                }else if(playBoard[i][j] == 1) {
+                    System.out.print(Util.ANSI_YELLOW + playBoard[i][j] + " " + Util.ANSI_RESET);
+                }else{
+                    System.out.print(playBoard[i][j] + " ");
+                }
             }
             System.out.println();
         }

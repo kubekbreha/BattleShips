@@ -5,7 +5,6 @@ import com.learning.board.Ship;
 import com.learning.player.Human;
 import com.learning.player.Player;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -32,15 +31,15 @@ public class ConsoleGUI {
 
 
     /**
-     * Put ships into playing board.
+     * Put ships into playing board manually.
      */
-    public void setUpBard() {
-        int[] shipSize = {2 ,1};
+    public void setUpBoard() {
+        int[] shipSize = {2, 1};
         int shipNumber = 0;
         int shipsCount = shipSize.length;
 
         while (shipsCount != 0) {
-            System.out.println("----SHIP " + shipNumber + "-("+ shipSize[shipNumber] +")---");
+            System.out.println("----SHIP " + shipNumber + "-(" + shipSize[shipNumber] + ")---");
             Ship ship = new Ship(shipSize[shipNumber]);
             System.out.println("Enter row number: ");
             int row = reader.nextInt();
@@ -52,6 +51,29 @@ public class ConsoleGUI {
             ships.add(ship);
             shipNumber++;
         }
+    }
+
+
+    /**
+     * Put ships into playing board randomly.
+     */
+    public void setUpBoardRandom() {
+        int[] shipSize = {2, 2, 2, 2, 2};
+        int shipNumber = 0;
+        int shipsCount = shipSize.length;
+
+        while (shipsCount != 0) {
+            Ship ship = new Ship(shipSize[shipNumber]);
+            while (!ship.placeShip(board.getPlayBoard(), rand.nextInt(10), rand.nextInt(10),
+                    board.getBoardRows(), board.getBoardCols(), 'V')) {
+
+            }
+
+            shipsCount--;
+            ships.add(ship);
+            shipNumber++;
+        }
+        board.printPlayBoard();
     }
 
 
