@@ -12,6 +12,7 @@ public class Board {
     /**
      * Basic constructor where you set size of playTable.
      * Fill board with zeros.
+     *
      * @param cols
      * @param rows
      */
@@ -32,7 +33,14 @@ public class Board {
      * Print playBoard to console.
      */
     public void printPlayBoard() {
+        System.out.print("  ");
+        for (int i = 0; i < 10; i++) {
+            System.out.print(Util.ANSI_CYAN + i+" "+ Util.ANSI_RESET);
+        }
+        System.out.println();
+
         for (int i = 0; i < boardCols; i++) {
+            System.out.print(Util.ANSI_CYAN + (char) (i + 65) + " " + Util.ANSI_RESET);
             for (int j = 0; j < boardRows; j++) {
                 System.out.print(playBoard[i][j] + " ");
             }
@@ -54,9 +62,10 @@ public class Board {
 
     /**
      * Get playBoard.
+     *
      * @return playBoard 2D array.
      */
-    public int[][] getPlayBoard(){
+    public int[][] getPlayBoard() {
         return playBoard;
     }
 

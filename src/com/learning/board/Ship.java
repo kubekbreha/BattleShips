@@ -6,29 +6,102 @@ package com.learning.board;
 public class Ship {
 
     private int shipSize;
+    private int[][] shipPositions;
 
     /**
      * Basic constructor which create ship.
+     *
      * @param size of ship.
      */
-    public Ship(int size){
+    public Ship(int size) {
         shipSize = size;
     }
 
     /**
      * Place ship to playBoard.
-     * @param board play-board where ship will be placed.
-     * @param row coordinate of start ship on board.
-     * @param col coordinate of start ship on board.
+     *
+     * @param board       play-board where ship will be placed.
+     * @param row         coordinate of start ship on board.
+     * @param col         coordinate of start ship on board.
      * @param orientation (V/H) vertical or horizontal orientation of ship on play-board.
      */
-    public void placeShip(int[][] board ,int row, int col, char orientation){
-        for(int i = 0; i<shipSize; i++){
-            if(orientation == 'H'){
-                Util.writeToBoard(board, 3, row, col+i);
-            }else if(orientation == 'V'){
-                Util.writeToBoard(board, 3, row+i, col);
+    public void placeShip(int[][] board, int row, int col, int maxRow, int maxCol, char orientation) {
+        boolean canPlace = true;
+        shipPositions = new int[shipSize][2];
+
+        //check if ship can be placed
+        if ((board[0][0] + row + shipSize) > maxRow && orientation == 'V') {
+            canPlace = false;
+        }
+        if ((board[1][0] + col + shipSize) > maxCol && orientation == 'H') {
+            canPlace = false;
+        }
+
+        //place ship to play-board
+        if (canPlace) {
+            for (int i = 0; i < shipSize; i++) {
+                if (orientation == 'H') {
+                    Util.writeToBoard(board, 3, row, col + i);
+                    shipPositions[i][0] = row;
+                    shipPositions[i][1] = col + i;
+                } else if (orientation == 'V') {
+                    Util.writeToBoard(board, 3, row + i, col);
+                    shipPositions[i][0] = row + i;
+                    shipPositions[i][1] = col;
+                }
             }
         }
     }
+
+    /**
+     * Set ship size.
+     *
+     * @param shipSize value which overwrite shipSize.
+     */
+    public void setShipSize(int shipSize) {
+        this.shipSize = shipSize;
+    }
+
+    /**
+     * Get 2D array of ship positions.
+     *
+     * @return int[][] array of ship positions.
+     */
+    public int[][] getShipPositions() {
+        return shipPositions;
+    }
+
+    /**
+     * Check if ship is touched.
+     *
+     * @param board where ship is placed.
+     */
+    public boolean isShipTouched(int[][] board) {
+        int touches = 0;
+
+        for (int i = 0; i < shipPositions.length; i++) {
+            if (board[shipPositions[i][0]][shipPositions[i][1]] == 1) {
+                touches++;
+            }
+        }
+        return touches != 0;
+    }
+
+
+    /**
+     * Check if ship is sunk.
+     *
+     * @param board where ship is placed.
+     */
+    public boolean isShipSunk(int[][] board) {
+        int touches = 0;
+
+        for (int i = 0; i < shipPositions.length; i++) {
+            if (board[shipPositions[i][0]][shipPositions[i][1]] == 1) {
+                touches++;
+            }
+        }
+        return touches == shipSize;
+    }
+
 }

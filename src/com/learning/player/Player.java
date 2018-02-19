@@ -15,9 +15,10 @@ public abstract class Player {
 
     /**
      * Perform a shoot.
+     *
      * @param board where shoot will go.
-     * @param row coordinate on board.
-     * @param col coordinate on board.
+     * @param row   coordinate on board.
+     * @param col   coordinate on board.
      */
     public void shoot(int[][] board, int row, int col) {
 
@@ -25,17 +26,19 @@ public abstract class Player {
 
     /**
      * One step back.
+     *
      * @param board board where step-back take place.
      */
-    public void undo(int[][] board){
+    public void undo(int[][] board) {
 
     }
 
     /**
      * Get history size.
+     *
      * @return int of history size.
      */
-    public int getHistorySize(){
+    public int getHistorySize() {
         return historyStack.size();
     }
 
