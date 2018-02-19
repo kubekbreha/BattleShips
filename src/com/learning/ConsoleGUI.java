@@ -58,7 +58,7 @@ public class ConsoleGUI {
      * Put ships into playing board randomly.
      */
     public void setUpBoardRandom() {
-        int[] shipSize = {2, 2, 2, 2, 2};
+        int[] shipSize = {2, 3, 4, 3, 2, 1 ,1};
         int shipNumber = 0;
         int shipsCount = shipSize.length;
 

@@ -26,6 +26,7 @@ public class Ship {
      * @param orientation (V/H) vertical or horizontal orientation of ship on play-board.
      * @return is ship placed successfully.
      */
+    //TODO: fix this.
     public boolean placeShip(int[][] board, int row, int col, int maxRow, int maxCol, char orientation) {
         boolean canPlace = true;
         shipPositions = new int[shipSize][2];
@@ -42,9 +43,47 @@ public class Ship {
         if (canPlace) {
             for (int i = 0; i < shipSize; i++) {
                 if (orientation == 'H') {
-                    if (board[row][col + i] == 3) canPlace = false;
+                    try {
+                        if (board[row][col + i] == 3) canPlace = false;
+                    } catch (Exception e) {
+                    }
+                    try {
+                        if (board[row + 1][col + i] == 3) canPlace = false;
+                    } catch (Exception e) {
+                    }
+                    try {
+                        if (board[row - 1][col + i] == 3) canPlace = false;
+                    } catch (Exception e) {
+                    }
+                    try {
+                        if (board[row][col + i - 1] == 3) canPlace = false;
+                    } catch (Exception e) {
+                    }
+                    try {
+                        if (board[row][col + i + 1] == 3) canPlace = false;
+                    } catch (Exception e) {
+                    }
                 } else if (orientation == 'V') {
-                    if (board[row + 1][col] == 3) canPlace = false;
+                    try {
+                        if (board[row + i][col] == 3) canPlace = false;
+                    } catch (Exception e) {
+                    }
+                    try {
+                        if (board[row + i][col + 1] == 3) canPlace = false;
+                    } catch (Exception e) {
+                    }
+                    try {
+                        if (board[row + i][col - 1] == 3) canPlace = false;
+                    } catch (Exception e) {
+                    }
+                    try {
+                        if (board[row + i - 1][col] == 3) canPlace = false;
+                    } catch (Exception e) {
+                    }
+                    try {
+                        if (board[row + i + 1][col] == 3) canPlace = false;
+                    } catch (Exception e) {
+                    }
                 }
             }
         }
