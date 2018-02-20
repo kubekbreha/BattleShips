@@ -1,8 +1,5 @@
 package com.learning.board;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
-
 /**
  * Created by Kubo Brehuv with <3 (18.2.2018)
  */
@@ -12,10 +9,6 @@ public class Board {
     private int boardRows;
     private int boardCols;
 
-    /**
-     * Stack for in-game history
-     */
-    Deque<int[][]> historyStack = new ArrayDeque<>();
 
     /**
      * Basic constructor where you set size of playTable.
@@ -40,11 +33,7 @@ public class Board {
     /**
      * Print playBoard to console.
      */
-    public void printPlayBoard(int mode) {
-        if(mode == 0){
-            historyStack.push(this.playBoard);
-        }
-
+    public void printPlayBoard() {
         System.out.print(Util.ANSI_CYAN + "* "+ Util.ANSI_RESET);
         for (int i = 0; i < 10; i++) {
             System.out.print(Util.ANSI_CYAN + i+" "+ Util.ANSI_RESET);
@@ -64,14 +53,6 @@ public class Board {
             }
             System.out.println();
         }
-    }
-
-
-    /**
-     * Display one step back play-board.
-     */
-    public void oneStepBack(){
-        setPlayBoard(historyStack.pop());
     }
 
 
@@ -133,12 +114,4 @@ public class Board {
         this.boardCols = boardCols;
     }
 
-    /**
-     * Get history size.
-     *
-     * @return int of history size.
-     */
-    public int getHistorySize() {
-        return historyStack.size();
-    }
 }

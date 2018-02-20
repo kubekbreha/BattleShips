@@ -5,9 +5,7 @@ import com.learning.board.Ship;
 import com.learning.player.Human;
 import com.learning.player.Player;
 
-import java.util.ArrayList;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Created by Kubo Brehuv with <3 (19.2.2018)
@@ -19,6 +17,7 @@ public class ConsoleGUI {
     private Scanner reader;
     private Player player;
     private ArrayList<Ship> ships;
+    private History history;
 
 
     public ConsoleGUI() {
@@ -27,6 +26,7 @@ public class ConsoleGUI {
         this.reader = new Scanner(System.in);
         this.player = new Human();
         this.ships = new ArrayList<>();
+        this.history = new History();
     }
 
 
@@ -47,7 +47,7 @@ public class ConsoleGUI {
             int col = reader.nextInt();
             ship.placeShip(board.getPlayBoard(), row, col, board.getBoardRows(), board.getBoardCols(), 'V');
             shipsCount--;
-            board.printPlayBoard(0);
+            board.printPlayBoard();
             ships.add(ship);
             shipNumber++;
         }
@@ -58,7 +58,7 @@ public class ConsoleGUI {
      * Put ships into playing board randomly.
      */
     public void setUpBoardRandom() {
-        int[] shipSize = {2, 4 ,2 ,3 ,1, 3, 2, 4};
+        int[] shipSize = {2, 4, 2, 3, 1, 3, 2, 4};
         int shipNumber = 0;
         int shipsCount = shipSize.length;
         char orientation = 'H';
@@ -70,9 +70,9 @@ public class ConsoleGUI {
             while (!ship.placeShip(board.getPlayBoard(), rand.nextInt(10), rand.nextInt(10),
                     board.getBoardRows(), board.getBoardCols(), orientation)) {
             }
-            if(shipsCount%2 == 0){
+            if (shipsCount % 2 == 0) {
                 orientation = 'V';
-            }else{
+            } else {
                 orientation = 'H';
             }
 
@@ -80,8 +80,9 @@ public class ConsoleGUI {
             ships.add(ship);
             shipNumber++;
         }
-        board.printPlayBoard(1);
+        board.printPlayBoard();
     }
+
 
     /**
      * Ask user if he want to step back.
@@ -91,8 +92,11 @@ public class ConsoleGUI {
     private boolean askForUndo() {
         System.out.println("Step back ? (Y/N)");
         if (reader.next().charAt(0) == 'Y') {
-            board.oneStepBack();
-            board.printPlayBoard(1);
+
+            board.setPlayBoard(history.getLast());
+            history.removeLast();
+
+            System.out.println("Deleting history size: " + history.getHistorySize());
             return true;
         }
         return false;
@@ -105,16 +109,23 @@ public class ConsoleGUI {
     public void startGame() {
         int shots = 0;
         while (!isGameVon()) {
-            if(!askForUndo()) {
-                System.out.println("-------ROUND " + shots + "-------");
-                board.printPlayBoard(0);
-                System.out.println("Enter row number: ");
-                int row = reader.nextInt();
-                System.out.println("Enter col number: ");
-                int col = reader.nextInt();
-                player.shoot(board.getPlayBoard(), row, col);
-                shots++;
+            this.history.addToHistory(board.getPlayBoard());
+
+            System.out.println("-------ROUND " + shots + "-------");
+            board.printPlayBoard();
+
+            if (history.getHistorySize() != 0 && shots != 0) {
+                while (askForUndo()) {
+                    board.printPlayBoard();
+                }
             }
+
+            System.out.println("Enter row number: ");
+            int row = reader.nextInt();
+            System.out.println("Enter col number: ");
+            int col = reader.nextInt();
+            player.shoot(board.getPlayBoard(), row, col);
+            shots++;
         }
         reader.close();
         System.out.println("Congratulations you won with only " + shots + " shots");

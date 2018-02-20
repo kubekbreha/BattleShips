@@ -26,7 +26,7 @@ public class Ship {
      * @param orientation (V/H) vertical or horizontal orientation of ship on play-board.
      * @return is ship placed successfully.
      */
-    //TODO: fix this.
+    //TODO: fix corners of ship and random endless loop
     public boolean placeShip(int[][] board, int row, int col, int maxRow, int maxCol, char orientation) {
         boolean canPlace = true;
         shipPositions = new int[shipSize][2];
