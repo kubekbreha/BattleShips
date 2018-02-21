@@ -1,4 +1,4 @@
-package com.learning.board;
+package com.battleships.core.board;
 
 /**
  * Created by Kubo Brehuv with <3 (18.2.2018)

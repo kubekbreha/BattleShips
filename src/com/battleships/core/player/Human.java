@@ -1,6 +1,6 @@
-package com.learning.player;
+package com.battleships.core.player;
 
-import com.learning.board.Util;
+import com.battleships.core.board.Util;
 
 /**
  * Created by Kubo Brehuv with <3 (18.2.2018)

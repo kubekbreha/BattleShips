@@ -1,4 +1,5 @@
-package com.learning.board;
+package com.battleships.core.board;
+
 
 /**
  * Created by Kubo Brehuv with <3 (18.2.2018)
@@ -131,7 +132,7 @@ public class Ship {
      *
      * @param board where ship is placed.
      */
-    public boolean isShipTouched(int[][] board) {
+    public void isShipTouched(int[][] board) {
         int touches = 0;
 
         for (int i = 0; i < shipPositions.length; i++) {
@@ -139,7 +140,7 @@ public class Ship {
                 touches++;
             }
         }
-        return touches != 0;
+
     }
 
 

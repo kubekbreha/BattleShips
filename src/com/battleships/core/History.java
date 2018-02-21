@@ -1,4 +1,4 @@
-package com.learning;
+package com.battleships.core;
 
 import java.util.ArrayList;
 import java.util.List;

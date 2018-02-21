@@ -1,16 +1,18 @@
-package com.learning;
+package com.battleships.consoleui;
 
-import com.learning.board.Board;
-import com.learning.board.Ship;
-import com.learning.player.Human;
-import com.learning.player.Player;
+import com.battleships.core.History;
+import com.battleships.core.board.Board;
+import com.battleships.core.board.Ship;
+import com.battleships.core.board.Util;
+import com.battleships.core.player.Human;
+import com.battleships.core.player.Player;
 
 import java.util.*;
 
 /**
  * Created by Kubo Brehuv with <3 (19.2.2018)
  */
-public class ConsoleGUI {
+public class ConsoleUI {
 
     private Random rand;
     private Board board;
@@ -20,7 +22,7 @@ public class ConsoleGUI {
     private History history;
 
 
-    public ConsoleGUI() {
+    public ConsoleUI() {
         this.board = new Board(10, 10);
         this.rand = new Random();
         this.reader = new Scanner(System.in);
@@ -47,7 +49,7 @@ public class ConsoleGUI {
             int col = reader.nextInt();
             ship.placeShip(board.getPlayBoard(), row, col, board.getBoardRows(), board.getBoardCols(), 'V');
             shipsCount--;
-            board.printPlayBoard();
+            printPlayBoard();
             ships.add(ship);
             shipNumber++;
         }
@@ -80,7 +82,7 @@ public class ConsoleGUI {
             ships.add(ship);
             shipNumber++;
         }
-        board.printPlayBoard();
+        printPlayBoard();
     }
 
 
@@ -112,11 +114,11 @@ public class ConsoleGUI {
             this.history.addToHistory(board.getPlayBoard());
 
             System.out.println("-------ROUND " + shots + "-------");
-            board.printPlayBoard();
+            printPlayBoard();
 
             if (history.getHistorySize() != 0 && shots != 0) {
                 while (askForUndo()) {
-                    board.printPlayBoard();
+                    printPlayBoard();
                 }
             }
 
@@ -161,5 +163,30 @@ public class ConsoleGUI {
             }
         }
         return sunkedShips == ships.size();
+    }
+
+    /**
+     * Print playBoard to console.
+     */
+    public void printPlayBoard() {
+        System.out.print(Util.ANSI_CYAN + "* " + Util.ANSI_RESET);
+        for (int i = 0; i < 10; i++) {
+            System.out.print(Util.ANSI_CYAN + i + " " + Util.ANSI_RESET);
+        }
+        System.out.println();
+
+        for (int i = 0; i < board.getBoardCols(); i++) {
+            System.out.print(Util.ANSI_CYAN + (char) (i + 65) + " " + Util.ANSI_RESET);
+            for (int j = 0; j < board.getBoardRows(); j++) {
+                if (board.getPlayBoard()[i][j] == 3) {
+                    System.out.print(Util.ANSI_RED + board.getPlayBoard()[i][j] + " " + Util.ANSI_RESET);
+                } else if (board.getPlayBoard()[i][j] == 1) {
+                    System.out.print(Util.ANSI_YELLOW + board.getPlayBoard()[i][j] + " " + Util.ANSI_RESET);
+                } else {
+                    System.out.print(board.getPlayBoard()[i][j] + " ");
+                }
+            }
+            System.out.println();
+        }
     }
 }
