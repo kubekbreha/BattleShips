@@ -16,4 +16,14 @@ public abstract class Player {
     public void shoot(int[][] board, int row, int col) {
 
     }
+
+
+    /**
+     * Perform a random shoot.
+     *
+     * @param board where shoot will go.
+     */
+    public void shootRand(int[][] board, char level) {
+
+    }
 }

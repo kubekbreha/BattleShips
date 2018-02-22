@@ -4,6 +4,7 @@ import com.battleships.core.History;
 import com.battleships.core.board.Board;
 import com.battleships.core.board.Ship;
 import com.battleships.core.board.Util;
+import com.battleships.core.player.Computer;
 import com.battleships.core.player.Human;
 import com.battleships.core.player.Player;
 
@@ -26,7 +27,7 @@ public class ConsoleUI {
         this.board = new Board(10, 10);
         this.rand = new Random();
         this.reader = new Scanner(System.in);
-        this.player = new Human();
+        this.player = new Computer();
         this.ships = new ArrayList<>();
         this.history = new History();
     }
@@ -108,7 +109,7 @@ public class ConsoleUI {
     /**
      * Start playing a game.
      */
-    public void startGame() {
+    public void startGame() throws InterruptedException {
         int shots = 0;
         while (!isGameVon()) {
             this.history.addToHistory(board.getPlayBoard());
@@ -122,11 +123,12 @@ public class ConsoleUI {
                 }
             }
 
-            System.out.println("Enter row number: ");
+            /*System.out.println("Enter row number: ");
             int row = reader.nextInt();
             System.out.println("Enter col number: ");
             int col = reader.nextInt();
-            player.shoot(board.getPlayBoard(), row, col);
+            player.shoot(board.getPlayBoard(), row, col);*/
+            player.shootRand(board.getPlayBoard(), 'M');
             shots++;
         }
         reader.close();
