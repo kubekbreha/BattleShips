@@ -1,5 +1,8 @@
 package com.battleships.core.board;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Kubo Brehuv with <3 (18.2.2018)
  */
@@ -76,5 +79,6 @@ public class Board {
     public void setBoardCols(int boardCols) {
         this.boardCols = boardCols;
     }
+
 
 }

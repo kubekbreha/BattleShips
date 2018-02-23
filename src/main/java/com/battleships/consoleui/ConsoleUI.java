@@ -191,4 +191,49 @@ public class ConsoleUI {
             System.out.println();
         }
     }
+
+
+    /**
+     * Create double array from 2D board.
+     *
+     * @return daouble[]
+     */
+    public List getDaoubleArrayOfBoardWithShips() {
+        int counter = 0;
+        int oneFieldNumber = 20;
+
+        List<Double> listOfOne = new ArrayList<>();
+
+        List<Double> listBoardValues = new ArrayList<>();
+        for (int i = 0; i < board.getBoardRows(); i++) {
+            for (int j = 0; j < board.getBoardCols(); j++) {
+                double value = board.getPlayBoard()[i][j];
+                listBoardValues.add(value);
+            }
+        }
+
+
+        for (int lists = 0; lists < 100; lists++) {
+            for (int i = 0; i < board.getBoardRows(); i++) {
+                for (int j = 0; j < board.getBoardCols(); j++) {
+                    double value = board.getPlayBoard()[i][j];
+                    listOfOne.add(value);
+                }
+            }
+            oneFieldNumber++;
+            listOfOne.add((double) oneFieldNumber);
+
+
+            if (listBoardValues.get(counter) == 0) {
+                //6 means ship is not on field
+                listOfOne.add(6.0);
+            } else if (listBoardValues.get(counter) == 3) {
+                //8 ship is on field
+                listOfOne.add(8.0);
+            }
+            counter++;
+        }
+
+        return listOfOne;
+    }
 }
