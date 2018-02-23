@@ -16,13 +16,15 @@ public class BattleShips {
     public static void main(String[] args) throws InterruptedException, FileNotFoundException {
         ConsoleUI consoleGUI = new ConsoleUI();
         consoleGUI.setUpBoardRandom();
-        //consoleGUI.startGame();
-        List list = consoleGUI.getDaoubleArrayOfBoardWithShips();
+        consoleGUI.startGame();
 
+
+
+        /*List list = consoleGUI.getDaoubleArrayOfBoardWithShips();
         DataSetForPerceptron data = new DataSetForPerceptron();
         //data.addDataToCsv(list);
         DataSet trainingSet = data.readFromCsv();
         Perceptron perceptron = new Perceptron();
-        perceptron.run(trainingSet);
+        perceptron.run(trainingSet);*/
     }
 }

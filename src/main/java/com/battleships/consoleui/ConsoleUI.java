@@ -128,7 +128,7 @@ public class ConsoleUI {
             System.out.println("Enter col number: ");
             int col = reader.nextInt();
             player.shoot(board.getPlayBoard(), row, col);*/
-            player.shootRand(board.getPlayBoard(), 'M');
+            player.shootRand(board.getPlayBoard(), 'H');
             shots++;
         }
         reader.close();
