@@ -21,8 +21,7 @@ public class Computer extends Player {
     boolean moveDown = false;
     boolean moveLeft = false;
     boolean moveRight = false;
-    boolean newLoop = false;
-    boolean shooted = false;
+    boolean newLoop = true;
 
     public Computer() {
         rand = new Random();
@@ -137,156 +136,151 @@ public class Computer extends Player {
         int col = rand.nextInt(10);
         int row = rand.nextInt(10);
 
-            if (moveUp && newLoop) {
-                if (savedRow - 2 > 0 && board[savedRow - 2][savedCol] != 1) {
-                    newLoop = false;
-                    Util.writeToBoard(board, 1, savedRow - 2, savedCol);
-                    shooted = true;
-                } else if (savedRow - 3 > 0 && board[savedRow - 3][savedCol] != 1) {
-                    newLoop = false;
-                    Util.writeToBoard(board, 1, savedRow - 3, savedCol);
-                    shooted = true;
-                    moveUp = false;
-                    moveDown = true;
-                } else {
-                    moveUp = false;
-                    moveDown = true;
-                }
+        if (moveUp && newLoop) {
+            if (savedRow - 2 > 0 && board[savedRow - 2][savedCol] != 1) {
+                newLoop = false;
+                Util.writeToBoard(board, 1, savedRow - 2, savedCol);
+            } else if (savedRow - 3 > 0 && board[savedRow - 3][savedCol] != 1) {
+                newLoop = false;
+                Util.writeToBoard(board, 1, savedRow - 3, savedCol);
+                moveUp = false;
+                moveDown = true;
+            } else {
+                moveUp = false;
+                moveDown = true;
             }
+            makeCross = false;
+        }
 
 
-            if (moveDown && newLoop) {
-                if (savedRow + 2 < 10 && board[savedRow + 2][savedCol] != 1) {
-                    newLoop = false;
-                    Util.writeToBoard(board, 1, savedRow + 2, savedCol);
-                    shooted = true;
-                } else if (savedRow + 3 < 10 && board[savedRow + 3][savedCol] != 1) {
-                    newLoop = false;
-                    Util.writeToBoard(board, 1, savedRow + 3, savedCol);
-                    shooted = true;
-                    moveDown = false;
-                } else {
-                    moveDown = false;
-                }
+        if (moveDown && newLoop) {
+            if (savedRow + 2 < 10 && board[savedRow + 2][savedCol] != 1) {
+                newLoop = false;
+                Util.writeToBoard(board, 1, savedRow + 2, savedCol);
+            } else if (savedRow + 3 < 10 && board[savedRow + 3][savedCol] != 1) {
+                newLoop = false;
+                Util.writeToBoard(board, 1, savedRow + 3, savedCol);
+                moveDown = false;
+            } else {
+                moveDown = false;
             }
+            makeCross = false;
+        }
 
 
-            if (moveLeft && newLoop) {
-                if (savedCol - 2 > 0 && board[savedRow][savedCol - 2] != 1) {
-                    newLoop = false;
-                    Util.writeToBoard(board, 1, savedRow, savedCol - 2);
-                    shooted = true;
-                } else if (savedCol - 3 > 0 && board[savedRow][savedCol - 3] != 1) {
-                    newLoop = false;
-                    Util.writeToBoard(board, 1, savedRow, savedCol - 3);
-                    shooted = true;
-                    moveLeft = false;
-                    moveRight = true;
-                } else {
-                    moveLeft = false;
-                    moveRight = true;
-                }
+        if (moveLeft && newLoop) {
+            if (savedCol - 2 > 0 && board[savedRow][savedCol - 2] != 1) {
+                newLoop = false;
+                Util.writeToBoard(board, 1, savedRow, savedCol - 2);
+            } else if (savedCol - 3 > 0 && board[savedRow][savedCol - 3] != 1) {
+                newLoop = false;
+                Util.writeToBoard(board, 1, savedRow, savedCol - 3);
+                moveLeft = false;
+                moveRight = true;
+            } else {
+                moveLeft = false;
+                moveRight = true;
+                makeCross = false;
             }
+        }
 
 
-            if (moveRight && newLoop) {
-                if (savedCol + 2 < 0 && board[savedRow][savedCol + 2] != 1) {
-                    newLoop = false;
-                    Util.writeToBoard(board, 1, savedRow, savedCol + 2);
-                    shooted = true;
-                } else if (savedCol + 3 < 0 && board[savedRow][savedCol + 3] != 1) {
-                    newLoop = false;
-                    Util.writeToBoard(board, 1, savedRow, savedCol + 3);
-                    shooted = true;
-                    moveRight = false;
-                } else {
-                    moveRight = false;
-                }
+        if (moveRight && newLoop) {
+            if (savedCol + 2 < 0 && board[savedRow][savedCol + 2] != 1) {
+                newLoop = false;
+                Util.writeToBoard(board, 1, savedRow, savedCol + 2);
+            } else if (savedCol + 3 < 0 && board[savedRow][savedCol + 3] != 1) {
+                newLoop = false;
+                Util.writeToBoard(board, 1, savedRow, savedCol + 3);
+                moveRight = false;
+            } else {
+                moveRight = false;
+                makeCross = false;
             }
+        }
 
-
-            if(!shooted) {
-                if (makeCross && newLoop) {
-                    switch (orientation) {
-                        case 0:
-                            if (savedRow - 1 > 0) {
-                                if (board[savedRow - 1][savedCol] == 1) {
-                                    orientation = 90;
-                                    randomHard(board);
-                                }
-                                if (board[savedRow - 1][savedCol] == 3) {
-                                    moveUp = true;
-                                }
-                                Util.writeToBoard(board, 1, savedRow - 1, savedCol);
+        if (newLoop) {
+            if (makeCross) {
+                switch (orientation) {
+                    case 0:
+                        if (savedRow - 1 > 0) {
+                            if (board[savedRow - 1][savedCol] == 1) {
                                 orientation = 90;
-                            } else {
-                                orientation += 90;
-                                newLoop = true;
                                 randomHard(board);
                             }
-                            break;
+                            if (board[savedRow - 1][savedCol] == 3) {
+                                moveUp = true;
+                            }
+                            Util.writeToBoard(board, 1, savedRow - 1, savedCol);
+                            orientation = 90;
+                        } else {
+                            orientation += 90;
+                            newLoop = true;
+                            randomHard(board);
+                        }
+                        break;
 
-                        case 90:
-                            if (savedCol + 1 < 10) {
-                                if (board[savedRow][savedCol + 1] == 1) {
-                                    orientation = 180;
-                                    randomHard(board);
-                                }
-                                if (board[savedRow][savedCol + 1] == 3) {
-                                    moveRight = true;
-                                }
-                                Util.writeToBoard(board, 1, savedRow, savedCol + 1);
+                    case 90:
+                        if (savedCol + 1 < 10) {
+                            if (board[savedRow][savedCol + 1] == 1) {
                                 orientation = 180;
-                            } else {
-                                orientation += 90;
-                                newLoop = true;
                                 randomHard(board);
                             }
-                            break;
+                            if (board[savedRow][savedCol + 1] == 3) {
+                                moveRight = true;
+                            }
+                            Util.writeToBoard(board, 1, savedRow, savedCol + 1);
+                            orientation = 180;
+                        } else {
+                            orientation += 90;
+                            newLoop = true;
+                            randomHard(board);
+                        }
+                        break;
 
-                        case 180:
-                            if (savedRow + 1 < 10) {
-                                if (board[savedRow + 1][savedCol] == 1) {
-                                    orientation = 270;
-                                    randomHard(board);
-                                }
-                                if (board[savedRow + 1][savedCol] == 3) {
-                                    moveDown = true;
-                                }
-                                Util.writeToBoard(board, 1, savedRow + 1, savedCol);
+                    case 180:
+                        if (savedRow + 1 < 10) {
+                            if (board[savedRow + 1][savedCol] == 1) {
                                 orientation = 270;
-                            } else {
-                                orientation += 90;
-                                newLoop = true;
                                 randomHard(board);
                             }
-                            break;
+                            if (board[savedRow + 1][savedCol] == 3) {
+                                moveDown = true;
+                            }
+                            Util.writeToBoard(board, 1, savedRow + 1, savedCol);
+                            orientation = 270;
+                        } else {
+                            orientation += 90;
+                            newLoop = true;
+                            randomHard(board);
+                        }
+                        break;
 
-                        case 270:
-                            if (savedCol - 1 > 0) {
-                                if (board[savedRow][savedCol - 1] == 1) {
-                                    orientation = 0;
-                                    makeCross = false;
-                                    randomHard(board);
-                                }
-                                if (board[savedRow][savedCol - 1] == 3) {
-                                    moveLeft = true;
-                                }
-                                Util.writeToBoard(board, 1, savedRow, savedCol - 1);
+                    case 270:
+                        if (savedCol - 1 > 0) {
+                            if (board[savedRow][savedCol - 1] == 1) {
                                 orientation = 0;
                                 makeCross = false;
-                            } else {
-                                makeCross = false;
-                                orientation = 0;
-                                newLoop = true;
                                 randomHard(board);
                             }
-                            break;
-                    }
-                } else {
-                    basicRandomShoot(board, row, col, 'H');
+                            if (board[savedRow][savedCol - 1] == 3) {
+                                moveLeft = true;
+                            }
+                            Util.writeToBoard(board, 1, savedRow, savedCol - 1);
+                            orientation = 0;
+                            makeCross = false;
+                        } else {
+                            makeCross = false;
+                            orientation = 0;
+                            newLoop = true;
+                            randomHard(board);
+                        }
+                        break;
                 }
+            } else {
+                basicRandomShoot(board, row, col, 'H');
             }
+        }
 
         newLoop = true;
 
