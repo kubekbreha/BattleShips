@@ -1,5 +1,7 @@
 package com.battleships.core;
 
+import com.battleships.core.board.Tile;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,7 +10,7 @@ public class History {
     /**
      * HashMap for in-game history
      */
-    private List<int[][]> historyList;
+    private List<Tile[][]> historyList;
 
 
     public History(){
@@ -19,7 +21,7 @@ public class History {
     /**
      * Get last item in array.
      */
-    public int[][] getLast(){
+    public Tile[][] getLast(){
         return historyList.get(historyList.size()-1);
     }
 
@@ -37,8 +39,8 @@ public class History {
      *
      * @param board which will be added.
      */
-    public void addToHistory(int[][] board){
-        int [][] retBoard = new int[board.length][];
+    public void addToHistory(Tile[][] board){
+        Tile[][] retBoard = new Tile[board.length][];
         for(int i = 0; i < board.length; i++)
             retBoard[i] = board[i].clone();
         historyList.add(retBoard);

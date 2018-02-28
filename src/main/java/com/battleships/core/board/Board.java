@@ -8,14 +8,14 @@ import java.util.List;
  */
 public class Board {
 
-    private int[][] playBoard;
+    private Tile[][] playBoard;
     private int boardRows;
     private int boardCols;
 
 
     /**
      * Basic constructor where you set size of playTable.
-     * Fill board with zeros.
+     * Fill board with water tiles.
      *
      * @param cols
      * @param rows
@@ -24,10 +24,10 @@ public class Board {
         this.boardCols = cols;
         this.boardRows = rows;
 
-        playBoard = new int[cols][rows];
+        playBoard = new Tile[cols][rows];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
-                playBoard[i][j] = 0;
+                playBoard[i][j] = new Tile(TileState.WATER);
             }
         }
     }
@@ -38,7 +38,7 @@ public class Board {
      *
      * @return playBoard 2D array.
      */
-    public int[][] getPlayBoard() {
+    public Tile[][] getPlayBoard() {
         return playBoard;
     }
 
@@ -47,7 +47,7 @@ public class Board {
      *
      * @param board which will be set.
      */
-    public void setPlayBoard(int[][] board) {
+    public void setPlayBoard(Tile[][] board) {
         this.playBoard = board;
     }
 

@@ -1,5 +1,6 @@
 package com.battleships.core.player;
 
+import com.battleships.core.board.Tile;
 import com.battleships.core.board.Util;
 
 /**
@@ -8,7 +9,7 @@ import com.battleships.core.board.Util;
 public class Human extends Player {
 
     @Override
-    public void shoot(int[][] board, int row, int col) {
-        Util.writeToBoard(board, 1, row, col);
+    public void shoot(Tile[][] board, int row, int col) {
+        Util.shootToBoard(board, row, col);
     }
 }

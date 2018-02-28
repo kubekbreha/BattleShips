@@ -28,62 +28,63 @@ public class Ship {
      * @return is ship placed successfully.
      */
     //TODO: fix corners of ship and random endless loop
-    public boolean placeShip(int[][] board, int row, int col, int maxRow, int maxCol, char orientation) {
+    public boolean placeShip(Tile[][] board, int row, int col, int maxRow, int maxCol, char orientation) {
         boolean canPlace = true;
         shipPositions = new int[shipSize][2];
 
         //check if ship can be placed
-        if ((board[0][0] + row + shipSize) > maxRow && orientation == 'V') {
+        if ((row + shipSize) > maxRow && orientation == 'V') {
             canPlace = false;
         }
-        if ((board[1][0] + col + shipSize) > maxCol && orientation == 'H') {
+        if ((col + shipSize) > maxCol && orientation == 'H') {
             canPlace = false;
         }
+
 
         //check if ship will be placed over other ship
         if (canPlace) {
             for (int i = 0; i < shipSize; i++) {
                 if (orientation == 'H') {
                     try {
-                        if (board[row][col + i] == 3) canPlace = false;
+                        if (board[row][col + i].getTileState() == TileState.SHIP) canPlace = false;
                     } catch (Exception e) {
                     }
                     try {
-                        if (board[row + 1][col + i] == 3) canPlace = false;
+                        if (board[row + 1][col + i].getTileState() == TileState.SHIP) canPlace = false;
                     } catch (Exception e) {
                     }
                     try {
-                        if (board[row - 1][col + i] == 3) canPlace = false;
+                        if (board[row - 1][col + i].getTileState() == TileState.SHIP) canPlace = false;
                     } catch (Exception e) {
                     }
                     try {
-                        if (board[row][col + i - 1] == 3) canPlace = false;
+                        if (board[row][col + i - 1].getTileState() == TileState.SHIP) canPlace = false;
                     } catch (Exception e) {
                     }
                     try {
-                        if (board[row][col + i + 1] == 3) canPlace = false;
+                        if (board[row][col + i + 1].getTileState() == TileState.SHIP) canPlace = false;
                     } catch (Exception e) {
                     }
 
                 } else if (orientation == 'V') {
                     try {
-                        if (board[row + i][col] == 3) canPlace = false;
+                        if (board[row + i][col].getTileState() == TileState.SHIP) canPlace = false;
                     } catch (Exception e) {
                     }
                     try {
-                        if (board[row + i][col + 1] == 3) canPlace = false;
+                        if (board[row + i][col + 1].getTileState() == TileState.SHIP) canPlace = false;
                     } catch (Exception e) {
                     }
                     try {
-                        if (board[row + i][col - 1] == 3) canPlace = false;
+                        if (board[row + i][col - 1].getTileState() == TileState.SHIP) canPlace = false;
                     } catch (Exception e) {
                     }
                     try {
-                        if (board[row + i - 1][col] == 3) canPlace = false;
+                        if (board[row + i - 1][col].getTileState() == TileState.SHIP) canPlace = false;
                     } catch (Exception e) {
                     }
                     try {
-                        if (board[row + i + 1][col] == 3) canPlace = false;
+                        if (board[row + i + 1][col].getTileState() == TileState.SHIP) canPlace = false;
                     } catch (Exception e) {
                     }
                 }
@@ -94,11 +95,11 @@ public class Ship {
         if (canPlace) {
             for (int i = 0; i < shipSize; i++) {
                 if (orientation == 'H') {
-                    Util.writeToBoard(board, 3, row, col + i);
+                    Util.writeToBoard(board, new Tile(TileState.SHIP), row, col + i);
                     shipPositions[i][0] = row;
                     shipPositions[i][1] = col + i;
                 } else if (orientation == 'V') {
-                    Util.writeToBoard(board, 3, row + i, col);
+                    Util.writeToBoard(board, new Tile(TileState.SHIP), row + i, col);
                     shipPositions[i][0] = row + i;
                     shipPositions[i][1] = col;
                 }
@@ -132,11 +133,11 @@ public class Ship {
      *
      * @param board where ship is placed.
      */
-    public void isShipTouched(int[][] board) {
+    public void isShipTouched(Tile[][] board) {
         int touches = 0;
 
         for (int i = 0; i < shipPositions.length; i++) {
-            if (board[shipPositions[i][0]][shipPositions[i][1]] == 1) {
+            if (board[shipPositions[i][0]][shipPositions[i][1]].getTileState() == TileState.HITTED) {
                 touches++;
             }
         }
@@ -149,11 +150,11 @@ public class Ship {
      *
      * @param board where ship is placed.
      */
-    public boolean isShipSunk(int[][] board) {
+    public boolean isShipSunk(Tile[][] board) {
         int touches = 0;
 
         for (int i = 0; i < shipPositions.length; i++) {
-            if (board[shipPositions[i][0]][shipPositions[i][1]] == 1) {
+            if (board[shipPositions[i][0]][shipPositions[i][1]].getTileState() == TileState.HITTED) {
                 touches++;
             }
         }

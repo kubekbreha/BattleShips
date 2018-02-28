@@ -1,5 +1,7 @@
 package com.battleships.core.player;
 
+import com.battleships.core.board.Tile;
+
 /**
  * Created by Kubo Brehuv with <3 (18.2.2018)
  */
@@ -13,8 +15,7 @@ public abstract class Player {
      * @param row   coordinate on board.
      * @param col   coordinate on board.
      */
-    public void shoot(int[][] board, int row, int col) {
-
+    public void shoot(Tile[][] board, int row, int col) {
     }
 
 
@@ -23,7 +24,6 @@ public abstract class Player {
      *
      * @param board where shoot will go.
      */
-    public void shootRand(int[][] board, char level) {
-
+    public void shootAI(Tile[][] board) {
     }
 }

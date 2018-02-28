@@ -3,10 +3,9 @@ package com.battleships.consoleui;
 import com.battleships.core.History;
 import com.battleships.core.board.Board;
 import com.battleships.core.board.Ship;
+import com.battleships.core.board.TileState;
 import com.battleships.core.board.Util;
-import com.battleships.core.player.Computer;
-import com.battleships.core.player.Human;
-import com.battleships.core.player.Player;
+import com.battleships.core.player.*;
 
 import java.util.*;
 
@@ -27,7 +26,8 @@ public class ConsoleUI {
         this.board = new Board(10, 10);
         this.rand = new Random();
         this.reader = new Scanner(System.in);
-        this.player = new Computer();
+        this.player = new Compuer();
+        ((Compuer) player).setAiState(new ComputerHard());
         this.ships = new ArrayList<>();
         this.history = new History();
     }
@@ -128,7 +128,8 @@ public class ConsoleUI {
             System.out.println("Enter col number: ");
             int col = reader.nextInt();
             player.shoot(board.getPlayBoard(), row, col);*/
-            player.shootRand(board.getPlayBoard(), 'H');
+
+            player.shootAI(board.getPlayBoard());
             shots++;
         }
         reader.close();
@@ -180,12 +181,14 @@ public class ConsoleUI {
         for (int i = 0; i < board.getBoardCols(); i++) {
             System.out.print(Util.ANSI_CYAN + (char) (i + 65) + " " + Util.ANSI_RESET);
             for (int j = 0; j < board.getBoardRows(); j++) {
-                if (board.getPlayBoard()[i][j] == 3) {
-                    System.out.print(Util.ANSI_RED + board.getPlayBoard()[i][j] + " " + Util.ANSI_RESET);
-                } else if (board.getPlayBoard()[i][j] == 1) {
-                    System.out.print(Util.ANSI_YELLOW + board.getPlayBoard()[i][j] + " " + Util.ANSI_RESET);
+                if (board.getPlayBoard()[i][j].getTileState() == TileState.SHIP) {
+                    System.out.print(Util.ANSI_RED + 3 + " " + Util.ANSI_RESET);
+                } else if (board.getPlayBoard()[i][j].getTileState() == TileState.HITTED) {
+                    System.out.print(Util.ANSI_YELLOW + 1 + " " + Util.ANSI_RESET);
+                } else if (board.getPlayBoard()[i][j].getTileState() == TileState.MISSED) {
+                    System.out.print(Util.ANSI_BLACK + 1 + " " + Util.ANSI_RESET);
                 } else {
-                    System.out.print(board.getPlayBoard()[i][j] + " ");
+                    System.out.print(0 + " ");
                 }
             }
             System.out.println();
@@ -193,12 +196,12 @@ public class ConsoleUI {
     }
 
 
-    /**
-     * Create double array from 2D board.
-     *
-     * @return daouble[]
-     */
-    public List getDaoubleArrayOfBoardWithShips() {
+/**
+ * Create double array from 2D board.
+ *
+ * @return double[]
+ */
+    /*public List getDaoubleArrayOfBoardWithShips() {
         int counter = 0;
         int oneFieldNumber = 20;
 
@@ -235,5 +238,5 @@ public class ConsoleUI {
         }
 
         return listOfOne;
-    }
+    }*/
 }

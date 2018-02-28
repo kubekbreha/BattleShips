@@ -16,15 +16,36 @@ public class Util {
     public static final String ANSI_WHITE = "\u001B[37m";
 
     /**
-     * Write int to board.
+     * Put tile to board.
      *
      * @param board where to write.
      * @param value to write.
      * @param row   coordinate on the board.
      * @param col   coordinate on the board.
      */
-    public static void writeToBoard(int[][] board, int value, int row, int col) {
+    public static void writeToBoard(Tile[][] board, Tile value, int row, int col) {
         board[row][col] = value;
+    }
+
+    public static void shootToBoard(Tile[][] board, int row, int col){
+        Tile tile = board[row][col];
+        switch (tile.getTileState()){
+            case SHIP:
+                Util.writeToBoard(board, new Tile(TileState.HITTED), row, col);
+                break;
+
+            case WATER:
+                Util.writeToBoard(board, new Tile(TileState.MISSED), row, col);
+                break;
+
+            case MISSED:
+                Util.writeToBoard(board, new Tile(TileState.MISSED), row, col);
+                break;
+
+            case HITTED:
+                Util.writeToBoard(board, new Tile(TileState.HITTED), row, col);
+                break;
+        }
     }
 
 }
