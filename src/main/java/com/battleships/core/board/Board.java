@@ -1,8 +1,12 @@
 package com.battleships.core.board;
 
+import com.battleships.consoleui.ConsoleUI;
+import com.battleships.core.game.GameController;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  * Created by Kubo Brehuv with <3 (18.2.2018)
@@ -22,6 +26,7 @@ public class Board {
      * @param rows
      */
     public Board(int cols, int rows) {
+        ships = new ArrayList<>();
         this.boardCols = cols;
         this.boardRows = rows;
 
@@ -33,6 +38,14 @@ public class Board {
         }
     }
 
+    /**
+     * Get list of ships.
+     *
+     * @return list of ships.
+     */
+    public ArrayList<Ship> getShips() {
+        return ships;
+    }
 
     /**
      * Get playBoard.
@@ -157,7 +170,7 @@ public class Board {
     /**
      * Put ships into playing board randomly.
      */
-    public void setUpBoardRandom() {
+    public void setUpBoardRandom(GameController gameController) {
         Random rand = new Random();
         int[] shipSize = {2, 3, 3, 4};
         int shipNumber = 0;
@@ -181,5 +194,36 @@ public class Board {
             ships.add(ship);
             shipNumber++;
         }
+        gameController.isGameSetUp(shipSize,this);
+    }
+
+
+    /**
+     * Put ships into playing board manually.
+     */
+    public void setUpBoard(GameController gameController) {
+        Scanner reader = new Scanner(System.in);
+        ConsoleUI consoleUI = new ConsoleUI();
+
+        int[] shipSize = {2, 3, 3, 4};
+        int shipNumber = 0;
+        int shipsCount = shipSize.length;
+
+        while (shipsCount != 0) {
+            System.out.println("----SHIP " + shipNumber + "-(" + shipSize[shipNumber] + ")---");
+            Ship ship = new Ship(shipSize[shipNumber]);
+            System.out.println("Enter row number: ");
+            int row = reader.nextInt();
+            System.out.println("Enter col number: ");
+            int col = reader.nextInt();
+            ship.placeShip(getPlayBoard(), row, col, getBoardRows(), getBoardCols(), 'V');
+            shipsCount--;
+
+            consoleUI.printPlayBoard(this);
+
+            ships.add(ship);
+            shipNumber++;
+        }
+        gameController.isGameSetUp(shipSize,this);
     }
 }

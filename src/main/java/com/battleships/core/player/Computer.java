@@ -6,7 +6,7 @@ import com.battleships.core.board.Tile;
 /**
  * Created by Kubo Brehuv with <3 (28.2.2018)
  */
-public class Compuer extends Player {
+public class Computer extends Player {
 
     private AILevel aiState;
 

@@ -13,20 +13,6 @@ import java.util.List;
 public class GameController {
 
     private GameState gameState;
-    private String target;
-
-    public GameController(String target) {
-        this.target = target;
-    }
-
-    /**
-     * Get target. For which user is Controller set up.
-     *
-     * @return
-     */
-    public String getTarget() {
-        return target;
-    }
 
     /**
      * Get tile state.
@@ -67,10 +53,10 @@ public class GameController {
      *
      * @return true if game is won otherwise false.
      */
-    public void isGameSetUp(List<Integer> shipsSizes, Board board) {
+    public void isGameSetUp(int[] shipsSizes, Board board) {
         int shipsListCount = 0;
-        for (int ship : shipsSizes) {
-            shipsListCount += ship;
+        for (int shipSize : shipsSizes) {
+            shipsListCount += shipSize;
         }
 
         int shipsTileCount = 0;
@@ -81,6 +67,10 @@ public class GameController {
                 }
             }
         }
+
+        System.out.println(shipsListCount);
+        System.out.println(shipsTileCount);
+
 
         if (shipsTileCount == shipsListCount) {
             gameState = GameState.SETTEDUP;
