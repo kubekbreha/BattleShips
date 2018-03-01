@@ -4,20 +4,11 @@ import com.battleships.core.board.Tile;
 import com.battleships.core.board.TileState;
 import com.battleships.core.board.Util;
 
-public class ComputerExpert implements AILevel {
 
-//    public int[][] probabilityBoard = {
-//            {10, 15, 19, 21, 22, 22, 21, 19, 15, 10},
-//            {15, 20, 24, 26, 27, 27, 26, 24, 20, 15},
-//            {19, 24, 28, 30, 31, 31, 30, 28, 24, 19},
-//            {21, 26, 30, 32, 33, 33, 32, 30, 26, 21},
-//            {22, 27, 31, 33, 34, 34, 33, 31, 27, 22},
-//            {22, 27, 31, 33, 34, 34, 33, 31, 27, 22},
-//            {21, 26, 30, 32, 33, 33, 32, 30, 26, 21},
-//            {19, 24, 28, 30, 31, 31, 30, 28, 24, 19},
-//            {15, 20, 24, 26, 27, 27, 26, 24, 20, 15},
-//            {10, 15, 19, 21, 22, 22, 21, 19, 15, 10},
-//    };
+/**
+ * Created by Kubo Brehuv with <3 (28.2.2018)
+ */
+public class ComputerExpert implements AILevel {
 
     private int rowToShoot;
     private int colToShoot;

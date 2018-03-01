@@ -1,6 +1,6 @@
 package com.battleships.consoleui;
 
-import com.battleships.core.History;
+import com.battleships.core.history.SinglePlayerHistory;
 import com.battleships.core.board.Board;
 import com.battleships.core.board.Ship;
 import com.battleships.core.board.TileState;
@@ -19,7 +19,7 @@ public class ConsoleUI {
     private Scanner reader;
     private Player player;
     private ArrayList<Ship> ships;
-    private History history;
+    private SinglePlayerHistory history;
 
 
     public ConsoleUI() {
@@ -29,7 +29,7 @@ public class ConsoleUI {
         this.player = new Compuer();
         ((Compuer) player).setAiState(new ComputerExpert());
         this.ships = new ArrayList<>();
-        this.history = new History();
+        this.history = new SinglePlayerHistory();
     }
 
 

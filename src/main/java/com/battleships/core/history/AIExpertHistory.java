@@ -1,19 +1,19 @@
-package com.battleships.core;
-
-import com.battleships.core.board.Tile;
+package com.battleships.core.history;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class History {
-
+/**
+ * Created by Kubo Brehuv with <3 (1.3.2018)
+ */
+public class AIExpertHistory {
     /**
      * HashMap for in-game history
      */
-    private List<Tile[][]> historyList;
+    private List<int[][]> historyList;
 
 
-    public History(){
+    public AIExpertHistory(){
         this.historyList = new ArrayList<>();
     }
 
@@ -21,7 +21,7 @@ public class History {
     /**
      * Get last item in array.
      */
-    public Tile[][] getLast(){
+    public int[][] getLast(){
         return historyList.get(historyList.size()-1);
     }
 
@@ -39,8 +39,8 @@ public class History {
      *
      * @param board which will be added.
      */
-    public void addToHistory(Tile[][] board){
-        Tile[][] retBoard = new Tile[board.length][];
+    public void addToHistory(int[][] board){
+        int[][] retBoard = new int[board.length][];
         for(int i = 0; i < board.length; i++)
             retBoard[i] = board[i].clone();
         historyList.add(retBoard);
@@ -54,4 +54,5 @@ public class History {
     public int getHistorySize() {
         return historyList.size();
     }
+
 }

@@ -6,6 +6,10 @@ import com.battleships.core.board.Util;
 
 import java.util.Random;
 
+
+/**
+ * Created by Kubo Brehuv with <3 (28.2.2018)
+ */
 public class ComputerMedium implements AILevel {
 
     private Random rand;

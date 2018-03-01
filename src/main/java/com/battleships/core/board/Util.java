@@ -16,17 +16,24 @@ public class Util {
     public static final String ANSI_WHITE = "\u001B[37m";
 
     /**
-     * Put tile to board.
+     * Change tile state.
      *
      * @param board where to write.
      * @param value to write.
-     * @param row   coordinate on the board.
      * @param col   coordinate on the board.
      */
     public static void writeToBoard(Tile[][] board, Tile value, int row, int col) {
         board[row][col] = value;
     }
 
+
+    /**
+     * Checking tile state and overwriting in due to conditions.
+     *
+     * @param board of Tiles.
+     * @param row   coordinate on the board.
+     * @param col   coordinate on the board.
+     */
     public static void shootToBoard(Tile[][] board, int row, int col){
         Tile tile = board[row][col];
         switch (tile.getTileState()){
@@ -47,5 +54,4 @@ public class Util {
                 break;
         }
     }
-
 }

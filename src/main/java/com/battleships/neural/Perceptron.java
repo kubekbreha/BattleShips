@@ -13,6 +13,10 @@ import org.neuroph.util.TransferFunctionType;
 
 import java.util.Arrays;
 
+
+/**
+ * Created by Kubo Brehuv with <3 (24.2.2018)
+ */
 public class Perceptron implements LearningEventListener {
 
 

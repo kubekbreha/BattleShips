@@ -9,6 +9,9 @@ import java.util.List;
 import java.util.Scanner;
 
 
+/**
+ * Created by Kubo Brehuv with <3 (24.2.2018)
+ */
 public class DataSetForPerceptron {
 
     private DataSet trainingSet;

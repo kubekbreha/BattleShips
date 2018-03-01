@@ -8,14 +8,25 @@ public class Tile {
 
     private TileState tileState;
 
-    public Tile(TileState state){
+    /**
+     * Give state to tile from enum TileState.
+     *
+     * @param state which will be set to tile.
+     */
+    public Tile(TileState state) {
         this.tileState = state;
     }
 
+    /**
+     * Get tile state.
+     */
     public TileState getTileState() {
         return tileState;
     }
 
+    /**
+     * Set tile state.
+     */
     public void setTileState(TileState tileState) {
         this.tileState = tileState;
     }
