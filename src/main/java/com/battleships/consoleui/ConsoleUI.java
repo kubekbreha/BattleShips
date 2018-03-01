@@ -27,7 +27,7 @@ public class ConsoleUI {
         this.rand = new Random();
         this.reader = new Scanner(System.in);
         this.player = new Compuer();
-        ((Compuer) player).setAiState(new ComputerHard());
+        ((Compuer) player).setAiState(new ComputerExpert());
         this.ships = new ArrayList<>();
         this.history = new History();
     }
@@ -61,7 +61,7 @@ public class ConsoleUI {
      * Put ships into playing board randomly.
      */
     public void setUpBoardRandom() {
-        int[] shipSize = {2, 4, 2, 3, 1, 3, 2, 4};
+        int[] shipSize = {2, 3, 3, 4};
         int shipNumber = 0;
         int shipsCount = shipSize.length;
         char orientation = 'H';
@@ -182,7 +182,7 @@ public class ConsoleUI {
             System.out.print(Util.ANSI_CYAN + (char) (i + 65) + " " + Util.ANSI_RESET);
             for (int j = 0; j < board.getBoardRows(); j++) {
                 if (board.getPlayBoard()[i][j].getTileState() == TileState.SHIP) {
-                    System.out.print(Util.ANSI_RED + 3 + " " + Util.ANSI_RESET);
+                    System.out.print(Util.ANSI_RED + 2 + " " + Util.ANSI_RESET);
                 } else if (board.getPlayBoard()[i][j].getTileState() == TileState.HITTED) {
                     System.out.print(Util.ANSI_YELLOW + 1 + " " + Util.ANSI_RESET);
                 } else if (board.getPlayBoard()[i][j].getTileState() == TileState.MISSED) {
@@ -194,49 +194,4 @@ public class ConsoleUI {
             System.out.println();
         }
     }
-
-
-/**
- * Create double array from 2D board.
- *
- * @return double[]
- */
-    /*public List getDaoubleArrayOfBoardWithShips() {
-        int counter = 0;
-        int oneFieldNumber = 20;
-
-        List<Double> listOfOne = new ArrayList<>();
-
-        List<Double> listBoardValues = new ArrayList<>();
-        for (int i = 0; i < board.getBoardRows(); i++) {
-            for (int j = 0; j < board.getBoardCols(); j++) {
-                double value = board.getPlayBoard()[i][j];
-                listBoardValues.add(value);
-            }
-        }
-
-
-        for (int lists = 0; lists < 100; lists++) {
-            for (int i = 0; i < board.getBoardRows(); i++) {
-                for (int j = 0; j < board.getBoardCols(); j++) {
-                    double value = board.getPlayBoard()[i][j];
-                    listOfOne.add(value);
-                }
-            }
-            oneFieldNumber++;
-            listOfOne.add((double) oneFieldNumber);
-
-
-            if (listBoardValues.get(counter) == 0) {
-                //6 means ship is not on field
-                listOfOne.add(6.0);
-            } else if (listBoardValues.get(counter) == 3) {
-                //8 ship is on field
-                listOfOne.add(8.0);
-            }
-            counter++;
-        }
-
-        return listOfOne;
-    }*/
 }

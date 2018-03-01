@@ -67,6 +67,7 @@ public class Board {
 
     /**
      * Set size of board rows.
+     *
      * @param boardRows
      */
     public void setBoardRows(int boardRows) {
@@ -78,6 +79,70 @@ public class Board {
      */
     public void setBoardCols(int boardCols) {
         this.boardCols = boardCols;
+    }
+
+
+    /**
+     * Create double array from 2D board.
+     *
+     * @return double[]
+     */
+    public List getDaoubleArrayOfBoardWithShips() {
+        int counter = 0;
+        int oneFieldNumber = 20;
+
+        List<Double> listOfOne = new ArrayList<>();
+
+        List<Double> listBoardValues = new ArrayList<>();
+        for (int i = 0; i < getBoardRows(); i++) {
+            for (int j = 0; j < getBoardCols(); j++) {
+                getNumberFromBoard(i, j, listBoardValues);
+            }
+        }
+
+        for (int lists = 0; lists < 100; lists++) {
+            for (int i = 0; i < getBoardRows(); i++) {
+                for (int j = 0; j < getBoardCols(); j++) {
+                    getNumberFromBoard(i, j, listBoardValues);
+                }
+            }
+            oneFieldNumber++;
+            listOfOne.add((double) oneFieldNumber);
+
+
+            if (listBoardValues.get(counter) == 0) {
+                //6 means ship is not on field
+                listOfOne.add(6.0);
+            } else if (listBoardValues.get(counter) == 3) {
+                //8 ship is on field
+                listOfOne.add(8.0);
+            }
+            counter++;
+        }
+
+        return listOfOne;
+    }
+
+    private void getNumberFromBoard(int i, int j, List listBoardValues) {
+        double value = 0;
+        switch (getPlayBoard()[i][j].getTileState()) {
+            case SHIP:
+                value = 2;
+                break;
+
+            case HITTED:
+                value = 1;
+                break;
+
+            case WATER:
+                value = 0;
+                break;
+
+            case MISSED:
+                value = 1;
+                break;
+        }
+        listBoardValues.add(value);
     }
 
 

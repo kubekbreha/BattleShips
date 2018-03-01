@@ -6,7 +6,7 @@ import com.battleships.core.board.Util;
 
 import java.util.Random;
 
-public class ComputerBegginer implements AIState {
+public class ComputerBegginer implements AILevel {
 
     private Random rand;
 

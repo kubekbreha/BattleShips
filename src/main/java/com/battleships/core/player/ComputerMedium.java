@@ -6,7 +6,7 @@ import com.battleships.core.board.Util;
 
 import java.util.Random;
 
-public class ComputerMedium implements AIState {
+public class ComputerMedium implements AILevel {
 
     private Random rand;
 
@@ -104,7 +104,7 @@ public class ComputerMedium implements AIState {
      * @param difficulty level of difficulty.
      */
     private void basicRandomShoot(Tile[][] board, int row, int col, char difficulty) {
-        if (board[row][col].getTileState() != TileState.HITTED) {
+        if (board[row][col].getTileState() != TileState.HITTED || board[row][col].getTileState() != TileState.MISSED){
             if (board[row][col].getTileState() == TileState.SHIP) {
                 makeCross = true;
                 savedCol = col;
