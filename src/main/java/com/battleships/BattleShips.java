@@ -1,17 +1,16 @@
 package com.battleships;
 
 import com.battleships.consoleui.ConsoleUI;
-import com.battleships.neural.DataSetForPerceptron;
-import com.battleships.neural.Perceptron;
-import org.neuroph.core.data.DataSet;
 
 import java.io.FileNotFoundException;
-import java.util.List;
 
 /**
  * Created by Kubo Brehuv with <3 (18.2.2018)
  */
 public class BattleShips {
+
+    //TODO: hint for user vs PC
+    //TODO: create play modes
 
     public static void main(String[] args) throws InterruptedException, FileNotFoundException {
         ConsoleUI consoleGUI = new ConsoleUI();

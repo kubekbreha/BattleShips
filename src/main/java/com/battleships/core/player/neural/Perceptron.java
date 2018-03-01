@@ -1,4 +1,4 @@
-package com.battleships.neural;
+package com.battleships.core.player.neural;
 
 import org.neuroph.core.NeuralNetwork;
 import org.neuroph.core.data.DataSet;

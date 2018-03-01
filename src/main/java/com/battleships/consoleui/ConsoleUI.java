@@ -57,34 +57,7 @@ public class ConsoleUI {
     }
 
 
-    /**
-     * Put ships into playing board randomly.
-     */
-    public void setUpBoardRandom() {
-        int[] shipSize = {2, 3, 3, 4};
-        int shipNumber = 0;
-        int shipsCount = shipSize.length;
-        char orientation = 'H';
 
-        while (shipsCount != 0) {
-            Ship ship = new Ship(shipSize[shipNumber]);
-
-            //try to place ship while true
-            while (!ship.placeShip(board.getPlayBoard(), rand.nextInt(10), rand.nextInt(10),
-                    board.getBoardRows(), board.getBoardCols(), orientation)) {
-            }
-            if (shipsCount % 2 == 0) {
-                orientation = 'V';
-            } else {
-                orientation = 'H';
-            }
-
-            shipsCount--;
-            ships.add(ship);
-            shipNumber++;
-        }
-        printPlayBoard();
-    }
 
 
     /**
@@ -137,36 +110,9 @@ public class ConsoleUI {
     }
 
 
-    /**
-     * Write to console positions where ship is placed.
-     *
-     * @param ship of which position will be written out.
-     */
-    private void writeOutShipPositions(Ship ship) {
-        int[][] pos = ship.getShipPositions();
-        for (int i = 0; i < pos.length; i++) {
-            for (int j = 0; j < 2; j++) {
-                System.out.print(pos[i][j] + " ");
-            }
-            System.out.println();
-        }
-    }
 
 
-    /**
-     * Check if player won the game.
-     *
-     * @return true if game is won otherwise false.
-     */
-    private boolean isGameVon() {
-        int sunkedShips = 0;
-        for (Ship ship : ships) {
-            if (ship.isShipSunk(board.getPlayBoard())) {
-                sunkedShips++;
-            }
-        }
-        return sunkedShips == ships.size();
-    }
+
 
     /**
      * Print playBoard to console.

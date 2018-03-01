@@ -2,6 +2,7 @@ package com.battleships.core.board;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by Kubo Brehuv with <3 (18.2.2018)
@@ -11,7 +12,7 @@ public class Board {
     private Tile[][] playBoard;
     private int boardRows;
     private int boardCols;
-
+    private ArrayList<Ship> ships;
 
     /**
      * Basic constructor where you set size of playTable.
@@ -123,9 +124,16 @@ public class Board {
         return listOfOne;
     }
 
-    private void getNumberFromBoard(int i, int j, List listBoardValues) {
+    /**
+     * Read number from tile in board.
+     *
+     * @param row of number in board.
+     * @param col of number in board.
+     * @param listBoardValues where number will be placed.
+     */
+    private void getNumberFromBoard(int row, int col, List listBoardValues) {
         double value = 0;
-        switch (getPlayBoard()[i][j].getTileState()) {
+        switch (getPlayBoard()[row][col].getTileState()) {
             case SHIP:
                 value = 2;
                 break;
@@ -146,4 +154,32 @@ public class Board {
     }
 
 
+    /**
+     * Put ships into playing board randomly.
+     */
+    public void setUpBoardRandom() {
+        Random rand = new Random();
+        int[] shipSize = {2, 3, 3, 4};
+        int shipNumber = 0;
+        int shipsCount = shipSize.length;
+        char orientation = 'H';
+
+        while (shipsCount != 0) {
+            Ship ship = new Ship(shipSize[shipNumber]);
+
+            //try to place ship while true
+            while (!ship.placeShip(getPlayBoard(), rand.nextInt(10), rand.nextInt(10),
+                    getBoardRows(), getBoardCols(), orientation)) {
+            }
+            if (shipsCount % 2 == 0) {
+                orientation = 'V';
+            } else {
+                orientation = 'H';
+            }
+
+            shipsCount--;
+            ships.add(ship);
+            shipNumber++;
+        }
+    }
 }
