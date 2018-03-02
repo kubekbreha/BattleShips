@@ -1,6 +1,7 @@
 package com.battleships.consoleui;
 
 import com.battleships.core.board.Board;
+import com.battleships.core.board.Hint;
 import com.battleships.core.game.GameController;
 import com.battleships.core.game.GameState;
 import com.battleships.core.history.AIExpertHistory;
@@ -24,11 +25,14 @@ public class PlayerVsComputer {
     private ConsoleUI consoleUI;
     private Player player;
     private Player computer;
+    private Hint hint;
     private int computerLevel;
 
 
     public PlayerVsComputer() {
         consoleUI = new ConsoleUI();
+
+        hint = new Hint();
 
         playerBoard = new Board(10, 10);
         computerBoard = new Board(10, 10);
@@ -99,6 +103,8 @@ public class PlayerVsComputer {
             System.out.println("-------COMPUTER------");
             consoleUI.printPlayBoard(computerBoard);
 
+            hint.findHint();
+
             if (playerHistory.getHistorySize() != 0 && shots != 0 && (computerLevel == 4 || computerLevel == 1)) {
                 while (askForUndo()) {
                     shots--;
@@ -110,6 +116,7 @@ public class PlayerVsComputer {
             playerHistory.addToHistory(playerBoard.getPlayBoard());
             computerHistory.addToHistory(computerBoard.getPlayBoard(), ((Computer) computer).getNotTileHistory());
 
+            askForHint();
 
             System.out.println("Enter row number: ");
             int row = reader.nextInt();
@@ -117,7 +124,9 @@ public class PlayerVsComputer {
             int col = reader.nextInt();
 
 
+
             player.shoot(playerBoard.getPlayBoard(), row, col);
+            hint.moveExecuted(playerBoard.getPlayBoard()[row][col].getTileState() , row, col);
             computer.shootAI(computerBoard.getPlayBoard());
 
             shots++;
@@ -163,5 +172,17 @@ public class PlayerVsComputer {
         return false;
     }
 
+    /**
+     * Ask user if he want to step back.
+     *
+     * @return true if he wants.
+     */
+    private void askForHint() {
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Want hint ? (Y/N)");
+        if (reader.next().charAt(0) == 'Y') {
+            System.out.println("Row: " + hint.getHintRow() + "  Col: " + hint.getHintCol());
+        }
+    }
 
 }

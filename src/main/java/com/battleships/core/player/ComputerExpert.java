@@ -16,18 +16,7 @@ public class ComputerExpert implements AILevel {
     private int[][] probabilityBoard;
 
     public ComputerExpert() {
-        this.probabilityBoard = new int[][]{
-                {8, 9, 10, 11, 12, 12, 11, 10, 9, 8},
-                {9, 10, 11, 12, 13, 13, 12, 11, 10, 9},
-                {10, 11, 12, 13, 14, 14, 13, 12, 11, 10},
-                {11, 12, 13, 14, 15, 15, 14, 13, 12, 11},
-                {12, 13, 14, 15, 16, 16, 15, 14, 13, 12},
-                {12, 13, 14, 15, 16, 16, 15, 14, 13, 12},
-                {11, 12, 13, 14, 15, 15, 14, 13, 12, 11},
-                {10, 11, 12, 13, 14, 14, 13, 12, 11, 10},
-                {9, 10, 11, 12, 13, 13, 12, 11, 10, 9},
-                {8, 9, 10, 11, 12, 12, 11, 10, 9, 8},
-        };
+        this.probabilityBoard = Util.createProbabilityBoard();
     }
 
 
@@ -104,7 +93,7 @@ public class ComputerExpert implements AILevel {
      * @param row where shoot take place.
      * @param col  where shoot take place.
      */
-    private void shipMissRecalculate(int[][] board, int row, int col) {
+    public void shipMissRecalculate(int[][] board, int row, int col) {
         board[row][col] = 0;
 
         //horizontal
@@ -132,7 +121,7 @@ public class ComputerExpert implements AILevel {
      * @param row where shoot take place.
      * @param col  where shoot take place.
      */
-    private void shipHitRecalculate(int[][] board, int row, int col) {
+    public void shipHitRecalculate(int[][] board, int row, int col) {
         board[row][col] = 0;
 
         //horizontal
