@@ -68,10 +68,6 @@ public class GameController {
             }
         }
 
-        System.out.println(shipsListCount);
-        System.out.println(shipsTileCount);
-
-
         if (shipsTileCount == shipsListCount) {
             gameState = GameState.SETTEDUP;
         } else {

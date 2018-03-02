@@ -1,13 +1,12 @@
-package com.battleships.core.game;
+package com.battleships.consoleui;
 
 import com.battleships.consoleui.ConsoleUI;
 import com.battleships.core.board.Board;
+import com.battleships.core.game.GameController;
+import com.battleships.core.game.GameState;
 import com.battleships.core.history.AIExpertHistory;
 import com.battleships.core.history.SinglePlayerHistory;
-import com.battleships.core.player.Computer;
-import com.battleships.core.player.ComputerExpert;
-import com.battleships.core.player.Human;
-import com.battleships.core.player.Player;
+import com.battleships.core.player.*;
 
 import java.util.Scanner;
 
@@ -26,6 +25,7 @@ public class PlayerVsComputer {
     private ConsoleUI consoleUI;
     private Player player;
     private Player computer;
+    private int computerLevel;
 
 
     public PlayerVsComputer() throws InterruptedException {
@@ -41,16 +41,40 @@ public class PlayerVsComputer {
         computerBoard.setUpBoardRandom(computerControler);
 
         playerHistory = new SinglePlayerHistory();
-
-        //TODO: Choose AIlevel.
-
         computerHistory = new AIExpertHistory();
+
 
         player = new Human();
         computer = new Computer();
-        ((Computer) computer).setAiState(new ComputerExpert());
 
+        System.out.println("Please choose difficulty of computer:");
+        System.out.println("1. Begginer (undo)");
+        System.out.println("2. Medium (no undo)");
+        System.out.println("3. Hard (no undo)");
+        System.out.println("4. Expert (undo)");
+        Scanner reader = new Scanner(System.in);
+        computerLevel = reader.nextInt();
+        switch (computerLevel) {
+            case 1:
+                ((Computer) computer).setAiState(new ComputerBegginer());
+                break;
 
+            case 2:
+                ((Computer) computer).setAiState(new ComputerMedium());
+                break;
+
+            case 3:
+                ((Computer) computer).setAiState(new ComputerHard());
+                break;
+
+            case 4:
+                ((Computer) computer).setAiState(new ComputerExpert());
+                break;
+
+            default:
+                ((Computer) computer).setAiState(new ComputerExpert());
+                break;
+        }
 
         if (computerControler.getGameState() == GameState.SETTEDUP && playerControler.getGameState() == GameState.SETTEDUP) {
             startGame();
@@ -60,6 +84,8 @@ public class PlayerVsComputer {
     }
 
 
+
+    //TODO: fix computer history.
     /**
      * Start playing a game.
      */
@@ -77,7 +103,7 @@ public class PlayerVsComputer {
             System.out.println("-------COMPUTER------");
             consoleUI.printPlayBoard(computerBoard);
 
-            if (playerHistory.getHistorySize() != 0 && shots != 0) {
+            if (playerHistory.getHistorySize() != 0 && shots != 0 && (computerLevel == 4 || computerLevel == 1)) {
                 while (askForUndo()) {
                     consoleUI.printPlayBoard(playerBoard);
                     consoleUI.printPlayBoard(computerBoard);
