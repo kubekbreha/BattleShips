@@ -132,7 +132,7 @@ public class PlayerVsComputer {
             shots++;
 
             playerControler.isGameVon(playerBoard.getShips(), playerBoard);
-            computerControler.isGameVon(playerBoard.getShips(), playerBoard);
+            computerControler.isGameVon(computerBoard.getShips(), computerBoard);
         }
         reader.close();
         if (computerControler.getGameState() == GameState.WON) {
@@ -140,7 +140,6 @@ public class PlayerVsComputer {
         } else if (playerControler.getGameState() == GameState.WON) {
             System.out.println("Congratulations you won with only " + shots + " shots");
         }
-
     }
 
 

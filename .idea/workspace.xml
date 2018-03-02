@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34129397-ade4-478d-847f-d535cbf3acd3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/battle_ships.xml" beforeDir="false" afterPath="$PROJECT_DIR$/res/battle_ships.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myMlPerceptron.nnet" beforeDir="false" afterPath="$PROJECT_DIR$/myMlPerceptron.nnet" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/battleships/BattleShips.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/battleships/BattleShips.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/battleships/consoleui/ConsoleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/battleships/consoleui/ConsoleUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/battleships/core/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/battleships/core/board/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/battleships/core/player/neural/DataSetForPerceptron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/battleships/core/player/neural/DataSetForPerceptron.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/battleships/consoleui/PlayerVsComputer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/battleships/consoleui/PlayerVsComputer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/battleships/consoleui/PlayerVsPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/battleships/consoleui/PlayerVsPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/battleships/core/player/neural/Perceptron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/battleships/core/player/neural/Perceptron.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/battleships/BattleShips.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/battleships/BattleShips.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/battleships/core/player/neural/DataSetForPerceptron.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/battleships/core/player/neural/DataSetForPerceptron.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/battleships/core/player/neural/Perceptron.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/battleships/core/player/neural/Perceptron.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/res/train_data.csv" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,55 +18,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BattleShips.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BattleShips.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/battleships/BattleShips.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="49" lean-forward="true" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+            <state relative-caret-position="357">
+              <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/battleships/core/board/Board.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-551">
-              <caret line="145" column="48" selection-start-line="145" selection-start-column="48" selection-end-line="145" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="train_data.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/train_data.csv">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="DataSetForPerceptron.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/battleships/core/player/neural/DataSetForPerceptron.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Perceptron.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/battleships/core/player/neural/Perceptron.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-91">
-              <caret line="31" column="56" lean-forward="true" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConsoleUI.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/battleships/consoleui/ConsoleUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -117,7 +68,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/battleships/core/board/Board.java" />
         <option value="$PROJECT_DIR$/src/com/battleships/neural/NeuronLayer.java" />
         <option value="$PROJECT_DIR$/src/com/battleships/neural/NeuralNetSimple.java" />
         <option value="$PROJECT_DIR$/src/com/battleships/neural/Network.java" />
@@ -161,13 +111,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/battleships/core/board/Util.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/battleships/core/player/ComputerExpert.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/battleships/core/board/Hint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/battleships/consoleui/PlayerVsComputer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/battleships/core/player/neural/Perceptron.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/battleships/core/board/Board.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/battleships/consoleui/ConsoleUI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/battleships/BattleShips.java" />
         <option value="$PROJECT_DIR$/res/train_data.csv" />
         <option value="$PROJECT_DIR$/src/main/java/com/battleships/core/player/neural/DataSetForPerceptron.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/battleships/core/player/neural/Perceptron.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/battleships/consoleui/PlayerVsComputer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/battleships/consoleui/PlayerVsPlayer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/battleships/BattleShips.java" />
       </list>
     </option>
   </component>
@@ -414,12 +365,12 @@
       <workItem from="1519901868403" duration="5124000" />
       <workItem from="1519910170510" duration="200000" />
       <workItem from="1519917572701" duration="15062000" />
-      <workItem from="1519967220693" duration="14254000" />
+      <workItem from="1519967220693" duration="16890000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171895000" />
+    <option name="totallyTimeSpent" value="174531000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -443,11 +394,11 @@
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.098824784" side_tool="true" weight="0.06543075" />
       <window_info anchor="right" id="Maven Projects" order="0" />
       <window_info anchor="bottom" id="Version Control" order="2" sideWeight="0.49731904" weight="0.32913166" />
-      <window_info active="true" anchor="bottom" x="55" y="453" width="1124" height="559" id="Run" order="6" sideWeight="0.9011752" visible="true" weight="0.15376227" />
+      <window_info anchor="bottom" x="55" y="453" width="1124" height="559" id="Run" order="6" sideWeight="0.9011752" visible="true" weight="0.05016358" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.32061067" />
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.21741453" />
+      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.21741453" />
       <window_info anchor="right" id="Database" order="2" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32824427" />
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
@@ -701,20 +652,24 @@
     <entry file="file://$PROJECT_DIR$/res/battle_ships.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/battleships/consoleui/PlayerVsPlayer.java">
+    <entry file="file://$PROJECT_DIR$/res/train_data.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="1360">
+          <caret line="80" column="44" lean-forward="true" selection-start-line="80" selection-start-column="44" selection-end-line="80" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/battleships/consoleui/PlayerVsComputer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/battleships/core/player/neural/Perceptron.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1439">
-          <caret line="105" column="28" lean-forward="true" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1173">
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/battleships/core/player/neural/DataSetForPerceptron.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -725,17 +680,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/battleships/core/player/neural/Perceptron.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/battleships/consoleui/PlayerVsComputer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-91">
-          <caret line="31" column="56" lean-forward="true" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
+        <state relative-caret-position="781">
+          <caret line="187" lean-forward="true" selection-start-line="187" selection-end-line="187" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/battleships/BattleShips.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/battleships/consoleui/PlayerVsPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="49" lean-forward="true" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+        <state relative-caret-position="1070">
+          <caret line="86" column="9" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -744,18 +702,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/battleships/core/board/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-551">
-          <caret line="145" column="48" selection-start-line="145" selection-start-column="48" selection-end-line="145" selection-end-column="48" />
+        <state relative-caret-position="1598">
+          <caret line="114" column="43" lean-forward="true" selection-start-line="114" selection-start-column="43" selection-end-line="114" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/train_data.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/battleships/core/player/neural/DataSetForPerceptron.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/battleships/BattleShips.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+        <state relative-caret-position="357">
+          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
