@@ -17,14 +17,14 @@ public class DataSetForPerceptron {
     private DataSet trainingSet;
 
     public DataSetForPerceptron() {
-        trainingSet = new DataSet(101, 1);
+        trainingSet = new DataSet(11, 1);
     }
 
     public void addDataToCsv(List tableNumbers) {
         PrintWriter pw = null;
 
         try {
-            pw = new PrintWriter(new FileWriter("train_data.csv", true));
+            pw = new PrintWriter(new FileWriter("res/train_data.csv", true));
         } catch (FileNotFoundException e) {
             System.out.println("CSV file not found");
         } catch (IOException e) {
@@ -35,7 +35,7 @@ public class DataSetForPerceptron {
 
         System.out.println(tableNumbers.size());
         for (int numberInList = 0; numberInList < tableNumbers.size(); numberInList++) {
-            if (numberInList % 102 == 0) {
+            if (numberInList % 11 == 0) {
                 sb.append('\n');
             }
             sb.append(tableNumbers.get(numberInList));
@@ -52,16 +52,16 @@ public class DataSetForPerceptron {
     public DataSet readFromCsv() throws FileNotFoundException {
         int counter = 0;
         String value;
-        double[] boardData = new double[101];
+        double[] boardData = new double[11];
         double[] expectedData = new double[1];
 
-        Scanner scanner = new Scanner(new File("train_data.csv"));
+        Scanner scanner = new Scanner(new File("res/train_data.csv"));
         scanner.useDelimiter(",");
         while (scanner.hasNext()) {
             value = scanner.next();
             boardData[counter] = Double.parseDouble(value);
             counter++;
-            if (counter % 101 == 0) {
+            if (counter % 11 == 0) {
                 value = scanner.next();
                 expectedData[0] = Double.parseDouble(value);
                 trainingSet.addRow(new DataSetRow(boardData, expectedData));

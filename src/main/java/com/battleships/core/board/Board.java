@@ -21,8 +21,9 @@ public class Board {
     /**
      * Basic constructor where you set size of playTable.
      * Fill board with water tiles.
+     * <p>
+     * 8* @param cols
      *
-     8* @param cols
      * @param rows
      */
     public Board(int cols, int rows) {
@@ -102,68 +103,50 @@ public class Board {
      * @return double[]
      */
     public List getDaoubleArrayOfBoardWithShips() {
-        int counter = 0;
-        int oneFieldNumber = 20;
+        double value = 0;
+        boolean shipPresent = false;
 
-        List<Double> listOfOne = new ArrayList<>();
+        List<Double> valuesList = new ArrayList<>();
 
-        List<Double> listBoardValues = new ArrayList<>();
         for (int i = 0; i < getBoardRows(); i++) {
             for (int j = 0; j < getBoardCols(); j++) {
-                getNumberFromBoard(i, j, listBoardValues);
-            }
-        }
+                switch (playBoard[i][j].getTileState()) {
+                    case SHIP:
+                        shipPresent = true;
+                        value = 2.0;
+                        break;
 
-        for (int lists = 0; lists < 100; lists++) {
-            for (int i = 0; i < getBoardRows(); i++) {
-                for (int j = 0; j < getBoardCols(); j++) {
-                    getNumberFromBoard(i, j, listBoardValues);
+                    case HITTED:
+                        value = 1.0;
+                        break;
+
+                    case WATER:
+                        value = 0.0;
+                        break;
+
+                    case MISSED:
+                        value = 1.0;
+                        break;
+
+                    default:
+                        value = 0.0;
+                        break;
                 }
+                valuesList.add(value);
             }
-            oneFieldNumber++;
-            listOfOne.add((double) oneFieldNumber);
-
-
-            if (listBoardValues.get(counter) == 0) {
-                //6 means ship is not on field
-                listOfOne.add(6.0);
-            } else if (listBoardValues.get(counter) == 3) {
-                //8 ship is on field
-                listOfOne.add(8.0);
+            if (shipPresent) {
+                valuesList.add(1.0);
+            }else {
+                valuesList.add(0.0);
             }
-            counter++;
+            shipPresent = false;
+            for(int x = 0; x<valuesList.size(); x++){
+                System.out.print(valuesList.get(x)+" ");
+            }
+            System.out.print(valuesList.size());
+            System.out.println();
         }
-
-        return listOfOne;
-    }
-
-    /**
-     * Read number from tile in board.
-     *
-     * @param row of number in board.
-     * @param col of number in board.
-     * @param listBoardValues where number will be placed.
-     */
-    private void getNumberFromBoard(int row, int col, List listBoardValues) {
-        double value = 0;
-        switch (getPlayBoard()[row][col].getTileState()) {
-            case SHIP:
-                value = 2;
-                break;
-
-            case HITTED:
-                value = 1;
-                break;
-
-            case WATER:
-                value = 0;
-                break;
-
-            case MISSED:
-                value = 1;
-                break;
-        }
-        listBoardValues.add(value);
+        return valuesList;
     }
 
 
@@ -194,7 +177,7 @@ public class Board {
             ships.add(ship);
             shipNumber++;
         }
-        gameController.isGameSetUp(shipSize,this);
+        gameController.isGameSetUp(shipSize, this);
     }
 
 
@@ -224,6 +207,6 @@ public class Board {
             ships.add(ship);
             shipNumber++;
         }
-        gameController.isGameSetUp(shipSize,this);
+        gameController.isGameSetUp(shipSize, this);
     }
 }

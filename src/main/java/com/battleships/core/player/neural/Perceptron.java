@@ -27,7 +27,7 @@ public class Perceptron implements LearningEventListener {
         DataSet trainingSet = dataSet;
 
         // create multi layer perceptron
-        MultiLayerPerceptron myMlPerceptron = new MultiLayerPerceptron(TransferFunctionType.SIGMOID, 101, 50, 48, 30, 15, 1);
+        MultiLayerPerceptron myMlPerceptron = new MultiLayerPerceptron(TransferFunctionType.SIGMOID, 11, 8, 6, 4, 2, 1);
 
         // enable batch if using MomentumBackpropagation
         if (myMlPerceptron.getLearningRule() instanceof MomentumBackpropagation)
