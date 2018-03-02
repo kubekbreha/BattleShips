@@ -23,4 +23,11 @@ public class Computer extends Player {
         aiState.play(board);
     }
 
+    public int[][] getNotTileHistory(){
+        return aiState.getHistory();
+    }
+
+    public void setNotTileHistory(int[][] history){
+        aiState.setHistory(history);
+    }
 }

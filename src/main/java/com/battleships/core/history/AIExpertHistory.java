@@ -1,5 +1,7 @@
 package com.battleships.core.history;
 
+import com.battleships.core.board.Tile;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,19 +12,28 @@ public class AIExpertHistory {
     /**
      * HashMap for in-game history
      */
-    private List<int[][]> historyList;
+    private List<Tile[][]> historyListTile;
+    private List<int[][]> historyListProbability;
 
 
-    public AIExpertHistory(){
-        this.historyList = new ArrayList<>();
+    public AIExpertHistory() {
+        this.historyListTile = new ArrayList<>();
+        this.historyListProbability = new ArrayList<>();
     }
 
 
     /**
      * Get last item in array.
      */
-    public int[][] getLast(){
-        return historyList.get(historyList.size()-1);
+    public Tile[][] getLastTile(){
+        return historyListTile.get(historyListTile.size()-1);
+    }
+
+    /**
+     * Get last item in array.
+     */
+    public int[][] getLastProbability(){
+        return historyListProbability.get(historyListProbability.size()-1);
     }
 
 
@@ -30,20 +41,28 @@ public class AIExpertHistory {
      * Remove last item in array.
      */
     public void removeLast(){
-        historyList.remove(historyList.size()-1);
+        historyListProbability.remove(historyListProbability.size()-1);
+        historyListTile.remove(historyListTile.size()-1);
     }
 
 
     /**
      * Add copy of 2D array to history.
      *
-     * @param board which will be added.
+     * @param boardTile which will be added.
      */
-    public void addToHistory(int[][] board){
-        int[][] retBoard = new int[board.length][];
-        for(int i = 0; i < board.length; i++)
-            retBoard[i] = board[i].clone();
-        historyList.add(retBoard);
+    public void addToHistory(Tile[][] boardTile, int[][] boardProbability){
+        Tile[][] retBoardTile = new Tile[boardTile.length][];
+        for(int i = 0; i < boardTile.length; i++) {
+            retBoardTile[i] = boardTile[i].clone();
+        }
+
+        int[][] retBoardProbability = new int[boardProbability.length][];
+        for(int i = 0; i < boardTile.length; i++) {
+            retBoardProbability[i] = boardProbability[i].clone();
+        }
+        historyListTile.add(retBoardTile);
+        historyListProbability.add(retBoardProbability);
     }
 
     /**
@@ -52,7 +71,7 @@ public class AIExpertHistory {
      * @return int of history size.
      */
     public int getHistorySize() {
-        return historyList.size();
+        return historyListTile.size();
     }
 
 }

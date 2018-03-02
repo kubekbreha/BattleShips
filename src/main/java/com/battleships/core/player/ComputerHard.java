@@ -202,6 +202,29 @@ public class ComputerHard implements AILevel {
             newLoop = true;
 
         }
+
+
+    /**
+     * Not needed.
+     *
+     * @return empty 2D int board.
+     */
+    @Override
+    public int[][] getHistory() {
+        return new int[0][];
+    }
+
+
+    /**
+     * Not needed.
+     *
+     * @return empty 2D int board.
+     */
+    @Override
+    public void setHistory(int[][] history) {
+
+    }
+
     /**
      * Basic shoot to field. If position is 1 make cross set to true.
      *

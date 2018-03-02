@@ -1,6 +1,5 @@
 package com.battleships.consoleui;
 
-import com.battleships.consoleui.ConsoleUI;
 import com.battleships.core.board.Board;
 import com.battleships.core.game.GameController;
 import com.battleships.core.game.GameState;
@@ -28,7 +27,7 @@ public class PlayerVsComputer {
     private int computerLevel;
 
 
-    public PlayerVsComputer() throws InterruptedException {
+    public PlayerVsComputer() {
         consoleUI = new ConsoleUI();
 
         playerBoard = new Board(10, 10);
@@ -84,19 +83,16 @@ public class PlayerVsComputer {
     }
 
 
-
     //TODO: fix computer history.
+
     /**
      * Start playing a game.
      */
-    private void startGame() throws InterruptedException {
+    private void startGame() {
         Scanner reader = new Scanner(System.in);
 
         int shots = 0;
         while (computerControler.getGameState() != GameState.WON || playerControler.getGameState() != GameState.WON) {
-            playerHistory.addToHistory(playerBoard.getPlayBoard());
-            //computerHistory.addToHistory(computerBoard.getPlayBoard());
-
             System.out.println("-------ROUND " + shots + "-------");
             System.out.println("-------PLAYER--------");
             consoleUI.printPlayBoard(playerBoard);
@@ -105,10 +101,15 @@ public class PlayerVsComputer {
 
             if (playerHistory.getHistorySize() != 0 && shots != 0 && (computerLevel == 4 || computerLevel == 1)) {
                 while (askForUndo()) {
-                    consoleUI.printPlayBoard(playerBoard);
-                    consoleUI.printPlayBoard(computerBoard);
+                    shots--;
+                    if(shots==0) break;
                 }
             }
+
+
+            playerHistory.addToHistory(playerBoard.getPlayBoard());
+            computerHistory.addToHistory(computerBoard.getPlayBoard(), ((Computer) computer).getNotTileHistory());
+
 
             System.out.println("Enter row number: ");
             int row = reader.nextInt();
@@ -147,11 +148,16 @@ public class PlayerVsComputer {
             playerBoard.setPlayBoard(playerHistory.getLast());
             playerHistory.removeLast();
 
-            computerBoard.setPlayBoard(playerHistory.getLast());
-            playerHistory.removeLast();
+            computerBoard.setPlayBoard(computerHistory.getLastTile());
+            ((Computer) computer).setNotTileHistory(computerHistory.getLastProbability());
+            computerHistory.removeLast();
 
             System.out.println("Player history size : " + playerHistory.getHistorySize());
             System.out.println("Computer history size : " + computerHistory.getHistorySize());
+
+            consoleUI.printPlayBoard(playerBoard);
+            consoleUI.printPlayBoard(computerBoard);
+
             return true;
         }
         return false;

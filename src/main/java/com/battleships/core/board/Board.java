@@ -22,7 +22,7 @@ public class Board {
      * Basic constructor where you set size of playTable.
      * Fill board with water tiles.
      *
-     * @param cols
+     8* @param cols
      * @param rows
      */
     public Board(int cols, int rows) {

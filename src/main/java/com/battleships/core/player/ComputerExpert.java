@@ -31,6 +31,11 @@ public class ComputerExpert implements AILevel {
     }
 
 
+    /**
+     * Basic play logic.
+     *
+     * @param board on which play.
+     */
     @Override
     public void play(Tile[][] board) {
         findBiggest(probabilityBoard);
@@ -40,10 +45,38 @@ public class ComputerExpert implements AILevel {
         } else if (board[rowToShoot][colToShoot].getTileState() == TileState.HITTED) {
             shipHitRecalculate(probabilityBoard, rowToShoot, colToShoot);
         }
+
         //just test if calculations are correct
         //printProbabilityTable();
     }
 
+    @Override
+    public int[][] getHistory() {
+        return probabilityBoard;
+    }
+
+    @Override
+    public void setHistory(int[][] history) {
+        setProbabilityBoard(history);
+    }
+
+    /**
+     * Get actual probability board.
+     *
+     * @return int[][]
+     */
+    public int[][] getProbabilityBoard() {
+        return probabilityBoard;
+    }
+
+    /**
+     * Set probability board.
+     *
+     * @param probabilityBoard which will be set.
+     */
+    public void setProbabilityBoard(int[][] probabilityBoard) {
+        this.probabilityBoard = probabilityBoard;
+    }
 
     /**
      * Find biggest number in probability table and set its row and col.

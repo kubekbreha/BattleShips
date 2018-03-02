@@ -7,4 +7,6 @@ import com.battleships.core.board.Tile;
  */
 interface AILevel {
     void play(Tile[][] board);
+    int[][] getHistory();
+    void setHistory(int[][] history);
 }

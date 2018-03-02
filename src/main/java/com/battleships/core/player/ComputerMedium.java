@@ -97,6 +97,25 @@ public class ComputerMedium implements AILevel {
     }
 
 
+    /**
+     * Not needed.
+     *
+     * @return empty 2D int board.
+     */
+    @Override
+    public int[][] getHistory() {
+        return new int[0][];
+    }
+
+    /**
+     * Not needed.
+     *
+     * @return empty 2D int board.
+     */
+    @Override
+    public void setHistory(int[][] history) {
+
+    }
 
 
     /**
