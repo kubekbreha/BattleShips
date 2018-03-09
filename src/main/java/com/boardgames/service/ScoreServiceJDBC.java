@@ -4,7 +4,8 @@ import com.boardgames.entity.Score;
 
 import java.sql.*;
 import java.sql.Date;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /*
     CREATE TABLE score (
@@ -20,6 +21,7 @@ import java.util.*;
 //SELECT player, game, points, playedon FROM score WHERE game = 'mines' ORDER BY points DESC LIMIT 10;
 
 public class ScoreServiceJDBC implements ScoreService {
+
     public static final String URL = "jdbc:postgresql://localhost/gamestudio";
     public static final String USER = "postgres";
     public static final String PASSWORD = "postgres";
