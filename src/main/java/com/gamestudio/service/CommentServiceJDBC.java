@@ -28,7 +28,7 @@ public class CommentServiceJDBC implements CommentService {
             "INSERT INTO comment (player, game, comment, commentedon) VALUES (?, ?, ?, ?)";
 
     public static final String SELECT_COMMENT =
-            "SELECT player, game, comment, commentedon FROM score ORDER BY points DESC LIMIT 10;";
+            "SELECT player, game, comment, commentedon FROM score WHERE game = ? ORDER BY points DESC LIMIT 10;";
 
     @Override
     public void addComment(Comment comment) throws CommentException {
@@ -42,7 +42,7 @@ public class CommentServiceJDBC implements CommentService {
                 ps.executeUpdate();
             }
         } catch (SQLException e) {
-            throw new ScoreException("Error saving  comment", e);
+            throw new CommentException("Error saving comment", e);
         }
     }
 
@@ -65,7 +65,7 @@ public class CommentServiceJDBC implements CommentService {
                 }
             }
         } catch (SQLException e) {
-            throw new ScoreException("Error loading comment", e);
+            throw new CommentException("Error loading comment", e);
         }
         return comments;
     }

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="34129397-ade4-478d-847f-d535cbf3acd3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/service/CommentServiceJDBC.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/service/CommentServiceJDBC.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/service/RatingServiceJDBC.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/service/RatingServiceJDBC.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -15,11 +16,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RatingServiceJDBC.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RatingServiceJDBC.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/service/RatingServiceJDBC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="10" selection-end-column="6" />
+            <state relative-caret-position="-534">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1520808100503" expanded="true" signature="764:834" ph="INSERT INTO rating... " />
+                <marker date="1520808100503" expanded="true" signature="898:975" ph="SELECT playe... rating" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rating.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Rating.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -28,8 +43,8 @@
       <file leaf-file-name="ScoreServiceJDBC.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/service/ScoreServiceJDBC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="642">
-              <caret line="72" column="22" lean-forward="true" selection-start-line="53" selection-start-column="8" selection-end-line="72" selection-end-column="22" />
+            <state relative-caret-position="-6">
+              <caret line="31" column="58" lean-forward="false" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1520802730203" expanded="true" signature="841:911" ph="INSERT INTO score... " />
@@ -40,25 +55,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommentServiceJDBC.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CommentServiceJDBC.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/service/CommentServiceJDBC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="30" column="80" lean-forward="false" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="80" />
               <folding>
-                <marker date="1520805288288" expanded="true" signature="862:938" ph="INSERT INTO score... " />
-                <marker date="1520805288288" expanded="true" signature="1003:1085" ph="SELECT playe... score" />
+                <element signature="imports" expanded="true" />
+                <marker date="1520807917796" expanded="true" signature="862:938" ph="INSERT INTO score... " />
+                <marker date="1520807917796" expanded="true" signature="1003:1100" ph="SELECT playe... score" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Comment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Comment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="28" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -107,7 +113,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/battleships/core/player/AIState.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/battleships/core/player/probability.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/battleships/core/board/Tile.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/battleships/core/player/AI/AILevel.java" />
@@ -156,8 +161,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/boardgames/service/ScoreServiceJDBC.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/service/ScoreServiceJDBC.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/service/RatingServiceJDBC.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Rating.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/service/CommentServiceJDBC.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/service/RatingServiceJDBC.java" />
       </list>
     </option>
   </component>
@@ -452,12 +458,12 @@
       <workItem from="1520774794953" duration="1901000" />
       <workItem from="1520795507734" duration="1602000" />
       <workItem from="1520801750895" duration="270000" />
-      <workItem from="1520802062474" duration="2580000" />
+      <workItem from="1520802062474" duration="3895000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190858000" />
+    <option name="totallyTimeSpent" value="192173000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -773,26 +779,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Rating.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Score.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/service/RatingServiceJDBC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="10" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -807,16 +797,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Comment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
+        <state relative-caret-position="525">
           <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Rating.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/service/ScoreServiceJDBC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="72" column="22" lean-forward="true" selection-start-line="53" selection-start-column="8" selection-end-line="72" selection-end-column="22" />
+        <state relative-caret-position="-6">
+          <caret line="31" column="58" lean-forward="false" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1520802730203" expanded="true" signature="841:911" ph="INSERT INTO score... " />
@@ -828,11 +826,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/service/CommentServiceJDBC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="30" column="80" lean-forward="false" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="80" />
           <folding>
-            <marker date="1520805288288" expanded="true" signature="862:938" ph="INSERT INTO score... " />
-            <marker date="1520805288288" expanded="true" signature="1003:1085" ph="SELECT playe... score" />
+            <element signature="imports" expanded="true" />
+            <marker date="1520807917796" expanded="true" signature="862:938" ph="INSERT INTO score... " />
+            <marker date="1520807917796" expanded="true" signature="1003:1100" ph="SELECT playe... score" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/service/RatingServiceJDBC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-534">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1520808100503" expanded="true" signature="764:834" ph="INSERT INTO rating... " />
+            <marker date="1520808100503" expanded="true" signature="898:975" ph="SELECT playe... rating" />
           </folding>
         </state>
       </provider>
