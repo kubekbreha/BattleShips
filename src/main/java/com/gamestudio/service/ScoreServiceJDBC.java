@@ -17,7 +17,6 @@ import java.util.List;
      */
 
 //INSERT INTO score (player, game, points, playedon) VALUES ('jaro', 'mines', 200, '2017-03-02 14:30')
-
 //SELECT player, game, points, playedon FROM score WHERE game = 'mines' ORDER BY points DESC LIMIT 10;
 
 public class ScoreServiceJDBC implements ScoreService {
