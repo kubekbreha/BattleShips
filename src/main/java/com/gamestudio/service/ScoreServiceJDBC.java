@@ -73,11 +73,4 @@ public class ScoreServiceJDBC implements ScoreService {
         }
         return scores;
     }
-
-//    public static void main(String[] args) throws Exception {
-//        Score score = new Score("mines", "juro", 55, new java.util.Date());
-//        ScoreService scoreService = new ScoreServiceJDBC();
-//        //scoreService.addScore(score);
-//        System.out.println(scoreService.getBestScores("mines"));
-//    }
 }
