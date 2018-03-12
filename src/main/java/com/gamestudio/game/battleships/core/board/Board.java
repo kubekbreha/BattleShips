@@ -13,6 +13,8 @@ import java.util.Scanner;
  */
 public class Board {
 
+    public static final String GAME_NAME = "battleships-brehuv";
+
     private Tile[][] playBoard;
     private int boardRows;
     private int boardCols;

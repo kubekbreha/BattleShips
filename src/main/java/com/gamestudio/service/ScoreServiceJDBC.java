@@ -16,9 +16,6 @@ import java.util.List;
     );
      */
 
-//INSERT INTO score (player, game, points, playedon) VALUES ('jaro', 'mines', 200, '2017-03-02 14:30')
-//SELECT player, game, points, playedon FROM score WHERE game = 'mines' ORDER BY points DESC LIMIT 10;
-
 public class ScoreServiceJDBC implements ScoreService {
 
     public static final String URL = "jdbc:mysql://localhost/gamestudio";
@@ -26,10 +23,10 @@ public class ScoreServiceJDBC implements ScoreService {
     public static final String PASSWORD = "Hackathon16";
 
     public static final String INSERT_SCORE =
-    "INSERT INTO score (player, game, points, playedon) VALUES (?, ?, ?, ?)";
+    "INSERT INTO score ( game, player, points, playedon) VALUES (?, ?, ?, ?)";
 
     public static final String SELECT_SCORE =
-        "SELECT player, game, points, playedon FROM score WHERE game = ? ORDER BY points DESC LIMIT 10;";
+        "SELECT game, player, points, playedon FROM score WHERE game = ? ORDER BY points DESC LIMIT 10;";
 
 
     @Override

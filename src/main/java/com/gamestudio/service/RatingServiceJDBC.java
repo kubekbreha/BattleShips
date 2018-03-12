@@ -6,15 +6,12 @@ import java.sql.*;
 
 /*
     CREATE TABLE rating (
-        player VARCHAR(64) NOT NULL,
         game VARCHAR(64) NOT NULL,
+        player VARCHAR(64) NOT NULL,
         rating INTEGER NOT NULL,
         ratedon TIMESTAMP NOT NULL
     );
      */
-
-//INSERT INTO rating (player, game, rating, ratedon) VALUES ('kubo' ,'battleships', 5, '2017-03-02 14:30')
-//SELECT player, game, rating, ratedon FROM rating ORDER BY ratedon DESC LIMIT 10;
 
 public class RatingServiceJDBC implements RatingService {
 
@@ -23,10 +20,10 @@ public class RatingServiceJDBC implements RatingService {
     public static final String PASSWORD = "Hackathon16";
 
     public static final String INSERT_RATING =
-            "INSERT INTO rating (player, game, rating, ratedon) VALUES (?, ?, ?, ?)";
+            "INSERT INTO rating ( game, player, rating, ratedon) VALUES (?, ?, ?, ?)";
 
     public static final String SELECT_RATING =
-            "SELECT player, game, rating, ratedon FROM rating WHERE game = ? DESC LIMIT 10;";
+            "SELECT  game, player, rating, ratedon FROM rating WHERE game = ? DESC LIMIT 10;";
 
     @Override
     public void setRating(Rating rating) throws RatingException {
