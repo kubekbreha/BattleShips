@@ -3,14 +3,14 @@ package com.gamestudio.entity;
 import java.util.Date;
 
 public class Comment {
-    private String player;
     private String game;
+    private String player;
     private String comment;
     private Date commentedOn;
 
-    public Comment(String player, String game, String comment, Date commentedOn) {
-        this.player = player;
+    public Comment(String game, String player, String comment, Date commentedOn) {
         this.game = game;
+        this.player = player;
         this.comment = comment;
         this.commentedOn = commentedOn;
     }
@@ -50,8 +50,8 @@ public class Comment {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Comment{");
-        sb.append("player='").append(player).append('\'');
-        sb.append(", game='").append(game).append('\'');
+        sb.append("game='").append(game).append('\'');
+        sb.append(", player='").append(player).append('\'');
         sb.append(", comment='").append(comment).append('\'');
         sb.append(", commentedOn=").append(commentedOn);
         sb.append('}');

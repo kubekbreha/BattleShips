@@ -26,7 +26,7 @@ public class CommentServiceJDBC implements CommentService {
             "INSERT INTO comment ( game, player, comment, commentedon) VALUES (?, ?, ?, ?)";
 
     public static final String SELECT_COMMENT =
-            "SELECT game, player, comment, commentedon FROM score WHERE game = ? ORDER BY points DESC LIMIT 10;";
+            "SELECT game, player, comment, commentedon FROM comment WHERE game = ?;";
 
     @Override
     public void addComment(Comment comment) throws CommentException {
@@ -67,4 +67,6 @@ public class CommentServiceJDBC implements CommentService {
         }
         return comments;
     }
+
+
 }
