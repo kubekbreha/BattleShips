@@ -16,6 +16,7 @@ public class GameMenu {
         System.out.println("1. Player vs Computer");
         System.out.println("2. Player vs Player");
         System.out.println("3. Show best scores");
+        System.out.println("4. Show comments");
 
         Scanner reader = new Scanner(System.in);
         int pick = reader.nextInt();
@@ -30,6 +31,11 @@ public class GameMenu {
 
             case 3:
                 Util.printScore();
+                showMenu();
+                break;
+
+            case 4:
+                Util.printComments();
                 showMenu();
                 break;
         }

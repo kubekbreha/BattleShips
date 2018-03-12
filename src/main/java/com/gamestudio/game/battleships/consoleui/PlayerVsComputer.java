@@ -4,6 +4,7 @@ import com.gamestudio.entity.Comment;
 import com.gamestudio.entity.Score;
 import com.gamestudio.game.battleships.core.board.Board;
 import com.gamestudio.game.battleships.core.board.Hint;
+import com.gamestudio.game.battleships.core.board.TileState;
 import com.gamestudio.game.battleships.core.board.Util;
 import com.gamestudio.game.battleships.core.game.GameController;
 import com.gamestudio.game.battleships.core.game.GameState;
@@ -22,6 +23,7 @@ import java.util.regex.Pattern;
 import static com.gamestudio.game.battleships.core.board.Board.GAME_NAME;
 
 //TODO: remake this to regex input.
+
 /**
  * Created by Kubo Brehuv with <3 (1.3.2018)
  */
@@ -164,23 +166,18 @@ public class PlayerVsComputer implements GameMode {
 
             askForHint();
 
+            int coor[] = askShootCoordinations(reader, playerBoard);
 
-            System.out.println("Enter row number: ");
-            int row = reader.nextInt();
-            System.out.println("Enter col number: ");
-            int col = reader.nextInt();
-
-
-            player.shoot(playerBoard.getPlayBoard(), row, col);
-            hint.moveExecuted(playerBoard.getPlayBoard()[row][col].getTileState(), row, col);
+            player.shoot(playerBoard.getPlayBoard(), coor[0], coor[1]);
+            hint.moveExecuted(playerBoard.getPlayBoard()[coor[0]][coor[1]].getTileState(), coor[0], coor[1]);
             computer.shootAI(computerBoard.getPlayBoard());
 
             shots++;
 
-            if(playerControler.isGameWon(playerBoard.getShips(), playerBoard)){
+            if (playerControler.isGameWon(playerBoard.getShips(), playerBoard)) {
                 break;
             }
-            if(computerControler.isGameWon(computerBoard.getShips(), computerBoard)){
+            if (computerControler.isGameWon(computerBoard.getShips(), computerBoard)) {
                 break;
             }
         }
@@ -205,22 +202,48 @@ public class PlayerVsComputer implements GameMode {
                 System.err.println(e.getMessage());
             }
 
-            System.out.println("Do you wan to add comment ?");
+
+            System.out.println("Do you wan to add comment ? (Y/N)");
             String line = Util.readLine(bufferedReader);
             Matcher m = YESNOPATTERN.matcher(line);
             if (m.matches()) {
-                addComment("what a great game");
+                String comment = Util.readLine(bufferedReader);
+                addComment(comment);
             } else {
+                System.out.println("Here are comments.");
                 Util.printComments();
             }
+
 
         }
     }
 
     /**
+     * Ask coordinations where to shoot.
+     *
+     * @param reader
+     * @param board
+     * @return int array consist of row and col.
+     */
+    private int[] askShootCoordinations(Scanner reader, Board board){
+        System.out.println("Enter row number: ");
+        int row = reader.nextInt();
+        System.out.println("Enter col number: ");
+        int col = reader.nextInt();
+
+        if(board.getPlayBoard()[row][col].getTileState() == TileState.HITTED){
+            askShootCoordinations(reader, board);
+        }
+
+        int ret[] = {row, col};
+        return ret;
+    }
+
+
+    /**
      * Add comment to game.
      */
-    private void addComment(String commentText){
+    private void addComment(String commentText) {
         try {
             commentService.addComment(new Comment(
                     GAME_NAME,
@@ -240,9 +263,11 @@ public class PlayerVsComputer implements GameMode {
      * @return true if he wants.
      */
     private boolean askForUndo() {
-        Scanner reader = new Scanner(System.in);
         System.out.println("Step back ? (Y/N)");
-        if (reader.next().charAt(0) == 'Y') {
+
+        String line = Util.readLine(bufferedReader);
+        Matcher m = YESNOPATTERN.matcher(line);
+        if (m.matches() && line.charAt(0) == 'Y') {
             if (computerLevel == 4) {
                 playerBoard.setPlayBoard(playerHistory.getLast());
                 playerHistory.removeLast();
@@ -255,7 +280,9 @@ public class PlayerVsComputer implements GameMode {
                 System.out.println("Player history size : " + playerHistory.getHistorySize());
                 System.out.println("Computer history size : " + computerHistoryHard.getHistorySize());
 
+                System.out.println("-------PLAYER--------");
                 consoleUI.printPlayBoard(playerBoard);
+                System.out.println("-------COMPUTER------");
                 consoleUI.printPlayBoard(computerBoard);
 
                 return true;
@@ -269,7 +296,9 @@ public class PlayerVsComputer implements GameMode {
                 System.out.println("Player history size : " + playerHistory.getHistorySize());
                 System.out.println("Computer history size : " + computerHistoryEasy.getHistorySize());
 
+                System.out.println("-------PLAYER--------");
                 consoleUI.printPlayBoard(playerBoard);
+                System.out.println("-------COMPUTER------");
                 consoleUI.printPlayBoard(computerBoard);
 
                 return true;

@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34129397-ade4-478d-847f-d535cbf3acd3" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/GameMenu.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/GameMenu.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PlayerVsComputer.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PlayerVsComputer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PrintBoard.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PrintBoard.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Board.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Board.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Util.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Util.java" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/consoleui/PlayerVsComputer.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/consoleui/PlayerVsComputer.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Board.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Board.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Util$1.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Util$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Util.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Util.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -53,12 +56,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PlayerVsComputer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PlayerVsComputer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PlayerVsComputer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2688">
-              <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+            <state relative-caret-position="1029">
+              <caret line="168" column="68" lean-forward="true" selection-start-line="168" selection-start-column="68" selection-end-line="168" selection-end-column="68" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameMenu.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/GameMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="731">
+              <caret line="38" column="27" lean-forward="true" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#182#183#0" expanded="true" />
+                <element signature="e#206#207#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,8 +83,8 @@
       <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="1953">
+              <caret line="311" column="9" lean-forward="true" selection-start-line="304" selection-start-column="8" selection-end-line="311" selection-end-column="9" />
               <folding>
                 <element signature="docComment;method#setUpBoard#0;class#Board#0" expanded="false" />
               </folding>
@@ -100,7 +117,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>histor</find>
       <find>ships</find>
       <find>setH</find>
       <find>historyMap</find>
@@ -130,6 +146,7 @@
       <find>isGameVon</find>
       <find>scoreSe</find>
       <find>score</find>
+      <find>compu</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -189,11 +206,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/ConsoleUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Ship.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/game/GameController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/GameMenu.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PrintBoard.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Board.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Util.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PlayerVsComputer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/GameMenu.java" />
       </list>
     </option>
   </component>
@@ -204,8 +221,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="261" />
-    <option name="y" value="-8" />
+    <option name="x" value="-114" />
+    <option name="y" value="-9" />
     <option name="width" value="1920" />
     <option name="height" value="884" />
   </component>
@@ -629,7 +646,7 @@
       <workItem from="1520833463285" duration="4801000" />
       <workItem from="1520842427536" duration="9740000" />
       <workItem from="1520855137727" duration="5488000" />
-      <workItem from="1520861253628" duration="11662000" />
+      <workItem from="1520861253628" duration="13630000" />
     </task>
     <servers />
   </component>
@@ -666,7 +683,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225008000" />
+    <option name="totallyTimeSpent" value="226976000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -679,7 +696,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.030371204" sideWeight="0.49626067" order="10" side_tool="false" content_ui="tabs" />
@@ -690,7 +706,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.06543075" sideWeight="0.098824784" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913166" sideWeight="0.49731904" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.9011752" order="6" side_tool="false" content_ui="tabs" x="55" y="453" width="1124" height="559" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5613048" sideWeight="0.9011752" order="6" side_tool="false" content_ui="tabs" x="55" y="453" width="1124" height="559" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32061067" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -749,7 +765,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="15" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1016,13 +1032,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/bb28bd68/b461c3b5-318d-4557-b4dc-5082c9ac97a3/gamestudio.rating">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/history/History.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/history/SinglePlayerHistory.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1037,13 +1046,6 @@
         <state relative-caret-position="819">
           <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/bb28bd68/b461c3b5-318d-4557-b4dc-5082c9ac97a3/gamestudio.comment">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1076,30 +1078,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/bb28bd68/b461c3b5-318d-4557-b4dc-5082c9ac97a3/gamestudio.score">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PrintBoard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="31" column="46" lean-forward="false" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/GameMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#182#183#0" expanded="true" />
-            <element signature="e#206#207#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1121,10 +1104,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://table:/bb28bd68/b461c3b5-318d-4557-b4dc-5082c9ac97a3/gamestudio.comment">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/bb28bd68/b461c3b5-318d-4557-b4dc-5082c9ac97a3/gamestudio.rating">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/bb28bd68/b461c3b5-318d-4557-b4dc-5082c9ac97a3/gamestudio.score">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="1953">
+          <caret line="311" column="9" lean-forward="true" selection-start-line="304" selection-start-column="8" selection-end-line="311" selection-end-column="9" />
           <folding>
             <element signature="docComment;method#setUpBoard#0;class#Board#0" expanded="false" />
           </folding>
@@ -1133,9 +1137,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PlayerVsComputer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2688">
-          <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+        <state relative-caret-position="1029">
+          <caret line="168" column="68" lean-forward="true" selection-start-line="168" selection-start-column="68" selection-end-line="168" selection-end-column="68" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/GameMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="38" column="27" lean-forward="true" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#182#183#0" expanded="true" />
+            <element signature="e#206#207#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
