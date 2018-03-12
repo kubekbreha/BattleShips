@@ -1,13 +1,19 @@
 package com.gamestudio.game.battleships.core.board;
 
-import com.gamestudio.game.battleships.consoleui.ConsoleUI;
+import com.gamestudio.game.battleships.consoleui.PrintBoard;
 import com.gamestudio.game.battleships.core.game.GameController;
 import com.gamestudio.game.battleships.core.game.GameState;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by Kubo Brehuv with <3 (18.2.2018)
@@ -15,6 +21,10 @@ import java.util.Scanner;
 public class Board {
 
     public static final String GAME_NAME = "battleships-brehuv";
+    private BufferedReader bufferedReader;
+    final Pattern ROWCOLPATTERN = Pattern.compile("[0-9]");
+    final Pattern ORIENTATIONPATTERN = Pattern.compile("[V|H]");
+
 
     private Tile[][] playBoard;
     private int boardRows;
@@ -29,6 +39,7 @@ public class Board {
      * @param rows
      */
     public Board(int cols, int rows) {
+        bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         ships = new ArrayList<>();
         this.boardCols = cols;
         this.boardRows = rows;
@@ -189,7 +200,7 @@ public class Board {
      */
     public void setUpBoard(GameController gameController) {
         Scanner reader = new Scanner(System.in);
-        ConsoleUI consoleUI = new ConsoleUI();
+        PrintBoard consoleUI = new PrintBoard();
         final int[] shipSize = {2, 2, 3, 4};
 
 
@@ -199,18 +210,8 @@ public class Board {
         while (shipsCount != 0) {
             System.out.println("----SHIP " + shipNumber + "-(" + shipSize[shipNumber] + ")---");
             Ship ship = new Ship(shipSize[shipNumber]);
-            System.out.println("Enter row number: ");
-            int row = reader.nextInt();
-            System.out.println("Enter col number: ");
-            int col = reader.nextInt();
-            System.out.println("Orientation (V/H): ");
-            char orientation = reader.next().charAt(0);
 
-            if (orientation == 'V') {
-                ship.placeShip(getPlayBoard(), row, col, getBoardRows(), getBoardCols(), 'V');
-            } else if (orientation == 'H') {
-                ship.placeShip(getPlayBoard(), row, col, getBoardRows(), getBoardCols(), 'H');
-            }
+            placeShip(ship);
 
             shipsCount--;
 
@@ -223,5 +224,123 @@ public class Board {
         if (gameController.getGameState() == GameState.NOTSETTEDUP) {
             setUpBoard(gameController);
         }
+    }
+
+    /**
+     * Place ship to board based on user input.
+     *
+     * @param ship which will be placed.
+     */
+    private void placeShip(Ship ship) {
+        int shipTileCountBefore = getShipTilesCount();
+
+        int row = getRowFromInput();
+        int col = getColFromInput();
+        char orientation = getShipPlacementOrientation();
+
+        if (orientation == 'V') {
+            ship.placeShip(getPlayBoard(), row, col, getBoardRows(), getBoardCols(), 'V');
+            System.out.println("placed");
+        } else if (orientation == 'H') {
+            ship.placeShip(getPlayBoard(), row, col, getBoardRows(), getBoardCols(), 'H');
+            System.out.println("placed");
+        }
+        int shipTileCountAfter = getShipTilesCount();
+
+        if(shipTileCountBefore == shipTileCountAfter){
+            System.out.println("You can not place ship like that. Try again!");
+            placeShip(ship);
+        }
+    }
+
+
+    /**
+     * Get input from user for board row.
+     *
+     * @return integer value onecpyher.
+     */
+    private int getRowFromInput() {
+        int row = 0;
+        System.out.println("Pick row:");
+        String line = readLine();
+        Matcher m = ROWCOLPATTERN.matcher(line);
+        if (m.matches()) {
+            row = m.group(0).charAt(0) - '0';
+        } else {
+            System.out.println("Wrong input. Please try again.");
+            getRowFromInput();
+        }
+        return row;
+    }
+
+
+    /**
+     * Get input from user for board col.
+     *
+     * @return integer value onecpyher.
+     */
+    private int getColFromInput() {
+        int col = 0;
+        System.out.println("Pick col:");
+        String line = readLine();
+        Matcher m = ROWCOLPATTERN.matcher(line);
+        if (m.matches()) {
+            col = m.group(0).charAt(0) - '0';
+        } else {
+            System.out.println("Wrong input. Please try again.");
+            getColFromInput();
+        }
+        return col;
+    }
+
+
+    /**
+     * Get input from user for orientation of ship.
+     *
+     * @return char value.
+     */
+    private char getShipPlacementOrientation() {
+        char orientation = ' ';
+        System.out.println("Pick orientation (V/H):");
+        String line = readLine();
+        Matcher m = ORIENTATIONPATTERN.matcher(line);
+        if (m.matches()) {
+            orientation = m.group(0).charAt(0);
+        } else {
+            System.out.println("Wrong input. Please try again.");
+            getShipPlacementOrientation();
+        }
+        return orientation;
+    }
+
+    /**
+     * Read line from user input.
+     *
+     * @return readed string.
+     */
+    private String readLine() {
+        try {
+            return bufferedReader.readLine();
+        } catch (IOException e) {
+            System.err.println("Nepodarilo sa nacitat vstup, skus znova");
+            return "";
+        }
+    }
+
+    /**
+     * Count ship tiles in board.
+     *
+     * @return integer count of ship tiles.
+     */
+    private int getShipTilesCount() {
+        int shipTileCount = 0;
+        for (int i = 0; i < boardRows; i++) {
+            for (int j = 0; j < boardRows; j++) {
+                if (playBoard[i][j].getTileState() == TileState.SHIP) {
+                    shipTileCount++;
+                }
+            }
+        }
+        return shipTileCount;
     }
 }

@@ -7,7 +7,7 @@ import com.gamestudio.game.battleships.core.board.Util;
 /**
  * Created by Kubo Brehuv with <3 (19.2.2018)
  */
-public class ConsoleUI {
+public class PrintBoard {
 
     /**
      * Print playBoard to console.

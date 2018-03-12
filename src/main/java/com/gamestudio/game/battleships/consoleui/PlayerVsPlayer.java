@@ -20,7 +20,7 @@ public class PlayerVsPlayer implements GameMode{
     private Board player2Board;
     private GameController player1Controler;
     private GameController player2Controler;
-    private ConsoleUI consoleUI;
+    private PrintBoard consoleUI;
     private Player player1;
     private Player player2;
     private ScoreService scoreService = new ScoreServiceJDBC();
@@ -29,7 +29,7 @@ public class PlayerVsPlayer implements GameMode{
      * Player vs Player game mode.
      */
     public PlayerVsPlayer() {
-        consoleUI = new ConsoleUI();
+        consoleUI = new PrintBoard();
 
         player1Board = new Board(10, 10);
         player2Board = new Board(10, 10);

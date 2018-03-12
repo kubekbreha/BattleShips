@@ -13,7 +13,6 @@ import com.gamestudio.service.ScoreService;
 import com.gamestudio.service.ScoreServiceJDBC;
 
 import java.util.Date;
-import java.util.List;
 import java.util.Scanner;
 
 import static com.gamestudio.game.battleships.core.board.Board.GAME_NAME;
@@ -32,7 +31,7 @@ public class PlayerVsComputer implements GameMode {
 
     private GameController playerControler;
     private GameController computerControler;
-    private ConsoleUI consoleUI;
+    private PrintBoard consoleUI;
     private Player player;
     private Player computer;
     private Hint hint;
@@ -44,7 +43,7 @@ public class PlayerVsComputer implements GameMode {
      * Player vs Computer play mode.
      */
     public PlayerVsComputer() {
-        consoleUI = new ConsoleUI();
+        consoleUI = new PrintBoard();
 
         playerControler = new GameController();
         computerControler = new GameController();
