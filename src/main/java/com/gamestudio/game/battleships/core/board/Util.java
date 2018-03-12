@@ -1,11 +1,13 @@
 package com.gamestudio.game.battleships.core.board;
 
 import com.gamestudio.entity.Comment;
+import com.gamestudio.entity.Rating;
 import com.gamestudio.entity.Score;
 import com.gamestudio.service.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 import static com.gamestudio.game.battleships.core.board.Board.GAME_NAME;
@@ -27,6 +29,8 @@ public class Util {
 
     private static ScoreService scoreService = new ScoreServiceJDBC();
     private static CommentService commentService = new CommentServiceJDBC();
+    private static RatingService ratingService = new RatingServiceJDBC();
+
     /**
      * Change tile state.
      *
@@ -118,6 +122,18 @@ public class Util {
     }
 
     /**
+     * Print rating of the game.
+     */
+    public static void printRating() {
+        try {
+            int ratings = ratingService.getAverageRating(GAME_NAME);
+                System.out.println("Rating of this game is : " + ratings);
+        } catch (RatingException e) {
+            System.err.println(e.getMessage());
+        }
+    }
+
+    /**
      * Read line from user input.
      *
      * @return readed string.
@@ -128,6 +144,23 @@ public class Util {
         } catch (IOException e) {
             System.err.println("Nepodarilo sa nacitat vstup, skus znova");
             return "";
+        }
+    }
+
+    /**
+     * Add new rating to database.
+     */
+    public static void addRating(int ratingValue){
+        try {
+            ratingService.setRating(new Rating(
+                    GAME_NAME,
+                    System.getProperty("user.name"),
+                    ratingValue,
+                    new Date()
+            ));
+            System.out.println("Your rating was added to database");
+        } catch (RatingException e) {
+            e.printStackTrace();
         }
     }
 
