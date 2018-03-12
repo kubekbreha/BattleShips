@@ -34,8 +34,8 @@ public class ComputerMedium implements AILevel {
      */
     @Override
     public void play(Tile[][] board) {
-        int col = rand.nextInt(10);
-        int row = rand.nextInt(10);
+        int col = rand.nextInt(board[0].length);
+        int row = rand.nextInt(board.length);
 
         if (makeCross) {
             try {

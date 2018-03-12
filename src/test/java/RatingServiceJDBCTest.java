@@ -6,6 +6,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 
+/**
+ * Created by Kubo Brehuv with <3 (10.3.2018)
+ */
 public class RatingServiceJDBCTest extends RatingServiceTest {
 
     public static final String DELETE = "DELETE FROM rating";

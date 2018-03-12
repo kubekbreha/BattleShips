@@ -1,8 +1,10 @@
 package com.gamestudio.entity;
 
-import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * Created by Kubo Brehuv with <3 (10.3.2018)
+ */
 public class Score {
     private String game;
     private String player;

@@ -1,5 +1,8 @@
 package com.gamestudio.service;
 
+/**
+ * Created by Kubo Brehuv with <3 (11.3.2018)
+ */
 import com.gamestudio.entity.Score;
 
 import java.sql.*;
@@ -22,13 +25,25 @@ public class ScoreServiceJDBC implements ScoreService {
     public static final String USER = "root";
     public static final String PASSWORD = "Hackathon16";
 
+
+    /**
+     * Insert score to database command.
+     */
     public static final String INSERT_SCORE =
     "INSERT INTO score ( game, player, points, playedon) VALUES (?, ?, ?, ?)";
 
+    /**
+     * Get score from database command.
+     */
     public static final String SELECT_SCORE =
         "SELECT game, player, points, playedon FROM score WHERE game = ? ORDER BY points DESC LIMIT 10;";
 
 
+    /**
+     * Add score to database.
+     * @param score which will be added.
+     * @throws ScoreException
+     */
     @Override
     public void addScore(Score score) throws ScoreException {
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
@@ -45,7 +60,12 @@ public class ScoreServiceJDBC implements ScoreService {
         }
     }
 
-
+    /**
+     * Get score from database.
+     * @param game to which was score added.
+     * @return list of scores objects.
+     * @throws ScoreException
+     */
     @Override
     public List<Score> getBestScores(String game) throws ScoreException {
         List<Score> scores = new ArrayList<>();

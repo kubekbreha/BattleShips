@@ -8,6 +8,10 @@ import com.gamestudio.game.battleships.core.player.Player;
 
 import java.util.Scanner;
 
+
+/**
+ * Created by Kubo Brehuv with <3 (5.3.2018)
+ */
 public class PlayerVsPlayer {
 
     private Board player1Board;
@@ -19,6 +23,9 @@ public class PlayerVsPlayer {
     private Player player2;
 
 
+    /**
+     * Player vs Player game mode.
+     */
     public PlayerVsPlayer() {
         consoleUI = new ConsoleUI();
 

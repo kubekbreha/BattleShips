@@ -20,6 +20,11 @@ public class DataSetForPerceptron {
         trainingSet = new DataSet(11, 1);
     }
 
+    /**
+     * Add data to .CSV file.
+     *
+     * @param tableNumbers list of training data contains of rows and results.
+     */
     public void addDataToCsv(List tableNumbers) {
         PrintWriter pw = null;
 
@@ -49,6 +54,10 @@ public class DataSetForPerceptron {
     }
 
 
+
+    /**
+     * Read and parse data from .CSV file.
+     */
     public DataSet readFromCsv() throws FileNotFoundException {
         int counter = 0;
         String value;
@@ -66,13 +75,6 @@ public class DataSetForPerceptron {
                 expectedData[0] = Double.parseDouble(value);
                 trainingSet.addRow(new DataSetRow(boardData, expectedData));
                 counter = 0;
-
-                    /*for(double d: boardData){
-                        System.out.println(d);
-                    }
-                    for(double d: expectedData){
-                        System.out.println(Util.ANSI_RED + d + Util.ANSI_WHITE);
-                    }*/
             }
         }
         scanner.close();

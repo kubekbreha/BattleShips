@@ -60,6 +60,7 @@ public class Util {
      *
      * @return
      */
+    //TODO: create dynamic probability board
     public static int[][] createProbabilityBoard(){
         return new int[][]{
                 {8, 9, 10, 11, 12, 12, 11, 10, 9, 8},

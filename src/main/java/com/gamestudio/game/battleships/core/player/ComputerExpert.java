@@ -74,8 +74,8 @@ public class ComputerExpert implements AILevel {
      */
     private void findBiggest(int[][] probabilityBoard) {
         int max = -1000;
-        for (int row = 0; row < 10; row++) {
-            for (int col = 0; col < 10; col++) {
+        for (int row = 0; row < probabilityBoard.length; row++) {
+            for (int col = 0; col < probabilityBoard[0].length; col++) {
                 if (probabilityBoard[row][col] > max) {
                     max = probabilityBoard[row][col];
                     rowToShoot = row;
@@ -97,17 +97,17 @@ public class ComputerExpert implements AILevel {
         board[row][col] = 0;
 
         //horizontal
-        if (col + 1 < 10) board[row][col + 1] -= 3;
-        if (col + 2 < 10) board[row][col + 2] -= 2;
-        if (col + 3 < 10) board[row][col + 3] -= 1;
+        if (col + 1 < board[0].length) board[row][col + 1] -= 3;
+        if (col + 2 < board[0].length) board[row][col + 2] -= 2;
+        if (col + 3 < board[0].length) board[row][col + 3] -= 1;
         if (col - 1 > 0) board[row][col - 1] -= 3;
         if (col - 2 > 0) board[row][col - 2] -= 2;
         if (col - 3 > 0) board[row][col - 3] -= 1;
 
         //vertical
-        if (row + 1 < 10) board[row + 1][col] -= 3;
-        if (row + 2 < 10) board[row + 2][col] -= 2;
-        if (row + 3 < 10) board[row + 3][col] -= 1;
+        if (row + 1 < board.length) board[row + 1][col] -= 3;
+        if (row + 2 < board.length) board[row + 2][col] -= 2;
+        if (row + 3 < board.length) board[row + 3][col] -= 1;
         if (row - 1 > 0) board[row - 1][col] -= 3;
         if (row - 2 > 0) board[row - 2][col] -= 2;
         if (row - 3 > 0) board[row - 3][col] -= 1;
@@ -125,17 +125,17 @@ public class ComputerExpert implements AILevel {
         board[row][col] = 0;
 
         //horizontal
-        if (col + 1 < 10) board[row][col + 1] += 5;
-        if (col + 2 < 10) board[row][col + 2] += 4;
-        if (col + 3 < 10) board[row][col + 3] += 3;
+        if (col + 1 < board[0].length) board[row][col + 1] += 5;
+        if (col + 2 < board[0].length) board[row][col + 2] += 4;
+        if (col + 3 < board[0].length) board[row][col + 3] += 3;
         if (col - 1 > 0) board[row][col - 1] += 5;
         if (col - 2 > 0) board[row][col - 2] += 4;
         if (col - 3 > 0) board[row][col - 3] += 3;
 
         //vertical
-        if (row + 1 < 10) board[row + 1][col] += 5;
-        if (row + 2 < 10) board[row + 2][col] += 4;
-        if (row + 3 < 10) board[row + 3][col] += 3;
+        if (row + 1 < board.length) board[row + 1][col] += 5;
+        if (row + 2 < board.length) board[row + 2][col] += 4;
+        if (row + 3 < board.length) board[row + 3][col] += 3;
         if (row - 1 > 0) board[row - 1][col] += 5;
         if (row - 2 > 0) board[row - 2][col] += 4;
         if (row - 3 > 0) board[row - 3][col] += 3;
@@ -147,7 +147,7 @@ public class ComputerExpert implements AILevel {
     public void printProbabilityTable() {
         System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
         for (int i = 0; i < probabilityBoard.length; i++) {
-            for (int j = 0; j < probabilityBoard.length; j++) {
+            for (int j = 0; j < probabilityBoard[0].length; j++) {
                 System.out.print(probabilityBoard[i][j] + " ");
             }
             System.out.println();

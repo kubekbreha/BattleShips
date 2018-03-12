@@ -14,9 +14,14 @@ public class Hint {
     private int hintRow;
     private int hintCol;
 
-    public Hint(){
+    private int boardRow;
+    private int boardCol;
+
+    public Hint(Board board){
         computerExpert = new ComputerExpert();
         hintBoard = Util.createProbabilityBoard();
+        boardRow = board.getBoardRows();
+        boardCol = board.getBoardCols();
     }
 
     /**
@@ -40,8 +45,8 @@ public class Hint {
      */
     public void findHint(){
         int max = -1000;
-        for (int row = 0; row < 10; row++) {
-            for (int col = 0; col < 10; col++) {
+        for (int row = 0; row < boardRow; row++) {
+            for (int col = 0; col < boardCol; col++) {
                 if (hintBoard[row][col] > max) {
                     max = hintBoard[row][col];
                     hintRow = row;

@@ -2,6 +2,7 @@ package com.gamestudio.game.battleships.core.board;
 
 import com.gamestudio.game.battleships.consoleui.ConsoleUI;
 import com.gamestudio.game.battleships.core.game.GameController;
+import com.gamestudio.game.battleships.core.game.GameState;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -209,5 +210,8 @@ public class Board {
             shipNumber++;
         }
         gameController.isGameSetUp(shipSize, this);
+        if (gameController.getGameState() == GameState.NOTSETTEDUP){
+            setUpBoard(gameController);
+        }
     }
 }

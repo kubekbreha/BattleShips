@@ -16,18 +16,33 @@ import java.util.List;
      */
 
 
+/**
+ * Created by Kubo Brehuv with <3 (11.3.2018)
+ */
 public class CommentServiceJDBC implements CommentService {
 
     public static final String URL = "jdbc:mysql://localhost/gamestudio";
     public static final String USER = "root";
     public static final String PASSWORD = "Hackathon16";
 
+    /**
+     * Insert comment to database command.
+     */
     public static final String INSERT_COMMENT =
             "INSERT INTO comment ( game, player, comment, commentedon) VALUES (?, ?, ?, ?)";
 
+
+    /**
+     * Get comment from database command.
+     */
     public static final String SELECT_COMMENT =
             "SELECT game, player, comment, commentedon FROM comment WHERE game = ?;";
 
+    /**
+     * Add comment to database.
+     * @param comment which will be added.
+     * @throws CommentException
+     */
     @Override
     public void addComment(Comment comment) throws CommentException {
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
@@ -44,6 +59,12 @@ public class CommentServiceJDBC implements CommentService {
         }
     }
 
+    /**
+     * Get comment from database.
+     * @param game to which was comment added.
+     * @return list od comment objects.
+     * @throws CommentException
+     */
     @Override
     public List<Comment> getComments(String game) throws CommentException {
         List<Comment> comments = new ArrayList<>();

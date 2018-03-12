@@ -144,7 +144,6 @@ public class Ship {
 
     }
 
-
     /**
      * Check if ship is sunk.
      *

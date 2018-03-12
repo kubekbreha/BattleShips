@@ -2,6 +2,9 @@ package com.gamestudio.entity;
 
 import java.util.Date;
 
+/**
+ * Created by Kubo Brehuv with <3 (10.3.2018)
+ */
 public class Comment {
     private String game;
     private String player;

@@ -38,8 +38,8 @@ public class ComputerHard implements AILevel {
      */
     @Override
     public void play(Tile[][] board) {
-            int col = rand.nextInt(10);
-            int row = rand.nextInt(10);
+            int col = rand.nextInt(board[0].length);
+            int row = rand.nextInt(board.length);
 
             if (moveUp && newLoop) {
                 if (savedRow - 2 > 0 && (board[savedRow - 2][savedCol].getTileState() != TileState.MISSED ||
@@ -61,11 +61,11 @@ public class ComputerHard implements AILevel {
 
 
             if (moveDown && newLoop) {
-                if (savedRow + 2 < 10 && (board[savedRow + 2][savedCol].getTileState() != TileState.MISSED ||
+                if (savedRow + 2 < board.length && (board[savedRow + 2][savedCol].getTileState() != TileState.MISSED ||
                          board[savedRow + 2][savedCol].getTileState() != TileState.HITTED)) {
                     newLoop = false;
                     Util.shootToBoard(board, savedRow + 2, savedCol);
-                } else if (savedRow + 3 < 10 && (board[savedRow + 3][savedCol].getTileState() != TileState.MISSED ||
+                } else if (savedRow + 3 < board.length && (board[savedRow + 3][savedCol].getTileState() != TileState.MISSED ||
                          board[savedRow + 3][savedCol].getTileState() != TileState.HITTED )) {
                     newLoop = false;
                     Util.shootToBoard(board, savedRow + 3, savedCol);
@@ -135,7 +135,7 @@ public class ComputerHard implements AILevel {
                             break;
 
                         case 90:
-                            if (savedCol + 1 < 10) {
+                            if (savedCol + 1 < board[0].length) {
                                 if (board[savedRow ][savedCol+1].getTileState() == TileState.HITTED
                                         || board[savedRow][savedCol+1].getTileState() == TileState.MISSED) {
                                     orientation = 180;
@@ -154,7 +154,7 @@ public class ComputerHard implements AILevel {
                             break;
 
                         case 180:
-                            if (savedRow + 1 < 10) {
+                            if (savedRow + 1 < board.length) {
                                 if (board[savedRow + 1][savedCol].getTileState() == TileState.HITTED
                                         || board[savedRow + 1][savedCol].getTileState() == TileState.MISSED) {
                                     orientation = 270;

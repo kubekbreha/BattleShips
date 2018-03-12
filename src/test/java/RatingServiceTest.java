@@ -7,6 +7,9 @@ import java.util.Date;
 import static com.gamestudio.game.battleships.core.board.Board.GAME_NAME;
 import static junit.framework.TestCase.*;
 
+/**
+ * Created by Kubo Brehuv with <3 (10.3.2018)
+ */
 public class RatingServiceTest {
 
     protected RatingService ratingService;

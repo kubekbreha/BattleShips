@@ -5,7 +5,9 @@ import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
 
-
+/**
+ * Created by Kubo Brehuv with <3 (10.3.2018)
+ */
 public class BoardTest {
 
     @Test

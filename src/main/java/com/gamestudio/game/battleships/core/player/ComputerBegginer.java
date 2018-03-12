@@ -25,9 +25,9 @@ public class ComputerBegginer implements AILevel {
      * @param board where AI shoots.
      */
     @Override
-    public void play(Tile[][] board) {
-        int row = rand.nextInt(10);
-        int col = rand.nextInt(10);
+    public void play(Tile[][] board ) {
+        int row = rand.nextInt(board.length);
+        int col = rand.nextInt(board[0].length);
 
         if (board[row][col].getTileState() != TileState.HITTED) {
             Util.shootToBoard(board, row, col);

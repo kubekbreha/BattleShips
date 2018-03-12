@@ -1,5 +1,8 @@
 package com.gamestudio.service;
 
+/**
+ * Created by Kubo Brehuv with <3 (11.3.2018)
+ */
 public class ScoreException extends RuntimeException {
     public ScoreException(String message) {
         super(message);

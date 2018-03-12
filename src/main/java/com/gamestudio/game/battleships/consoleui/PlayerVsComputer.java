@@ -13,7 +13,6 @@ import java.util.Scanner;
 /**
  * Created by Kubo Brehuv with <3 (1.3.2018)
  */
-
 public class PlayerVsComputer {
 
     private Board playerBoard;
@@ -28,7 +27,9 @@ public class PlayerVsComputer {
     private Hint hint;
     private int computerLevel;
 
-
+    /**
+     * Player vs Computer play mode.
+     */
     public PlayerVsComputer() {
         consoleUI = new ConsoleUI();
 
