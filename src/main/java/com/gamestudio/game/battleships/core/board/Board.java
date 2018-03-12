@@ -23,9 +23,8 @@ public class Board {
     /**
      * Basic constructor where you set size of playTable.
      * Fill board with water tiles.
-     * <p>
-     * 8* @param cols
      *
+     * @param cols
      * @param rows
      */
     public Board(int cols, int rows) {
@@ -166,7 +165,7 @@ public class Board {
             Ship ship = new Ship(shipSize[shipNumber]);
 
             //try to place ship while true
-            while (!ship.placeShip(getPlayBoard(), rand.nextInt(10), rand.nextInt(10),
+            while (!ship.placeShip(getPlayBoard(), rand.nextInt(boardRows), rand.nextInt(boardCols),
                     getBoardRows(), getBoardCols(), orientation)) {
             }
             if (shipsCount % 2 == 0) {
