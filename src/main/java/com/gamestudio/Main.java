@@ -1,5 +1,6 @@
 package com.gamestudio;
 
+import com.gamestudio.game.battleships.consoleui.GameMenu;
 import com.gamestudio.game.battleships.consoleui.PlayerVsComputer;
 
 import java.io.FileNotFoundException;
@@ -10,8 +11,7 @@ import java.io.FileNotFoundException;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException, FileNotFoundException {
-        PlayerVsComputer game = new PlayerVsComputer();
-        //PlayerVsPlayer game = new PlayerVsPlayer();
+        GameMenu gameMenu = new GameMenu();
 
         /*GameController controller = new GameController();
         Board board = new Board(10,10);

@@ -20,6 +20,7 @@ public class Board {
     private int boardRows;
     private int boardCols;
     private ArrayList<Ship> ships;
+    private final int[] shipSize = {2, 3, 3, 4};
 
     /**
      * Basic constructor where you set size of playTable.
@@ -157,7 +158,7 @@ public class Board {
      */
     public void setUpBoardRandom(GameController gameController) {
         Random rand = new Random();
-        int[] shipSize = {2, 3, 3, 4};
+
         int shipNumber = 0;
         int shipsCount = shipSize.length;
         char orientation = 'H';
@@ -190,7 +191,7 @@ public class Board {
         Scanner reader = new Scanner(System.in);
         ConsoleUI consoleUI = new ConsoleUI();
 
-        int[] shipSize = {2, 3, 3, 4};
+
         int shipNumber = 0;
         int shipsCount = shipSize.length;
 

@@ -13,7 +13,7 @@ import java.util.Scanner;
 /**
  * Created by Kubo Brehuv with <3 (1.3.2018)
  */
-public class PlayerVsComputer {
+public class PlayerVsComputer implements GameMode{
 
     private Board playerBoard;
     private Board computerBoard;
@@ -33,20 +33,10 @@ public class PlayerVsComputer {
     public PlayerVsComputer() {
         consoleUI = new ConsoleUI();
 
-        hint = new Hint();
-
-        playerBoard = new Board(10, 10);
-        computerBoard = new Board(10, 10);
-
-        playerControler = new GameController();
-        computerControler = new GameController();
-
-        playerBoard.setUpBoardRandom(playerControler);
-        computerBoard.setUpBoardRandom(computerControler);
+        setupBoard();
 
         playerHistory = new SinglePlayerHistory();
         computerHistory = new AIExpertHistory();
-
 
         player = new Human();
         computer = new Computer();
@@ -87,8 +77,34 @@ public class PlayerVsComputer {
         }
     }
 
+    //TODO: print playing user board ships.
+    private void setupBoard(){
+        playerControler = new GameController();
+        computerControler = new GameController();
 
-    //TODO: fix computer history.
+        System.out.println("Setup map.");
+        System.out.println("1. Manually");
+        System.out.println("2. Randomly");
+
+        Scanner reader = new Scanner(System.in);
+        int setupMode = reader.nextInt();
+        switch (setupMode) {
+            case 1:
+                playerBoard = new Board(10, 10);
+                playerBoard.setUpBoard(playerControler);
+                break;
+
+            case 2:
+                playerBoard = new Board(10, 10);
+                playerBoard.setUpBoardRandom(playerControler);
+                break;
+        }
+        computerBoard = new Board(10,10);
+        computerBoard.setUpBoardRandom(computerControler);
+
+        hint = new Hint(playerBoard);
+    }
+
 
     /**
      * Start playing a game.

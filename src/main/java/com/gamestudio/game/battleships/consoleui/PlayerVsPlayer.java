@@ -12,7 +12,7 @@ import java.util.Scanner;
 /**
  * Created by Kubo Brehuv with <3 (5.3.2018)
  */
-public class PlayerVsPlayer {
+public class PlayerVsPlayer implements GameMode{
 
     private Board player1Board;
     private Board player2Board;
