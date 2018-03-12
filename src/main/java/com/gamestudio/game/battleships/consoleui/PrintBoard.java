@@ -63,5 +63,4 @@ public class PrintBoard {
             System.out.println();
         }
     }
-
 }

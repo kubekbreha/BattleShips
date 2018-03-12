@@ -1,10 +1,11 @@
 package com.gamestudio.game.battleships.core.board;
 
+import com.gamestudio.entity.Comment;
 import com.gamestudio.entity.Score;
-import com.gamestudio.service.ScoreException;
-import com.gamestudio.service.ScoreService;
-import com.gamestudio.service.ScoreServiceJDBC;
+import com.gamestudio.service.*;
 
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.util.List;
 
 import static com.gamestudio.game.battleships.core.board.Board.GAME_NAME;
@@ -25,6 +26,7 @@ public class Util {
     public static final String ANSI_WHITE = "\u001B[37m";
 
     private static ScoreService scoreService = new ScoreServiceJDBC();
+    private static CommentService commentService = new CommentServiceJDBC();
     /**
      * Change tile state.
      *
@@ -86,7 +88,9 @@ public class Util {
         };
     }
 
-
+    /**
+     * Print score from database.
+     */
     public static void printScore() {
         try {
             List<Score> scores = scoreService.getBestScores(GAME_NAME);
@@ -98,4 +102,33 @@ public class Util {
             System.err.println(e.getMessage());
         }
     }
+
+    /**
+     * Print comments from database.
+     */
+    public static void printComments() {
+        try {
+            List<Comment> comments = commentService.getComments(GAME_NAME);
+            for (Comment c : comments) {
+                System.out.println(c);
+            }
+        } catch (CommentException e) {
+            System.err.println(e.getMessage());
+        }
+    }
+
+    /**
+     * Read line from user input.
+     *
+     * @return readed string.
+     */
+    public static String readLine(BufferedReader bufferedReader) {
+        try {
+            return bufferedReader.readLine();
+        } catch (IOException e) {
+            System.err.println("Nepodarilo sa nacitat vstup, skus znova");
+            return "";
+        }
+    }
+
 }

@@ -262,7 +262,7 @@ public class Board {
     private int getRowFromInput() {
         int row = 0;
         System.out.println("Pick row:");
-        String line = readLine();
+        String line = Util.readLine(bufferedReader);
         Matcher m = ROWCOLPATTERN.matcher(line);
         if (m.matches()) {
             row = m.group(0).charAt(0) - '0';
@@ -282,7 +282,7 @@ public class Board {
     private int getColFromInput() {
         int col = 0;
         System.out.println("Pick col:");
-        String line = readLine();
+        String line = Util.readLine(bufferedReader);
         Matcher m = ROWCOLPATTERN.matcher(line);
         if (m.matches()) {
             col = m.group(0).charAt(0) - '0';
@@ -302,7 +302,7 @@ public class Board {
     private char getShipPlacementOrientation() {
         char orientation = ' ';
         System.out.println("Pick orientation (V/H):");
-        String line = readLine();
+        String line = Util.readLine(bufferedReader);
         Matcher m = ORIENTATIONPATTERN.matcher(line);
         if (m.matches()) {
             orientation = m.group(0).charAt(0);
@@ -311,20 +311,6 @@ public class Board {
             getShipPlacementOrientation();
         }
         return orientation;
-    }
-
-    /**
-     * Read line from user input.
-     *
-     * @return readed string.
-     */
-    private String readLine() {
-        try {
-            return bufferedReader.readLine();
-        } catch (IOException e) {
-            System.err.println("Nepodarilo sa nacitat vstup, skus znova");
-            return "";
-        }
     }
 
     /**

@@ -1,22 +1,27 @@
 package com.gamestudio.game.battleships.consoleui;
 
+import com.gamestudio.entity.Comment;
 import com.gamestudio.entity.Score;
 import com.gamestudio.game.battleships.core.board.Board;
 import com.gamestudio.game.battleships.core.board.Hint;
+import com.gamestudio.game.battleships.core.board.Util;
 import com.gamestudio.game.battleships.core.game.GameController;
 import com.gamestudio.game.battleships.core.game.GameState;
 import com.gamestudio.game.battleships.core.history.AIExpertHistory;
 import com.gamestudio.game.battleships.core.history.SinglePlayerHistory;
 import com.gamestudio.game.battleships.core.player.*;
-import com.gamestudio.service.ScoreException;
-import com.gamestudio.service.ScoreService;
-import com.gamestudio.service.ScoreServiceJDBC;
+import com.gamestudio.service.*;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.Date;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static com.gamestudio.game.battleships.core.board.Board.GAME_NAME;
 
+//TODO: remake this to regex input.
 /**
  * Created by Kubo Brehuv with <3 (1.3.2018)
  */
@@ -36,13 +41,19 @@ public class PlayerVsComputer implements GameMode {
     private Player computer;
     private Hint hint;
     private int computerLevel;
-    private ScoreService scoreService = new ScoreServiceJDBC();
 
+    private ScoreService scoreService = new ScoreServiceJDBC();
+    private CommentService commentService = new CommentServiceJDBC();
+    private BufferedReader bufferedReader;
+
+    final Pattern YESNOPATTERN = Pattern.compile("[Y|N]");
 
     /**
      * Player vs Computer play mode.
      */
     public PlayerVsComputer() {
+        bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
         consoleUI = new PrintBoard();
 
         playerControler = new GameController();
@@ -153,6 +164,7 @@ public class PlayerVsComputer implements GameMode {
 
             askForHint();
 
+
             System.out.println("Enter row number: ");
             int row = reader.nextInt();
             System.out.println("Enter col number: ");
@@ -193,9 +205,34 @@ public class PlayerVsComputer implements GameMode {
                 System.err.println(e.getMessage());
             }
 
+            System.out.println("Do you wan to add comment ?");
+            String line = Util.readLine(bufferedReader);
+            Matcher m = YESNOPATTERN.matcher(line);
+            if (m.matches()) {
+                addComment("what a great game");
+            } else {
+                Util.printComments();
+            }
+
         }
     }
 
+    /**
+     * Add comment to game.
+     */
+    private void addComment(String commentText){
+        try {
+            commentService.addComment(new Comment(
+                    GAME_NAME,
+                    System.getProperty("user.name"),
+                    commentText,
+                    new Date()
+            ));
+            System.out.println("Your comment was added to database");
+        } catch (CommentException e) {
+            e.printStackTrace();
+        }
+    }
 
     /**
      * Ask user if he want to step back.
@@ -253,5 +290,4 @@ public class PlayerVsComputer implements GameMode {
             System.out.println("Row: " + hint.getHintRow() + "  Col: " + hint.getHintCol());
         }
     }
-
 }
