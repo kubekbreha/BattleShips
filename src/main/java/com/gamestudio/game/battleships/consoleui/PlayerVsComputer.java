@@ -1,5 +1,6 @@
 package com.gamestudio.game.battleships.consoleui;
 
+import com.gamestudio.entity.Score;
 import com.gamestudio.game.battleships.core.board.Board;
 import com.gamestudio.game.battleships.core.board.Hint;
 import com.gamestudio.game.battleships.core.game.GameController;
@@ -7,18 +8,28 @@ import com.gamestudio.game.battleships.core.game.GameState;
 import com.gamestudio.game.battleships.core.history.AIExpertHistory;
 import com.gamestudio.game.battleships.core.history.SinglePlayerHistory;
 import com.gamestudio.game.battleships.core.player.*;
+import com.gamestudio.service.ScoreException;
+import com.gamestudio.service.ScoreService;
+import com.gamestudio.service.ScoreServiceJDBC;
 
+import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
+
+import static com.gamestudio.game.battleships.core.board.Board.GAME_NAME;
 
 /**
  * Created by Kubo Brehuv with <3 (1.3.2018)
  */
-public class PlayerVsComputer implements GameMode{
+public class PlayerVsComputer implements GameMode {
 
     private Board playerBoard;
     private Board computerBoard;
+
     private SinglePlayerHistory playerHistory;
-    private AIExpertHistory computerHistory;
+    private AIExpertHistory computerHistoryHard;
+    private SinglePlayerHistory computerHistoryEasy;
+
     private GameController playerControler;
     private GameController computerControler;
     private ConsoleUI consoleUI;
@@ -26,6 +37,8 @@ public class PlayerVsComputer implements GameMode{
     private Player computer;
     private Hint hint;
     private int computerLevel;
+    private ScoreService scoreService = new ScoreServiceJDBC();
+
 
     /**
      * Player vs Computer play mode.
@@ -33,10 +46,12 @@ public class PlayerVsComputer implements GameMode{
     public PlayerVsComputer() {
         consoleUI = new ConsoleUI();
 
-        setupBoard();
+        playerControler = new GameController();
+        computerControler = new GameController();
+
+        setupBoard(playerControler, computerControler);
 
         playerHistory = new SinglePlayerHistory();
-        computerHistory = new AIExpertHistory();
 
         player = new Human();
         computer = new Computer();
@@ -51,6 +66,7 @@ public class PlayerVsComputer implements GameMode{
         switch (computerLevel) {
             case 1:
                 ((Computer) computer).setAiState(new ComputerBegginer());
+                computerHistoryEasy = new SinglePlayerHistory();
                 break;
 
             case 2:
@@ -63,6 +79,7 @@ public class PlayerVsComputer implements GameMode{
 
             case 4:
                 ((Computer) computer).setAiState(new ComputerExpert());
+                computerHistoryHard = new AIExpertHistory();
                 break;
 
             default:
@@ -78,9 +95,7 @@ public class PlayerVsComputer implements GameMode{
     }
 
     //TODO: print playing user board ships.
-    private void setupBoard(){
-        playerControler = new GameController();
-        computerControler = new GameController();
+    private void setupBoard(GameController playerC, GameController computerC) {
 
         System.out.println("Setup map.");
         System.out.println("1. Manually");
@@ -91,16 +106,16 @@ public class PlayerVsComputer implements GameMode{
         switch (setupMode) {
             case 1:
                 playerBoard = new Board(10, 10);
-                playerBoard.setUpBoard(playerControler);
+                playerBoard.setUpBoard(playerC);
                 break;
 
             case 2:
                 playerBoard = new Board(10, 10);
-                playerBoard.setUpBoardRandom(playerControler);
+                playerBoard.setUpBoardRandom(playerC);
                 break;
         }
-        computerBoard = new Board(10,10);
-        computerBoard.setUpBoardRandom(computerControler);
+        computerBoard = new Board(10, 10);
+        computerBoard.setUpBoardRandom(computerC);
 
         hint = new Hint(playerBoard);
     }
@@ -125,13 +140,17 @@ public class PlayerVsComputer implements GameMode{
             if (playerHistory.getHistorySize() != 0 && shots != 0 && (computerLevel == 4 || computerLevel == 1)) {
                 while (askForUndo()) {
                     shots--;
-                    if(shots==0) break;
+                    if (shots == 0) break;
                 }
             }
 
 
             playerHistory.addToHistory(playerBoard.getPlayBoard());
-            computerHistory.addToHistory(computerBoard.getPlayBoard(), ((Computer) computer).getNotTileHistory());
+            if (computerLevel == 4) {
+                computerHistoryHard.addToHistory(computerBoard.getPlayBoard(), ((Computer) computer).getNotTileHistory());
+            } else if (computerLevel == 1) {
+                computerHistoryEasy.addToHistory(playerBoard.getPlayBoard());
+            }
 
             askForHint();
 
@@ -141,21 +160,40 @@ public class PlayerVsComputer implements GameMode{
             int col = reader.nextInt();
 
 
-
             player.shoot(playerBoard.getPlayBoard(), row, col);
-            hint.moveExecuted(playerBoard.getPlayBoard()[row][col].getTileState() , row, col);
+            hint.moveExecuted(playerBoard.getPlayBoard()[row][col].getTileState(), row, col);
             computer.shootAI(computerBoard.getPlayBoard());
 
             shots++;
 
-            playerControler.isGameVon(playerBoard.getShips(), playerBoard);
-            computerControler.isGameVon(computerBoard.getShips(), computerBoard);
+            if(playerControler.isGameWon(playerBoard.getShips(), playerBoard)){
+                break;
+            }
+            if(computerControler.isGameWon(computerBoard.getShips(), computerBoard)){
+                break;
+            }
         }
         reader.close();
+
         if (computerControler.getGameState() == GameState.WON) {
             System.out.println("Try next time.");
+            consoleUI.printPlayBoard(playerBoard);
+            System.out.println();
+            consoleUI.printPlayBoard(computerBoard);
         } else if (playerControler.getGameState() == GameState.WON) {
             System.out.println("Congratulations you won with only " + shots + " shots");
+            try {
+                scoreService.addScore(new Score(
+                        GAME_NAME,
+                        System.getProperty("user.name"),
+                        shots,
+                        new Date()
+                ));
+                System.out.println("Your score was added to database");
+            } catch (ScoreException e) {
+                System.err.println(e.getMessage());
+            }
+
         }
     }
 
@@ -169,21 +207,37 @@ public class PlayerVsComputer implements GameMode{
         Scanner reader = new Scanner(System.in);
         System.out.println("Step back ? (Y/N)");
         if (reader.next().charAt(0) == 'Y') {
+            if (computerLevel == 4) {
+                playerBoard.setPlayBoard(playerHistory.getLast());
+                playerHistory.removeLast();
+                //TODO: fix history hint
 
-            playerBoard.setPlayBoard(playerHistory.getLast());
-            playerHistory.removeLast();
+                computerBoard.setPlayBoard(computerHistoryHard.getLastTile());
+                ((Computer) computer).setNotTileHistory(computerHistoryHard.getLastProbability());
+                computerHistoryHard.removeLast();
 
-            computerBoard.setPlayBoard(computerHistory.getLastTile());
-            ((Computer) computer).setNotTileHistory(computerHistory.getLastProbability());
-            computerHistory.removeLast();
+                System.out.println("Player history size : " + playerHistory.getHistorySize());
+                System.out.println("Computer history size : " + computerHistoryHard.getHistorySize());
 
-            System.out.println("Player history size : " + playerHistory.getHistorySize());
-            System.out.println("Computer history size : " + computerHistory.getHistorySize());
+                consoleUI.printPlayBoard(playerBoard);
+                consoleUI.printPlayBoard(computerBoard);
 
-            consoleUI.printPlayBoard(playerBoard);
-            consoleUI.printPlayBoard(computerBoard);
+                return true;
+            } else if (computerLevel == 1) {
+                playerBoard.setPlayBoard(playerHistory.getLast());
+                playerHistory.removeLast();
 
-            return true;
+                computerBoard.setPlayBoard(computerHistoryEasy.getLast());
+                computerHistoryEasy.removeLast();
+
+                System.out.println("Player history size : " + playerHistory.getHistorySize());
+                System.out.println("Computer history size : " + computerHistoryEasy.getHistorySize());
+
+                consoleUI.printPlayBoard(playerBoard);
+                consoleUI.printPlayBoard(computerBoard);
+
+                return true;
+            }
         }
         return false;
     }

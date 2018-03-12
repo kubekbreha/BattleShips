@@ -1,5 +1,14 @@
 package com.gamestudio.game.battleships.core.board;
 
+import com.gamestudio.entity.Score;
+import com.gamestudio.service.ScoreException;
+import com.gamestudio.service.ScoreService;
+import com.gamestudio.service.ScoreServiceJDBC;
+
+import java.util.List;
+
+import static com.gamestudio.game.battleships.core.board.Board.GAME_NAME;
+
 /**
  * Created by Kubo Brehuv with <3 (18.2.2018)
  */
@@ -15,6 +24,7 @@ public class Util {
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
 
+    private static ScoreService scoreService = new ScoreServiceJDBC();
     /**
      * Change tile state.
      *
@@ -74,5 +84,18 @@ public class Util {
                 {9, 10, 11, 12, 13, 13, 12, 11, 10, 9},
                 {8, 9, 10, 11, 12, 12, 11, 10, 9, 8},
         };
+    }
+
+
+    public static void printScore() {
+        try {
+            List<Score> scores = scoreService.getBestScores(GAME_NAME);
+
+            for (Score s : scores) {
+                System.out.println(s);
+            }
+        } catch (ScoreException e) {
+            System.err.println(e.getMessage());
+        }
     }
 }

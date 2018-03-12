@@ -120,6 +120,15 @@ public class Ship {
     }
 
     /**
+     * Get ship size.
+     *
+     * @return integer ship size.
+     */
+    public int getShipSize() {
+        return shipSize;
+    }
+
+    /**
      * Get 2D array of ship positions.
      *
      * @return int[][] array of ship positions.

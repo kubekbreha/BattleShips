@@ -32,7 +32,7 @@ public class GameController {
      *
      * @return true if game is won otherwise false.
      */
-    public void isGameVon(ArrayList<Ship> ships, Board board) {
+    public boolean isGameWon(ArrayList<Ship> ships, Board board) {
         int sunkedShips = 0;
         for (Ship ship : ships) {
             if (ship.isShipSunk(board.getPlayBoard())) {
@@ -40,9 +40,13 @@ public class GameController {
             }
         }
         if (sunkedShips == ships.size()) {
-            gameState = GameState.WON;
+            setGameState(GameState.WON);
+            System.out.println("WON");
+            return true;
         } else {
-            gameState = GameState.PLAYING;
+            System.out.println("PLAYING");
+            setGameState(GameState.PLAYING);
+            return false;
         }
     }
 

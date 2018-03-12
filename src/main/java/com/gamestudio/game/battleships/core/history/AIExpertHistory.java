@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by Kubo Brehuv with <3 (1.3.2018)
  */
-public class AIExpertHistory {
+public class AIExpertHistory{
     /**
      * HashMap for in-game history
      */
@@ -44,7 +44,6 @@ public class AIExpertHistory {
         historyListProbability.remove(historyListProbability.size()-1);
         historyListTile.remove(historyListTile.size()-1);
     }
-
 
     /**
      * Add copy of 2D array to history.

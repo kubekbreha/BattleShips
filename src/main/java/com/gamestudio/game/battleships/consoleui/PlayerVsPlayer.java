@@ -5,6 +5,8 @@ import com.gamestudio.game.battleships.core.game.GameController;
 import com.gamestudio.game.battleships.core.game.GameState;
 import com.gamestudio.game.battleships.core.player.Human;
 import com.gamestudio.game.battleships.core.player.Player;
+import com.gamestudio.service.ScoreService;
+import com.gamestudio.service.ScoreServiceJDBC;
 
 import java.util.Scanner;
 
@@ -21,7 +23,7 @@ public class PlayerVsPlayer implements GameMode{
     private ConsoleUI consoleUI;
     private Player player1;
     private Player player2;
-
+    private ScoreService scoreService = new ScoreServiceJDBC();
 
     /**
      * Player vs Player game mode.
@@ -81,8 +83,8 @@ public class PlayerVsPlayer implements GameMode{
 
             shots++;
 
-            player1Controler.isGameVon(player1Board.getShips(), player1Board);
-            player2Controler.isGameVon(player2Board.getShips(), player2Board);
+            player1Controler.isGameWon(player1Board.getShips(), player1Board);
+            player2Controler.isGameWon(player2Board.getShips(), player2Board);
         }
         reader.close();
         if (player1Controler.getGameState() == GameState.WON) {

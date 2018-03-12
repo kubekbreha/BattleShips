@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by Kubo Brehuv with <3 (1.3.2018)
  */
-public class SinglePlayerHistory {
+public class SinglePlayerHistory{
 
     /**
      * HashMap for in-game history
@@ -49,7 +49,7 @@ public class SinglePlayerHistory {
         historyList.add(retBoard);
     }
 
-    /**
+     /**
      * Get history size.
      *
      * @return int of history size.

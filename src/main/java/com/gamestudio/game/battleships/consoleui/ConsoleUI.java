@@ -23,7 +23,7 @@ public class ConsoleUI {
             System.out.print(Util.ANSI_CYAN + (char) (i + 'A') + " " + Util.ANSI_RESET);
             for (int j = 0; j < board.getBoardRows(); j++) {
                 if (board.getPlayBoard()[i][j].getTileState() == TileState.SHIP) {
-                    System.out.print(Util.ANSI_RESET + 0 + " " + Util.ANSI_RESET);
+                    System.out.print(Util.ANSI_RED + 3 + " " + Util.ANSI_RESET);
                 } else if (board.getPlayBoard()[i][j].getTileState() == TileState.HITTED) {
                     System.out.print(Util.ANSI_RED + 1 + " " + Util.ANSI_RESET);
                 } else if (board.getPlayBoard()[i][j].getTileState() == TileState.MISSED) {
