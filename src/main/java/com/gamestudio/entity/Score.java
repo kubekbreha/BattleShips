@@ -3,13 +3,10 @@ package com.gamestudio.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Score implements Comparable<Score>, Serializable {
+public class Score {
     private String game;
-
     private String player;
-
     private int points;
-
     private Date playedOn;
 
     public Score(String game, String player, int points, Date playedOn) {
@@ -53,17 +50,12 @@ public class Score implements Comparable<Score>, Serializable {
 
     @Override
     public String toString() {
-        return "Score{" +
-                "game='" + game + '\'' +
-                ", player='" + player + '\'' +
-                ", points=" + points +
-                ", playedOn=" + playedOn +
-                '}';
-    }
-
-    @Override
-    public int compareTo(Score o) {
-        if(o == null) return -1;
-        return this.getPoints() - o.getPoints();
+        final StringBuilder sb = new StringBuilder("Score{");
+        sb.append("game='").append(game).append('\'');
+        sb.append(", player='").append(player).append('\'');
+        sb.append(", points=").append(points);
+        sb.append(", playedon=").append(playedOn);
+        sb.append('}');
+        return sb.toString();
     }
 }

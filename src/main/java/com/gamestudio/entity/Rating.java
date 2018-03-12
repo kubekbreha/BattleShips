@@ -3,14 +3,14 @@ package com.gamestudio.entity;
 import java.util.Date;
 
 public class Rating {
-    private String player;
     private String game;
+    private String player;
     private int rating;
     private Date ratedon;
 
-    public Rating(String player, String game, int rating, Date ratedon) {
-        this.player = player;
+    public Rating(String game, String player, int rating, Date ratedon) {
         this.game = game;
+        this.player = player;
         this.rating = rating;
         this.ratedon = ratedon;
     }
@@ -50,8 +50,8 @@ public class Rating {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Rating{");
-        sb.append("player='").append(player).append('\'');
-        sb.append(", game='").append(game).append('\'');
+        sb.append("game='").append(game).append('\'');
+        sb.append(", player='").append(player).append('\'');
         sb.append(", rating=").append(rating);
         sb.append(", ratedon=").append(ratedon);
         sb.append('}');

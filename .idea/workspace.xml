@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34129397-ade4-478d-847f-d535cbf3acd3" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/CommentServiceJDBCTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/CommentServiceTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/RatingServiceJDBCTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/RatingServiceTest.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Comment.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Comment.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/service/CommentServiceJDBC.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/service/CommentServiceJDBC.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Rating.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Rating.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Score.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Score.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/service/RatingServiceJDBC.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/service/RatingServiceJDBC.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -19,13 +20,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="RatingServiceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/RatingServiceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RatingServiceJDBCTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/RatingServiceJDBCTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#525#526#0" expanded="true" />
+                <element signature="e#586#587#0" expanded="true" />
+                <marker date="1520843493127" expanded="true" signature="290:302" ph="DELETE FROM score... " />
+                <marker date="1520843493127" expanded="true" signature="290:308" ph="DELETE FROM rating... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RatingServiceJDBC.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/service/RatingServiceJDBC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="422">
+              <caret line="33" column="49" lean-forward="true" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
+              <folding>
+                <marker date="1520843483608" expanded="true" signature="573:644" ph="INSERT INTO rating... " />
+                <marker date="1520843483608" expanded="true" signature="708:772" ph="SELECT playe... rating" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ScoreServiceJDBCTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ScoreServiceJDBCTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="8" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#520#521#0" expanded="true" />
                 <element signature="e#579#580#0" expanded="true" />
                 <marker date="1520834501575" expanded="true" signature="287:304" ph="DELETE FROM score... " />
@@ -37,8 +76,8 @@
       <file leaf-file-name="ScoreServiceTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ScoreServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -47,10 +86,9 @@
       <file leaf-file-name="CommentServiceJDBCTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/CommentServiceJDBCTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#530#531#0" expanded="true" />
                 <element signature="e#593#594#0" expanded="true" />
                 <marker date="1520837934342" expanded="true" signature="293:312" ph="DELETE FROM comment... " />
@@ -59,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommentServiceTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CommentServiceTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/CommentServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="378">
+              <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,6 +142,10 @@
       <find>3</find>
       <find>sel</find>
       <find>gamema</find>
+      <find>c</find>
+      <find>com</find>
+      <find>scor</find>
+      <find>sco</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -117,9 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/battleships/core/playMode/GameState.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/battleships/core/playMode/PlayerVsComputer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/battleships/core/playMode/GameController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/battleships/core/history/History.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/battleships/core/history/SinglePlayerHistory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/battleships/core/game/PlayerVsComputer.java" />
@@ -156,18 +195,21 @@
         <option value="$PROJECT_DIR$/src/main/java/com/boardgames/game/battleships/core/player/neural/Perceptron.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/boardgames/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/boardgames/service/ScoreServiceJDBC.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Rating.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/gamestudio/service/ScoreServiceJDBCTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Board.java" />
         <option value="$PROJECT_DIR$/src/test/java/ScoreServiceJDBCTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/service/RatingServiceJDBC.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/service/ScoreServiceJDBC.java" />
         <option value="$PROJECT_DIR$/src/test/java/ScoreServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Comment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/service/CommentServiceJDBC.java" />
         <option value="$PROJECT_DIR$/src/test/java/CommentServiceTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/CommentServiceJDBCTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Rating.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Score.java" />
+        <option value="$PROJECT_DIR$/src/test/java/RatingServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/service/RatingServiceJDBC.java" />
+        <option value="$PROJECT_DIR$/src/test/java/RatingServiceJDBCTest.java" />
       </list>
     </option>
   </component>
@@ -198,6 +240,42 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
+              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
+              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
+              <item name="entity" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
+              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
+              <item name="game.battleships" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
+              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
+              <item name="service" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -301,42 +379,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
-              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
-              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
-              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
-              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
-              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
-              <item name="entity" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
-              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
-              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
-              <item name="game.battleships" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
-              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
-              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
-              <item name="service" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -397,23 +439,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CommentServiceJDBCTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="com.gamestudio.Main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="BattleShips" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-    </configuration>
+  <component name="RunManager" selected="JUnit.RatingServiceJDBCTest">
     <configuration name="ScoreServiceJDBC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -473,6 +499,26 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration name="RatingServiceJDBCTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="BattleShips" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RatingServiceJDBCTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration name="ScoreServiceJDBCTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="BattleShips" />
@@ -509,19 +555,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="1" class="java.lang.String" itemvalue="Application.ScoreServiceJDBC" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ScoreServiceJDBCTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.CommentServiceTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.CommentServiceJDBCTest" />
+      <item index="0" class="java.lang.String" itemvalue="Application.ScoreServiceJDBC" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ScoreServiceJDBCTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.CommentServiceTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.CommentServiceJDBCTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.RatingServiceJDBCTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.CommentServiceJDBCTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.CommentServiceTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ScoreServiceJDBCTest" />
-        <item index="3" class="java.lang.String" itemvalue="Application.ScoreServiceJDBC" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.RatingServiceJDBCTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CommentServiceJDBCTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CommentServiceTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ScoreServiceJDBCTest" />
+        <item index="4" class="java.lang.String" itemvalue="Application.ScoreServiceJDBC" />
       </list>
     </recent_temporary>
   </component>
@@ -572,17 +618,12 @@
       <workItem from="1520795507734" duration="1602000" />
       <workItem from="1520801750895" duration="270000" />
       <workItem from="1520802062474" duration="5039000" />
-      <workItem from="1520833463285" duration="4174000" />
+      <workItem from="1520833463285" duration="4801000" />
+      <workItem from="1520842427536" duration="1065000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CommentServiceJDBCTest - 2018.03.12 at 07h 45m 19s.xml">
-      <configuration name="CommentServiceJDBCTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CommentServiceJDBCTest - 2018.03.12 at 07h 46m 52s.xml">
-      <configuration name="CommentServiceJDBCTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CommentServiceJDBCTest - 2018.03.12 at 07h 53m 28s.xml">
       <configuration name="CommentServiceJDBCTest" configurationId="JUnit" />
     </history-entry>
@@ -601,6 +642,12 @@
     <history-entry file="CommentServiceTest - 2018.03.12 at 07h 45m 03s.xml">
       <configuration name="CommentServiceTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RatingServiceJDBCTest - 2018.03.12 at 09h 30m 01s.xml">
+      <configuration name="RatingServiceJDBCTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RatingServiceJDBCTest - 2018.03.12 at 09h 31m 26s.xml">
+      <configuration name="RatingServiceJDBCTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="ScoreServiceJDBCTest - 2018.03.12 at 07h 10m 23s.xml">
       <configuration name="ScoreServiceJDBCTest" configurationId="JUnit" />
     </history-entry>
@@ -609,7 +656,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197491000" />
+    <option name="totallyTimeSpent" value="199183000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -633,11 +680,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.06543075" sideWeight="0.098824784" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913166" sideWeight="0.49731904" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1496063" sideWeight="0.9011752" order="6" side_tool="false" content_ui="tabs" x="55" y="453" width="1124" height="559" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3655793" sideWeight="0.9011752" order="6" side_tool="false" content_ui="tabs" x="55" y="453" width="1124" height="559" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32061067" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21965629" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22287862" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
@@ -701,8 +748,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/battleships/neural/NetworkTools.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/battleships/neural.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/battleships/neural/DataSet.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/Computer.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/battleships/core/player/probability.java" />
@@ -916,17 +961,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/service/RatingServiceJDBC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <marker date="1520834853519" expanded="true" signature="573:644" ph="INSERT INTO rating... " />
-            <marker date="1520834853519" expanded="true" signature="708:786" ph="SELECT playe... rating" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/service/ScoreService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -947,55 +981,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Rating.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ScoreServiceJDBCTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <marker date="1520834501575" expanded="true" signature="287:304" ph="DELETE FROM score... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ScoreServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/service/CommentService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Comment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-192">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Score.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1014,10 +1003,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/CommentServiceJDBCTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#530#531#0" expanded="true" />
             <element signature="e#593#594#0" expanded="true" />
             <marker date="1520837934342" expanded="true" signature="293:312" ph="DELETE FROM comment... " />
@@ -1025,12 +1013,89 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ScoreServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ScoreServiceJDBCTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="8" />
+          <folding>
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#579#580#0" expanded="true" />
+            <marker date="1520834501575" expanded="true" signature="287:304" ph="DELETE FROM score... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-177">
+          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Score.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Rating.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="861">
+          <caret line="57" column="29" lean-forward="true" selection-start-line="50" selection-start-column="30" selection-end-line="57" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/CommentServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="378">
+          <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/RatingServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/service/RatingServiceJDBC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="33" column="49" lean-forward="true" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
+          <folding>
+            <marker date="1520843483608" expanded="true" signature="573:644" ph="INSERT INTO rating... " />
+            <marker date="1520843483608" expanded="true" signature="708:772" ph="SELECT playe... rating" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/RatingServiceJDBCTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#525#526#0" expanded="true" />
+            <element signature="e#586#587#0" expanded="true" />
+            <marker date="1520843493127" expanded="true" signature="290:302" ph="DELETE FROM score... " />
+            <marker date="1520843493127" expanded="true" signature="290:308" ph="DELETE FROM rating... " />
           </folding>
         </state>
       </provider>

@@ -23,7 +23,7 @@ public class RatingServiceJDBC implements RatingService {
             "INSERT INTO rating ( game, player, rating, ratedon) VALUES (?, ?, ?, ?)";
 
     public static final String SELECT_RATING =
-            "SELECT  game, player, rating, ratedon FROM rating WHERE game = ? DESC LIMIT 10;";
+            "SELECT  game, player, rating, ratedon FROM rating WHERE game = ?;";
 
     @Override
     public void setRating(Rating rating) throws RatingException {
