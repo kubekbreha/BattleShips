@@ -138,12 +138,12 @@ public class Board {
             }
             if (shipPresent) {
                 valuesList.add(1.0);
-            }else {
+            } else {
                 valuesList.add(0.0);
             }
             shipPresent = false;
-            for(int x = 0; x<valuesList.size(); x++){
-                System.out.print(valuesList.get(x)+" ");
+            for (int x = 0; x < valuesList.size(); x++) {
+                System.out.print(valuesList.get(x) + " ");
             }
             System.out.print(valuesList.size());
             System.out.println();
@@ -157,7 +157,7 @@ public class Board {
      */
     public void setUpBoardRandom(GameController gameController) {
         Random rand = new Random();
-        final int[] shipSize = {1};
+        final int[] shipSize = {2, 2, 3, 4};
 
         int shipNumber = 0;
         int shipsCount = shipSize.length;
@@ -190,7 +190,7 @@ public class Board {
     public void setUpBoard(GameController gameController) {
         Scanner reader = new Scanner(System.in);
         ConsoleUI consoleUI = new ConsoleUI();
-        final int[] shipSize = {1};
+        final int[] shipSize = {2, 2, 3, 4};
 
 
         int shipNumber = 0;
@@ -203,7 +203,15 @@ public class Board {
             int row = reader.nextInt();
             System.out.println("Enter col number: ");
             int col = reader.nextInt();
-            ship.placeShip(getPlayBoard(), row, col, getBoardRows(), getBoardCols(), 'V');
+            System.out.println("Orientation (V/H): ");
+            char orientation = reader.next().charAt(0);
+
+            if (orientation == 'V') {
+                ship.placeShip(getPlayBoard(), row, col, getBoardRows(), getBoardCols(), 'V');
+            } else if (orientation == 'H') {
+                ship.placeShip(getPlayBoard(), row, col, getBoardRows(), getBoardCols(), 'H');
+            }
+
             shipsCount--;
 
             consoleUI.printPlayBoard(this);
@@ -212,7 +220,7 @@ public class Board {
             shipNumber++;
         }
         gameController.isGameSetUp(shipSize, this);
-        if (gameController.getGameState() == GameState.NOTSETTEDUP){
+        if (gameController.getGameState() == GameState.NOTSETTEDUP) {
             setUpBoard(gameController);
         }
     }
