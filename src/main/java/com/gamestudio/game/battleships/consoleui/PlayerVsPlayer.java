@@ -35,8 +35,8 @@ public class PlayerVsPlayer implements GameMode{
         player2Board = new Board(10, 10);
 
 
-        player1Board.setUpBoardRandom(player1Controler);
-        player2Board.setUpBoardRandom(player2Controler);
+        player1Board.setUpBoardRandom();
+        player2Board.setUpBoardRandom();
 
         player1Controler = new GameController(player1Board);
         player2Controler = new GameController(player2Board);

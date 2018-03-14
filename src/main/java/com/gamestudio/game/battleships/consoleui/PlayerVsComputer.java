@@ -117,19 +117,23 @@ public class PlayerVsComputer implements GameMode {
         switch (setupMode) {
             case 1:
                 playerBoard = new Board(10, 10);
-                playerBoard.setUpBoard(playerC);
+                playerBoard.setUpBoard();
                 break;
 
             case 2:
                 playerBoard = new Board(10, 10);
-                playerBoard.setUpBoardRandom(playerC);
+                playerBoard.setUpBoardRandom();
                 break;
         }
         computerBoard = new Board(10, 10);
-        computerBoard.setUpBoardRandom(computerC);
+        computerBoard.setUpBoardRandom();
 
         playerControler = new GameController(playerBoard);
         computerControler = new GameController(computerBoard);
+
+        //TODO: handle not setted up.
+        playerControler.isGameSetUp(playerBoard.getShipSize());
+        computerControler.isGameSetUp(computerBoard.getShipSize());
 
         hint = new Hint(playerBoard);
     }
@@ -228,10 +232,10 @@ public class PlayerVsComputer implements GameMode {
      * @return int array consist of row and col.
      */
     private int[] askShootCoordinations(Scanner reader, Board board){
-        System.out.println("Enter row number: ");
-        int row = reader.nextInt();
-        System.out.println("Enter col number: ");
-        int col = reader.nextInt();
+        System.out.println("Enter row char: ");
+        int row = reader.next().charAt(0)-'A';
+        System.out.println("Enter col number : ");
+        int col = reader.nextInt();;
 
         if(board.getPlayBoard()[row][col].getTileState() == TileState.HITTED){
             askShootCoordinations(reader, board);
@@ -318,7 +322,7 @@ public class PlayerVsComputer implements GameMode {
         Scanner reader = new Scanner(System.in);
         System.out.println("Want hint ? (Y/N)");
         if (reader.next().charAt(0) == 'Y') {
-            System.out.println("Row: " + hint.getHintRow() + "  Col: " + hint.getHintCol());
+            System.out.println("Row: " + (char)(hint.getHintRow() + 'A') + "  Col: " + hint.getHintCol());
         }
     }
 }

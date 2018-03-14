@@ -14,7 +14,8 @@ public class BoardTest {
     public void istBoardSetCorrectly(){
         Board board = new Board(10, 10);
         GameController gameController = new GameController(board);
-        board.setUpBoardRandom(gameController);
+        board.setUpBoardRandom();
+        gameController.isGameSetUp(board.getShipSize());
         assertEquals(gameController.getGameState(), GameState.SETTEDUP);
     }
 }

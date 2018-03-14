@@ -30,6 +30,8 @@ public class Board {
     private int boardRows;
     private int boardCols;
     private ArrayList<Ship> ships;
+    final int[] shipSize = {2, 2, 3, 4};
+
 
     /**
      * Basic constructor where you set size of playTable.
@@ -50,6 +52,10 @@ public class Board {
                 playBoard[i][j] = new Tile(TileState.WATER);
             }
         }
+    }
+
+    public int[] getShipSize() {
+        return shipSize;
     }
 
     /**
@@ -166,9 +172,8 @@ public class Board {
     /**
      * Put ships into playing board randomly.
      */
-    public void setUpBoardRandom(GameController gameController) {
+    public void setUpBoardRandom() {
         Random rand = new Random();
-        final int[] shipSize = {2, 2, 3, 4};
 
         int shipNumber = 0;
         int shipsCount = shipSize.length;
@@ -191,17 +196,14 @@ public class Board {
             ships.add(ship);
             shipNumber++;
         }
-        gameController.isGameSetUp(shipSize);
     }
-
 
     /**
      * Put ships into playing board manually.
      */
-    public void setUpBoard(GameController gameController) {
+    public void setUpBoard() {
         Scanner reader = new Scanner(System.in);
         PrintBoard consoleUI = new PrintBoard();
-        final int[] shipSize = {2, 2, 3, 4};
 
 
         int shipNumber = 0;
@@ -220,10 +222,9 @@ public class Board {
             ships.add(ship);
             shipNumber++;
         }
-        gameController.isGameSetUp(shipSize);
-        if (gameController.getGameState() == GameState.NOTSETTEDUP) {
-            setUpBoard(gameController);
-        }
+//        if (gameController.getGameState() == GameState.NOTSETTEDUP) {
+//            setUpBoard(gameController);
+//        }
     }
 
     /**
