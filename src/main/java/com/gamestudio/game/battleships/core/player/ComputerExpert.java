@@ -16,7 +16,7 @@ public class ComputerExpert implements AILevel {
     private int[][] probabilityBoard;
 
     public ComputerExpert() {
-        this.probabilityBoard = Util.createProbabilityBoard();
+        this.probabilityBoard = Util.createProbabilityBoard(10,10);
     }
 
 

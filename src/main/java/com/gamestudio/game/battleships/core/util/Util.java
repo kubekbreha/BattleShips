@@ -1,18 +1,10 @@
 package com.gamestudio.game.battleships.core.util;
 
-import com.gamestudio.entity.Comment;
-import com.gamestudio.entity.Rating;
-import com.gamestudio.entity.Score;
 import com.gamestudio.game.battleships.core.board.Tile;
 import com.gamestudio.game.battleships.core.board.TileState;
-import com.gamestudio.service.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.Date;
-import java.util.List;
-
-import static com.gamestudio.game.battleships.core.board.Board.GAME_NAME;
 
 /**
  * Created by Kubo Brehuv with <3 (18.2.2018)
@@ -28,8 +20,6 @@ public class Util {
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
-
-
 
     /**
      * Change tile state.
@@ -50,9 +40,9 @@ public class Util {
      * @param row   coordinate on the board.
      * @param col   coordinate on the board.
      */
-    public static void shootToBoard(Tile[][] board, int row, int col){
+    public static void shootToBoard(Tile[][] board, int row, int col) {
         Tile tile = board[row][col];
-        switch (tile.getTileState()){
+        switch (tile.getTileState()) {
             case SHIP:
                 Util.writeToBoard(board, new Tile(TileState.HITTED), row, col);
                 break;
@@ -73,26 +63,49 @@ public class Util {
 
     /**
      * Create probability board for hint and expertAI.
+     * Only for even number.
      *
      * @return
      */
-    //TODO: create dynamic probability board
-    public static int[][] createProbabilityBoard(){
-        return new int[][]{
-                {8, 9, 10, 11, 12, 12, 11, 10, 9, 8},
-                {9, 10, 11, 12, 13, 13, 12, 11, 10, 9},
-                {10, 11, 12, 13, 14, 14, 13, 12, 11, 10},
-                {11, 12, 13, 14, 15, 15, 14, 13, 12, 11},
-                {12, 13, 14, 15, 16, 16, 15, 14, 13, 12},
-                {12, 13, 14, 15, 16, 16, 15, 14, 13, 12},
-                {11, 12, 13, 14, 15, 15, 14, 13, 12, 11},
-                {10, 11, 12, 13, 14, 14, 13, 12, 11, 10},
-                {9, 10, 11, 12, 13, 13, 12, 11, 10, 9},
-                {8, 9, 10, 11, 12, 12, 11, 10, 9, 8},
-        };
+    public static int[][] createProbabilityBoard(int rows, int cols) {
+        int[][] probabilityBoard = new int[rows][cols];
+
+        int base = 8;
+        int biggestJ = 0;
+        int biggestI = 0;
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < rows; j++) {
+                if (i < cols / 2) {
+                    if (j < rows / 2) {
+                        probabilityBoard[i][j] = i + base + j;
+                        biggestJ = j;
+                    } else {
+                        probabilityBoard[i][j] = i + base + biggestJ;
+                        biggestJ--;
+                    }
+                    biggestI = i + 1;
+                } else {
+                    if (j < rows / 2) {
+                        probabilityBoard[i][j] = biggestI + base + j;
+                        biggestJ = j;
+                    } else {
+                        probabilityBoard[i][j] = biggestI + base + biggestJ;
+                        biggestJ--;
+                    }
+                }
+            }
+            biggestI--;
+        }
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < rows; j++) {
+                System.out.print(probabilityBoard[i][j]);
+            }
+            System.out.println();
+        }
+
+        return probabilityBoard;
     }
-
-
 
     /**
      * Read line from user input.

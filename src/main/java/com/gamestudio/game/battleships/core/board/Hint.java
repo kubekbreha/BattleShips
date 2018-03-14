@@ -20,7 +20,7 @@ public class Hint {
 
     public Hint(Board board){
         computerExpert = new ComputerExpert();
-        hintBoard = Util.createProbabilityBoard();
+        hintBoard = Util.createProbabilityBoard(10,10);
         boardRow = board.getBoardRows();
         boardCol = board.getBoardCols();
     }

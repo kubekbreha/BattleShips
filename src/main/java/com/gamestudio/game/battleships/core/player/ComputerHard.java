@@ -17,7 +17,7 @@ public class ComputerHard implements AILevel {
 
 
     public ComputerHard(){
-        this.probabilityBoard = Util.createProbabilityBoard();
+        this.probabilityBoard = Util.createProbabilityBoard(10, 10);
     }
 
     /**
