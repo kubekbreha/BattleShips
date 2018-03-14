@@ -24,11 +24,13 @@ public class PlayerVsPlayer implements GameMode{
     private Player player1;
     private Player player2;
     private ScoreService scoreService = new ScoreServiceJDBC();
+    private Scanner reader;
 
     /**
      * Player vs Player game mode.
      */
     public PlayerVsPlayer() {
+        reader = new Scanner(System.in);
         consoleUI = new PrintBoard();
 
         player1Board = new Board(10, 10);
@@ -40,6 +42,10 @@ public class PlayerVsPlayer implements GameMode{
 
         player1Controler = new GameController(player1Board);
         player2Controler = new GameController(player2Board);
+
+        player1Controler.isGameSetUp(player1Board.getShipSize());
+        player2Controler.isGameSetUp(player2Board.getShipSize());
+
 
         player1 = new Human();
         player2 = new Human();
@@ -56,31 +62,22 @@ public class PlayerVsPlayer implements GameMode{
      * Start playing a game.
      */
     private void startGame() {
-        Scanner reader = new Scanner(System.in);
+        int coors[];
 
         int shots = 0;
         while (player1Controler.getGameState() != GameState.WON || player2Controler.getGameState() != GameState.WON) {
-            int row;
-            int col;
             System.out.println("-------ROUND " + shots + "-------");
+
             System.out.println("-------PLAYER 1-------");
             consoleUI.printPlayBoard(player1Board);
-
-            System.out.println("Enter row number: ");
-            row = reader.nextInt();
-            System.out.println("Enter col number: ");
-            col = reader.nextInt();
-            player1.shoot(player1Board.getPlayBoard(), row, col);
+            coors = getCoordinationFromUser();
+            player1.shoot(player1Board.getPlayBoard(), coors[0], coors[1]);
 
 
             System.out.println("-------PLAYER 2-------");
             consoleUI.printPlayBoard(player2Board);
-
-            System.out.println("Enter row number: ");
-            row = reader.nextInt();
-            System.out.println("Enter col number: ");
-            col = reader.nextInt();
-            player2.shoot(player2Board.getPlayBoard(), row, col);
+            coors = getCoordinationFromUser();
+            player2.shoot(player2Board.getPlayBoard(), coors[0], coors[1]);
 
             shots++;
 
@@ -93,5 +90,19 @@ public class PlayerVsPlayer implements GameMode{
         } else if (player2Controler.getGameState() == GameState.WON) {
             System.out.println("Player 2 won in " + shots + " shoots.");
         }
+    }
+
+    /**
+     *  Get coordination input from user.
+     *
+     * @return
+     */
+    private int[] getCoordinationFromUser() {
+        System.out.println("Enter row character: ");
+        int row = reader.next().charAt(0) - 'A';
+        System.out.println("Enter col number: ");
+        int col = reader.nextInt();
+        int[] ret = {row, col};
+        return ret;
     }
 }

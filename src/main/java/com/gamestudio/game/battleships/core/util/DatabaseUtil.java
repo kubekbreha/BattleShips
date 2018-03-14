@@ -102,7 +102,7 @@ public class DatabaseUtil {
 
     /**
      * Add score to database .
-     * 
+     *
      * @param score
      */
     public static void addScore(int score){
