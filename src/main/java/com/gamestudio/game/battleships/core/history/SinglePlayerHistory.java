@@ -14,11 +14,13 @@ public class SinglePlayerHistory{
      * HashMap for in-game history
      */
     private List<Tile[][]> historyList;
-
+    private List<int[][]> historyProbabilityList;
 
     public SinglePlayerHistory(){
         this.historyList = new ArrayList<>();
+        this.historyProbabilityList = new ArrayList<>();
     }
+
 
 
     /**
@@ -36,6 +38,22 @@ public class SinglePlayerHistory{
         historyList.remove(historyList.size()-1);
     }
 
+    /**
+     * Get last item in probability array.
+     */
+    public int[][] getLastProbability(){
+        return historyProbabilityList.get(historyProbabilityList.size()-1);
+    }
+
+
+    /**
+     * Remove last item in probability array.
+     */
+    public void removeLastProbability(){
+        historyProbabilityList.remove(historyProbabilityList.size()-1);
+    }
+
+
 
     /**
      * Add copy of 2D array to history.
@@ -47,6 +65,18 @@ public class SinglePlayerHistory{
         for(int i = 0; i < board.length; i++)
             retBoard[i] = board[i].clone();
         historyList.add(retBoard);
+    }
+
+    /**
+     * Add copy of 2D array to probability history.
+     *
+     * @param board which will be added.
+     */
+    public void addToProbabilityHistory(int[][] board){
+        int[][] retBoard = new int[board.length][];
+        for(int i = 0; i < board.length; i++)
+            retBoard[i] = board[i].clone();
+        historyProbabilityList.add(retBoard);
     }
 
      /**

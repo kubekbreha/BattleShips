@@ -26,6 +26,23 @@ public class Hint {
     }
 
     /**
+     * Set hint board.
+     *
+     * @param hintBoard which will replace old one.
+     */
+    public void setHintBoard(int[][] hintBoard) {
+        this.hintBoard = hintBoard;
+    }
+
+    /**
+     * Get hint board.
+     * @return actual hint board.
+     */
+    public int[][] getHintBoard() {
+        return hintBoard;
+    }
+
+    /**
      * Recalculate probability board after move.
      *
      * @param state to decide calculation.
@@ -74,5 +91,18 @@ public class Hint {
      */
     public int getHintRow() {
         return hintRow;
+    }
+
+
+    /**
+     * Print probability board for testing purposes.
+     */
+    public void printHintBoard(){
+        for (int row = 0; row < boardRow; row++) {
+            for (int col = 0; col < boardCol; col++) {
+                System.out.print(hintBoard[row][col]);
+            }
+            System.out.println();
+        }
     }
 }

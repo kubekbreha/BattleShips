@@ -69,13 +69,13 @@ public class PlayerVsPlayer implements GameMode{
             System.out.println("-------ROUND " + shots + "-------");
 
             System.out.println("-------PLAYER 1-------");
-            consoleUI.printPlayBoard(player1Board);
+            consoleUI.printPlayBoard(player1Board, false);
             coors = getCoordinationFromUser();
             player1.shoot(player1Board.getPlayBoard(), coors[0], coors[1]);
 
 
             System.out.println("-------PLAYER 2-------");
-            consoleUI.printPlayBoard(player2Board);
+            consoleUI.printPlayBoard(player2Board, false);
             coors = getCoordinationFromUser();
             player2.shoot(player2Board.getPlayBoard(), coors[0], coors[1]);
 

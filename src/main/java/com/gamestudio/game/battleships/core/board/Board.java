@@ -28,7 +28,7 @@ public class Board {
     private int boardRows;
     private int boardCols;
     private ArrayList<Ship> ships;
-    final int[] shipSize = {2, 2, 3, 4, 4, 4, 5, 5, 3};
+    final int[] shipSize = {1, 1, 2, 2, 3, 4, 4, 5};
 
 
     /**
@@ -212,47 +212,6 @@ public class Board {
 
 
     /**
-     * Check if board have free space to place ship.
-     *
-     * @param shipSize    of ship which will be placed.
-     * @param orientation of ship which will be placed.
-     * @return boolean.
-     */
-    private boolean canPlaceShip(int shipSize, char orientation) {
-        for (int row = 0; row < boardRows; row++) {
-            for (int col = 0; col < boardCols; col++) {
-                int canPlace = 0;
-                for (int size = 0; size < shipSize; size++) {
-                    try {
-                        if ((col + size < boardCols) && (row - 1 > 0) && (row + 1 < 10) && orientation == 'H'
-                                && playBoard[row][col + size].getTileState() == TileState.WATER
-                                && playBoard[row + 1][col + size].getTileState() == TileState.WATER
-                                && playBoard[row - 1][col + size].getTileState() == TileState.WATER) {
-                            canPlace++;
-                        } else if ((row + size < boardRows) && (col - 1 > 0) && (col + 1 < 10) && orientation == 'V'
-                                && playBoard[row + size][col].getTileState() == TileState.WATER
-                                && playBoard[row + 1][col + size].getTileState() == TileState.WATER
-                                && playBoard[row - 1][col + size].getTileState() == TileState.WATER) {
-                            canPlace++;
-                        }
-                    } catch (Exception e) {
-
-                    }
-                }
-                if (canPlace == shipSize) {
-                    System.out.println("can place");
-                    return true;
-                }
-            }
-        }
-        System.out.println("can not place");
-
-        SETUPBOARDTIMEOUT++;
-        return false;
-    }
-
-
-    /**
      * Put ships into playing board manually.
      */
     public void setUpBoard() {
@@ -271,7 +230,7 @@ public class Board {
 
             shipsCount--;
 
-            consoleUI.printPlayBoard(this);
+            consoleUI.printPlayBoard(this, false);
 
             ships.add(ship);
             shipNumber++;

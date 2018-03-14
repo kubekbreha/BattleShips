@@ -97,12 +97,13 @@ public class Util {
             biggestI--;
         }
 
-        for (int i = 0; i < rows; i++) {
+        //printing out board
+        /*for (int i = 0; i < rows; i++) {
             for (int j = 0; j < rows; j++) {
                 System.out.print(probabilityBoard[i][j]);
             }
             System.out.println();
-        }
+        }*/
 
         return probabilityBoard;
     }

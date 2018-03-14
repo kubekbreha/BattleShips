@@ -23,7 +23,6 @@ import java.util.regex.Pattern;
 
 import static com.gamestudio.game.battleships.core.board.Board.GAME_NAME;
 
-//TODO: remake this to regex input.
 
 /**
  * Created by Kubo Brehuv with <3 (1.3.2018)
@@ -105,7 +104,6 @@ public class PlayerVsComputer implements GameMode {
         }
     }
 
-    //TODO: print playing user board ships.
     private void setupBoard(GameController playerC, GameController computerC) {
 
         System.out.println("Setup map.");
@@ -131,11 +129,10 @@ public class PlayerVsComputer implements GameMode {
         playerControler = new GameController(playerBoard);
         computerControler = new GameController(computerBoard);
 
-        //TODO: handle not setted up.
         playerControler.isGameSetUp(playerBoard.getShipSize());
         computerControler.isGameSetUp(computerBoard.getShipSize());
 
-        hint = new Hint(playerBoard);
+        hint = new Hint(computerBoard);
     }
 
 
@@ -149,9 +146,9 @@ public class PlayerVsComputer implements GameMode {
         while (computerControler.getGameState() != GameState.WON || playerControler.getGameState() != GameState.WON) {
             System.out.println("-------ROUND " + shots + "-------");
             System.out.println("-------PLAYER--------");
-            consoleUI.printPlayBoard(playerBoard);
+            consoleUI.printPlayBoard(playerBoard, true);
             System.out.println("-------COMPUTER------");
-            consoleUI.printPlayBoard(computerBoard);
+            consoleUI.printPlayBoard(computerBoard, false);
 
             hint.findHint();
 
@@ -163,27 +160,29 @@ public class PlayerVsComputer implements GameMode {
             }
 
 
-            playerHistory.addToHistory(playerBoard.getPlayBoard());
+            playerHistory.addToHistory(computerBoard.getPlayBoard());
+            playerHistory.addToProbabilityHistory(hint.getHintBoard());
+
             if (computerLevel == 4) {
-                computerHistoryHard.addToHistory(computerBoard.getPlayBoard(), ((Computer) computer).getNotTileHistory());
+                computerHistoryHard.addToHistory(playerBoard.getPlayBoard(), ((Computer) computer).getNotTileHistory());
             } else if (computerLevel == 1) {
                 computerHistoryEasy.addToHistory(playerBoard.getPlayBoard());
             }
 
             askForHint();
 
-            int coor[] = askShootCoordinations(reader, playerBoard);
+            int coor[] = askShootCoordinations(reader, computerBoard);
 
-            player.shoot(playerBoard.getPlayBoard(), coor[0], coor[1]);
-            hint.moveExecuted(playerBoard.getPlayBoard()[coor[0]][coor[1]].getTileState(), coor[0], coor[1]);
-            computer.shootAI(computerBoard.getPlayBoard());
+            player.shoot(computerBoard.getPlayBoard(), coor[0], coor[1]);
+            hint.moveExecuted(computerBoard.getPlayBoard()[coor[0]][coor[1]].getTileState(), coor[0], coor[1]);
+            computer.shootAI(playerBoard.getPlayBoard());
 
             shots++;
 
-            if (playerControler.isGameWon(playerBoard.getShips())) {
+            if (playerControler.isGameWon(computerBoard.getShips())) {
                 break;
             }
-            if (computerControler.isGameWon(computerBoard.getShips())) {
+            if (computerControler.isGameWon(playerBoard.getShips())) {
                 break;
             }
         }
@@ -191,9 +190,9 @@ public class PlayerVsComputer implements GameMode {
 
         if (computerControler.getGameState() == GameState.WON) {
             System.out.println("Try next time.");
-            consoleUI.printPlayBoard(playerBoard);
+            consoleUI.printPlayBoard(playerBoard, true);
             System.out.println();
-            consoleUI.printPlayBoard(computerBoard);
+            consoleUI.printPlayBoard(computerBoard, false);
         } else if (playerControler.getGameState() == GameState.WON) {
             System.out.println("Congratulations you won with only " + shots + " shots");
 
@@ -251,7 +250,9 @@ public class PlayerVsComputer implements GameMode {
             if (computerLevel == 4) {
                 playerBoard.setPlayBoard(playerHistory.getLast());
                 playerHistory.removeLast();
-                //TODO: fix history hint
+
+                hint.setHintBoard(playerHistory.getLastProbability());
+                playerHistory.removeLastProbability();
 
                 computerBoard.setPlayBoard(computerHistoryHard.getLastTile());
                 ((Computer) computer).setNotTileHistory(computerHistoryHard.getLastProbability());
@@ -261,9 +262,9 @@ public class PlayerVsComputer implements GameMode {
                 System.out.println("Computer history size : " + computerHistoryHard.getHistorySize());
 
                 System.out.println("-------PLAYER--------");
-                consoleUI.printPlayBoard(playerBoard);
+                consoleUI.printPlayBoard(playerBoard, true);
                 System.out.println("-------COMPUTER------");
-                consoleUI.printPlayBoard(computerBoard);
+                consoleUI.printPlayBoard(computerBoard, false);
 
                 return true;
             } else if (computerLevel == 1) {
@@ -277,9 +278,9 @@ public class PlayerVsComputer implements GameMode {
                 System.out.println("Computer history size : " + computerHistoryEasy.getHistorySize());
 
                 System.out.println("-------PLAYER--------");
-                consoleUI.printPlayBoard(playerBoard);
+                consoleUI.printPlayBoard(playerBoard, true);
                 System.out.println("-------COMPUTER------");
-                consoleUI.printPlayBoard(computerBoard);
+                consoleUI.printPlayBoard(computerBoard, false);
 
                 return true;
             }
@@ -296,6 +297,7 @@ public class PlayerVsComputer implements GameMode {
         Scanner reader = new Scanner(System.in);
         System.out.println("Want hint ? (Y/N)");
         if (reader.next().charAt(0) == 'Y') {
+            //hint.printHintBoard();
             System.out.println("Row: " + (char) (hint.getHintRow() + 'A') + "  Col: " + hint.getHintCol());
         }
     }

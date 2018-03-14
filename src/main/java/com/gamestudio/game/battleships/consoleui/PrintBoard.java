@@ -12,7 +12,7 @@ public class PrintBoard {
     /**
      * Print playBoard to console.
      */
-    public void printPlayBoard(Board board) {
+    public void printPlayBoard(Board board, boolean visibleShips) {
         System.out.print(Util.ANSI_CYAN + "* " + Util.ANSI_RESET);
         for (int i = 0; i < 10; i++) {
             System.out.print(Util.ANSI_CYAN + i + " " + Util.ANSI_RESET);
@@ -23,7 +23,11 @@ public class PrintBoard {
             System.out.print(Util.ANSI_CYAN + (char) (i + 'A') + " " + Util.ANSI_RESET);
             for (int j = 0; j < board.getBoardRows(); j++) {
                 if (board.getPlayBoard()[i][j].getTileState() == TileState.SHIP) {
-                    System.out.print(Util.ANSI_RESET + "*" + " " + Util.ANSI_RESET);
+                    if(!visibleShips) {
+                        System.out.print(Util.ANSI_RESET + "*" + " " + Util.ANSI_RESET);
+                    }else {
+                        System.out.print(Util.ANSI_YELLOW + "*" + " " + Util.ANSI_RESET);
+                    }
                 } else if (board.getPlayBoard()[i][j].getTileState() == TileState.HITTED) {
                     System.out.print(Util.ANSI_RED + "O" + " " + Util.ANSI_RESET);
                 } else if (board.getPlayBoard()[i][j].getTileState() == TileState.MISSED) {
