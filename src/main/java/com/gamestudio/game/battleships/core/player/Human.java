@@ -1,7 +1,7 @@
 package com.gamestudio.game.battleships.core.player;
 
 import com.gamestudio.game.battleships.core.board.Tile;
-import com.gamestudio.game.battleships.core.board.Util;
+import com.gamestudio.game.battleships.core.util.Util;
 
 /**
  * Created by Kubo Brehuv with <3 (18.2.2018)

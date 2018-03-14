@@ -5,7 +5,8 @@ import com.gamestudio.entity.Score;
 import com.gamestudio.game.battleships.core.board.Board;
 import com.gamestudio.game.battleships.core.board.Hint;
 import com.gamestudio.game.battleships.core.board.TileState;
-import com.gamestudio.game.battleships.core.board.Util;
+import com.gamestudio.game.battleships.core.util.DatabaseUtil;
+import com.gamestudio.game.battleships.core.util.Util;
 import com.gamestudio.game.battleships.core.game.GameController;
 import com.gamestudio.game.battleships.core.game.GameState;
 import com.gamestudio.game.battleships.core.history.AIExpertHistory;
@@ -57,7 +58,6 @@ public class PlayerVsComputer implements GameMode {
         bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
         consoleUI = new PrintBoard();
-
 
 
         setupBoard(playerControler, computerControler);
@@ -196,28 +196,18 @@ public class PlayerVsComputer implements GameMode {
             consoleUI.printPlayBoard(computerBoard);
         } else if (playerControler.getGameState() == GameState.WON) {
             System.out.println("Congratulations you won with only " + shots + " shots");
-            try {
-                scoreService.addScore(new Score(
-                        GAME_NAME,
-                        System.getProperty("user.name"),
-                        shots,
-                        new Date()
-                ));
-                System.out.println("Your score was added to database");
-            } catch (ScoreException e) {
-                System.err.println(e.getMessage());
-            }
 
+            DatabaseUtil.addScore(shots);
 
             System.out.println("Do you wan to add comment ? (Y/N)");
             String line = Util.readLine(bufferedReader);
             Matcher m = YESNOPATTERN.matcher(line);
             if (m.matches()) {
                 String comment = Util.readLine(bufferedReader);
-                addComment(comment);
+                DatabaseUtil.addComment(comment);
             } else {
                 System.out.println("Here are comments.");
-                Util.printComments();
+                DatabaseUtil.printComments();
             }
 
 
@@ -231,13 +221,14 @@ public class PlayerVsComputer implements GameMode {
      * @param board
      * @return int array consist of row and col.
      */
-    private int[] askShootCoordinations(Scanner reader, Board board){
+    private int[] askShootCoordinations(Scanner reader, Board board) {
         System.out.println("Enter row char: ");
-        int row = reader.next().charAt(0)-'A';
+        int row = reader.next().charAt(0) - 'A';
         System.out.println("Enter col number : ");
-        int col = reader.nextInt();;
+        int col = reader.nextInt();
+        ;
 
-        if(board.getPlayBoard()[row][col].getTileState() == TileState.HITTED){
+        if (board.getPlayBoard()[row][col].getTileState() == TileState.HITTED) {
             askShootCoordinations(reader, board);
         }
 
@@ -245,23 +236,6 @@ public class PlayerVsComputer implements GameMode {
         return ret;
     }
 
-
-    /**
-     * Add comment to game.
-     */
-    private void addComment(String commentText) {
-        try {
-            commentService.addComment(new Comment(
-                    GAME_NAME,
-                    System.getProperty("user.name"),
-                    commentText,
-                    new Date()
-            ));
-            System.out.println("Your comment was added to database");
-        } catch (CommentException e) {
-            e.printStackTrace();
-        }
-    }
 
     /**
      * Ask user if he want to step back.
@@ -322,7 +296,7 @@ public class PlayerVsComputer implements GameMode {
         Scanner reader = new Scanner(System.in);
         System.out.println("Want hint ? (Y/N)");
         if (reader.next().charAt(0) == 'Y') {
-            System.out.println("Row: " + (char)(hint.getHintRow() + 'A') + "  Col: " + hint.getHintCol());
+            System.out.println("Row: " + (char) (hint.getHintRow() + 'A') + "  Col: " + hint.getHintCol());
         }
     }
 }

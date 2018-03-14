@@ -2,7 +2,7 @@ package com.gamestudio.game.battleships.consoleui;
 
 import com.gamestudio.game.battleships.core.board.Board;
 import com.gamestudio.game.battleships.core.board.TileState;
-import com.gamestudio.game.battleships.core.board.Util;
+import com.gamestudio.game.battleships.core.util.Util;
 
 /**
  * Created by Kubo Brehuv with <3 (19.2.2018)

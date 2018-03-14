@@ -1,17 +1,14 @@
 package com.gamestudio.game.battleships.core.board;
 
 import com.gamestudio.game.battleships.consoleui.PrintBoard;
-import com.gamestudio.game.battleships.core.game.GameController;
-import com.gamestudio.game.battleships.core.game.GameState;
+import com.gamestudio.game.battleships.core.util.Util;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

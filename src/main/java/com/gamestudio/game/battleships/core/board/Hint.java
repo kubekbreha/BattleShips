@@ -1,5 +1,6 @@
 package com.gamestudio.game.battleships.core.board;
 
+import com.gamestudio.game.battleships.core.util.Util;
 import com.gamestudio.game.battleships.core.player.ComputerExpert;
 
 

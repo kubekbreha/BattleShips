@@ -1,5 +1,4 @@
-import com.gamestudio.entity.Rating;
-import com.gamestudio.game.battleships.core.board.Util;
+import com.gamestudio.game.battleships.core.util.Util;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;

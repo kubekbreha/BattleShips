@@ -1,6 +1,8 @@
 package com.gamestudio.game.battleships.core.board;
 
 
+import com.gamestudio.game.battleships.core.util.Util;
+
 /**
  * Created by Kubo Brehuv with <3 (18.2.2018)
  */

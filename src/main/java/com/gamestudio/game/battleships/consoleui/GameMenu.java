@@ -1,6 +1,7 @@
 package com.gamestudio.game.battleships.consoleui;
 
-import com.gamestudio.game.battleships.core.board.Util;
+import com.gamestudio.game.battleships.core.util.DatabaseUtil;
+import com.gamestudio.game.battleships.core.util.Util;
 
 import java.util.Scanner;
 
@@ -32,22 +33,22 @@ public class GameMenu {
                 break;
 
             case 3:
-                Util.printScore();
+                DatabaseUtil.printScore();
                 showMenu();
                 break;
 
             case 4:
-                Util.printComments();
+                DatabaseUtil.printComments();
                 showMenu();
                 break;
 
             case 5:
-                Util.printRating();
+                DatabaseUtil.printRating();
                 showMenu();
                 break;
 
             case 6:
-                Util.addRating(1);
+                DatabaseUtil.addRating(1);
                 showMenu();
                 break;
         }

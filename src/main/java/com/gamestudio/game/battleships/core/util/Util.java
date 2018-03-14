@@ -1,8 +1,10 @@
-package com.gamestudio.game.battleships.core.board;
+package com.gamestudio.game.battleships.core.util;
 
 import com.gamestudio.entity.Comment;
 import com.gamestudio.entity.Rating;
 import com.gamestudio.entity.Score;
+import com.gamestudio.game.battleships.core.board.Tile;
+import com.gamestudio.game.battleships.core.board.TileState;
 import com.gamestudio.service.*;
 
 import java.io.BufferedReader;
@@ -27,9 +29,7 @@ public class Util {
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
 
-    private static ScoreService scoreService = new ScoreServiceJDBC();
-    private static CommentService commentService = new CommentServiceJDBC();
-    private static RatingService ratingService = new RatingServiceJDBC();
+
 
     /**
      * Change tile state.
@@ -92,46 +92,7 @@ public class Util {
         };
     }
 
-    /**
-     * Print score from database.
-     */
-    public static void printScore() {
-        try {
-            List<Score> scores = scoreService.getBestScores(GAME_NAME);
 
-            for (Score s : scores) {
-                System.out.println(s);
-            }
-        } catch (ScoreException e) {
-            System.err.println(e.getMessage());
-        }
-    }
-
-    /**
-     * Print comments from database.
-     */
-    public static void printComments() {
-        try {
-            List<Comment> comments = commentService.getComments(GAME_NAME);
-            for (Comment c : comments) {
-                System.out.println(c);
-            }
-        } catch (CommentException e) {
-            System.err.println(e.getMessage());
-        }
-    }
-
-    /**
-     * Print rating of the game.
-     */
-    public static void printRating() {
-        try {
-            int ratings = ratingService.getAverageRating(GAME_NAME);
-                System.out.println("Rating of this game is : " + ratings);
-        } catch (RatingException e) {
-            System.err.println(e.getMessage());
-        }
-    }
 
     /**
      * Read line from user input.
@@ -147,21 +108,5 @@ public class Util {
         }
     }
 
-    /**
-     * Add new rating to database.
-     */
-    public static void addRating(int ratingValue){
-        try {
-            ratingService.setRating(new Rating(
-                    GAME_NAME,
-                    System.getProperty("user.name"),
-                    ratingValue,
-                    new Date()
-            ));
-            System.out.println("Your rating was added to database");
-        } catch (RatingException e) {
-            e.printStackTrace();
-        }
-    }
 
 }

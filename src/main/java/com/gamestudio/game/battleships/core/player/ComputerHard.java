@@ -2,9 +2,7 @@ package com.gamestudio.game.battleships.core.player;
 
 import com.gamestudio.game.battleships.core.board.Tile;
 import com.gamestudio.game.battleships.core.board.TileState;
-import com.gamestudio.game.battleships.core.board.Util;
-
-import java.util.Random;
+import com.gamestudio.game.battleships.core.util.Util;
 
 
 /**
