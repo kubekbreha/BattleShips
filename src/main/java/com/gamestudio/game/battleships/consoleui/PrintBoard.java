@@ -23,13 +23,13 @@ public class PrintBoard {
             System.out.print(Util.ANSI_CYAN + (char) (i + 'A') + " " + Util.ANSI_RESET);
             for (int j = 0; j < board.getBoardRows(); j++) {
                 if (board.getPlayBoard()[i][j].getTileState() == TileState.SHIP) {
-                    System.out.print(Util.ANSI_RED + 3 + " " + Util.ANSI_RESET);
+                    System.out.print(Util.ANSI_RESET + "*" + " " + Util.ANSI_RESET);
                 } else if (board.getPlayBoard()[i][j].getTileState() == TileState.HITTED) {
-                    System.out.print(Util.ANSI_RED + 1 + " " + Util.ANSI_RESET);
+                    System.out.print(Util.ANSI_RED + "O" + " " + Util.ANSI_RESET);
                 } else if (board.getPlayBoard()[i][j].getTileState() == TileState.MISSED) {
-                    System.out.print(Util.ANSI_BLACK + 1 + " " + Util.ANSI_RESET);
+                    System.out.print(Util.ANSI_BLACK + "O" + " " + Util.ANSI_RESET);
                 } else {
-                    System.out.print(0 + " ");
+                    System.out.print("*" + " ");
                 }
             }
             System.out.println();

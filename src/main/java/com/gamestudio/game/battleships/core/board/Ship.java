@@ -142,13 +142,18 @@ public class Ship {
      *
      * @param board where ship is placed.
      */
-    public void isShipTouched(Tile[][] board) {
+    public boolean isShipTouched(Tile[][] board) {
         int touches = 0;
 
         for (int i = 0; i < shipPositions.length; i++) {
             if (board[shipPositions[i][0]][shipPositions[i][1]].getTileState() == TileState.HITTED) {
                 touches++;
             }
+        }
+        if(touches > 0 ){
+            return true;
+        }else {
+            return false;
         }
 
     }

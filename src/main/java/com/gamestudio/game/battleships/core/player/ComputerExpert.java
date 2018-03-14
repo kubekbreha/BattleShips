@@ -67,6 +67,7 @@ public class ComputerExpert implements AILevel {
         this.probabilityBoard = probabilityBoard;
     }
 
+
     /**
      * Find biggest number in probability table and set its row and col.
      *

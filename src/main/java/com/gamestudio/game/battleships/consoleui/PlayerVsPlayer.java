@@ -34,11 +34,12 @@ public class PlayerVsPlayer implements GameMode{
         player1Board = new Board(10, 10);
         player2Board = new Board(10, 10);
 
-        player1Controler = new GameController();
-        player2Controler = new GameController();
 
         player1Board.setUpBoardRandom(player1Controler);
         player2Board.setUpBoardRandom(player2Controler);
+
+        player1Controler = new GameController(player1Board);
+        player2Controler = new GameController(player2Board);
 
         player1 = new Human();
         player2 = new Human();
@@ -83,8 +84,8 @@ public class PlayerVsPlayer implements GameMode{
 
             shots++;
 
-            player1Controler.isGameWon(player1Board.getShips(), player1Board);
-            player2Controler.isGameWon(player2Board.getShips(), player2Board);
+            player1Controler.isGameWon(player1Board.getShips());
+            player2Controler.isGameWon(player2Board.getShips());
         }
         reader.close();
         if (player1Controler.getGameState() == GameState.WON) {

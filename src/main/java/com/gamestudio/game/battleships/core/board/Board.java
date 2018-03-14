@@ -191,7 +191,7 @@ public class Board {
             ships.add(ship);
             shipNumber++;
         }
-        gameController.isGameSetUp(shipSize, this);
+        gameController.isGameSetUp(shipSize);
     }
 
 
@@ -220,7 +220,7 @@ public class Board {
             ships.add(ship);
             shipNumber++;
         }
-        gameController.isGameSetUp(shipSize, this);
+        gameController.isGameSetUp(shipSize);
         if (gameController.getGameState() == GameState.NOTSETTEDUP) {
             setUpBoard(gameController);
         }

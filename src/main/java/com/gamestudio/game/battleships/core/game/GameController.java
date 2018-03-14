@@ -12,6 +12,11 @@ import java.util.ArrayList;
 public class GameController {
 
     private GameState gameState;
+    private Board board;
+
+    public GameController(Board board){
+        this.board = board;
+    }
 
     /**
      * Get tile state.
@@ -32,7 +37,7 @@ public class GameController {
      *
      * @return true if game is won otherwise false.
      */
-    public boolean isGameWon(ArrayList<Ship> ships, Board board) {
+    public boolean isGameWon(ArrayList<Ship> ships) {
         int sunkedShips = 0;
         for (Ship ship : ships) {
             if (ship.isShipSunk(board.getPlayBoard())) {
@@ -41,10 +46,8 @@ public class GameController {
         }
         if (sunkedShips == ships.size()) {
             setGameState(GameState.WON);
-            System.out.println("WON");
             return true;
         } else {
-            System.out.println("PLAYING");
             setGameState(GameState.PLAYING);
             return false;
         }
@@ -56,7 +59,7 @@ public class GameController {
      *
      * @return true if game is won otherwise false.
      */
-    public void isGameSetUp(int[] shipsSizes, Board board) {
+    public void isGameSetUp(int[] shipsSizes) {
         int shipsListCount = 0;
         for (int shipSize : shipsSizes) {
             shipsListCount += shipSize;

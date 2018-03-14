@@ -58,8 +58,7 @@ public class PlayerVsComputer implements GameMode {
 
         consoleUI = new PrintBoard();
 
-        playerControler = new GameController();
-        computerControler = new GameController();
+
 
         setupBoard(playerControler, computerControler);
 
@@ -129,6 +128,9 @@ public class PlayerVsComputer implements GameMode {
         computerBoard = new Board(10, 10);
         computerBoard.setUpBoardRandom(computerC);
 
+        playerControler = new GameController(playerBoard);
+        computerControler = new GameController(computerBoard);
+
         hint = new Hint(playerBoard);
     }
 
@@ -174,10 +176,10 @@ public class PlayerVsComputer implements GameMode {
 
             shots++;
 
-            if (playerControler.isGameWon(playerBoard.getShips(), playerBoard)) {
+            if (playerControler.isGameWon(playerBoard.getShips())) {
                 break;
             }
-            if (computerControler.isGameWon(computerBoard.getShips(), computerBoard)) {
+            if (computerControler.isGameWon(computerBoard.getShips())) {
                 break;
             }
         }

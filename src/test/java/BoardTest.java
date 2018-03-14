@@ -13,7 +13,7 @@ public class BoardTest {
     @Test
     public void istBoardSetCorrectly(){
         Board board = new Board(10, 10);
-        GameController gameController = new GameController();
+        GameController gameController = new GameController(board);
         board.setUpBoardRandom(gameController);
         assertEquals(gameController.getGameState(), GameState.SETTEDUP);
     }
