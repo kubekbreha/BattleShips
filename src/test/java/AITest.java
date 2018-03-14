@@ -1,4 +1,3 @@
-import com.gamestudio.game.battleships.consoleui.PrintBoard;
 import com.gamestudio.game.battleships.core.board.Board;
 import com.gamestudio.game.battleships.core.board.Ship;
 import com.gamestudio.game.battleships.core.game.GameController;
@@ -32,7 +31,7 @@ public class AITest {
             player.shootAI(board.getPlayBoard());
             count++;
         }
-        System.out.println("Expert steps: " + count);
+        //System.out.println("Expert steps: " + count);
 
         boolean result;
         if(gameController.getGameState() == GameState.WON){
@@ -60,7 +59,7 @@ public class AITest {
             player.shootAI(board.getPlayBoard());
             count++;
         }
-        System.out.println("Begginer steps: " + count);
+        //System.out.println("Begginer steps: " + count);
 
         boolean result;
         if(gameController.getGameState() == GameState.WON){
@@ -87,7 +86,7 @@ public class AITest {
             player.shootAI(board.getPlayBoard());
             count++;
         }
-        System.out.println("Medium steps: " + count);
+        //System.out.println("Medium steps: " + count);
 
         boolean result;
         if(gameController.getGameState() == GameState.WON){
@@ -114,7 +113,7 @@ public class AITest {
             player.shootAI(board.getPlayBoard());
             count++;
         }
-        System.out.println("Hard steps: " + count);
+        //System.out.println("Hard steps: " + count);
 
         boolean result;
         if(gameController.getGameState() == GameState.WON){

@@ -37,6 +37,4 @@ public class ShootTest {
 
         assertEquals(true, ship.isShipTouched(board.getPlayBoard()));
     }
-
-
 }
