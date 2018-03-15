@@ -115,9 +115,9 @@ public class AITest {
         ships.add(ship2);
         ships.add(ship3);
         ships.add(ship4);
-        ship.placeShip(board.getPlayBoard(), 4, 4, 10, 10, 'H');
-        ship2.placeShip(board.getPlayBoard(), 2, 2, 10, 10, 'V');
-        ship3.placeShip(board.getPlayBoard(), 0, 7, 10, 10, 'H');
-        ship4.placeShip(board.getPlayBoard(), 9, 8, 10, 10, 'H');
+        ship.placeShip(board.getPlayBoard(), 4, 4,  'H');
+        ship2.placeShip(board.getPlayBoard(), 2, 2, 'V');
+        ship3.placeShip(board.getPlayBoard(), 0, 7, 'H');
+        ship4.placeShip(board.getPlayBoard(), 9, 8, 'H');
     }
 }

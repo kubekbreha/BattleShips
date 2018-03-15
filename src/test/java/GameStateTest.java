@@ -24,7 +24,7 @@ public class GameStateTest {
     public void isGameWon(){
         Board board = new Board(10, 10);
         Ship ship = new Ship(2);
-        ship.placeShip(board.getPlayBoard(), 3, 3 , 10 , 10,'H' );
+        ship.placeShip(board.getPlayBoard(), 3, 3 , 'H' );
 
         GameController gameController = new GameController(board);
         Player player = new Human();
@@ -44,7 +44,7 @@ public class GameStateTest {
     public void isGameStillPlaying(){
         Board board = new Board(10, 10);
         Ship ship = new Ship(2);
-        ship.placeShip(board.getPlayBoard(), 3, 3 , 10 , 10,'H' );
+        ship.placeShip(board.getPlayBoard(), 3, 3 , 'H' );
 
         GameController gameController = new GameController(board);
         Player player = new Human();

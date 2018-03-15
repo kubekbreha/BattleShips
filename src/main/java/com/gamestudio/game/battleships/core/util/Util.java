@@ -44,7 +44,7 @@ public class Util {
         Tile tile = board[row][col];
         switch (tile.getTileState()) {
             case SHIP:
-                Util.writeToBoard(board, new Tile(TileState.HITTED), row, col);
+                Util.writeToBoard(board, new Tile(TileState.HIT), row, col);
                 break;
 
             case WATER:
@@ -55,8 +55,8 @@ public class Util {
                 Util.writeToBoard(board, new Tile(TileState.MISSED), row, col);
                 break;
 
-            case HITTED:
-                Util.writeToBoard(board, new Tile(TileState.HITTED), row, col);
+            case HIT:
+                Util.writeToBoard(board, new Tile(TileState.HIT), row, col);
                 break;
         }
     }

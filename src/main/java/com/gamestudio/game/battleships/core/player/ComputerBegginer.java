@@ -12,10 +12,10 @@ import java.util.Random;
  */
 public class ComputerBegginer implements AILevel {
 
-    private Random rand;
+    private Random random;
 
     public ComputerBegginer(){
-        rand = new Random();
+        random = new Random();
     }
 
 
@@ -26,10 +26,10 @@ public class ComputerBegginer implements AILevel {
      */
     @Override
     public void play(Tile[][] board ) {
-        int row = rand.nextInt(board.length);
-        int col = rand.nextInt(board[0].length);
+        int row = random.nextInt(board.length);
+        int col = random.nextInt(board[0].length);
 
-        if (board[row][col].getTileState() != TileState.HITTED) {
+        if (board[row][col].getTileState() != TileState.HIT) {
             Util.shootToBoard(board, row, col);
         } else {
             play(board);

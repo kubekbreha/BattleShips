@@ -35,7 +35,7 @@ public class PlayerVsComputer implements GameMode {
 
     private GameController playerControler;
     private GameController computerControler;
-    private PrintBoard consoleUI;
+    private ConsoleBoard consoleBoardUI;
     private Player player;
     private Player computer;
     private Hint hint;
@@ -54,7 +54,7 @@ public class PlayerVsComputer implements GameMode {
      */
     public PlayerVsComputer() {
         bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        consoleUI = new PrintBoard();
+        consoleBoardUI = new ConsoleBoard();
         reader = new Scanner(System.in);
 
         setupBoard();
@@ -143,9 +143,9 @@ public class PlayerVsComputer implements GameMode {
         while (computerControler.getGameState() != GameState.WON || playerControler.getGameState() != GameState.WON) {
             System.out.println("-------ROUND " + shots + "-------");
             System.out.println("-------PLAYER--------");
-            consoleUI.printPlayBoard(playerBoard, true);
+            consoleBoardUI.printPlayBoard(playerBoard, true);
             System.out.println("-------COMPUTER------");
-            consoleUI.printPlayBoard(computerBoard, false);
+            consoleBoardUI.printPlayBoard(computerBoard, false);
 
             hint.findHint();
 
@@ -184,9 +184,9 @@ public class PlayerVsComputer implements GameMode {
 
         if (computerControler.getGameState() == GameState.WON) {
             System.out.println("Try next time.");
-            consoleUI.printPlayBoard(playerBoard, true);
+            consoleBoardUI.printPlayBoard(playerBoard, true);
             System.out.println();
-            consoleUI.printPlayBoard(computerBoard, false);
+            consoleBoardUI.printPlayBoard(computerBoard, false);
         } else if (playerControler.getGameState() == GameState.WON) {
             System.out.println("Congratulations you won with only " + shots + " shots");
 
@@ -217,7 +217,7 @@ public class PlayerVsComputer implements GameMode {
         System.out.println("Enter col number : ");
         int col = reader.nextInt();
 
-        if (board.getPlayBoard()[row][col].getTileState() == TileState.HITTED) {
+        if (board.getPlayBoard()[row][col].getTileState() == TileState.HIT) {
             askShootCoordinations(reader, board);
         }
         return new int[]{row, col};
@@ -250,9 +250,9 @@ public class PlayerVsComputer implements GameMode {
                 System.out.println("Computer history size : " + computerHistoryHard.getHistorySize());
 
                 System.out.println("-------PLAYER--------");
-                consoleUI.printPlayBoard(playerBoard, true);
+                consoleBoardUI.printPlayBoard(playerBoard, true);
                 System.out.println("-------COMPUTER------");
-                consoleUI.printPlayBoard(computerBoard, false);
+                consoleBoardUI.printPlayBoard(computerBoard, false);
 
                 return true;
             } else if (computerLevel == 1) {
@@ -266,9 +266,9 @@ public class PlayerVsComputer implements GameMode {
                 System.out.println("Computer history size : " + computerHistoryEasy.getHistorySize());
 
                 System.out.println("-------PLAYER--------");
-                consoleUI.printPlayBoard(playerBoard, true);
+                consoleBoardUI.printPlayBoard(playerBoard, true);
                 System.out.println("-------COMPUTER------");
-                consoleUI.printPlayBoard(computerBoard, false);
+                consoleBoardUI.printPlayBoard(computerBoard, false);
 
                 return true;
             }

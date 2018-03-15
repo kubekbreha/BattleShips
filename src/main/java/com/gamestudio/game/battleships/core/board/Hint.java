@@ -52,7 +52,7 @@ public class Hint {
     public void moveExecuted(TileState state, int row, int col){
         if(state == TileState.MISSED){
             computerExpert.shipMissRecalculate(hintBoard, row, col);
-        }else if(state == TileState.HITTED){
+        }else if(state == TileState.HIT){
             computerExpert.shipHitRecalculate(hintBoard, row, col);
         }
     }

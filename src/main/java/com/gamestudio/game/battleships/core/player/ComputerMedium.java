@@ -38,7 +38,7 @@ public class ComputerMedium implements AILevel {
             try {
                 switch (orientation) {
                     case 0:
-                        if (board[savedRow - 1][savedCol].getTileState() == TileState.HITTED ||
+                        if (board[savedRow - 1][savedCol].getTileState() == TileState.HIT ||
                                 board[savedRow - 1][savedCol].getTileState() == TileState.MISSED) {
                             orientation = 90;
                             play(board);
@@ -48,7 +48,7 @@ public class ComputerMedium implements AILevel {
                         break;
 
                     case 90:
-                        if (board[savedRow][savedCol + 1].getTileState() == TileState.HITTED ||
+                        if (board[savedRow][savedCol + 1].getTileState() == TileState.HIT ||
                                 board[savedRow][savedCol + 1].getTileState() == TileState.MISSED) {
                             orientation = 180;
                             play(board);
@@ -58,7 +58,7 @@ public class ComputerMedium implements AILevel {
                         break;
 
                     case 180:
-                        if (board[savedRow + 1][savedCol].getTileState() == TileState.HITTED ||
+                        if (board[savedRow + 1][savedCol].getTileState() == TileState.HIT ||
                                 board[savedRow + 1][savedCol].getTileState() == TileState.MISSED) {
                             orientation = 270;
                             play(board);
@@ -68,7 +68,7 @@ public class ComputerMedium implements AILevel {
                         break;
 
                     case 270:
-                        if (board[savedRow][savedCol - 1].getTileState() == TileState.HITTED ||
+                        if (board[savedRow][savedCol - 1].getTileState() == TileState.HIT ||
                                 board[savedRow][savedCol - 1].getTileState() == TileState.MISSED) {
                             orientation = 0;
                             makeCross = false;
@@ -106,7 +106,7 @@ public class ComputerMedium implements AILevel {
 
     /**
      * Not needed.
-     */
+\     */
     @Override
     public void setHistory(int[][] history) {
 
@@ -121,7 +121,7 @@ public class ComputerMedium implements AILevel {
      * @param col        where to shoot.
      */
     private void basicRandomShoot(Tile[][] board, int row, int col) {
-        if (board[row][col].getTileState() != TileState.HITTED || board[row][col].getTileState() != TileState.MISSED){
+        if (board[row][col].getTileState() != TileState.HIT || board[row][col].getTileState() != TileState.MISSED){
             if (board[row][col].getTileState() == TileState.SHIP) {
                 makeCross = true;
                 savedCol = col;

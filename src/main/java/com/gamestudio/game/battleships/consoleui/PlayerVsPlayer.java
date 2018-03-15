@@ -20,7 +20,7 @@ public class PlayerVsPlayer implements GameMode{
     private Board player2Board;
     private GameController player1Controler;
     private GameController player2Controler;
-    private PrintBoard consoleUI;
+    private ConsoleBoard consoleBoardUI;
     private Player player1;
     private Player player2;
     private ScoreService scoreService = new ScoreServiceJDBC();
@@ -31,7 +31,7 @@ public class PlayerVsPlayer implements GameMode{
      */
     public PlayerVsPlayer() {
         reader = new Scanner(System.in);
-        consoleUI = new PrintBoard();
+        consoleBoardUI = new ConsoleBoard();
 
         player1Board = new Board(10, 10);
         player2Board = new Board(10, 10);
@@ -69,13 +69,13 @@ public class PlayerVsPlayer implements GameMode{
             System.out.println("-------ROUND " + shots + "-------");
 
             System.out.println("-------PLAYER 1-------");
-            consoleUI.printPlayBoard(player1Board, false);
+            consoleBoardUI.printPlayBoard(player1Board, false);
             coors = getCoordinationFromUser();
             player1.shoot(player1Board.getPlayBoard(), coors[0], coors[1]);
 
 
             System.out.println("-------PLAYER 2-------");
-            consoleUI.printPlayBoard(player2Board, false);
+            consoleBoardUI.printPlayBoard(player2Board, false);
             coors = getCoordinationFromUser();
             player2.shoot(player2Board.getPlayBoard(), coors[0], coors[1]);
 

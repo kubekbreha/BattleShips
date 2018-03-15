@@ -1,6 +1,6 @@
 package com.gamestudio.game.battleships.core.board;
 
-import com.gamestudio.game.battleships.consoleui.PrintBoard;
+import com.gamestudio.game.battleships.consoleui.ConsoleBoard;
 import com.gamestudio.game.battleships.core.util.Util;
 
 import java.io.BufferedReader;
@@ -37,7 +37,7 @@ public class Board {
      * @param cols
      * @param rows
      */
-    public Board(int cols, int rows) {
+    public Board(int rows, int cols) {
         bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         ships = new ArrayList<>();
         this.boardCols = cols;
@@ -137,7 +137,7 @@ public class Board {
                         value = 2.0;
                         break;
 
-                    case HITTED:
+                    case HIT:
                         value = 1.0;
                         break;
 
@@ -186,8 +186,7 @@ public class Board {
 
             int i = 0;
             //try to place ship while true
-            while (!ship.placeShip(getPlayBoard(), rand.nextInt(boardRows), rand.nextInt(boardCols),
-                    getBoardRows(), getBoardCols(), orientation)) {
+            while (!ship.placeShip(getPlayBoard(), rand.nextInt(boardRows), rand.nextInt(boardCols), orientation)) {
                 i++;
                 if (i > 1000) {
                     if (SETUPBOARDTIMEOUT < 15) {
@@ -217,7 +216,7 @@ public class Board {
      * Put ships into playing board manually.
      */
     public void setUpBoard() {
-        PrintBoard consoleUI = new PrintBoard();
+        ConsoleBoard consoleBoardUI = new ConsoleBoard();
 
         int shipNumber = 0;
         int shipsCount = shipSizes.length;
@@ -228,7 +227,7 @@ public class Board {
 
             placeShip(ship);
             shipsCount--;
-            consoleUI.printPlayBoard(this, false);
+            consoleBoardUI.printPlayBoard(this, false);
 
             ships.add(ship);
             shipNumber++;
@@ -248,10 +247,10 @@ public class Board {
         char orientation = getShipPlacementOrientation();
 
         if (orientation == 'V') {
-            ship.placeShip(getPlayBoard(), row, col, getBoardRows(), getBoardCols(), 'V');
+            ship.placeShip(getPlayBoard(), row, col, 'V');
             System.out.println("placed");
         } else if (orientation == 'H') {
-            ship.placeShip(getPlayBoard(), row, col, getBoardRows(), getBoardCols(), 'H');
+            ship.placeShip(getPlayBoard(), row, col, 'H');
             System.out.println("placed");
         }
         int shipTileCountAfter = getShipTilesCount();

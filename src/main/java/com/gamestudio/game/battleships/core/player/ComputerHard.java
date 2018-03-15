@@ -31,7 +31,7 @@ public class ComputerHard implements AILevel {
         Util.shootToBoard(board, rowToShoot, colToShoot);
         if (board[rowToShoot][colToShoot].getTileState() == TileState.MISSED) {
             shipMissRecalculate(probabilityBoard, rowToShoot, colToShoot);
-        } else if (board[rowToShoot][colToShoot].getTileState() == TileState.HITTED) {
+        } else if (board[rowToShoot][colToShoot].getTileState() == TileState.HIT) {
             shipHitRecalculate(probabilityBoard, rowToShoot, colToShoot);
         }
     }

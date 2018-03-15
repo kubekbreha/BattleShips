@@ -18,7 +18,7 @@ public class Main {
         /*GameController controller = new GameController();
         Board board = new Board(10,10);
         board.setUpBoardRandom(controller);
-        PrintBoard consoleUI = new PrintBoard();
+        ConsoleBoard consoleUI = new ConsoleBoard();
         consoleUI.printPlayBoardTesting(board);
 
         List list = board.getDaoubleArrayOfBoardWithShips();

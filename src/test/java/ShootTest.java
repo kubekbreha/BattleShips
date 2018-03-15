@@ -20,7 +20,7 @@ public class ShootTest {
     public void shootMissed() {
         Board board = new Board(10, 10);
         Ship ship = new Ship(2);
-        ship.placeShip(board.getPlayBoard(), 5, 2, 10, 10, 'H');
+        ship.placeShip(board.getPlayBoard(), 5, 2,  'H');
 
         Player player = new Human();
         player.shoot(board.getPlayBoard(), 5, 8);
@@ -36,7 +36,7 @@ public class ShootTest {
     public void shootHitted() {
         Board board = new Board(10, 10);
         Ship ship = new Ship(2);
-        ship.placeShip(board.getPlayBoard(), 5, 2, 10, 10, 'H');
+        ship.placeShip(board.getPlayBoard(), 5, 2,  'H');
 
         Player player = new Human();
         player.shoot(board.getPlayBoard(), 5, 2);

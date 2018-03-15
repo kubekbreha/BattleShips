@@ -30,15 +30,15 @@ public class Ship {
      * @return is ship placed successfully.
      */
     //TODO: fix corners of ship and random endless loop
-    public boolean placeShip(Tile[][] board, int row, int col, int maxRow, int maxCol, char orientation) {
+    public boolean placeShip(Tile[][] board, int row, int col, char orientation) {
         boolean canPlace = true;
         shipPositions = new int[shipSize][2];
 
         //check if ship can be placed
-        if ((row + shipSize) > maxRow && orientation == 'V') {
+        if ((row + shipSize) > board.length && orientation == 'V') {
             canPlace = false;
         }
-        if ((col + shipSize) > maxCol && orientation == 'H') {
+        if ((col + shipSize) > board[0].length && orientation == 'H') {
             canPlace = false;
         }
 
@@ -148,7 +148,7 @@ public class Ship {
         int touches = 0;
 
         for (int[] shipPosition : shipPositions) {
-            if (board[shipPosition[0]][shipPosition[1]].getTileState() == TileState.HITTED) {
+            if (board[shipPosition[0]][shipPosition[1]].getTileState() == TileState.HIT) {
                 touches++;
             }
         }
@@ -164,7 +164,7 @@ public class Ship {
         int touches = 0;
 
         for (int[] shipPosition : shipPositions) {
-            if (board[shipPosition[0]][shipPosition[1]].getTileState() == TileState.HITTED) {
+            if (board[shipPosition[0]][shipPosition[1]].getTileState() == TileState.HIT) {
                 touches++;
             }
         }

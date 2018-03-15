@@ -1,6 +1,5 @@
 package com.gamestudio.game.battleships.core.player;
 
-import com.gamestudio.game.battleships.core.board.Board;
 import com.gamestudio.game.battleships.core.board.Tile;
 import com.gamestudio.game.battleships.core.board.TileState;
 import com.gamestudio.game.battleships.core.util.Util;
@@ -32,7 +31,7 @@ public class ComputerExpert implements AILevel {
         Util.shootToBoard(board, rowToShoot, colToShoot);
         if (board[rowToShoot][colToShoot].getTileState() == TileState.MISSED) {
             shipMissRecalculate(probabilityBoard, rowToShoot, colToShoot);
-        } else if (board[rowToShoot][colToShoot].getTileState() == TileState.HITTED) {
+        } else if (board[rowToShoot][colToShoot].getTileState() == TileState.HIT) {
             shipHitRecalculate(probabilityBoard, rowToShoot, colToShoot);
         }
     }
