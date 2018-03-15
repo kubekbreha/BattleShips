@@ -1,45 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34129397-ade4-478d-847f-d535cbf3acd3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/res/battle_ships.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/Main.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PlayerVsComputer.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PlayerVsComputer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PlayerVsPlayer.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PlayerVsPlayer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PrintBoard.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/ConsoleBoard.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Board.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Board.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Hint.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Hint.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Ship.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Ship.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/TileState.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/TileState.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerBegginer.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerBegginer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerExpert.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerExpert.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerHard.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerHard.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerMedium.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerMedium.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/util/Util.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/util/Util.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AITest.java" afterPath="$PROJECT_DIR$/src/test/java/AITest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GameStateTest.java" afterPath="$PROJECT_DIR$/src/test/java/GameStateTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShipTest.java" afterPath="$PROJECT_DIR$/src/test/java/ShipTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShootTest.java" afterPath="$PROJECT_DIR$/src/test/java/ShootTest.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/consoleui/PlayerVsComputer.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/consoleui/PlayerVsComputer.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/consoleui/PlayerVsPlayer.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/consoleui/PlayerVsPlayer.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/consoleui/PrintBoard.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Board$1.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Board$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Board.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Board.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Hint.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Hint.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Ship.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Ship.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/TileState.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/TileState.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/player/ComputerBegginer.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/player/ComputerBegginer.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/player/ComputerExpert.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/player/ComputerExpert.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/player/ComputerHard.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/player/ComputerHard.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/player/ComputerMedium.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/player/ComputerMedium.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/util/Util$1.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/util/Util$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/util/Util.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/util/Util.class" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/AITest.class" afterPath="$PROJECT_DIR$/target/test-classes/AITest.class" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/GameStateTest.class" afterPath="$PROJECT_DIR$/target/test-classes/GameStateTest.class" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ShipTest.class" afterPath="$PROJECT_DIR$/target/test-classes/ShipTest.class" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ShootTest.class" afterPath="$PROJECT_DIR$/target/test-classes/ShootTest.class" />
-    </list>
+    <list default="true" id="34129397-ade4-478d-847f-d535cbf3acd3" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -114,12 +76,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ComputerExpert.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ComputerExpert.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerExpert.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2709">
               <caret line="145" column="18" lean-forward="false" selection-start-line="145" selection-start-column="18" selection-end-line="145" selection-end-column="18" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="315">
+                <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -184,7 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/service/CommentException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/service/CommentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/service/RatingException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/service/RatingService.java" />
@@ -235,6 +209,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/ConsoleBoard.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Ship.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Board.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -588,7 +563,7 @@
       <workItem from="1521093015577" duration="3851000" />
       <workItem from="1521108759531" duration="1239000" />
       <workItem from="1521110245349" duration="756000" />
-      <workItem from="1521111100701" duration="11175000" />
+      <workItem from="1521111100701" duration="11502000" />
     </task>
     <servers />
   </component>
@@ -625,7 +600,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="272352000" />
+    <option name="totallyTimeSpent" value="272679000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -638,6 +613,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21034871" sideWeight="0.49626067" order="6" side_tool="false" content_ui="tabs" />
@@ -652,7 +628,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32061067" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22556391" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22556391" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18045112" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733408" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -718,13 +694,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/service/ScoreService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/RatingServiceJDBCTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1110,6 +1079,17 @@
         <state relative-caret-position="0">
           <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="2329" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="315">
+            <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
