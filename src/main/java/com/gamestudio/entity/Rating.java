@@ -6,14 +6,14 @@ import java.util.Date;
  * Created by Kubo Brehuv with <3 (10.3.2018)
  */
 public class Rating {
-    private String game;
     private String player;
+    private String game;
     private int rating;
     private Date ratedon;
 
-    public Rating(String game, String player, int rating, Date ratedon) {
-        this.game = game;
+    public Rating(String player, String game, int rating, Date ratedon) {
         this.player = player;
+        this.game = game;
         this.rating = rating;
         this.ratedon = ratedon;
     }
@@ -53,8 +53,8 @@ public class Rating {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Rating{");
-        sb.append("game='").append(game).append('\'');
-        sb.append(", player='").append(player).append('\'');
+        sb.append("player='").append(player).append('\'');
+        sb.append(", game='").append(game).append('\'');
         sb.append(", rating=").append(rating);
         sb.append(", ratedon=").append(ratedon);
         sb.append('}');

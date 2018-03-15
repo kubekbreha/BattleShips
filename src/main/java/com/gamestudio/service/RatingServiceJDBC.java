@@ -9,8 +9,8 @@ import java.sql.*;
 
 /*
     CREATE TABLE rating (
-        game VARCHAR(64) NOT NULL,
         player VARCHAR(64) NOT NULL,
+        game VARCHAR(64) NOT NULL,
         rating INTEGER NOT NULL,
         ratedon TIMESTAMP NOT NULL
     );
@@ -26,13 +26,13 @@ public class RatingServiceJDBC implements RatingService {
      * Insert rating to database command.
      */
     public static final String INSERT_RATING =
-            "INSERT INTO rating ( game, player, rating, ratedon) VALUES (?, ?, ?, ?)";
+            "INSERT INTO rating ( player, game, rating, ratedon) VALUES (?, ?, ?, ?)";
 
     /**
      * Get rating from database command.
      */
     public static final String SELECT_RATING =
-            "SELECT  game, player, rating, ratedon FROM rating WHERE game = ?;";
+            "SELECT player, game, rating, ratedon FROM rating WHERE game = ?;";
 
     /**
      * Add rating to database.
@@ -43,8 +43,8 @@ public class RatingServiceJDBC implements RatingService {
     public void setRating(Rating rating) throws RatingException {
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
             try (PreparedStatement ps = connection.prepareStatement(INSERT_RATING)) {
-                ps.setString(1, rating.getGame());
-                ps.setString(2, rating.getPlayer());
+                ps.setString(1, rating.getPlayer());
+                ps.setString(2, rating.getGame());
                 ps.setInt(3, rating.getRating());
                 ps.setDate(4, new Date(rating.getRatedon().getTime()));
 

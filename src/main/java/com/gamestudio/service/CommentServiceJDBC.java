@@ -8,8 +8,8 @@ import java.util.List;
 
 /*
     CREATE TABLE comment (
-        game VARCHAR(64) NOT NULL,
         player VARCHAR(64) NOT NULL,
+        game VARCHAR(64) NOT NULL,
         comment VARCHAR(64) NOT NULL,
         commentedon TIMESTAMP NOT NULL
     );
@@ -29,14 +29,14 @@ public class CommentServiceJDBC implements CommentService {
      * Insert comment to database command.
      */
     public static final String INSERT_COMMENT =
-            "INSERT INTO comment ( game, player, comment, commentedon) VALUES (?, ?, ?, ?)";
+            "INSERT INTO comment ( player, game, comment, commentedon) VALUES (?, ?, ?, ?)";
 
 
     /**
      * Get comment from database command.
      */
     public static final String SELECT_COMMENT =
-            "SELECT game, player, comment, commentedon FROM comment WHERE game = ?;";
+            "SELECT player, game, comment, commentedon FROM comment WHERE game = ?;";
 
     /**
      * Add comment to database.
@@ -47,8 +47,8 @@ public class CommentServiceJDBC implements CommentService {
     public void addComment(Comment comment) throws CommentException {
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
             try(PreparedStatement ps = connection.prepareStatement(INSERT_COMMENT)){
-                ps.setString(1, comment.getGame());
                 ps.setString(2, comment.getPlayer());
+                ps.setString(1, comment.getGame());
                 ps.setString(3, comment.getComment());
                 ps.setDate(4, new Date(comment.getCommentedOn().getTime()));
 

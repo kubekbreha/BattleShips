@@ -1,14 +1,18 @@
 package com.gamestudio.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by Kubo Brehuv with <3 (10.3.2018)
  */
-public class Score {
+public class Score implements Comparable<Score>, Serializable {
     private String game;
+
     private String player;
+
     private int points;
+
     private Date playedOn;
 
     public Score(String game, String player, int points, Date playedOn) {
@@ -52,12 +56,17 @@ public class Score {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Score{");
-        sb.append("game='").append(game).append('\'');
-        sb.append(", player='").append(player).append('\'');
-        sb.append(", points=").append(points);
-        sb.append(", playedon=").append(playedOn);
-        sb.append('}');
-        return sb.toString();
+        return "Score{" +
+                "game='" + game + '\'' +
+                ", player='" + player + '\'' +
+                ", points=" + points +
+                ", playedOn=" + playedOn +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Score o) {
+        if(o == null) return -1;
+        return this.getPoints() - o.getPoints();
     }
 }
