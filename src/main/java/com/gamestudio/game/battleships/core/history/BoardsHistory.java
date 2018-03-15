@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by Kubo Brehuv with <3 (1.3.2018)
  */
-public class SinglePlayerHistory{
+public class BoardsHistory {
 
     /**
      * HashMap for in-game history
@@ -16,12 +16,10 @@ public class SinglePlayerHistory{
     private List<Tile[][]> historyList;
     private List<int[][]> historyProbabilityList;
 
-    public SinglePlayerHistory(){
+    public BoardsHistory(){
         this.historyList = new ArrayList<>();
         this.historyProbabilityList = new ArrayList<>();
     }
-
-
 
     /**
      * Get last item in array.
@@ -52,7 +50,6 @@ public class SinglePlayerHistory{
     public void removeLastProbability(){
         historyProbabilityList.remove(historyProbabilityList.size()-1);
     }
-
 
 
     /**

@@ -11,12 +11,14 @@ import java.util.List;
 
 import static com.gamestudio.game.battleships.core.board.Board.GAME_NAME;
 
+/**
+ * Created by Kubo Brehuv with <3 (11.3.2018)
+ */
 public class DatabaseUtil {
 
     private static ScoreService scoreService = new ScoreServiceJDBC();
     private static CommentService commentService = new CommentServiceJDBC();
     private static RatingService ratingService = new RatingServiceJDBC();
-
 
     /**
      * Print score from database.
@@ -103,7 +105,7 @@ public class DatabaseUtil {
     /**
      * Add score to database .
      *
-     * @param score
+     * @param score what will be added.
      */
     public static void addScore(int score){
         try {

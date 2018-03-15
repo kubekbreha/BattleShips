@@ -1,5 +1,6 @@
 package com.gamestudio.game.battleships.core.player;
 
+import com.gamestudio.game.battleships.core.board.Board;
 import com.gamestudio.game.battleships.core.board.Tile;
 import com.gamestudio.game.battleships.core.board.TileState;
 import com.gamestudio.game.battleships.core.util.Util;
@@ -15,10 +16,10 @@ public class ComputerExpert implements AILevel {
 
     private int[][] probabilityBoard;
 
-    public ComputerExpert() {
-        this.probabilityBoard = Util.createProbabilityBoard(10,10);
+    public ComputerExpert(int rows, int cols) {
+        this.probabilityBoard =
+                Util.createProbabilityBoard(rows, cols);
     }
-
 
     /**
      * Basic play logic.
@@ -34,9 +35,6 @@ public class ComputerExpert implements AILevel {
         } else if (board[rowToShoot][colToShoot].getTileState() == TileState.HITTED) {
             shipHitRecalculate(probabilityBoard, rowToShoot, colToShoot);
         }
-
-        //just test if calculations are correct
-        //printProbabilityTable();
     }
 
     @Override

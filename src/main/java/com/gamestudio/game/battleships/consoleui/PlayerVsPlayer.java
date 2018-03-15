@@ -43,8 +43,8 @@ public class PlayerVsPlayer implements GameMode{
         player1Controler = new GameController(player1Board);
         player2Controler = new GameController(player2Board);
 
-        player1Controler.isGameSetUp(player1Board.getShipSize());
-        player2Controler.isGameSetUp(player2Board.getShipSize());
+        player1Controler.isGameSetUp(player1Board.getShipSizes());
+        player2Controler.isGameSetUp(player2Board.getShipSizes());
 
 
         player1 = new Human();
@@ -102,7 +102,6 @@ public class PlayerVsPlayer implements GameMode{
         int row = reader.next().charAt(0) - 'A';
         System.out.println("Enter col number: ");
         int col = reader.nextInt();
-        int[] ret = {row, col};
-        return ret;
+        return new int[]{row, col};
     }
 }

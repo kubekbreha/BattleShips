@@ -13,6 +13,9 @@ import static junit.framework.TestCase.assertEquals;
  */
 public class ShipTest {
 
+    /**
+     * Test if ship can be sunk.
+     */
     @Test
     public void isShipSunked() {
         Board board = new Board(10, 10);
@@ -27,6 +30,9 @@ public class ShipTest {
     }
 
 
+    /**
+     * Test if ship is touched after shoot.
+     */
     @Test
     public void isShipTouched() {
         Board board = new Board(10, 10);
@@ -40,6 +46,9 @@ public class ShipTest {
     }
 
 
+    /**
+     * Test if ship is not touched after shoot.
+     */
     @Test
     public void isShipNotTouched() {
         Board board = new Board(10, 10);

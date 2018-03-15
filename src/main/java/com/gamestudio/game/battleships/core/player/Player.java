@@ -7,7 +7,6 @@ import com.gamestudio.game.battleships.core.board.Tile;
  */
 public abstract class Player {
 
-
     /**
      * Perform a shoot.
      *
@@ -17,7 +16,6 @@ public abstract class Player {
      */
     public void shoot(Tile[][] board, int row, int col) {
     }
-
 
     /**
      * Perform a random shoot.

@@ -3,7 +3,15 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 
+/**
+ * Created by Kubo Brehuv with <3 (14.3.2018)
+ */
 public class TestRunner {
+
+    /**
+     * Run all tests at same time.
+     * @param args of main.
+     */
     public static void main(String[] args) {
         Result result = JUnitCore.runClasses(AITest.class, BoardTest.class, GameStateTest.class,
                 ShipTest.class, ShootTest.class, CommentServiceJDBCTest.class,

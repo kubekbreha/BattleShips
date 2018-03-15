@@ -7,16 +7,20 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
-public class GameMenu {
 
-    private BufferedReader bufferedReader;
+/**
+ * Created by Kubo Brehuv with <3 (10.3.2018)
+ */
+public class GameMenu {
 
     public GameMenu(){
       showMenu();
     }
 
+    /**
+     * Game menu, first interaction with user.
+     */
     private void showMenu(){
-        GameMode gameMode;
         System.out.println("Welcome to BATTLESHIPS game.");
         System.out.println("1. Player vs Computer");
         System.out.println("2. Player vs Player");
@@ -30,7 +34,7 @@ public class GameMenu {
         int pick = reader.nextInt();
         switch (pick) {
             case 1:
-                gameMode = new PlayerVsComputer();
+                GameMode gameMode = new PlayerVsComputer();
                 break;
 
             case 2:
@@ -49,7 +53,7 @@ public class GameMenu {
 
 
             case 5:
-                bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
                 String comment = Util.readLine(bufferedReader);
                 DatabaseUtil.addComment(comment);
                 showMenu();

@@ -4,18 +4,39 @@
     <list default="true" id="34129397-ade4-478d-847f-d535cbf3acd3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/GameMenu.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/GameMenu.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/GameMode.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/GameMode.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PlayerVsComputer.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PlayerVsComputer.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PlayerVsPlayer.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PlayerVsPlayer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PrintBoard.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PrintBoard.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Board.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Board.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Hint.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Hint.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/history/SinglePlayerHistory.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/history/SinglePlayerHistory.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Ship.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Ship.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/game/GameController.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/game/GameController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/history/AIExpertHistory.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/history/SinglePlayerHistory.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/history/BoardsHistory.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/AILevel.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/AILevel.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerExpert.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerExpert.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerHard.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerHard.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerMedium.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerMedium.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/Player.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/Player.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/util/DatabaseUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/util/DatabaseUtil.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/util/Util.java" afterPath="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/util/Util.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AITest.java" afterPath="$PROJECT_DIR$/src/test/java/AITest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BoardTest.java" afterPath="$PROJECT_DIR$/src/test/java/BoardTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GameStateTest.java" afterPath="$PROJECT_DIR$/src/test/java/GameStateTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShipTest.java" afterPath="$PROJECT_DIR$/src/test/java/ShipTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShootTest.java" afterPath="$PROJECT_DIR$/src/test/java/ShootTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestRunner.java" afterPath="$PROJECT_DIR$/src/test/java/TestRunner.java" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/consoleui/GameMenu.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/consoleui/GameMenu.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/consoleui/PlayerVsComputer.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/consoleui/PlayerVsComputer.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/consoleui/PlayerVsPlayer.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/consoleui/PlayerVsPlayer.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/consoleui/PrintBoard.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/consoleui/PrintBoard.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Board$1.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Board$1.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Board.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Board.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/util/Util.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/util/Util.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Hint.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Hint.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Ship.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Ship.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/game/GameController.class" afterPath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/game/GameController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/history/AIExpertHistory.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/history/SinglePlayerHistory.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BoardTest.class" afterPath="$PROJECT_DIR$/target/test-classes/BoardTest.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,71 +66,11 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="gamestudio@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="gamestudio@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="gamestudio@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="gamestudio: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="gamestudio@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="gamestudio: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="comment: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="gamestudio@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="gamestudio: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="rating: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameMenu.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/GameMenu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="65" column="45" lean-forward="false" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerVsComputer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PlayerVsComputer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-189">
-              <caret line="0" column="38" lean-forward="true" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Board.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="41" column="47" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding>
-                <element signature="e#1550#1551#0" expanded="true" />
-                <element signature="e#1581#1582#0" expanded="true" />
-                <element signature="docComment;method#setUpBoard#0;class#Board#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -122,9 +83,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>shooted</find>
-      <find>shoot</find>
-      <find>playe</find>
       <find>3</find>
       <find>sel</find>
       <find>gamema</find>
@@ -151,7 +109,10 @@
       <find>erro</find>
       <find>getLas</find>
       <find>hin</find>
+      <find>//</find>
       <find>bufferedReader</find>
+      <find>AI</find>
+      <find>computerHistoryHard</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -165,13 +126,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/gamestudio/service/ScoreServiceJDBCTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Rating.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Score.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/neural/DataSetForPerceptron.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerBegginer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerMedium.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Comment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/service/CommentException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/service/CommentService.java" />
@@ -188,34 +145,38 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/service/ScoreServiceJDBC.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/service/CommentServiceJDBC.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/service/RatingServiceJDBC.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/GameMode.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/history/History.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/history/AIExpertHistory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/ConsoleUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Util.java" />
         <option value="$PROJECT_DIR$/src/test/java/MissTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Ship.java" />
-        <option value="$PROJECT_DIR$/src/test/java/GameStateTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/RunAllTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestRunner.java" />
-        <option value="$PROJECT_DIR$/src/test/java/AITest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ShootTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/BoardTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/Util.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PrintBoard.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/GameMode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Ship.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Board.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PlayerVsPlayer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/GameMenu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/game/GameController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/history/AIExpertHistory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/history/SinglePlayerHistory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/history/BoardsHistory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/util/DatabaseUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/util/Util.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestRunner.java" />
+        <option value="$PROJECT_DIR$/src/test/java/BoardTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/GameStateTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ShipTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ShootTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/AILevel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerExpert.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerHard.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/Main.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ShipTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/util/Util.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PlayerVsPlayer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PrintBoard.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/game/GameController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/history/SinglePlayerHistory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Board.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Hint.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PlayerVsComputer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/GameMenu.java" />
+        <option value="$PROJECT_DIR$/src/test/java/AITest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerMedium.java" />
       </list>
     </option>
   </component>
@@ -252,42 +213,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
-              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
-              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
-              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
-              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
-              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
-              <item name="entity" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
-              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
-              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
-              <item name="game.battleships" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
-              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
-              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
-              <item name="service" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -387,6 +312,50 @@
               <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
               <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gamestudio" type="462c0819:PsiDirectoryNode" />
+              <item name="battleships" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gamestudio" type="462c0819:PsiDirectoryNode" />
+              <item name="battleships" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="history" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gamestudio" type="462c0819:PsiDirectoryNode" />
+              <item name="battleships" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="player" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gamestudio" type="462c0819:PsiDirectoryNode" />
+              <item name="battleships" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -405,6 +374,42 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
+              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
+              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
+              <item name="entity" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
+              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
+              <item name="game.battleships" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
+              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
+              <item name="service" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -444,7 +449,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.AITest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -518,26 +523,6 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="BoardTest.istBoardSetCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="BattleShips" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BoardTest" />
-      <option name="METHOD_NAME" value="istBoardSetCorrectly" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
     <configuration name="CommentServiceJDBCTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="BattleShips" />
@@ -574,19 +559,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.AITest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.CommentServiceJDBCTest" />
       <item index="1" class="java.lang.String" itemvalue="Application.TestRunner" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.BoardTest.istBoardSetCorrectly" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.BoardTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.BoardTest" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.AITest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TestRunner" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.BoardTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BoardTest.istBoardSetCorrectly" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.AITest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.AITest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CommentServiceJDBCTest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.TestRunner" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.BoardTest" />
       </list>
     </recent_temporary>
   </component>
@@ -644,15 +629,13 @@
       <workItem from="1521009748608" duration="2557000" />
       <workItem from="1521023159601" duration="8495000" />
       <workItem from="1521038220078" duration="15490000" />
+      <workItem from="1521093015577" duration="3775000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AITest - 2018.03.14 at 14h 06m 29s.xml">
+    <history-entry file="AITest - 2018.03.15 at 08h 33m 08s.xml">
       <configuration name="AITest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AITest_expertToEnd - 2018.03.14 at 14h 00m 35s.xml">
-      <configuration name="AITest.expertToEnd" configurationId="JUnit" />
     </history-entry>
     <history-entry file="AITest_expertToEnd - 2018.03.14 at 14h 03m 19s.xml">
       <configuration name="AITest.expertToEnd" configurationId="JUnit" />
@@ -678,9 +661,12 @@
     <history-entry file="CommentServiceJDBCTest - 2018.03.14 at 14h 55m 55s.xml">
       <configuration name="CommentServiceJDBCTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CommentServiceJDBCTest - 2018.03.15 at 07h 33m 37s.xml">
+      <configuration name="CommentServiceJDBCTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="255331000" />
+    <option name="totallyTimeSpent" value="259106000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -693,7 +679,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21034871" sideWeight="0.49626067" order="6" side_tool="false" content_ui="tabs" />
@@ -704,15 +689,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.06543075" sideWeight="0.098824784" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913166" sideWeight="0.49731904" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5815523" sideWeight="0.9011752" order="2" side_tool="false" content_ui="tabs" x="55" y="453" width="1124" height="559" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63329583" sideWeight="0.9011752" order="2" side_tool="false" content_ui="tabs" x="55" y="453" width="1124" height="559" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32061067" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21267454" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21589689" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18045112" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733408" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -724,6 +707,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733408" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -773,34 +758,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Rating.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Comment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="37" lean-forward="false" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/entity/Score.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/service/RatingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/service/RatingException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -873,7 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -889,17 +845,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/GameStateTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -907,6 +852,190 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/CommentServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="11" column="3" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/CommentServiceJDBCTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/bb28bd68/b461c3b5-318d-4557-b4dc-5082c9ac97a3/gamestudio.score">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/bb28bd68/b461c3b5-318d-4557-b4dc-5082c9ac97a3/gamestudio.comment">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/bb28bd68/b461c3b5-318d-4557-b4dc-5082c9ac97a3/gamestudio.rating">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/GameMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Ship.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3297">
+          <caret line="165" column="9" lean-forward="true" selection-start-line="165" selection-start-column="9" selection-end-line="165" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2991">
+          <caret line="163" column="12" lean-forward="true" selection-start-line="163" selection-start-column="12" selection-end-line="163" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1628#1629#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
+            <element signature="docComment;method#setUpBoard#0;class#Board#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PrintBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="28" column="57" lean-forward="false" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PlayerVsPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="104" column="8" lean-forward="false" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/GameMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="55" column="16" lean-forward="false" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#364#365#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/TileState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Tile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/game/GameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="30" column="7" lean-forward="false" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/game/GameState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/history/AIExpertHistory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/history/BoardsHistory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding>
+            <element signature="e#902#903#0" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/util/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2058">
+          <caret line="100" column="4" lean-forward="false" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/util/DatabaseUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="107" column="39" lean-forward="false" selection-start-line="107" selection-start-column="39" selection-end-line="107" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/GameStateTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="40" column="62" lean-forward="false" selection-start-line="40" selection-start-column="62" selection-end-line="40" selection-end-column="62" />
           <folding />
         </state>
       </provider>
@@ -919,168 +1048,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/CommentServiceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ShipTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="11" column="3" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        <state relative-caret-position="789">
+          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/CommentServiceJDBCTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-          <folding>
-            <marker date="1521038165118" expanded="true" signature="347:366" ph="DELETE FROM comment... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/AITest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ShootTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="22" column="47" lean-forward="false" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="10" column="44" lean-forward="false" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        <state relative-caret-position="504">
+          <caret line="32" column="15" lean-forward="false" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/BoardTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/bb28bd68/b461c3b5-318d-4557-b4dc-5082c9ac97a3/gamestudio.score">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/GameMode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/util/DatabaseUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="104" column="6" lean-forward="false" selection-start-line="104" selection-start-column="6" selection-end-line="104" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ShipTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/util/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="99" column="28" lean-forward="false" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Ship.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PrintBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-66">
-          <caret line="28" column="57" lean-forward="false" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PlayerVsPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="53" column="24" lean-forward="false" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/game/GameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/history/AIExpertHistory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="6" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/Human.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/AILevel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerExpert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="145" column="18" lean-forward="true" selection-start-line="145" selection-start-column="18" selection-end-line="145" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerBegginer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
+        <state relative-caret-position="168">
           <caret line="29" column="48" lean-forward="false" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
           <folding />
         </state>
@@ -1094,91 +1104,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerExpert.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-483">
-          <caret line="18" column="65" lean-forward="false" selection-start-line="18" selection-start-column="65" selection-end-line="18" selection-end-column="65" />
+        <state relative-caret-position="378">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/Human.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PlayerVsComputer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="84" column="49" lean-forward="false" selection-start-line="84" selection-start-column="49" selection-end-line="84" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Hint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1038">
+          <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding>
+            <element signature="e#878#879#0" expanded="true" />
+            <element signature="e#920#921#0" expanded="true" />
+            <element signature="e#1030#1031#0" expanded="true" />
+            <element signature="e#1062#1063#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerMedium.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2098">
+          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/AITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="95" column="49" lean-forward="true" selection-start-line="95" selection-start-column="49" selection-end-line="95" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/player/ComputerHard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Hint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="97" column="52" lean-forward="false" selection-start-line="97" selection-start-column="52" selection-end-line="97" selection-end-column="52" />
-          <folding>
-            <element signature="e#799#800#0" expanded="true" />
-            <element signature="e#841#842#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
-            <element signature="e#983#984#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/TileState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/history/SinglePlayerHistory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding>
-            <element signature="e#997#998#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/bb28bd68/b461c3b5-318d-4557-b4dc-5082c9ac97a3/gamestudio.comment">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/PlayerVsComputer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-189">
-          <caret line="0" column="38" lean-forward="true" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/core/board/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="41" column="47" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="e#1550#1551#0" expanded="true" />
-            <element signature="e#1581#1582#0" expanded="true" />
-            <element signature="docComment;method#setUpBoard#0;class#Board#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/bb28bd68/b461c3b5-318d-4557-b4dc-5082c9ac97a3/gamestudio.rating">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gamestudio/game/battleships/consoleui/GameMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="65" column="45" lean-forward="false" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="45" />
+        <state relative-caret-position="-1290">
+          <caret line="18" column="42" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
           <folding />
         </state>
       </provider>

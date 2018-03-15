@@ -19,8 +19,8 @@ public class Hint {
     private int boardCol;
 
     public Hint(Board board){
-        computerExpert = new ComputerExpert();
-        hintBoard = Util.createProbabilityBoard(10,10);
+        computerExpert = new ComputerExpert(board.getBoardRows(), board.getBoardCols());
+        hintBoard = Util.createProbabilityBoard(board.getBoardRows(), board.getBoardCols());
         boardRow = board.getBoardRows();
         boardCol = board.getBoardCols();
     }

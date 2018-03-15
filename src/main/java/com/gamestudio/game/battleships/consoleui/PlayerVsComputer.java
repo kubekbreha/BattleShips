@@ -1,27 +1,24 @@
 package com.gamestudio.game.battleships.consoleui;
 
-import com.gamestudio.entity.Comment;
-import com.gamestudio.entity.Score;
 import com.gamestudio.game.battleships.core.board.Board;
 import com.gamestudio.game.battleships.core.board.Hint;
 import com.gamestudio.game.battleships.core.board.TileState;
-import com.gamestudio.game.battleships.core.util.DatabaseUtil;
-import com.gamestudio.game.battleships.core.util.Util;
 import com.gamestudio.game.battleships.core.game.GameController;
 import com.gamestudio.game.battleships.core.game.GameState;
-import com.gamestudio.game.battleships.core.history.AIExpertHistory;
-import com.gamestudio.game.battleships.core.history.SinglePlayerHistory;
+import com.gamestudio.game.battleships.core.history.BoardsHistory;
 import com.gamestudio.game.battleships.core.player.*;
-import com.gamestudio.service.*;
+import com.gamestudio.game.battleships.core.util.DatabaseUtil;
+import com.gamestudio.game.battleships.core.util.Util;
+import com.gamestudio.service.CommentService;
+import com.gamestudio.service.CommentServiceJDBC;
+import com.gamestudio.service.ScoreService;
+import com.gamestudio.service.ScoreServiceJDBC;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Date;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import static com.gamestudio.game.battleships.core.board.Board.GAME_NAME;
 
 
 /**
@@ -32,9 +29,9 @@ public class PlayerVsComputer implements GameMode {
     private Board playerBoard;
     private Board computerBoard;
 
-    private SinglePlayerHistory playerHistory;
-    private AIExpertHistory computerHistoryHard;
-    private SinglePlayerHistory computerHistoryEasy;
+    private BoardsHistory playerHistory;
+    private BoardsHistory computerHistoryHard;
+    private BoardsHistory computerHistoryEasy;
 
     private GameController playerControler;
     private GameController computerControler;
@@ -43,25 +40,26 @@ public class PlayerVsComputer implements GameMode {
     private Player computer;
     private Hint hint;
     private int computerLevel;
+    private Scanner reader;
 
     private ScoreService scoreService = new ScoreServiceJDBC();
     private CommentService commentService = new CommentServiceJDBC();
     private BufferedReader bufferedReader;
 
-    final Pattern YESNOPATTERN = Pattern.compile("[Y|N]");
+    private final Pattern YESNOPATTERN = Pattern.compile("[Y|N]");
+
 
     /**
      * Player vs Computer play mode.
      */
     public PlayerVsComputer() {
         bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-
         consoleUI = new PrintBoard();
+        reader = new Scanner(System.in);
 
+        setupBoard();
 
-        setupBoard(playerControler, computerControler);
-
-        playerHistory = new SinglePlayerHistory();
+        playerHistory = new BoardsHistory();
 
         player = new Human();
         computer = new Computer();
@@ -76,7 +74,7 @@ public class PlayerVsComputer implements GameMode {
         switch (computerLevel) {
             case 1:
                 ((Computer) computer).setAiState(new ComputerBegginer());
-                computerHistoryEasy = new SinglePlayerHistory();
+                computerHistoryEasy = new BoardsHistory();
                 break;
 
             case 2:
@@ -84,16 +82,16 @@ public class PlayerVsComputer implements GameMode {
                 break;
 
             case 3:
-                ((Computer) computer).setAiState(new ComputerHard());
+                ((Computer) computer).setAiState(new ComputerHard(10, 10));
                 break;
 
             case 4:
-                ((Computer) computer).setAiState(new ComputerExpert());
-                computerHistoryHard = new AIExpertHistory();
+                ((Computer) computer).setAiState(new ComputerExpert(10, 10));
+                computerHistoryHard = new BoardsHistory();
                 break;
 
             default:
-                ((Computer) computer).setAiState(new ComputerExpert());
+                ((Computer) computer).setAiState(new ComputerExpert(10, 10));
                 break;
         }
 
@@ -104,12 +102,13 @@ public class PlayerVsComputer implements GameMode {
         }
     }
 
-    private void setupBoard(GameController playerC, GameController computerC) {
-
+    /**
+     *  Setup game wither manually or random.
+     */
+    private void setupBoard() {
         System.out.println("Setup map.");
         System.out.println("1. Manually");
         System.out.println("2. Randomly");
-
         Scanner reader = new Scanner(System.in);
         int setupMode = reader.nextInt();
         switch (setupMode) {
@@ -129,8 +128,8 @@ public class PlayerVsComputer implements GameMode {
         playerControler = new GameController(playerBoard);
         computerControler = new GameController(computerBoard);
 
-        playerControler.isGameSetUp(playerBoard.getShipSize());
-        computerControler.isGameSetUp(computerBoard.getShipSize());
+        playerControler.isGameSetUp(playerBoard.getShipSizes());
+        computerControler.isGameSetUp(computerBoard.getShipSizes());
 
         hint = new Hint(computerBoard);
     }
@@ -140,8 +139,6 @@ public class PlayerVsComputer implements GameMode {
      * Start playing a game.
      */
     private void startGame() {
-        Scanner reader = new Scanner(System.in);
-
         int shots = 0;
         while (computerControler.getGameState() != GameState.WON || playerControler.getGameState() != GameState.WON) {
             System.out.println("-------ROUND " + shots + "-------");
@@ -159,26 +156,23 @@ public class PlayerVsComputer implements GameMode {
                 }
             }
 
-
             playerHistory.addToHistory(computerBoard.getPlayBoard());
             playerHistory.addToProbabilityHistory(hint.getHintBoard());
 
             if (computerLevel == 4) {
-                computerHistoryHard.addToHistory(playerBoard.getPlayBoard(), ((Computer) computer).getNotTileHistory());
+                computerHistoryHard.addToHistory(playerBoard.getPlayBoard());
+                computerHistoryHard.addToProbabilityHistory(((Computer) computer).getNotTileHistory());
             } else if (computerLevel == 1) {
                 computerHistoryEasy.addToHistory(playerBoard.getPlayBoard());
             }
 
             askForHint();
-
             int coor[] = askShootCoordinations(reader, computerBoard);
-
             player.shoot(computerBoard.getPlayBoard(), coor[0], coor[1]);
             hint.moveExecuted(computerBoard.getPlayBoard()[coor[0]][coor[1]].getTileState(), coor[0], coor[1]);
             computer.shootAI(playerBoard.getPlayBoard());
 
             shots++;
-
             if (playerControler.isGameWon(computerBoard.getShips())) {
                 break;
             }
@@ -197,7 +191,6 @@ public class PlayerVsComputer implements GameMode {
             System.out.println("Congratulations you won with only " + shots + " shots");
 
             DatabaseUtil.addScore(shots);
-
             System.out.println("Do you wan to add comment ? (Y/N)");
             String line = Util.readLine(bufferedReader);
             Matcher m = YESNOPATTERN.matcher(line);
@@ -208,8 +201,6 @@ public class PlayerVsComputer implements GameMode {
                 System.out.println("Here are comments.");
                 DatabaseUtil.printComments();
             }
-
-
         }
     }
 
@@ -225,14 +216,11 @@ public class PlayerVsComputer implements GameMode {
         int row = reader.next().charAt(0) - 'A';
         System.out.println("Enter col number : ");
         int col = reader.nextInt();
-        ;
 
         if (board.getPlayBoard()[row][col].getTileState() == TileState.HITTED) {
             askShootCoordinations(reader, board);
         }
-
-        int ret[] = {row, col};
-        return ret;
+        return new int[]{row, col};
     }
 
 
@@ -254,7 +242,7 @@ public class PlayerVsComputer implements GameMode {
                 hint.setHintBoard(playerHistory.getLastProbability());
                 playerHistory.removeLastProbability();
 
-                computerBoard.setPlayBoard(computerHistoryHard.getLastTile());
+                computerBoard.setPlayBoard(computerHistoryHard.getLast());
                 ((Computer) computer).setNotTileHistory(computerHistoryHard.getLastProbability());
                 computerHistoryHard.removeLast();
 
@@ -290,14 +278,11 @@ public class PlayerVsComputer implements GameMode {
 
     /**
      * Ask user if he want to step back.
-     *
-     * @return true if he wants.
      */
     private void askForHint() {
         Scanner reader = new Scanner(System.in);
         System.out.println("Want hint ? (Y/N)");
         if (reader.next().charAt(0) == 'Y') {
-            //hint.printHintBoard();
             System.out.println("Row: " + (char) (hint.getHintRow() + 'A') + "  Col: " + hint.getHintCol());
         }
     }

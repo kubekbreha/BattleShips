@@ -17,6 +17,9 @@ public class GameStateTest {
 
     private ArrayList<Ship> ships = new ArrayList<>();
 
+    /**
+     * Test game win state after destroying ship.
+     */
     @Test
     public void isGameWon(){
         Board board = new Board(10, 10);
@@ -34,6 +37,9 @@ public class GameStateTest {
         assertEquals(gameController.getGameState(), GameState.WON);
     }
 
+    /**
+     * Test if game is in playing mode after one ship touched.
+     */
     @Test
     public void isGameStillPlaying(){
         Board board = new Board(10, 10);

@@ -8,7 +8,6 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -19,8 +18,8 @@ public class Board {
 
     public static final String GAME_NAME = "battleships-brehuv";
     private BufferedReader bufferedReader;
-    final Pattern ROWCOLPATTERN = Pattern.compile("[0-9]");
-    final Pattern ORIENTATIONPATTERN = Pattern.compile("[V|H]");
+    private final Pattern ROWCOLPATTERN = Pattern.compile("[0-9]");
+    private final Pattern ORIENTATIONPATTERN = Pattern.compile("[V|H]");
 
     private int SETUPBOARDTIMEOUT = 0;
 
@@ -28,7 +27,7 @@ public class Board {
     private int boardRows;
     private int boardCols;
     private ArrayList<Ship> ships;
-    final int[] shipSize = {1, 1, 2, 2, 3, 4, 4, 5};
+    private final int[] shipSizes = {1, 1, 2, 2, 3, 4};
 
 
     /**
@@ -52,12 +51,17 @@ public class Board {
         }
     }
 
-    public int[] getShipSize() {
-        return shipSize;
+    /**
+     * Get list of ship sizes.
+     *
+     * @return integer array.
+     */
+    public int[] getShipSizes() {
+        return shipSizes;
     }
 
     /**
-     * Get list of ships.
+     * Get list of ships objects.
      *
      * @return list of ships.
      */
@@ -157,8 +161,8 @@ public class Board {
                 valuesList.add(0.0);
             }
             shipPresent = false;
-            for (int x = 0; x < valuesList.size(); x++) {
-                System.out.print(valuesList.get(x) + " ");
+            for (Double aValuesList : valuesList) {
+                System.out.print(aValuesList + " ");
             }
             System.out.print(valuesList.size());
             System.out.println();
@@ -173,14 +177,12 @@ public class Board {
     public void setUpBoardRandom() {
         Random rand = new Random();
 
-        long start = System.nanoTime();
         int shipNumber = 0;
-        int shipsCount = shipSize.length;
+        int shipsCount = shipSizes.length;
         char orientation = 'H';
 
         while (shipsCount != 0) {
-            Ship ship = new Ship(shipSize[shipNumber]);
-
+            Ship ship = new Ship(shipSizes[shipNumber]);
 
             int i = 0;
             //try to place ship while true
@@ -215,29 +217,22 @@ public class Board {
      * Put ships into playing board manually.
      */
     public void setUpBoard() {
-        Scanner reader = new Scanner(System.in);
         PrintBoard consoleUI = new PrintBoard();
 
-
         int shipNumber = 0;
-        int shipsCount = shipSize.length;
+        int shipsCount = shipSizes.length;
 
         while (shipsCount != 0) {
-            System.out.println("----SHIP " + shipNumber + "-(" + shipSize[shipNumber] + ")---");
-            Ship ship = new Ship(shipSize[shipNumber]);
+            System.out.println("----SHIP " + shipNumber + "-(" + shipSizes[shipNumber] + ")---");
+            Ship ship = new Ship(shipSizes[shipNumber]);
 
             placeShip(ship);
-
             shipsCount--;
-
             consoleUI.printPlayBoard(this, false);
 
             ships.add(ship);
             shipNumber++;
         }
-//        if (gameController.getGameState() == GameState.NOTSETTEDUP) {
-//            setUpBoard(gameController);
-//        }
     }
 
     /**

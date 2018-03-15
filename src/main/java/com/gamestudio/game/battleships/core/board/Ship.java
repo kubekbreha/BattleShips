@@ -42,7 +42,7 @@ public class Ship {
             canPlace = false;
         }
 
-
+        //TODO: Rewrite this bullshit code.
         //check if ship will be placed over other ship
         if (canPlace) {
             for (int i = 0; i < shipSize; i++) {
@@ -147,17 +147,12 @@ public class Ship {
     public boolean isShipTouched(Tile[][] board) {
         int touches = 0;
 
-        for (int i = 0; i < shipPositions.length; i++) {
-            if (board[shipPositions[i][0]][shipPositions[i][1]].getTileState() == TileState.HITTED) {
+        for (int[] shipPosition : shipPositions) {
+            if (board[shipPosition[0]][shipPosition[1]].getTileState() == TileState.HITTED) {
                 touches++;
             }
         }
-        if(touches > 0 ){
-            return true;
-        }else {
-            return false;
-        }
-
+        return touches > 0;
     }
 
     /**
@@ -168,8 +163,8 @@ public class Ship {
     public boolean isShipSunk(Tile[][] board) {
         int touches = 0;
 
-        for (int i = 0; i < shipPositions.length; i++) {
-            if (board[shipPositions[i][0]][shipPositions[i][1]].getTileState() == TileState.HITTED) {
+        for (int[] shipPosition : shipPositions) {
+            if (board[shipPosition[0]][shipPosition[1]].getTileState() == TileState.HITTED) {
                 touches++;
             }
         }

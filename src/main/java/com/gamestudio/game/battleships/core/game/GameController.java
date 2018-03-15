@@ -59,7 +59,7 @@ public class GameController {
      *
      * @return true if game is won otherwise false.
      */
-    public void isGameSetUp(int[] shipsSizes) {
+    public boolean isGameSetUp(int[] shipsSizes) {
         int shipsListCount = 0;
         for (int shipSize : shipsSizes) {
             shipsListCount += shipSize;
@@ -76,8 +76,10 @@ public class GameController {
 
         if (shipsTileCount == shipsListCount) {
             gameState = GameState.SETTEDUP;
+            return true;
         } else {
             gameState = GameState.NOTSETTEDUP;
+            return false;
         }
     }
 }

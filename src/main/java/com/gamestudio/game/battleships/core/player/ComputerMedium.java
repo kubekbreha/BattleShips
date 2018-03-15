@@ -20,12 +20,9 @@ public class ComputerMedium implements AILevel {
     private boolean makeCross;
     private int orientation;
 
-
     public ComputerMedium(){
         rand = new Random();
     }
-
-
 
     /**
      * AI which create cross around hit field in board.
@@ -92,7 +89,7 @@ public class ComputerMedium implements AILevel {
                 play(board);
             }
         } else {
-            basicRandomShoot(board, row, col, 'M');
+            basicRandomShoot(board, row, col);
         }
     }
 
@@ -109,8 +106,6 @@ public class ComputerMedium implements AILevel {
 
     /**
      * Not needed.
-     *
-     * @return empty 2D int board.
      */
     @Override
     public void setHistory(int[][] history) {
@@ -124,9 +119,8 @@ public class ComputerMedium implements AILevel {
      * @param board      where to shoot.
      * @param row        where to shoot.
      * @param col        where to shoot.
-     * @param difficulty level of difficulty.
      */
-    private void basicRandomShoot(Tile[][] board, int row, int col, char difficulty) {
+    private void basicRandomShoot(Tile[][] board, int row, int col) {
         if (board[row][col].getTileState() != TileState.HITTED || board[row][col].getTileState() != TileState.MISSED){
             if (board[row][col].getTileState() == TileState.SHIP) {
                 makeCross = true;

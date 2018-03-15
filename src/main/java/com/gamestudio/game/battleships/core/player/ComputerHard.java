@@ -16,8 +16,8 @@ public class ComputerHard implements AILevel {
     private int[][] probabilityBoard;
 
 
-    public ComputerHard(){
-        this.probabilityBoard = Util.createProbabilityBoard(10, 10);
+    public ComputerHard(int rows, int cols){
+        this.probabilityBoard = Util.createProbabilityBoard(rows, cols);
     }
 
     /**
@@ -34,9 +34,6 @@ public class ComputerHard implements AILevel {
         } else if (board[rowToShoot][colToShoot].getTileState() == TileState.HITTED) {
             shipHitRecalculate(probabilityBoard, rowToShoot, colToShoot);
         }
-
-        //just test if calculations are correct
-        //printProbabilityTable();
     }
 
 

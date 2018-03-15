@@ -10,12 +10,15 @@ import static junit.framework.TestCase.assertEquals;
  */
 public class BoardTest {
 
+    /**
+     * Check if board is set correctly.
+     */
     @Test
     public void istBoardSetCorrectly(){
         Board board = new Board(10, 10);
         GameController gameController = new GameController(board);
         board.setUpBoardRandom();
-        gameController.isGameSetUp(board.getShipSize());
+        gameController.isGameSetUp(board.getShipSizes());
         assertEquals(gameController.getGameState(), GameState.SETTEDUP);
     }
 }

@@ -13,6 +13,9 @@ import static junit.framework.TestCase.assertEquals;
  */
 public class ShootTest {
 
+    /**
+     * Test miss shoot.
+     */
     @Test
     public void shootMissed() {
         Board board = new Board(10, 10);
@@ -26,6 +29,9 @@ public class ShootTest {
     }
 
 
+    /**
+     * Test hit shoot.
+     */
     @Test
     public void shootHitted() {
         Board board = new Board(10, 10);

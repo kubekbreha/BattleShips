@@ -16,6 +16,9 @@ public class AITest {
 
     private ArrayList<Ship> ships = new ArrayList<>();
 
+    /**
+     * Test if can be won by AIexpert algorithm.
+     */
     @Test
     public void expertToEnd() {
         Board board = new Board(10, 10);
@@ -24,26 +27,20 @@ public class AITest {
 
         GameController gameController = new GameController(board);
         Player player = new Computer();
-        ((Computer) player).setAiState(new ComputerExpert());
+        ((Computer) player).setAiState(new ComputerExpert(board.getBoardRows(), board.getBoardCols()));
 
-        int count = 0;
         while (!gameController.isGameWon(ships)){
             player.shootAI(board.getPlayBoard());
-            count++;
         }
-        //System.out.println("Expert steps: " + count);
 
-        boolean result;
-        if(gameController.getGameState() == GameState.WON){
-            result = true;
-        }else{
-            result = false;
-        }
+        boolean result = gameController.getGameState() == GameState.WON;
         assertEquals(true, result);
     }
 
 
-
+    /**
+     * Test if can be won by AIbeginner algorithm.
+     */
     @Test
     public void beginnerToEnd() {
         Board board = new Board(10, 10);
@@ -54,23 +51,17 @@ public class AITest {
         Player player = new Computer();
         ((Computer) player).setAiState(new ComputerBegginer());
 
-        int count = 0;
         while (!gameController.isGameWon(ships)){
             player.shootAI(board.getPlayBoard());
-            count++;
         }
-        //System.out.println("Begginer steps: " + count);
 
-        boolean result;
-        if(gameController.getGameState() == GameState.WON){
-            result = true;
-        }else{
-            result = false;
-        }
+        boolean result = gameController.getGameState() == GameState.WON;
         assertEquals(true, result);
     }
 
-
+    /**
+     * Test if can be won by AImedium algorithm.
+     */
     @Test
     public void mediumToEnd() {
         Board board = new Board(10, 10);
@@ -81,23 +72,17 @@ public class AITest {
         Player player = new Computer();
         ((Computer) player).setAiState(new ComputerMedium());
 
-        int count = 0;
         while (!gameController.isGameWon(ships)){
             player.shootAI(board.getPlayBoard());
-            count++;
         }
-        //System.out.println("Medium steps: " + count);
 
-        boolean result;
-        if(gameController.getGameState() == GameState.WON){
-            result = true;
-        }else{
-            result = false;
-        }
+        boolean result = gameController.getGameState() == GameState.WON;
         assertEquals(true, result);
     }
 
-
+    /**
+     * Test if can be won by AIhard algorithm.
+     */
     @Test
     public void hardToEnd() {
         Board board = new Board(10, 10);
@@ -106,24 +91,20 @@ public class AITest {
 
         GameController gameController = new GameController(board);
         Player player = new Computer();
-        ((Computer) player).setAiState(new ComputerHard());
+        ((Computer) player).setAiState(new ComputerHard(board.getBoardRows(), board.getBoardCols()));
 
-        int count = 0;
         while (!gameController.isGameWon(ships)){
             player.shootAI(board.getPlayBoard());
-            count++;
         }
-        //System.out.println("Hard steps: " + count);
 
-        boolean result;
-        if(gameController.getGameState() == GameState.WON){
-            result = true;
-        }else{
-            result = false;
-        }
+        boolean result = gameController.getGameState() == GameState.WON;
         assertEquals(true, result);
     }
 
+    /**
+     * Add ships to board.
+     * @param board where ships will be placed.
+     */
     private void addShips(Board board){
         Ship ship = new Ship(2);
         Ship ship2 = new Ship(4);
