@@ -6,7 +6,6 @@ import sk.tuke.gamestudio.game.battleships.core.board.TileState;
 import sk.tuke.gamestudio.game.battleships.core.game.GameController;
 import sk.tuke.gamestudio.game.battleships.core.game.GameState;
 import sk.tuke.gamestudio.game.battleships.core.history.BoardsHistory;
-import com.gamestudio.game.battleships.core.player.*;
 import sk.tuke.gamestudio.game.battleships.core.util.DatabaseUtil;
 import sk.tuke.gamestudio.game.battleships.core.util.Util;
 import sk.tuke.gamestudio.service.CommentService;
@@ -182,7 +181,17 @@ public class PlayerVsComputer implements GameMode {
             }
         }
         reader.close();
+        gameFinnieshedHandle(shots);
 
+    }
+
+
+    /**
+     * Gandle finished game.
+     *
+     * @param shots = score.
+     */
+    public void gameFinnieshedHandle(int shots){
         if (computerControler.getGameState() == GameState.WON) {
             System.out.println("Try next time.");
             consoleBoardUI.printPlayBoard(playerBoard, true);

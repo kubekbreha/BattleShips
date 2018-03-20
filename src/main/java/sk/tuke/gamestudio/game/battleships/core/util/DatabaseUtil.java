@@ -3,7 +3,6 @@ package sk.tuke.gamestudio.game.battleships.core.util;
 import sk.tuke.gamestudio.entity.Comment;
 import sk.tuke.gamestudio.entity.Rating;
 import sk.tuke.gamestudio.entity.Score;
-import com.gamestudio.service.*;
 import sk.tuke.gamestudio.service.*;
 
 import java.util.Date;
