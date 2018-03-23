@@ -7,17 +7,15 @@ import java.util.Date;
  * Created by Kubo Brehuv with <3 (10.3.2018)
  */
 public class Score implements Comparable<Score>, Serializable {
-    private String game;
 
     private String player;
-
+    private String game;
     private int points;
-
     private Date playedOn;
 
     public Score( String player, String game, int points, Date playedOn) {
-        this.game = game;
         this.player = player;
+        this.game = game;
         this.points = points;
         this.playedOn = playedOn;
     }

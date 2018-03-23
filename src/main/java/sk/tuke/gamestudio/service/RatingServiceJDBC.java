@@ -3,9 +3,12 @@ package sk.tuke.gamestudio.service;
 /**
  * Created by Kubo Brehuv with <3 (11.3.2018)
  */
+import sk.tuke.gamestudio.entity.Comment;
 import sk.tuke.gamestudio.entity.Rating;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /*
     CREATE TABLE rating (
@@ -121,5 +124,36 @@ public class RatingServiceJDBC implements RatingService {
             throw new ScoreException("Error loading player rating", e);
         }
         return ratingVal;
+    }
+
+
+    /**
+     * Get ratings from database.
+     * @param game to which was rating added.
+     * @return list od rating objects.
+     * @throws RatingException
+     */
+    @Override
+    public List<Rating> getRatings(String game) throws RatingException {
+        List<Rating> ratings = new ArrayList<>();
+        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+            try(PreparedStatement ps = connection.prepareStatement(SELECT_RATING)){
+                ps.setString(1, game);
+                try(ResultSet rs = ps.executeQuery()) {
+                    while(rs.next()) {
+                        Rating rating = new Rating(
+                                rs.getString(1),
+                                rs.getString(2),
+                                rs.getInt(3),
+                                rs.getTimestamp(4)
+                        );
+                        ratings.add(rating);
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            throw new RatingException("Error loading ratings", e);
+        }
+        return ratings;
     }
 }

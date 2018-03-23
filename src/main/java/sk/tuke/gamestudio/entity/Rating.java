@@ -1,11 +1,12 @@
 package sk.tuke.gamestudio.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by Kubo Brehuv with <3 (10.3.2018)
  */
-public class Rating {
+public class Rating implements Comparable<Rating>, Serializable {
     private String player;
     private String game;
     private int rating;
@@ -59,5 +60,11 @@ public class Rating {
         sb.append(", ratedon=").append(ratedon);
         sb.append('}');
         return sb.toString();
+    }
+
+    @Override
+    public int compareTo(Rating o) {
+        if(o == null) return -1;
+        return this.getRating() - o.getRating();
     }
 }
