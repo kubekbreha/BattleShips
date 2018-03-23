@@ -200,16 +200,16 @@ public class PlayerVsComputer implements GameMode {
         } else if (playerControler.getGameState() == GameState.WON) {
             System.out.println("Congratulations you won with only " + shots + " shots");
 
-            DatabaseUtil.addScore(shots);
+            new DatabaseUtil(scoreService).addScore(shots);
             System.out.println("Do you wan to add comment ? (Y/N)");
             String line = Util.readLine(bufferedReader);
             Matcher m = YESNOPATTERN.matcher(line);
             if (m.matches()) {
                 String comment = Util.readLine(bufferedReader);
-                DatabaseUtil.addComment(comment);
+                new DatabaseUtil(commentService).addComment(comment);
             } else {
                 System.out.println("Here are comments.");
-                DatabaseUtil.printComments();
+                new DatabaseUtil(commentService).printComments();
             }
         }
     }

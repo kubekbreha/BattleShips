@@ -1,6 +1,9 @@
 package sk.tuke.gamestudio.game.battleships;
 
+import org.springframework.context.annotation.Bean;
+import sk.tuke.gamestudio.entity.Score;
 import sk.tuke.gamestudio.game.battleships.consoleui.GameMenu;
+import sk.tuke.gamestudio.service.*;
 
 import java.io.FileNotFoundException;
 
@@ -10,7 +13,12 @@ import java.io.FileNotFoundException;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException, FileNotFoundException {
-        GameMenu gameMenu = new GameMenu();
+
+        CommentService commentService = new CommentServiceFile();
+        ScoreService scoreService = new ScoreServiceFile();
+        RatingService ratingService = new RatingServiceFile();
+
+        GameMenu gameMenu = new GameMenu(scoreService, commentService, ratingService);
         gameMenu.showMenu();
 
 

@@ -3,7 +3,9 @@ package sk.tuke.gamestudio.game.battleships.consoleui;
 import org.springframework.beans.factory.annotation.Autowired;
 import sk.tuke.gamestudio.game.battleships.core.util.DatabaseUtil;
 import sk.tuke.gamestudio.game.battleships.core.util.Util;
-import sk.tuke.gamestudio.service.*;
+import sk.tuke.gamestudio.service.CommentService;
+import sk.tuke.gamestudio.service.RatingService;
+import sk.tuke.gamestudio.service.ScoreService;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -24,11 +26,15 @@ public class GameMenu {
     @Autowired
     private CommentService commentService;
 
+    public GameMenu(ScoreService scoreService, CommentService commentService, RatingService ratingService) {
+        this.scoreService = scoreService;
+        this.commentService = commentService;
+        this.ratingService = ratingService;
+    }
 
     /**
      * Game menu, first interaction with user.
      */
-    @Autowired
     public void showMenu(){
         System.out.println("Welcome to BATTLESHIPS game.");
         System.out.println("1. Player vs Computer");
@@ -51,12 +57,12 @@ public class GameMenu {
                 break;
 
             case 3:
-                DatabaseUtil.printScore();
+                new DatabaseUtil(this.scoreService).printScore();
                 showMenu();
                 break;
 
             case 4:
-                DatabaseUtil.printComments();
+                new DatabaseUtil(this.commentService).printComments();
                 showMenu();
                 break;
 
@@ -64,19 +70,19 @@ public class GameMenu {
             case 5:
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
                 String comment = Util.readLine(bufferedReader);
-                DatabaseUtil.addComment(comment);
+                new DatabaseUtil(this.commentService).addComment(comment);
                 showMenu();
                 break;
 
             case 6:
-                DatabaseUtil.printRating();
+                new DatabaseUtil(this.ratingService).printRating();
                 showMenu();
                 break;
 
             case 7:
                 bufferedReader = new BufferedReader(new InputStreamReader(System.in));
                 int rating = Util.readLine(bufferedReader).charAt(0) - '0';
-                DatabaseUtil.addRating(rating);
+                new DatabaseUtil(this.ratingService).addRating(rating);
                 showMenu();
                 break;
         }

@@ -26,8 +26,8 @@ public class SpringClient {
     }
 
     @Bean
-    public GameMenu gameMenu() {
-        return new GameMenu();
+    public GameMenu gameMenu(ScoreService scoreService, CommentService commentService, RatingService ratingService) {
+        return new GameMenu(scoreService(), commentService(), ratingService());
     }
 
 
