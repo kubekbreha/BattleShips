@@ -3,9 +3,7 @@ package sk.tuke.gamestudio.game.battleships.consoleui;
 import org.springframework.beans.factory.annotation.Autowired;
 import sk.tuke.gamestudio.game.battleships.core.util.DatabaseUtil;
 import sk.tuke.gamestudio.game.battleships.core.util.Util;
-import sk.tuke.gamestudio.service.CommentService;
-import sk.tuke.gamestudio.service.RatingService;
-import sk.tuke.gamestudio.service.ScoreService;
+import sk.tuke.gamestudio.service.*;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -26,9 +24,11 @@ public class GameMenu {
     @Autowired
     private CommentService commentService;
 
+
     /**
      * Game menu, first interaction with user.
      */
+    @Autowired
     public void showMenu(){
         System.out.println("Welcome to BATTLESHIPS game.");
         System.out.println("1. Player vs Computer");
