@@ -47,8 +47,8 @@ public class CommentServiceJDBC implements CommentService {
     public void addComment(Comment comment) throws CommentException {
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
             try(PreparedStatement ps = connection.prepareStatement(INSERT_COMMENT)){
-                ps.setString(2, comment.getPlayer());
-                ps.setString(1, comment.getGame());
+                ps.setString(1, comment.getPlayer());
+                ps.setString(2, comment.getGame());
                 ps.setString(3, comment.getComment());
                 ps.setDate(4, new Date(comment.getCommentedOn().getTime()));
 

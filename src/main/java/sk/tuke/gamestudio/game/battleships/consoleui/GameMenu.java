@@ -1,7 +1,11 @@
 package sk.tuke.gamestudio.game.battleships.consoleui;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import sk.tuke.gamestudio.game.battleships.core.util.DatabaseUtil;
 import sk.tuke.gamestudio.game.battleships.core.util.Util;
+import sk.tuke.gamestudio.service.CommentService;
+import sk.tuke.gamestudio.service.RatingService;
+import sk.tuke.gamestudio.service.ScoreService;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -13,14 +17,19 @@ import java.util.Scanner;
  */
 public class GameMenu {
 
-    public GameMenu(){
-      showMenu();
-    }
+    @Autowired
+    private ScoreService scoreService;
+
+    @Autowired
+    private RatingService ratingService;
+
+    @Autowired
+    private CommentService commentService;
 
     /**
      * Game menu, first interaction with user.
      */
-    private void showMenu(){
+    public void showMenu(){
         System.out.println("Welcome to BATTLESHIPS game.");
         System.out.println("1. Player vs Computer");
         System.out.println("2. Player vs Player");

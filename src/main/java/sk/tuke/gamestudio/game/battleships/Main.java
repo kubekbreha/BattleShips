@@ -1,4 +1,4 @@
-package sk.tuke.gamestudio;
+package sk.tuke.gamestudio.game.battleships;
 
 import sk.tuke.gamestudio.game.battleships.consoleui.GameMenu;
 
@@ -11,6 +11,7 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException, FileNotFoundException {
         GameMenu gameMenu = new GameMenu();
+        gameMenu.showMenu();
 
 
         /*GameController controller = new GameController();

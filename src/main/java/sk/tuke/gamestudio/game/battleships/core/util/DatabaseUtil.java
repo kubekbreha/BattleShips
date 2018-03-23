@@ -72,8 +72,8 @@ public class DatabaseUtil {
     public static void addRating(int ratingValue) {
         try {
             ratingService.setRating(new Rating(
-                    GAME_NAME,
                     System.getProperty("user.name"),
+                    GAME_NAME,
                     ratingValue,
                     new Date()
             ));
@@ -89,8 +89,8 @@ public class DatabaseUtil {
     public static void addComment(String commentText) {
         try {
             commentService.addComment(new Comment(
-                    GAME_NAME,
                     System.getProperty("user.name"),
+                    GAME_NAME,
                     commentText,
                     new Date()
             ));
@@ -109,8 +109,8 @@ public class DatabaseUtil {
     public static void addScore(int score){
         try {
             scoreService.addScore(new Score(
-                    GAME_NAME,
                     System.getProperty("user.name"),
+                    GAME_NAME,
                     score,
                     new Date()
             ));

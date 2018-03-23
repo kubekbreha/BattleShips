@@ -12,7 +12,7 @@ public class TestRunner {
      * Run all tests at same time.
      * @param args of main.
      */
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         Result result = JUnitCore.runClasses(AITest.class, BoardTest.class, GameStateTest.class,
                 ShipTest.class, ShootTest.class, CommentServiceJDBCTest.class,
                 RatingServiceJDBCTest.class, ScoreServiceJDBCTest.class);
@@ -26,5 +26,5 @@ public class TestRunner {
         } else {
             System.out.println(Util.ANSI_RED + "Some test failed." + Util.ANSI_RESET);
         }
-    }
+    }*/
 }

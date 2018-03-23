@@ -1,6 +1,7 @@
 import sk.tuke.gamestudio.entity.Comment;
 import sk.tuke.gamestudio.service.CommentService;
 import org.junit.Test;
+import sk.tuke.gamestudio.service.CommentServiceJDBC;
 
 import java.util.Date;
 
@@ -12,7 +13,6 @@ import static junit.framework.TestCase.*;
  */
 public class CommentServiceTest {
     protected CommentService commentService;
-
     @Test
     public void testDbInit() throws Exception {
         assertEquals(0, commentService.getComments(GAME_NAME).size());
@@ -20,7 +20,7 @@ public class CommentServiceTest {
 
     @Test
     public void testAddComment() throws Exception {
-        Comment comment = new Comment(GAME_NAME, "miska", "perfect game", new Date());
+        Comment comment = new Comment("miska", GAME_NAME,  "perfect game", new Date());
         commentService.addComment(comment);
         assertEquals(1, commentService.getComments(GAME_NAME).size());
     }
