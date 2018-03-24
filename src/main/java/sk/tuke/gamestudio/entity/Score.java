@@ -1,17 +1,29 @@
 package sk.tuke.gamestudio.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by Kubo Brehuv with <3 (10.3.2018)
  */
+@Entity
 public class Score implements Comparable<Score>, Serializable {
+
+    @Id
+    @GeneratedValue
+    private int indent;
 
     private String player;
     private String game;
     private int points;
     private Date playedOn;
+
+    public Score(){
+
+    }
 
     public Score( String player, String game, int points, Date playedOn) {
         this.player = player;

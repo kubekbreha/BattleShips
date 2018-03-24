@@ -7,6 +7,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import sk.tuke.gamestudio.game.battleships.consoleui.GameMenu;
+import sk.tuke.gamestudio.game.battleships.service.GamePlayService;
+import sk.tuke.gamestudio.game.battleships.service.GamePlayServiceJPA;
 import sk.tuke.gamestudio.service.*;
 
 /**
@@ -31,6 +33,12 @@ public class SpringClient {
     }
 
 
+
+    @Bean
+    public GamePlayService gamePlayService() {
+        return new GamePlayServiceJPA();
+    }
+
     @Bean
     public CommentService commentService() {
         return new CommentServiceFile();
@@ -38,7 +46,7 @@ public class SpringClient {
 
     @Bean
     public ScoreService scoreService() {
-        return new ScoreServiceFile();
+        return new ScoreServiceJPA();
     }
 
     @Bean
