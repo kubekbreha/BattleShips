@@ -9,9 +9,9 @@ import java.util.Date;
  */
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "Rating.getBestRating",
+        @NamedQuery(name = "Rating.getRatings",
                 query = "SELECT r FROM Rating r WHERE r.game=:game ORDER BY r.rating DESC"),
-        @NamedQuery(name = "Comment.getAverageComment",
+        @NamedQuery(name = "Comment.getAverageRating",
                 query = "SELECT r FROM Rating r WHERE r.game=:game ORDER BY r.ratedon DESC")
 })
 public class Rating implements Comparable<Rating>, Serializable {

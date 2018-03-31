@@ -2,197 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43c1545f-97d6-4095-b8a6-c622172fa2c8" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/CommentServiceJPA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/RatingServiceJPA.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/ScoreServiceJPA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b461c3b5-318d-4557-b4dc-5082c9ac97a3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_beykery_neuroph_2_92.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/project-template.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/qaplug_profiles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/qaplug_profiles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleShips.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/BattleShips.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/ClassDiagram.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/StateDiagram.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/WordsAboutProject" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/myMlPerceptron.nnet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/train_data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/SpringClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/entity/Comment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/entity/Rating.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/entity/Score.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/consoleui/ConsoleBoard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/consoleui/GameMenu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/consoleui/GameMode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/consoleui/PlayerVsComputer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/consoleui/PlayerVsPlayer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/core/board/Board.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/core/board/Hint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/core/board/Ship.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/core/board/Tile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/core/board/TileState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/core/game/GameController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/core/game/GameState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/core/history/BoardsHistory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/core/player/AILevel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/core/player/Computer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/core/player/ComputerBegginer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/core/player/ComputerExpert.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/core/player/ComputerHard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/core/player/ComputerMedium.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/core/player/Human.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/core/player/Player.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/core/player/neural/DataSetForPerceptron.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/core/player/neural/Perceptron.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/core/util/DatabaseUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/core/util/Util.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/entity/Command.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/entity/CommandType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/entity/GamePlay.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/entity/ShootCoordinate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/service/GamePlayService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/service/GamePlayServiceJPA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/CommentException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/CommentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/CommentServiceFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/CommentServiceJDBC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/RatingException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/RatingService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/RatingServiceFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/RatingServiceJDBC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/ScoreException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/ScoreService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/ScoreServiceFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/ScoreServiceJDBC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/ScoreServiceJPA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/AITest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/BoardTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/CommentServiceJDBCTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/CommentServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/GameStateTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/RatingServiceJDBCTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/RatingServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/ScoreServiceJDBCTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/ScoreServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/ShipTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/ShootTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/TestRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/entity/Comment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/entity/Rating.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/entity/Score.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/consoleui/ConsoleUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/consoleui/PlayerVsComputer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/consoleui/PlayerVsPlayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/core/board/Board$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/core/board/Board.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/core/board/Hint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/core/board/Ship.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/core/board/Tile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/core/board/TileState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/core/board/Util$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/core/board/Util.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/core/game/GameController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/core/game/GameState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/core/history/AIExpertHistory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/core/history/SinglePlayerHistory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/core/player/AILevel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/core/player/Computer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/core/player/ComputerBegginer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/core/player/ComputerExpert.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/core/player/ComputerHard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/core/player/ComputerMedium.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/core/player/Human.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/core/player/Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/core/player/neural/DataSetForPerceptron.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/game/battleships/core/player/neural/Perceptron.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/service/CommentException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/service/CommentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/service/RatingException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/service/RatingService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/service/ScoreException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/service/ScoreService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boardgames/service/ScoreServiceJDBC.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/consoleui/PrintBoard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Util$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/board/Util.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/history/AIExpertHistory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamestudio/game/battleships/core/history/SinglePlayerHistory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/SpringClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/entity/Comment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/entity/Rating.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/entity/Score.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/consoleui/ConsoleBoard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/consoleui/GameMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/consoleui/GameMode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/consoleui/PlayerVsComputer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/consoleui/PlayerVsPlayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/core/board/Board$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/core/board/Board.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/core/board/Hint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/core/board/Ship.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/core/board/Tile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/core/board/TileState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/core/game/GameController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/core/game/GameState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/core/history/BoardsHistory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/core/player/AILevel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/core/player/Computer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/core/player/ComputerBegginer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/core/player/ComputerExpert.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/core/player/ComputerHard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/core/player/ComputerMedium.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/core/player/Human.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/core/player/Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/core/player/neural/DataSetForPerceptron.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/core/player/neural/Perceptron.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/core/util/DatabaseUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/core/util/Util$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/core/util/Util.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/entity/Command.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/entity/CommandType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/entity/GamePlay.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/entity/ShootCoordinate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/service/GamePlayService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/service/GamePlayServiceJPA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/service/CommentException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/service/CommentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/service/CommentServiceFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/service/CommentServiceJDBC.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/service/RatingException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/service/RatingService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/service/RatingServiceFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/service/RatingServiceJDBC.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/service/ScoreException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/service/ScoreService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/service/ScoreServiceFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/service/ScoreServiceJDBC.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/service/ScoreServiceJPA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/AITest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/BoardTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/CommentServiceJDBCTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/CommentServiceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/GameStateTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/RatingServiceJDBCTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/RatingServiceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ScoreServiceJDBCTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ScoreServiceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ShipTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ShootTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestRunner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/entity/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/entity/Rating.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -209,29 +22,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <file leaf-file-name="RatingServiceJPA.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/RatingServiceJPA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="35" />
+            <state relative-caret-position="420">
+              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScoreServiceJPA.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/ScoreServiceJPA.java">
+      <file leaf-file-name="Rating.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/entity/Rating.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+            <state relative-caret-position="189">
+              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommentServiceJDBC.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/CommentServiceJDBC.java">
+      <file leaf-file-name="Comment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/entity/Comment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="26" column="54" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="54" />
+            <state relative-caret-position="168">
+              <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RatingService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/RatingService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -259,11 +81,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/entity/Score.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/entity/Comment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/entity/Rating.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/ScoreServiceJPA.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/entity/Comment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/CommentServiceJPA.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/entity/Rating.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/RatingServiceJPA.java" />
       </list>
     </option>
   </component>
@@ -428,6 +252,9 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="sk.tuke.gamestudio.server.service" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\kubek\Desktop\gamestudio\src\main\java\sk\tuke\gamestudio\server\entity" />
     </key>
@@ -515,12 +342,12 @@
       <updated>1522495817786</updated>
       <workItem from="1522495830288" duration="136000" />
       <workItem from="1522496017472" duration="1053000" />
-      <workItem from="1522497386826" duration="893000" />
+      <workItem from="1522497386826" duration="1407000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2090000" />
+    <option name="totallyTimeSpent" value="2604000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -609,8 +436,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/CommentException.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/entity/te/Comment.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/entity/te/Rating.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/entity/te/Score.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/ScoreException.java" />
@@ -669,13 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/entity/Rating.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="85" selection-start-line="14" selection-start-column="85" selection-end-line="14" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="556">
@@ -686,10 +504,27 @@
     <entry file="file://$PROJECT_DIR$/gamestudio.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/entity/Comment.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+        <state relative-caret-position="84">
+          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/CommentServiceJDBC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="26" column="54" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/ScoreServiceJPA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -700,6 +535,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/CommentServiceJPA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/RatingService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -707,24 +549,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/CommentServiceJDBC.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/entity/Comment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="26" column="54" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="54" />
+        <state relative-caret-position="168">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/entity/Rating.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="35" />
+        <state relative-caret-position="189">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/ScoreServiceJPA.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/RatingServiceJPA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        <state relative-caret-position="420">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
         </state>
       </provider>
     </entry>
