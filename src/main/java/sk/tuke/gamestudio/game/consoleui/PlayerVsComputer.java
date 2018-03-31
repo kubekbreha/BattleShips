@@ -11,11 +11,6 @@ import sk.tuke.gamestudio.game.core.history.BoardsHistory;
 import sk.tuke.gamestudio.game.core.player.*;
 import sk.tuke.gamestudio.game.core.util.DatabaseUtil;
 import sk.tuke.gamestudio.game.core.util.Util;
-import sk.tuke.gamestudio.server.service.CommentService;
-import sk.tuke.gamestudio.server.service.CommentServiceJDBC;
-import sk.tuke.gamestudio.server.service.ScoreService;
-import sk.tuke.gamestudio.server.service.ScoreServiceJDBC;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Scanner;
@@ -44,8 +39,6 @@ public class PlayerVsComputer implements GameMode {
     private int computerLevel;
     private Scanner reader;
 
-    private ScoreService scoreService = new ScoreServiceJDBC();
-    private CommentService commentService = new CommentServiceJDBC();
     private BufferedReader bufferedReader;
 
     private final Pattern YESNOPATTERN = Pattern.compile("[Y|N]");

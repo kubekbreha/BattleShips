@@ -1,6 +1,7 @@
 package sk.tuke.gamestudio.game.core.util;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import sk.tuke.gamestudio.server.entity.Comment;
 import sk.tuke.gamestudio.server.entity.Rating;
 import sk.tuke.gamestudio.server.entity.Score;
@@ -17,9 +18,14 @@ import static sk.tuke.gamestudio.game.core.board.Board.GAME_NAME;
  */
 public class DatabaseUtil {
 
-    private static ScoreService scoreService = new ScoreServiceJDBC();
-    private static CommentService commentService = new CommentServiceJDBC();
-    private static RatingService ratingService = new RatingServiceJDBC();
+    @Autowired
+    private static ScoreService scoreService;
+
+    @Autowired
+    private static CommentService commentService;
+
+    @Autowired
+    private static RatingService ratingService;
 
     /**
      * Print score from database.

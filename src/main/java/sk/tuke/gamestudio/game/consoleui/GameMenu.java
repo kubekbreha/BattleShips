@@ -1,7 +1,5 @@
 package sk.tuke.gamestudio.game.consoleui;
 
-
-
 import sk.tuke.gamestudio.game.core.util.DatabaseUtil;
 import sk.tuke.gamestudio.game.core.util.Util;
 
@@ -15,14 +13,10 @@ import java.util.Scanner;
  */
 public class GameMenu {
 
-    public GameMenu(){
-      showMenu();
-    }
-
     /**
      * Game menu, first interaction with user.
      */
-    private void showMenu(){
+    public void showMenu(){
         System.out.println("Welcome to BATTLESHIPS game.");
         System.out.println("1. Player vs Computer");
         System.out.println("2. Player vs Player");
@@ -36,11 +30,11 @@ public class GameMenu {
         int pick = reader.nextInt();
         switch (pick) {
             case 1:
-                GameMode gameMode = new PlayerVsComputer();
+                new PlayerVsComputer();
                 break;
 
             case 2:
-                gameMode = new PlayerVsPlayer();
+                new PlayerVsPlayer();
                 break;
 
             case 3:
