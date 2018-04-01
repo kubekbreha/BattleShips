@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import sk.tuke.gamestudio.game.consoleui.GameMenu;
+import sk.tuke.gamestudio.game.core.util.DatabaseUtil;
 import sk.tuke.gamestudio.server.service.*;
 
 @Configuration
@@ -26,11 +27,17 @@ public class Main {
     }
 
     @Bean
-    public ScoreService scoreService() { return new ScoreServiceJPA(); }
+    public ScoreService scoreService() {
+        return new ScoreServiceJPA();
+    }
 
     @Bean
-    public RatingService ratingService() { return new RatingServiceJPA(); }
+    public CommentService commentService() {
+        return new CommentServiceJPA();
+    }
 
     @Bean
-    public CommentService commentService() { return new CommentServiceJPA(); }
+    public RatingService ratingService() {
+        return new RatingServiceJPA();
+    }
 }

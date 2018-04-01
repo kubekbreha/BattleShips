@@ -10,7 +10,7 @@ import java.util.List;
 @Transactional
 public class ScoreServiceJPA implements ScoreService {
     @PersistenceContext
-    private EntityManager entityManager;
+    EntityManager entityManager;
 
     @Override
     public void addScore(Score score) throws ScoreException {
@@ -18,8 +18,9 @@ public class ScoreServiceJPA implements ScoreService {
     }
 
     @Override
-    public List<Score> getBestScores(String game) throws ScoreException {
-        return entityManager.createNamedQuery("Score.getBestScores")
-                .setParameter("game", game).setMaxResults(10).getResultList();
+    public List<Score> getBestScores(String gameName) throws ScoreException {
+        return entityManager.createQuery(
+                "SELECT s FROM Score s WHERE s.game = :gameName ORDER BY s.points DESC")
+                .setParameter("gameName", gameName).setMaxResults(10).getResultList();
     }
 }

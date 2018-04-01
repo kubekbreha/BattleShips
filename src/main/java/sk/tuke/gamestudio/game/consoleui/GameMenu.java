@@ -1,11 +1,18 @@
 package sk.tuke.gamestudio.game.consoleui;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import sk.tuke.gamestudio.game.core.util.DatabaseUtil;
 import sk.tuke.gamestudio.game.core.util.Util;
+import sk.tuke.gamestudio.server.entity.Comment;
+import sk.tuke.gamestudio.server.entity.Score;
+import sk.tuke.gamestudio.server.service.*;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Date;
 import java.util.Scanner;
+
+import static sk.tuke.gamestudio.game.core.board.Board.GAME_NAME;
 
 
 /**
@@ -13,10 +20,22 @@ import java.util.Scanner;
  */
 public class GameMenu {
 
+    @Autowired
+    private ScoreService scoreService;
+
+    @Autowired
+    private CommentService commentService;
+
+    @Autowired
+    private RatingService ratingService;
+
+    public GameMenu() {
+    }
+
     /**
      * Game menu, first interaction with user.
      */
-    public void showMenu(){
+    public void showMenu() {
         System.out.println("Welcome to BATTLESHIPS game.");
         System.out.println("1. Player vs Computer");
         System.out.println("2. Player vs Player");
@@ -30,7 +49,7 @@ public class GameMenu {
         int pick = reader.nextInt();
         switch (pick) {
             case 1:
-                new PlayerVsComputer();
+                new PlayerVsComputer(scoreService);
                 break;
 
             case 2:
@@ -38,12 +57,12 @@ public class GameMenu {
                 break;
 
             case 3:
-                DatabaseUtil.printScore();
+                DatabaseUtil.printScore(scoreService);
                 showMenu();
                 break;
 
             case 4:
-                DatabaseUtil.printComments();
+                DatabaseUtil.printComments(commentService);
                 showMenu();
                 break;
 
@@ -51,21 +70,32 @@ public class GameMenu {
             case 5:
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
                 String comment = Util.readLine(bufferedReader);
-                DatabaseUtil.addComment(comment);
+                try {
+                    commentService.addComment(new Comment(
+                            GAME_NAME,
+                            System.getProperty("user.name"),
+                            comment,
+                            new Date()
+                    ));
+                    System.out.println("Your comment was added to database");
+                } catch (CommentException e) {
+                    e.printStackTrace();
+                }
                 showMenu();
                 break;
 
             case 6:
-                DatabaseUtil.printRating();
+                DatabaseUtil.printRating(ratingService);
                 showMenu();
                 break;
 
             case 7:
                 bufferedReader = new BufferedReader(new InputStreamReader(System.in));
                 int rating = Util.readLine(bufferedReader).charAt(0) - '0';
-                DatabaseUtil.addRating(rating);
+                DatabaseUtil.addRating(rating, ratingService);
                 showMenu();
                 break;
+
         }
     }
 }

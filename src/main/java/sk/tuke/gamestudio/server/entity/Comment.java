@@ -37,9 +37,6 @@ public class Comment implements Comparable<Comment>, Serializable {
         return indent;
     }
 
-    public void setIndent(int indent) {
-        this.indent = indent;
-    }
 
     public String getPlayer() {
         return player;

@@ -1,46 +1,37 @@
 package sk.tuke.gamestudio.server.entity;
 
+import org.hibernate.annotations.Table;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.NamedQuery;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * Created by Kubo Brehuv with <3 (10.3.2018)
- */
 @Entity
-@NamedQuery( name = "Score.getBestScores",
-        query = "SELECT s FROM Score s WHERE s.game=:game ORDER BY s.points DESC")
-public class Score implements Comparable<Score>, Serializable {
+public class Score implements Serializable, Comparable<Score> {
 
     @Id
     @GeneratedValue
-    private int indent;
+    int ident;
 
-    private String player;
     private String game;
+    private String username;
     private int points;
     private Date playedOn;
 
-    public Score(){
-
+    public Score() {
     }
 
-    public Score( String player, String game, int points, Date playedOn) {
-        this.player = player;
+    public Score(String game, String username, int points, Date playedOn) {
         this.game = game;
+        this.username = username;
         this.points = points;
         this.playedOn = playedOn;
     }
 
-    public int getIndent() {
-        return indent;
-    }
-
-    public void setIndent(int indent) {
-        this.indent = indent;
+    public int getIdent() {
+        return ident;
     }
 
     public String getGame() {
@@ -51,12 +42,12 @@ public class Score implements Comparable<Score>, Serializable {
         this.game = game;
     }
 
-    public String getPlayer() {
-        return player;
+    public String getUsername() {
+        return username;
     }
 
-    public void setPlayer(String player) {
-        this.player = player;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public int getPoints() {
@@ -79,15 +70,14 @@ public class Score implements Comparable<Score>, Serializable {
     public String toString() {
         return "Score{" +
                 "game='" + game + '\'' +
-                ", player='" + player + '\'' +
+                ", username='" + username + '\'' +
                 ", points=" + points +
                 ", playedOn=" + playedOn +
                 '}';
     }
 
     @Override
-    public int compareTo(Score o) {
-        if(o == null) return -1;
-        return this.getPoints() - o.getPoints();
+    public int compareTo(Score s) {
+        return s.getPoints() - this.points;
     }
 }

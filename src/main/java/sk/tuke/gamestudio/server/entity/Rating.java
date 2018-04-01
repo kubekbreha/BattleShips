@@ -38,10 +38,6 @@ public class Rating implements Comparable<Rating>, Serializable {
         return indent;
     }
 
-    public void setIndent(int indent) {
-        this.indent = indent;
-    }
-
     public String getPlayer() {
         return player;
     }

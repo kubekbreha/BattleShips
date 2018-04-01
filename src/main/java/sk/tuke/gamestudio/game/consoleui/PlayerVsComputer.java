@@ -11,6 +11,9 @@ import sk.tuke.gamestudio.game.core.history.BoardsHistory;
 import sk.tuke.gamestudio.game.core.player.*;
 import sk.tuke.gamestudio.game.core.util.DatabaseUtil;
 import sk.tuke.gamestudio.game.core.util.Util;
+import sk.tuke.gamestudio.server.entity.Score;
+import sk.tuke.gamestudio.server.service.ScoreService;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Scanner;
@@ -43,15 +46,17 @@ public class PlayerVsComputer implements GameMode {
 
     private final Pattern YESNOPATTERN = Pattern.compile("[Y|N]");
 
+    private ScoreService scoreService;
+
 
     /**
      * Player vs Computer play mode.
      */
-    public PlayerVsComputer() {
+    public PlayerVsComputer(ScoreService scoreService) {
         bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         consoleBoardUI = new ConsoleBoard();
         reader = new Scanner(System.in);
-
+        this.scoreService = scoreService;
         setupBoard();
 
         playerHistory = new BoardsHistory();
@@ -195,17 +200,8 @@ public class PlayerVsComputer implements GameMode {
         } else if (playerControler.getGameState() == GameState.WON) {
             System.out.println("Congratulations you won with only " + shots + " shots");
 
-            DatabaseUtil.addScore(shots);
-            System.out.println("Do you wan to add comment ? (Y/N)");
-            String line = Util.readLine(bufferedReader);
-            Matcher m = YESNOPATTERN.matcher(line);
-            if (m.matches()) {
-                String comment = Util.readLine(bufferedReader);
-                DatabaseUtil.addComment(comment);
-            } else {
-                System.out.println("Here are comments.");
-                DatabaseUtil.printComments();
-            }
+            DatabaseUtil.addScore(shots, scoreService);
+
         }
     }
 

@@ -16,26 +16,18 @@ import static sk.tuke.gamestudio.game.core.board.Board.GAME_NAME;
 /**
  * Created by Kubo Brehuv with <3 (11.3.2018)
  */
+
 public class DatabaseUtil {
-
-    @Autowired
-    private static ScoreService scoreService;
-
-    @Autowired
-    private static CommentService commentService;
-
-    @Autowired
-    private static RatingService ratingService;
 
     /**
      * Print score from database.
      */
-    public static void printScore() {
+    public static void printScore(ScoreService scoreService) {
         try {
             List<Score> scores = scoreService.getBestScores(GAME_NAME);
 
             for (Score s : scores) {
-                System.out.println(Util.ANSI_CYAN + "Player: " + Util.ANSI_RESET + s.getPlayer() + Util.ANSI_CYAN +
+                System.out.println(Util.ANSI_CYAN + "Player: " + Util.ANSI_RESET + s.getUsername() + Util.ANSI_CYAN +
                         " game: " + Util.ANSI_RESET + s.getGame() +
                         Util.ANSI_CYAN + " points: " + Util.ANSI_RESET + s.getPoints() + Util.ANSI_CYAN + " date: "
                         + Util.ANSI_RESET + s.getPlayedOn());
@@ -48,7 +40,7 @@ public class DatabaseUtil {
     /**
      * Print comments from database.
      */
-    public static void printComments() {
+    public static void printComments(CommentService commentService) {
         try {
             List<Comment> comments = commentService.getComments(GAME_NAME);
             for (Comment c : comments) {
@@ -65,7 +57,7 @@ public class DatabaseUtil {
     /**
      * Print rating of the game.
      */
-    public static void printRating() {
+    public static void printRating(RatingService ratingService) {
         try {
             int ratings = ratingService.getAverageRating(GAME_NAME);
             System.out.println("Rating of this game is : " + ratings);
@@ -77,7 +69,7 @@ public class DatabaseUtil {
     /**
      * Add new rating to database.
      */
-    public static void addRating(int ratingValue) {
+    public static void addRating(int ratingValue, RatingService ratingService) {
         try {
             ratingService.setRating(new Rating(
                     GAME_NAME,
@@ -94,7 +86,7 @@ public class DatabaseUtil {
     /**
      * Add comment to game.
      */
-    public static void addComment(String commentText) {
+    public static void addComment(String commentText, CommentService commentService) {
         try {
             commentService.addComment(new Comment(
                     GAME_NAME,
@@ -114,7 +106,7 @@ public class DatabaseUtil {
      *
      * @param score what will be added.
      */
-    public static void addScore(int score){
+    public static void addScore(int score, ScoreService scoreService){
         try {
             scoreService.addScore(new Score(
                     GAME_NAME,
