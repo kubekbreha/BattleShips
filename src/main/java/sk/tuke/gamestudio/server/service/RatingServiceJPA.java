@@ -18,6 +18,12 @@ public class RatingServiceJPA implements RatingService {
         entityManager.persist(rating);
     }
 
+    //todo: refactor and implemet this
+    @Override
+    public int getAverageRating(String game) throws RatingException {
+        return 0;
+    }
+
     @Override
     public List<Rating> getRatings(String gameName) throws RatingException {
         return entityManager.createQuery(
