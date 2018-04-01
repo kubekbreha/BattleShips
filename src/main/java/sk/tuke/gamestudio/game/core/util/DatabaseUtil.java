@@ -71,8 +71,6 @@ public class DatabaseUtil {
             }else {
                 System.out.println("Rating of this game is : " + 0);
             }
-
-
         } catch (RatingException e) {
             System.out.println("ERROR");
 
