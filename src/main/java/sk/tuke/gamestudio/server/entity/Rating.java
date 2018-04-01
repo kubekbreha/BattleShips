@@ -17,15 +17,15 @@ public class Rating implements Comparable<Rating>, Serializable {
     private String game;
     private String player;
     private int rating;
-    private Date ratedon;
+    private Date ratedOn;
 
     public Rating(){}
 
-    public Rating( String game, String player, int rating, Date ratedon) {
+    public Rating( String game, String player, int rating, Date ratedOn) {
         this.game = game;
         this.player = player;
         this.rating = rating;
-        this.ratedon = ratedon;
+        this.ratedOn = ratedOn;
     }
 
     public int getIndent() {
@@ -56,12 +56,12 @@ public class Rating implements Comparable<Rating>, Serializable {
         this.rating = rating;
     }
 
-    public Date getRatedon() {
-        return ratedon;
+    public Date getRatedOn() {
+        return ratedOn;
     }
 
-    public void setRatedon(Date ratedon) {
-        this.ratedon = ratedon;
+    public void setRatedOn(Date ratedOn) {
+        this.ratedOn = ratedOn;
     }
 
     @Override
@@ -70,7 +70,7 @@ public class Rating implements Comparable<Rating>, Serializable {
         sb.append("player='").append(player).append('\'');
         sb.append(", game='").append(game).append('\'');
         sb.append(", rating=").append(rating);
-        sb.append(", ratedon=").append(ratedon);
+        sb.append(", ratedOn=").append(ratedOn);
         sb.append('}');
         return sb.toString();
     }

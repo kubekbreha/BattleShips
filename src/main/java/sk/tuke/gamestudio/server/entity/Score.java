@@ -16,16 +16,16 @@ public class Score implements Serializable, Comparable<Score> {
     int ident;
 
     private String game;
-    private String username;
+    private String player;
     private int points;
     private Date playedOn;
 
     public Score() {
     }
 
-    public Score(String game, String username, int points, Date playedOn) {
+    public Score(String game, String player, int points, Date playedOn) {
         this.game = game;
-        this.username = username;
+        this.player = player;
         this.points = points;
         this.playedOn = playedOn;
     }
@@ -42,12 +42,12 @@ public class Score implements Serializable, Comparable<Score> {
         this.game = game;
     }
 
-    public String getUsername() {
-        return username;
+    public String getPlayer() {
+        return player;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setPlayer(String player) {
+        this.player = player;
     }
 
     public int getPoints() {
@@ -70,7 +70,7 @@ public class Score implements Serializable, Comparable<Score> {
     public String toString() {
         return "Score{" +
                 "game='" + game + '\'' +
-                ", username='" + username + '\'' +
+                ", player='" + player + '\'' +
                 ", points=" + points +
                 ", playedOn=" + playedOn +
                 '}';

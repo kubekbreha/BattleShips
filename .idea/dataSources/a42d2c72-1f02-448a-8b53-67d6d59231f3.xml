@@ -48,7 +48,8 @@
     </role>
     <schema id="10" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2018-04-01.16:52:09.224</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2018-04-01.20:59:27.369</IntrospectionTimestamp>
+      <IntrospectionStateNumber>621</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -67,5 +68,12 @@
     <schema id="15" parent="2" name="information_schema">
       <ObjectId>12002</ObjectId>
     </schema>
+    <sequence id="16" parent="10" name="hibernate_sequence">
+      <ObjectId>16546</ObjectId>
+      <StateNumber>621</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
   </database-model>
 </dataSource>

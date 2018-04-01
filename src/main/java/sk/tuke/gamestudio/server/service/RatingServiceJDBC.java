@@ -50,7 +50,7 @@ public class RatingServiceJDBC implements RatingService {
                 ps.setString(1, rating.getPlayer());
                 ps.setString(2, rating.getGame());
                 ps.setInt(3, rating.getRating());
-                ps.setDate(4, new Date(rating.getRatedon().getTime()));
+                ps.setDate(4, new Date(rating.getRatedOn().getTime()));
 
                 ps.executeUpdate();
             }

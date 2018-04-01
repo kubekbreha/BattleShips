@@ -19,9 +19,10 @@ public class RatingServiceJPA implements RatingService {
     }
 
     @Override
-    public List<Rating> getRatings(String game) throws RatingException {
-        return entityManager.createNamedQuery("Score.getRatings")
-                .setParameter("game", game).setMaxResults(10).getResultList();
+    public List<Rating> getRatings(String gameName) throws RatingException {
+        return entityManager.createQuery(
+                "SELECT r FROM Rating r WHERE r.game = :gameName ORDER BY r.ratedOn DESC")
+                .setParameter("gameName", gameName).setMaxResults(10).getResultList();
     }
 
 

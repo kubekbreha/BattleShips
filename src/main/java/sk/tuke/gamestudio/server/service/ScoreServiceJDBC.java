@@ -29,10 +29,10 @@ public class ScoreServiceJDBC implements ScoreService {
     private static final String PASS = "postgres";
 
     private static final String INSERT =
-            "INSERT INTO score (game, username, points, played_on) VALUES (?, ?, ?, ?)";
+            "INSERT INTO score (game, player, points, played_on) VALUES (?, ?, ?, ?)";
 
     private static final String SELECT =
-            "SELECT game, username, points, played_on FROM score " +
+            "SELECT game, player, points, played_on FROM score " +
                     "WHERE game = ? ORDER BY points DESC";
 
     @Override
@@ -40,7 +40,7 @@ public class ScoreServiceJDBC implements ScoreService {
         try (Connection c = DriverManager.getConnection(URL, USER, PASS)) {
             try (PreparedStatement ps = c.prepareStatement(INSERT)) {
                 ps.setString(1, score.getGame());
-                ps.setString(2, score.getUsername());
+                ps.setString(2, score.getPlayer());
                 ps.setInt(3, score.getPoints());
                 ps.setTimestamp(4, new Timestamp(score.getPlayedOn().getTime()));
 

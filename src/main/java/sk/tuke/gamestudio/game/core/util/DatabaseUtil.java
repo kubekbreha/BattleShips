@@ -1,7 +1,6 @@
 package sk.tuke.gamestudio.game.core.util;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
 import sk.tuke.gamestudio.server.entity.Comment;
 import sk.tuke.gamestudio.server.entity.Rating;
 import sk.tuke.gamestudio.server.entity.Score;
@@ -27,7 +26,7 @@ public class DatabaseUtil {
             List<Score> scores = scoreService.getBestScores(GAME_NAME);
 
             for (Score s : scores) {
-                System.out.println(Util.ANSI_CYAN + "Player: " + Util.ANSI_RESET + s.getUsername() + Util.ANSI_CYAN +
+                System.out.println(Util.ANSI_CYAN + "Player: " + Util.ANSI_RESET + s.getPlayer() + Util.ANSI_CYAN +
                         " game: " + Util.ANSI_RESET + s.getGame() +
                         Util.ANSI_CYAN + " points: " + Util.ANSI_RESET + s.getPoints() + Util.ANSI_CYAN + " date: "
                         + Util.ANSI_RESET + s.getPlayedOn());
@@ -63,14 +62,20 @@ public class DatabaseUtil {
 
             int ratingSum = 0;
             int ratingCount = 0;
-            for (Rating rating : rat) {
-                ratingSum += rating.getRating();
-                ratingCount++;
+            if (rat != null) {
+                for (Rating rating : rat) {
+                    ratingSum += rating.getRating();
+                    ratingCount++;
+                }
+                System.out.println("Rating of this game is : " + ratingSum / ratingCount);
+            }else {
+                System.out.println("Rating of this game is : " + 0);
             }
 
 
-            System.out.println("Rating of this game is : " + ratingSum/ratingCount);
         } catch (RatingException e) {
+            System.out.println("ERROR");
+
             System.err.println(e.getMessage());
         }
     }
@@ -115,7 +120,7 @@ public class DatabaseUtil {
      *
      * @param score what will be added.
      */
-    public static void addScore(int score, ScoreService scoreService){
+    public static void addScore(int score, ScoreService scoreService) {
         try {
             scoreService.addScore(new Score(
                     GAME_NAME,
