@@ -8,28 +8,22 @@ import java.util.Date;
  * Created by Kubo Brehuv with <3 (10.3.2018)
  */
 @Entity
-@NamedQueries({
-        @NamedQuery(name = "Rating.getRatings",
-                query = "SELECT r FROM Rating r WHERE r.game=:game ORDER BY r.rating DESC"),
-        @NamedQuery(name = "Comment.getAverageRating",
-                query = "SELECT r FROM Rating r WHERE r.game=:game ORDER BY r.ratedon DESC")
-})
 public class Rating implements Comparable<Rating>, Serializable {
 
     @Id
     @GeneratedValue
     private int indent;
 
-    private String player;
     private String game;
+    private String player;
     private int rating;
     private Date ratedon;
 
     public Rating(){}
 
-    public Rating(String player, String game, int rating, Date ratedon) {
-        this.player = player;
+    public Rating( String game, String player, int rating, Date ratedon) {
         this.game = game;
+        this.player = player;
         this.rating = rating;
         this.ratedon = ratedon;
     }

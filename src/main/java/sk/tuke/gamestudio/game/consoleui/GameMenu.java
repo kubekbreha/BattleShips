@@ -70,17 +70,7 @@ public class GameMenu {
             case 5:
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
                 String comment = Util.readLine(bufferedReader);
-                try {
-                    commentService.addComment(new Comment(
-                            GAME_NAME,
-                            System.getProperty("user.name"),
-                            comment,
-                            new Date()
-                    ));
-                    System.out.println("Your comment was added to database");
-                } catch (CommentException e) {
-                    e.printStackTrace();
-                }
+               DatabaseUtil.addComment(comment, commentService);
                 showMenu();
                 break;
 

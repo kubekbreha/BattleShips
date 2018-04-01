@@ -11,24 +11,22 @@ import java.util.Date;
  * Created by Kubo Brehuv with <3 (10.3.2018)
  */
 @Entity
-@NamedQuery( name = "Comment.getComments",
-        query = "SELECT c FROM Comment c WHERE c.game=:game ORDER BY c.commentedOn DESC")
 public class Comment implements Comparable<Comment>, Serializable {
 
     @Id
     @GeneratedValue
     private int indent;
 
-    private String player;
     private String game;
+    private String player;
     private String comment;
     private Date commentedOn;
 
     public Comment(){}
 
-    public Comment(String player, String game, String comment, Date commentedOn) {
-        this.player = player;
+    public Comment( String game, String player, String comment, Date commentedOn) {
         this.game = game;
+        this.player = player;
         this.comment = comment;
         this.commentedOn = commentedOn;
     }

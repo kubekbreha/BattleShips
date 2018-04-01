@@ -24,10 +24,6 @@ public class RatingServiceJPA implements RatingService {
                 .setParameter("game", game).setMaxResults(10).getResultList();
     }
 
-    @Override
-    public int getAverageRating(String game) throws RatingException {
-        return 0;
-    }
 
     @Override
     public int getRating(String game, String player) throws RatingException {

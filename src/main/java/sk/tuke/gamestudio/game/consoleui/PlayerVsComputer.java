@@ -199,9 +199,7 @@ public class PlayerVsComputer implements GameMode {
             consoleBoardUI.printPlayBoard(computerBoard, false);
         } else if (playerControler.getGameState() == GameState.WON) {
             System.out.println("Congratulations you won with only " + shots + " shots");
-
             DatabaseUtil.addScore(shots, scoreService);
-
         }
     }
 

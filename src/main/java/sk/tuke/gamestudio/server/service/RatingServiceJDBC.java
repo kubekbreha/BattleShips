@@ -60,38 +60,38 @@ public class RatingServiceJDBC implements RatingService {
     }
 
 
-    /**
-     * Get average rating from database.
-     * @param game to which were ratings added.
-     * @return integer value.
-     * @throws RatingException
-     */
-    @Override
-    public int getAverageRating(String game) throws RatingException {
-        int ratingCount = 0;
-        int ratingSum = 0;
-
-        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
-            try (PreparedStatement ps = connection.prepareStatement(SELECT_RATING)) {
-                ps.setString(1, game);
-                try (ResultSet rs = ps.executeQuery()) {
-                    while (rs.next()) {
-                        Rating rating = new Rating(
-                                rs.getString(1),
-                                rs.getString(2),
-                                rs.getInt(3),
-                                rs.getTimestamp(4)
-                        );
-                        ratingSum += rating.getRating();
-                        ratingCount++;
-                    }
-                }
-            }
-        } catch (SQLException e) {
-            throw new ScoreException("Error loading player rating", e);
-        }
-        return ratingSum/ratingCount;
-    }
+//    /**
+//     * Get average rating from database.
+//     * @param game to which were ratings added.
+//     * @return integer value.
+//     * @throws RatingException
+//     */
+//    @Override
+//    public int getAverageRating(String game) throws RatingException {
+//        int ratingCount = 0;
+//        int ratingSum = 0;
+//
+//        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+//            try (PreparedStatement ps = connection.prepareStatement(SELECT_RATING)) {
+//                ps.setString(1, game);
+//                try (ResultSet rs = ps.executeQuery()) {
+//                    while (rs.next()) {
+//                        Rating rating = new Rating(
+//                                rs.getString(1),
+//                                rs.getString(2),
+//                                rs.getInt(3),
+//                                rs.getTimestamp(4)
+//                        );
+//                        ratingSum += rating.getRating();
+//                        ratingCount++;
+//                    }
+//                }
+//            }
+//        } catch (SQLException e) {
+//            throw new ScoreException("Error loading player rating", e);
+//        }
+//        return ratingSum/ratingCount;
+//    }
 
 
     /**
