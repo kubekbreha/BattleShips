@@ -3,16 +3,11 @@ package sk.tuke.gamestudio.game.consoleui;
 import org.springframework.beans.factory.annotation.Autowired;
 import sk.tuke.gamestudio.game.core.util.DatabaseUtil;
 import sk.tuke.gamestudio.game.core.util.Util;
-import sk.tuke.gamestudio.server.entity.Comment;
-import sk.tuke.gamestudio.server.entity.Score;
 import sk.tuke.gamestudio.server.service.*;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Date;
 import java.util.Scanner;
-
-import static sk.tuke.gamestudio.game.core.board.Board.GAME_NAME;
 
 
 /**
@@ -75,7 +70,7 @@ public class GameMenu {
                 break;
 
             case 6:
-                DatabaseUtil.printRating(ratingService);
+                DatabaseUtil.printAverageRating(ratingService);
                 showMenu();
                 break;
 

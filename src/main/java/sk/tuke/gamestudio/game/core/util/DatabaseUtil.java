@@ -56,24 +56,10 @@ public class DatabaseUtil {
     /**
      * Print rating of the game.
      */
-    public static void printRating(RatingService ratingService) {
+    public static void printAverageRating(RatingService ratingService) {
         try {
-            List<Rating> rat = ratingService.getRatings(GAME_NAME);
-
-            int ratingSum = 0;
-            int ratingCount = 0;
-            if (rat != null) {
-                for (Rating rating : rat) {
-                    ratingSum += rating.getRating();
-                    ratingCount++;
-                }
-                System.out.println("Rating of this game is : " + ratingSum / ratingCount);
-            }else {
-                System.out.println("Rating of this game is : " + 0);
-            }
+            System.out.println("Average rating is : " + ratingService.getAverageRating(GAME_NAME));
         } catch (RatingException e) {
-            System.out.println("ERROR");
-
             System.err.println(e.getMessage());
         }
     }
