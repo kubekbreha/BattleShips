@@ -1,19 +1,18 @@
 package sk.tuke.gamestudio;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import sk.tuke.gamestudio.game.consoleui.GameMenu;
-import sk.tuke.gamestudio.game.core.util.DatabaseUtil;
 import sk.tuke.gamestudio.server.service.*;
 
 @Configuration
 @SpringBootApplication
-public class Main {
+public class SpringClient {
 
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(Main.class, args);
+        new SpringApplicationBuilder(SpringClient.class).web(false).run(args);
     }
 
     @Bean
@@ -28,12 +27,12 @@ public class Main {
 
     @Bean
     public ScoreService scoreService() {
-        return new ScoreServiceJPA();
+        return new ScoreServiceRestClient();
     }
 
     @Bean
     public CommentService commentService() {
-        return new CommentServiceJPA();
+        return new CommentServiceRestClient();
     }
 
     @Bean
