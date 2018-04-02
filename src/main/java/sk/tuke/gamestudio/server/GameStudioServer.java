@@ -16,9 +16,9 @@ public class GameStudioServer {
 	@Bean
 	public ScoreService scoreService() {return new ScoreServiceJPA();}
 
-//	@Bean
-//	public RatingService ratingService() {return new RatingServiceJPA();}
-//
-//	@Bean
-//	public CommentService commentService() {return new CommentServiceJPA();}
+	@Bean
+	public RatingService ratingService() {return new RatingServiceJPA();}
+
+	@Bean
+	public CommentService commentService() {return new CommentServiceJPA();}
 }

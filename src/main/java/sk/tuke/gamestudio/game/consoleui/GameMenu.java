@@ -65,7 +65,7 @@ public class GameMenu {
             case 5:
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
                 String comment = Util.readLine(bufferedReader);
-               DatabaseUtil.addComment(comment, commentService);
+                DatabaseUtil.addComment(comment, commentService);
                 showMenu();
                 break;
 
@@ -81,6 +81,8 @@ public class GameMenu {
                 showMenu();
                 break;
 
+            case 8:
+                DatabaseUtil.addScore(55 , scoreService);
         }
     }
 }

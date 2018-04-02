@@ -1,8 +1,13 @@
 package sk.tuke.gamestudio.server.service;
 
 import sk.tuke.gamestudio.server.entity.Score;
-import javax.ws.rs.client.*;
-import javax.ws.rs.core.*;
+
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Entity;
+import javax.ws.rs.core.GenericType;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.List;
 
 public class ScoreServiceRestClient implements ScoreService {
@@ -14,7 +19,8 @@ public class ScoreServiceRestClient implements ScoreService {
             Client client = ClientBuilder.newClient();
             Response response = client.target(URL)
                     .request(MediaType.APPLICATION_JSON)
-                    .post(Entity.entity(score, MediaType.APPLICATION_JSON), Response.class);
+                    .post(Entity.entity(score, MediaType.APPLICATION_JSON),
+                            Response.class);
         } catch (Exception e) {
             throw new ScoreException("Error saving score", e);
         }

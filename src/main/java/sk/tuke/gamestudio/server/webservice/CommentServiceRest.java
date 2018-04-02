@@ -12,7 +12,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
-@Path("/score")
+@Path("/comment")
 public class CommentServiceRest {
 
     @Autowired
