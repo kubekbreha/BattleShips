@@ -4,6 +4,9 @@ package sk.tuke.gamestudio.game.core.util;
 import sk.tuke.gamestudio.server.entity.Comment;
 import sk.tuke.gamestudio.server.entity.Rating;
 import sk.tuke.gamestudio.server.entity.Score;
+import sk.tuke.gamestudio.server.exception.CommentException;
+import sk.tuke.gamestudio.server.exception.RatingException;
+import sk.tuke.gamestudio.server.exception.ScoreException;
 import sk.tuke.gamestudio.server.service.*;
 
 import java.util.Date;
@@ -58,7 +61,7 @@ public class DatabaseUtil {
      */
     public static void printAverageRating(RatingService ratingService) {
         try {
-            System.out.println("Average rating is : " + ratingService.getAverageRating(GAME_NAME));
+            System.out.println(""+ ratingService.getAverageRating(GAME_NAME));
         } catch (RatingException e) {
             System.err.println(e.getMessage());
         }
@@ -67,7 +70,7 @@ public class DatabaseUtil {
     /**
      * Add new rating to database.
      */
-    public static void addRating(int ratingValue, RatingService ratingService) {
+    public static void setRating(int ratingValue, RatingService ratingService) {
         try {
             ratingService.setRating(new Rating(
                     GAME_NAME,

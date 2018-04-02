@@ -2,7 +2,7 @@ package sk.tuke.gamestudio.server.webservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import sk.tuke.gamestudio.server.entity.Score;
-import sk.tuke.gamestudio.server.service.ScoreException;
+import sk.tuke.gamestudio.server.exception.ScoreException;
 import sk.tuke.gamestudio.server.service.ScoreService;
 
 import javax.ws.rs.*;

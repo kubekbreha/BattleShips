@@ -8,7 +8,7 @@ import sk.tuke.gamestudio.game.core.game.GameState;
 import sk.tuke.gamestudio.game.core.player.Human;
 import sk.tuke.gamestudio.game.core.player.Player;
 import sk.tuke.gamestudio.server.service.ScoreService;
-import sk.tuke.gamestudio.server.service.ScoreServiceJDBC;
+import sk.tuke.gamestudio.server.service.JDBC.ScoreServiceJDBC;
 
 import java.util.Scanner;
 

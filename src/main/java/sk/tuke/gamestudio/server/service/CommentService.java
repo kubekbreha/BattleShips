@@ -2,6 +2,7 @@ package sk.tuke.gamestudio.server.service;
 
 
 import sk.tuke.gamestudio.server.entity.Comment;
+import sk.tuke.gamestudio.server.exception.CommentException;
 
 import java.util.List;
 

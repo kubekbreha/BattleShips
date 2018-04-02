@@ -77,7 +77,7 @@ public class GameMenu {
             case 7:
                 bufferedReader = new BufferedReader(new InputStreamReader(System.in));
                 int rating = Util.readLine(bufferedReader).charAt(0) - '0';
-                DatabaseUtil.addRating(rating, ratingService);
+                DatabaseUtil.setRating(rating, ratingService);
                 showMenu();
                 break;
 

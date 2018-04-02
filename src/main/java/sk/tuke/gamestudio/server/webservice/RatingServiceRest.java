@@ -2,15 +2,11 @@ package sk.tuke.gamestudio.server.webservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import sk.tuke.gamestudio.server.entity.Rating;
-import sk.tuke.gamestudio.server.entity.Score;
-import sk.tuke.gamestudio.server.service.RatingException;
+import sk.tuke.gamestudio.server.exception.RatingException;
 import sk.tuke.gamestudio.server.service.RatingService;
-import sk.tuke.gamestudio.server.service.ScoreException;
-import sk.tuke.gamestudio.server.service.ScoreService;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
-import java.util.List;
 
 @Path("/rating")
 public class RatingServiceRest {
@@ -41,4 +37,5 @@ public class RatingServiceRest {
     public int getRating(@PathParam("game") String game, String player) throws RatingException {
         return ratingService.getRating(game, player);
     }
+
 }

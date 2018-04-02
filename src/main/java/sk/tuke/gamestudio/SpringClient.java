@@ -6,6 +6,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import sk.tuke.gamestudio.game.consoleui.GameMenu;
 import sk.tuke.gamestudio.server.service.*;
+import sk.tuke.gamestudio.server.service.JPA.RatingServiceJPA;
+import sk.tuke.gamestudio.server.service.REST.CommentServiceRestClient;
+import sk.tuke.gamestudio.server.service.REST.RatingServiceRestClient;
+import sk.tuke.gamestudio.server.service.REST.ScoreServiceRestClient;
 
 @Configuration
 @SpringBootApplication
