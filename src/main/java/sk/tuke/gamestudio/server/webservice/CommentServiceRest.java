@@ -15,7 +15,7 @@ public class CommentServiceRest {
     @Autowired
     private CommentService commentService;
 
-    //http://localhost:8080/rest/score
+    //http://localhost:8080/rest/comment
     @POST
     @Consumes("application/json")
     public Response addComment(Comment comment) throws CommentException {
@@ -23,7 +23,7 @@ public class CommentServiceRest {
         return Response.ok().build();
     }
 
-    //http://localhost:8080/rest/score/mines
+    //http://localhost:8080/rest/score/comment
     @GET
     @Path("/{game}")
     @Produces("application/json")

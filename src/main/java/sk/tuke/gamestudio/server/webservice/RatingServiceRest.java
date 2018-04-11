@@ -34,7 +34,7 @@ public class RatingServiceRest {
     @GET
     @Path("/{game}/{player}")
     @Produces("application/json")
-    public int getRating(@PathParam("game") String game, String player) throws RatingException {
+    public int getRating(@PathParam("game") String game, @PathParam("player")  String player) throws RatingException {
         return ratingService.getRating(game, player);
     }
 
