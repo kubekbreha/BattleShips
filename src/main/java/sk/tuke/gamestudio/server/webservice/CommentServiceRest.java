@@ -1,9 +1,9 @@
 package sk.tuke.gamestudio.server.webservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import sk.tuke.gamestudio.server.entity.Comment;
-import sk.tuke.gamestudio.server.exception.CommentException;
-import sk.tuke.gamestudio.server.service.CommentService;
+import sk.tuke.gamestudio.entity.Comment;
+import sk.tuke.gamestudio.service.CommentException;
+import sk.tuke.gamestudio.service.CommentService;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;

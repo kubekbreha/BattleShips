@@ -1,9 +1,9 @@
 package sk.tuke.gamestudio.server.webservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import sk.tuke.gamestudio.server.entity.Rating;
-import sk.tuke.gamestudio.server.exception.RatingException;
-import sk.tuke.gamestudio.server.service.RatingService;
+import sk.tuke.gamestudio.entity.Rating;
+import sk.tuke.gamestudio.service.RatingException;
+import sk.tuke.gamestudio.service.RatingService;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;

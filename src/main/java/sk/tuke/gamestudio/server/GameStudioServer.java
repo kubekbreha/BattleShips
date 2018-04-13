@@ -5,14 +5,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import sk.tuke.gamestudio.server.service.*;
-import sk.tuke.gamestudio.server.service.JPA.CommentServiceJPA;
-import sk.tuke.gamestudio.server.service.JPA.RatingServiceJPA;
-import sk.tuke.gamestudio.server.service.JPA.ScoreServiceJPA;
+import sk.tuke.gamestudio.service.*;
+import sk.tuke.gamestudio.service.CommentServiceJPA;
+import sk.tuke.gamestudio.service.RatingServiceJPA;
+import sk.tuke.gamestudio.service.ScoreServiceJPA;
 
 @Configuration
 @SpringBootApplication
-@EntityScan({"sk.tuke.gamestudio.server.entity"})
+@EntityScan({"sk.tuke.gamestudio.entity"})
 public class GameStudioServer {
 	public static void main(String[] args) {
 		SpringApplication.run(GameStudioServer.class, args);
