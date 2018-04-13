@@ -11,11 +11,11 @@
           href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"></link>
     <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
 
-    <script type="text/javascript">
-        //<![CDATA[
+    <script type="text/javascript" >
+            //<![CDATA[
         $(document).ready(function () {
             $.ajax({
-                url: "/rest/score/mines",
+                url: "/rest/score/battleships-brehuv",
             }).done(function (json) {
                 for (var i = 0; i < json.length; i++) {
                     var score = json[i];
@@ -27,11 +27,11 @@
         $(document).ready(function () {
             $('#example').DataTable({
                 columns: [
-                    {data: "username"},
+                    {data: "player"},
                     {data: "points"},
                     {data: "playedOn"}
                 ],
-                ajax: {url: "/rest/score/mines", dataSrc: ''}
+                ajax: {url: "/rest/score/battleships-brehuv", dataSrc: ''}
             });
         });
         //]]>
@@ -39,39 +39,8 @@
 
 </head>
 <body>
-
-<p th:utext='${webUI.renderAsHtml()}' />
-
-<a href="?command=new">New Game</a>
-<a href="?command=mark"><span th:text='${webUI.marking ? "Open" : "Mark"}'/></a>
-<a href="?command=next">Next move</a>
-<a href="?command=auto">Auto play</a>
-
-<hr/>
-<h2>Hall of fame</h2>
-
-<h3>Server side generation - Thymeleaf</h3>
-<table>
-    <thead>
-    <tr>
-        <th>Player</th>
-        <th>Points</th>
-        <th>Played on</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="score: ${scores}">
-        <td th:text="${score.username}"></td>
-        <td th:text="${score.points}"></td>
-        <td th:text="${score.playedOn}"></td>
-    </tr>
-    </tbody>
-</table>
-
-<h3>Client side generation - simple AJAX call</h3>
-<ol id="scoreList"/>
-
-<h3>Client side generation - jQuery DataTable</h3>
-<table id="example"/>
+    <p th:utext='${webUI.renderAsHtml()}' />
+    <h2>Hall of fame</h2>
+    <ol id="scoreList"/>
 </body>
 </html>

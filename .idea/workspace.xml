@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43c1545f-97d6-4095-b8a6-c622172fa2c8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/consoleui/PlayerVsComputer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/consoleui/PlayerVsComputer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/mines-bacikova.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/closed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/marked.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/mine.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/open0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/open1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/open2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/open3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/open4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/open5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/open6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/open7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/open8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mines-bacikova.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mines-bacikova_bot.html" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/scripts/battleships-brehuv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,6 +34,32 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="gamestudio@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="gamestudio@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="gamestudio@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="gamestudio: database" type="6d9b600a:PostgresImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="gamestudio@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="gamestudio: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="gamestudio@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="gamestudio: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
     </expand>
     <select />
   </component>
@@ -66,38 +77,26 @@
       <file leaf-file-name="battleships-brehuv.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="120">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BattleshipsBrehuvController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvController.java">
+      <file leaf-file-name="battleships-brehuv.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/battleships-brehuv.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="330">
+              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="56" lean-forward="true" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerVsComputer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/consoleui/PlayerVsComputer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+      <file leaf-file-name="score" pinned="false" current-in-tab="false">
+        <entry file="das://74af1ce3-3eb3-4e3d-af1f-a0955eba5533/database/gamestudio/schema/public/table/score">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -108,6 +107,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -133,7 +133,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/consoleui/PlayerVsPlayer.java" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/board/Board.java" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/board/Hint.java" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/board/Ship.java" />
@@ -183,6 +182,7 @@
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUI.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/consoleui/PlayerVsComputer.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/scripts/battleships-brehuv.js" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv.html" />
       </list>
     </option>
@@ -334,6 +334,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
@@ -529,12 +538,12 @@
       <workItem from="1523425072722" duration="1476000" />
       <workItem from="1523635988196" duration="427000" />
       <workItem from="1523636439350" duration="563000" />
-      <workItem from="1523637589434" duration="765000" />
+      <workItem from="1523637589434" duration="2305000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46906000" />
+    <option name="totallyTimeSpent" value="48446000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -566,11 +575,12 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Java Enterprise" order="1" weight="0.3282353" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.52" />
+      <window_info anchor="bottom" id="Run" order="4" visible="true" weight="0.2" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32941177" />
       <window_info anchor="bottom" id="Spring" order="2" weight="0.3282353" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info id="Persistence" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.23897436" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22710623" />
       <window_info anchor="right" id="Bean Validation" order="1" weight="0.32975295" />
       <window_info id="Web" order="1" side_tool="true" />
@@ -580,7 +590,6 @@
       <window_info anchor="right" id="Coverage" order="9" sideWeight="0.503937" side_tool="true" visible="true" weight="0.18045112" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
-      <window_info anchor="bottom" id="Database Console" order="13" weight="0.23947896" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.32875144" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -600,7 +609,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://a42d2c72-1f02-448a-8b53-67d6d59231f3/database/gamestudio/schema/public/table/rating" />
     <entry file="das://a42d2c72-1f02-448a-8b53-67d6d59231f3/database/gamestudio/schema/public/table/rating" />
     <entry file="das://a42d2c72-1f02-448a-8b53-67d6d59231f3/database/gamestudio/schema/public/table/rating" />
     <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/core/board/Board.java">
@@ -628,16 +636,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
           <caret line="62" column="14" selection-start-line="62" selection-start-column="14" selection-end-line="62" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/GameStudioServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -707,13 +705,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://74af1ce3-3eb3-4e3d-af1f-a0955eba5533/database/gamestudio/schema/public/table/score">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -893,10 +884,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUI.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/GameStudioServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -910,10 +904,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://74af1ce3-3eb3-4e3d-af1f-a0955eba5533/database/gamestudio/schema/public/table/score">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/battleships-brehuv.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
