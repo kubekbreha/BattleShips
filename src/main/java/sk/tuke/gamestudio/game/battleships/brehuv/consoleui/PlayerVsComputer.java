@@ -8,7 +8,6 @@ import sk.tuke.gamestudio.game.battleships.brehuv.core.board.TileState;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.game.GameController;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.game.GameState;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.history.BoardsHistory;
-import sk.tuke.gamestudio.game.battleships.brehuv.consoleui.consoleUI.player.*;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.player.*;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.util.DatabaseUtil;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.util.Util;

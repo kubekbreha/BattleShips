@@ -2,112 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43c1545f-97d6-4095-b8a6-c622172fa2c8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/core/player/Human.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/mines-bacikova.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/mines/bacikova/closed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/mines/bacikova/marked.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/mines/bacikova/mine.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/mines/bacikova/open0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/mines/bacikova/open1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/mines/bacikova/open2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/mines/bacikova/open3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/mines/bacikova/open4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/mines/bacikova/open5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/mines/bacikova/open6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/mines/bacikova/open7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/mines/bacikova/open8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/mines-bacikova.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/mines-bacikova_bot.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gamestudio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gamestudio.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/SpringClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/SpringClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/consoleui/ConsoleBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/consoleui/ConsoleBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/consoleui/GameMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/consoleui/GameMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/consoleui/GameMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/consoleui/GameMode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/consoleui/PlayerVsComputer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/consoleui/PlayerVsComputer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/consoleui/PlayerVsPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/consoleui/PlayerVsPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/core/board/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/board/Hint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/core/board/Hint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/board/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/core/board/Ship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/board/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/core/board/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/board/TileState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/core/board/TileState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/game/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/core/game/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/game/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/core/game/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/history/BoardsHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/core/history/BoardsHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/player/AILevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/core/player/AILevel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/player/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/core/player/Computer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/player/ComputerBegginer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/core/player/ComputerBegginer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/player/ComputerExpert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/core/player/ComputerExpert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/player/ComputerHard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/core/player/ComputerHard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/player/ComputerMedium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/core/player/ComputerMedium.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/player/Human.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/core/player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/util/DatabaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/core/util/DatabaseUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/core/util/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/GameStudioServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/GameStudioServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/entity/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/entity/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/entity/Rating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/entity/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/entity/Score.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/exception/CommentException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/CommentException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/exception/RatingException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/RatingException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/exception/ScoreException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/ScoreException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/CommentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/CommentServiceJDBC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/CommentServiceJPA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/CommentServiceRestClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/RatingService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/RatingServiceJDBC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/RatingServiceJPA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/RatingServiceRestClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/ScoreService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/ScoreServiceJDBC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/ScoreServiceJPA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/service/ScoreServiceRestClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/webservice/CommentServiceRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/webservice/CommentServiceRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/webservice/RatingServiceRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/webservice/RatingServiceRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/webservice/ScoreServiceRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/webservice/ScoreServiceRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/consoleui/ConsoleBoard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/consoleui/GameMode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/core/board/Board$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/core/board/Board.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/core/board/Hint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/core/board/Ship.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/core/board/Tile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/core/board/TileState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/core/game/GameController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/core/game/GameState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/core/history/BoardsHistory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/core/player/AILevel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/core/player/Computer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/core/player/ComputerBegginer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/core/player/ComputerExpert.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/core/player/ComputerHard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/core/player/ComputerMedium.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/core/player/Human.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/core/player/Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/core/util/Util$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/core/util/Util.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/RestServiceConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/exception/CommentException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/exception/RatingException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/exception/ScoreException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/service/JDBC/CommentServiceJDBC.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/service/JDBC/RatingServiceJDBC.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/service/JDBC/ScoreServiceJDBC.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/service/JPA/CommentServiceJPA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/service/JPA/RatingServiceJPA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/service/JPA/ScoreServiceJPA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/service/REST/CommentServiceRestClient$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/service/REST/CommentServiceRestClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/service/REST/RatingServiceRestClient$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/service/REST/RatingServiceRestClient$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/service/REST/RatingServiceRestClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/service/REST/ScoreServiceRestClient$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/service/REST/ScoreServiceRestClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/consoleui/PlayerVsComputer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/consoleui/PlayerVsComputer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/mines-bacikova.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/closed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/marked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/mine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/open0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/open1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/open2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/open3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/open4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/open5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/open6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/open7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/mines/brehuv/open8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mines-bacikova.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mines-bacikova_bot.html" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -138,32 +49,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="gamestudio@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="gamestudio@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="gamestudio@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="gamestudio: database" type="6d9b600a:PostgresImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="gamestudio@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="gamestudio: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="gamestudio@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="gamestudio: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
     </expand>
     <select />
   </component>
@@ -172,17 +57,17 @@
       <file leaf-file-name="WebUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+            <state relative-caret-position="330">
+              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mines-bacikova.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/mines-bacikova.css">
+      <file leaf-file-name="battleships-brehuv.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-531">
-              <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+            <state relative-caret-position="328">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
@@ -190,11 +75,29 @@
       <file leaf-file-name="BattleshipsBrehuvController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
+            <state relative-caret-position="465">
               <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="56" lean-forward="true" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerVsComputer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/consoleui/PlayerVsComputer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -230,8 +133,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/player/ComputerExpert.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/consoleui/ConsoleBoard.java" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/consoleui/PlayerVsPlayer.java" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/board/Board.java" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/core/board/Hint.java" />
@@ -280,6 +181,9 @@
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/consoleui/PlayerVsPlayer.java" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvController.java" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUI.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/consoleui/PlayerVsComputer.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv.html" />
       </list>
     </option>
   </component>
@@ -300,7 +204,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="947" />
@@ -311,6 +215,40 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
+              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
+              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
+              <item name="entity" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
+              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
+              <item name="game.battleships" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
+              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
+              <item name="service" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -403,50 +341,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
-              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
-              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
-              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
-              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
-              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
-              <item name="entity" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
-              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
-              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
-              <item name="game.battleships" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="58d84e3e:PackageViewProjectNode" />
-              <item name="BattleShips" type="616d4139:PackageViewModuleNode" />
-              <item name="com.boardgames" type="1f31426a:PackageElementNode" />
-              <item name="service" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
@@ -634,11 +529,12 @@
       <workItem from="1523425072722" duration="1476000" />
       <workItem from="1523635988196" duration="427000" />
       <workItem from="1523636439350" duration="563000" />
+      <workItem from="1523637589434" duration="765000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46141000" />
+    <option name="totallyTimeSpent" value="46906000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -650,7 +546,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="947" extended-state="6" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="8" />
@@ -665,12 +561,12 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.15558061" />
       <window_info anchor="bottom" id="TODO" order="16" weight="0.32941177" />
-      <window_info anchor="bottom" id="Messages" order="5" sideWeight="0.49679488" visible="true" weight="0.22235294" />
+      <window_info anchor="bottom" id="Messages" order="5" sideWeight="0.49679488" weight="0.22235294" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Java Enterprise" order="1" weight="0.3282353" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.5200401" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.52" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32941177" />
       <window_info anchor="bottom" id="Spring" order="2" weight="0.3282353" />
       <window_info anchor="bottom" id="Terminal" order="11" />
@@ -704,42 +600,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://a42d2c72-1f02-448a-8b53-67d6d59231f3/database/gamestudio/schema/public/table/rating" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/ScoreService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/CommentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/RatingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a42d2c72-1f02-448a-8b53-67d6d59231f3/database/gamestudio/schema/public/table/rating" />
-    <entry file="das://a42d2c72-1f02-448a-8b53-67d6d59231f3/database/gamestudio/schema/public/table/rating" />
-    <entry file="das://a42d2c72-1f02-448a-8b53-67d6d59231f3/database/gamestudio/schema/public/table/rating" />
-    <entry file="das://a42d2c72-1f02-448a-8b53-67d6d59231f3/database/gamestudio/schema/public/table/rating" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/core/util/DatabaseUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://a42d2c72-1f02-448a-8b53-67d6d59231f3/database/gamestudio/schema/public/table/rating" />
     <entry file="das://a42d2c72-1f02-448a-8b53-67d6d59231f3/database/gamestudio/schema/public/table/rating" />
     <entry file="das://a42d2c72-1f02-448a-8b53-67d6d59231f3/database/gamestudio/schema/public/table/rating" />
@@ -778,13 +638,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -984,13 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/consoleui/PlayerVsComputer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/consoleui/PlayerVsPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -998,9 +844,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/images/battleships/brehuv/closed.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/images/battleships/brehuv/open1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/images/battleships/brehuv/open3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/images/battleships/brehuv/open2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/images/battleships/brehuv/mine.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mines-bacikova_bot.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/images/battleships/brehuv/open5.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/consoleui/PlayerVsComputer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="56" lean-forward="true" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
+        <state relative-caret-position="465">
           <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1008,17 +910,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUI.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/mines-bacikova.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-531">
-          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        <state relative-caret-position="328">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
