@@ -53,6 +53,18 @@ public class Board {
         }
     }
 
+
+    /**
+     * Get specific tile state.
+     *
+     * @param row of tile.
+     * @param col of tile.
+     * @return tile state.
+     */
+    public Tile getBoardTile(int row, int col){
+        return playBoard[row][col];
+    }
+
     /**
      * Get list of ship sizes.
      *
