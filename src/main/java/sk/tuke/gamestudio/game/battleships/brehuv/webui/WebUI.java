@@ -61,16 +61,18 @@ public class WebUI {
 
     public String renderAsHtml() {
         StringBuilder sb = new StringBuilder();
-        sb.append("<table cellspacing=\"0\">");
 
+
+        sb.append("<div class=\"row\">" +
+                  "<div class=\"col-xs-6\">");
+
+        sb.append("<table cellspacing=\"0\">");
         for (int row = 0; row < board.getBoardRows(); row++) {
             sb.append("<tr>\n");
             for (int col = 0; col < board.getBoardCols(); col++) {
                 Tile tile = board.getBoardTile(row, col);
                 sb.append("<td>\n");
-
                 sb.append("<a  href='" + String.format("?row=%d&column=%d", row, col) + "'>\n");
-
                 String image = "";
                 switch (tile.getTileState()) {
                     case WATER:
@@ -88,16 +90,51 @@ public class WebUI {
                     default:
                         throw new IllegalArgumentException("Unexpected tile state " + tile.getTileState());
                 }
-
                 sb.append("<img class='" + "mines-tile"  + "' src='" + String.format("/images/battleships/brehuv/%s.png", image) + "'>\n");
                 sb.append("</a>\n");
-
                 sb.append("</td>\n");
             }
             sb.append("</tr>\n");
         }
-
         sb.append("</table>");
+
+        sb.append("</div>" +
+                "<div class=\"col-xs-6\">");
+
+        sb.append("<table cellspacing=\"0\">");
+        for (int row = 0; row < board.getBoardRows(); row++) {
+            sb.append("<tr>\n");
+            for (int col = 0; col < board.getBoardCols(); col++) {
+                Tile tile = board.getBoardTile(row, col);
+                sb.append("<td>\n");
+                sb.append("<a  href='" + String.format("?row=%d&column=%d", row, col) + "'>\n");
+                String image = "";
+                switch (tile.getTileState()) {
+                    case WATER:
+                        image = "closed";
+                        break;
+                    case SHIP:
+                        image = "mine";
+                        break;
+                    case MISSED:
+                        image = "marked";
+                        break;
+                    case HIT:
+                        image = "open5";
+                        break;
+                    default:
+                        throw new IllegalArgumentException("Unexpected tile state " + tile.getTileState());
+                }
+                sb.append("<img class='" + "mines-tile"  + "' src='" + String.format("/images/battleships/brehuv/%s.png", image) + "'>\n");
+                sb.append("</a>\n");
+                sb.append("</td>\n");
+            }
+            sb.append("</tr>\n");
+        }
+        sb.append("</table>");
+
+        sb.append("</div>" +
+                "</div>");
 
         if(showHint){
             sb.append("<p>");
@@ -108,6 +145,13 @@ public class WebUI {
 
         return sb.toString();
     }
+
+
+
+
+
+
+
 
     private void setUpGame() {
         board = new Board(10, 10);
