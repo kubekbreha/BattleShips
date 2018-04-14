@@ -76,16 +76,16 @@ public class WebUI {
                 String image = "";
                 switch (tile.getTileState()) {
                     case WATER:
-                        image = "closed";
+                        image = "water";
                         break;
                     case SHIP:
-                        image = "mine";
+                        image = "ship";
                         break;
                     case MISSED:
-                        image = "marked";
+                        image = "missed";
                         break;
                     case HIT:
-                        image = "open5";
+                        image = "destroyed";
                         break;
                     default:
                         throw new IllegalArgumentException("Unexpected tile state " + tile.getTileState());
@@ -111,16 +111,16 @@ public class WebUI {
                 String image = "";
                 switch (tile.getTileState()) {
                     case WATER:
-                        image = "closed";
+                        image = "water";
                         break;
                     case SHIP:
-                        image = "mine";
+                        image = "ship";
                         break;
                     case MISSED:
-                        image = "marked";
+                        image = "missed";
                         break;
                     case HIT:
-                        image = "open5";
+                        image = "destroyed";
                         break;
                     default:
                         throw new IllegalArgumentException("Unexpected tile state " + tile.getTileState());
