@@ -63,6 +63,7 @@ public class WebUI {
         StringBuilder sb = new StringBuilder();
 
 
+        //first board
         sb.append("<div class=\"row\">" +
                   "<div class=\"col-xs-6\">");
 
@@ -101,6 +102,7 @@ public class WebUI {
         sb.append("</div>" +
                 "<div class=\"col-xs-6\">");
 
+        //second playboard
         sb.append("<table cellspacing=\"0\">");
         for (int row = 0; row < board.getBoardRows(); row++) {
             sb.append("<tr>\n");

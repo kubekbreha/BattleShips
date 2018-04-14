@@ -15,14 +15,34 @@
 <body>
     <div>
         <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <H1>You</H1>
+                </div>
+                <div class="col-xs-6">
+                    <H1>Computer</H1>
+                </div>
+            </div>
             <p th:utext='${webUI.renderAsHtml()}' />
+            <div class="row">
+                <div class="col">
+                    <a href="?command=undo">Undo</a>
+                    <a href="?command=hint">Hint</a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-xs-6">
+                    <h2>Hall of fame</h2>
+                    <ol id="scoreList"/>
+                </div>
+            </div>
+
+
         </div>
 
-        <a href="?command=undo">Undo</a>
-        <a href="?command=hint">Hint</a>
 
-        <h2>Hall of fame</h2>
-        <ol id="scoreList"/>
 
     </div>
 
