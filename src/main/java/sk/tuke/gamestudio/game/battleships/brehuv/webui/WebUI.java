@@ -1,17 +1,62 @@
 package sk.tuke.gamestudio.game.battleships.brehuv.webui;
 
 import sk.tuke.gamestudio.game.battleships.brehuv.core.board.Board;
+import sk.tuke.gamestudio.game.battleships.brehuv.core.board.Hint;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.board.Tile;
+import sk.tuke.gamestudio.game.battleships.brehuv.core.game.GameController;
+import sk.tuke.gamestudio.game.battleships.brehuv.core.history.BoardsHistory;
+import sk.tuke.gamestudio.game.battleships.brehuv.core.player.Human;
+import sk.tuke.gamestudio.game.battleships.brehuv.core.player.Player;
+
+import java.util.Scanner;
 
 public class WebUI {
 
     private Board board;
+    private Player player;
+    private GameController gameController;
+    private BoardsHistory playerHistory;
+    private Hint hint;
 
-    public void processCommand( String rowString, String columnString) {
-        if (board == null) {
-            createBoard();
+    private boolean showHint;
+
+
+    public void processCommand(String command, String rowString, String columnString) {
+
+        int row = 0, col = 0;
+        if(rowString != null) {
+            row = Integer.parseInt(rowString);
         }
 
+        if(columnString != null) {
+            col = Integer.parseInt(columnString);
+        }
+
+
+        if (board == null) {
+            setUpGame();
+        }else if(command != null){
+            hint.findHint();
+            switch (command){
+                case "undo":
+                    if (playerHistory.getHistorySize() != 0) {
+                        board.setPlayBoard(playerHistory.getLast());
+                        playerHistory.removeLast();
+                        hint.setHintBoard(playerHistory.getLastProbability());
+                        playerHistory.removeLastProbability();
+                    }
+                    break;
+
+                case "hint":
+                    showHint = true;
+                    break;
+            }
+        }else if(rowString != null || columnString != null){
+            playerHistory.addToHistory(board.getPlayBoard());
+            playerHistory.addToProbabilityHistory(hint.getHintBoard());
+            player.shoot(board.getPlayBoard(), Integer.parseInt(rowString), Integer.parseInt(columnString));
+            hint.moveExecuted(board.getPlayBoard()[row][col].getTileState(), row, col);
+        }
     }
 
     public String renderAsHtml() {
@@ -35,10 +80,10 @@ public class WebUI {
                         image = "mine";
                         break;
                     case MISSED:
-                        image = "closed";
+                        image = "marked";
                         break;
                     case HIT:
-                        image = "closed";
+                        image = "open5";
                         break;
                     default:
                         throw new IllegalArgumentException("Unexpected tile state " + tile.getTileState());
@@ -54,11 +99,24 @@ public class WebUI {
 
         sb.append("</table>");
 
+        if(showHint){
+            sb.append("<p>");
+            sb.append(String.format("Row: " + (char) (hint.getHintRow() + 'A') + "  Col: " + hint.getHintCol()));
+            sb.append("</p>\n");
+            showHint = false;
+        }
+
         return sb.toString();
     }
 
-    private void createBoard() {
+    private void setUpGame() {
         board = new Board(10, 10);
         board.setUpBoardRandom();
+        hint = new Hint(board);
+        player = new Human();
+        gameController = new GameController(board);
+        playerHistory = new BoardsHistory();
     }
+
+
 }
