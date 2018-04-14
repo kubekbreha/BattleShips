@@ -167,5 +167,8 @@
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-devtools:1.4.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:1.4.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:1.4.4.RELEASE" level="project" />
+    <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="jquery.dataTables" level="application" />
+    <orderEntry type="library" name="materialize" level="application" />
   </component>
 </module>

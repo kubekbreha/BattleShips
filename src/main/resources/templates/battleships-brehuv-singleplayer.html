@@ -2,17 +2,39 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Minesweeper</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    <link rel="stylesheet" href="/css/stylesheet.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
+    <link href="../static/css/battleships-brehuv.css" rel="stylesheet"></link>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"></link>
     <link rel="stylesheet" type="text/css"
           href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"></link>
+
+</head>
+<body>
+    <div class="container">
+        <p th:utext='${webUI.renderAsHtml()}' />
+
+        <a href="?command=undo">Undo</a>
+        <a href="?command=hint">Hint</a>
+
+        <h2>Hall of fame</h2>
+        <ol id="scoreList"/>
+
+    </div>
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
     <script type="text/javascript" >
-            //<![CDATA[
+        //<![CDATA[
         $(document).ready(function () {
             $.ajax({
                 url: "/rest/score/battleships-brehuv",
@@ -36,16 +58,5 @@
         });
         //]]>
     </script>
-
-</head>
-
-    <body>
-        <p th:utext='${webUI.renderAsHtml()}' />
-
-        <a href="?command=undo">Undo</a>
-        <a href="?command=hint">Hint</a>
-
-        <h2>Hall of fame</h2>
-        <ol id="scoreList"/>
-    </body>
+</body>
 </html>
