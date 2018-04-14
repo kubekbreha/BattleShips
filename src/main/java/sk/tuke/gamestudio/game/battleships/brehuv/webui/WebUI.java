@@ -61,7 +61,7 @@ public class WebUI {
 
     public String renderAsHtml() {
         StringBuilder sb = new StringBuilder();
-        sb.append("<table>\n");
+        sb.append("<table cellspacing=\"0\">");
 
         for (int row = 0; row < board.getBoardRows(); row++) {
             sb.append("<tr>\n");
@@ -89,7 +89,7 @@ public class WebUI {
                         throw new IllegalArgumentException("Unexpected tile state " + tile.getTileState());
                 }
 
-                sb.append("<img src='" + String.format("/images/battleships/brehuv/%s.png", image) + "'>\n");
+                sb.append("<img class='" + "mines-tile"  + "' src='" + String.format("/images/battleships/brehuv/%s.png", image) + "'>\n");
                 sb.append("</a>\n");
 
                 sb.append("</td>\n");
