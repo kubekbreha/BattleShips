@@ -38,9 +38,14 @@
     </script>
 
 </head>
-<body>
-    <p th:utext='${webUI.renderAsHtml()}' />
-    <h2>Hall of fame</h2>
-    <ol id="scoreList"/>
-</body>
+
+    <body>
+        <p th:utext='${webUI.renderAsHtml()}' />
+
+        <a href="?command=undo">Undo</a>
+        <a href="?command=hint">Hint</a>
+
+        <h2>Hall of fame</h2>
+        <ol id="scoreList"/>
+    </body>
 </html>
