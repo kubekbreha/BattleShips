@@ -11,7 +11,10 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"></link>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet"></link>
     <link href="css/battleships-brehuv-stars.css" rel="stylesheet"></link>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"></link>
+
 </head>
+
 
 <body>
 <div>
@@ -22,16 +25,22 @@
             padding: 20px 2% 0px 2%; border: 1px; margin-top: 100px; ">
             <h1>Rate this game</h1>
 
-            <input type="checkbox" id="st1" value="1" />
-            <label for="st1"></label>
-            <input type="checkbox" id="st2" value="2" />
-            <label for="st2"></label>
-            <input type="checkbox" id="st3" value="3" />
-            <label for="st3"></label>
-            <input type="checkbox" id="st4" value="4" />
-            <label for="st4"></label>
-            <input type="checkbox" id="st5" value="5" />
-            <label for="st5"></label>
+            <div class="stars">
+                <form action="">
+                    <input class="star star-5" id="star-5" type="radio" name="star"/>
+                    <label class="star star-5" for="star-5"></label>
+                    <input class="star star-4" id="star-4" type="radio" name="star"/>
+                    <label class="star star-4" for="star-4"></label>
+                    <input class="star star-3" id="star-3" type="radio" name="star"/>
+                    <label class="star star-3" for="star-3"></label>
+                    <input class="star star-2" id="star-2" type="radio" name="star"/>
+                    <label class="star star-2" for="star-2"></label>
+                    <input class="star star-1" id="star-1" type="radio" name="star"/>
+                    <label class="star star-1" for="star-1"></label>
+                </form>
+            </div>
+
+
 
             <br></br>
             <p><a class="waves-effect waves-light blue btn" href="/battleships-brehuv-gamemenu">Back to menu</a></p>
@@ -47,6 +56,7 @@
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="scripts/battleships-brehuv-stars.js"></script>
 
 </body>
 </html>
