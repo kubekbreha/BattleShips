@@ -3,7 +3,7 @@
 <head>
     <title>Battleships</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
     <link rel="stylesheet" type="text/css"
@@ -13,67 +13,32 @@
 
 </head>
 <body>
-    <div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-6">
-                    <H1>You</H1>
-                </div>
-                <div class="col-xs-6">
-                    <H1>Computer</H1>
-                </div>
-            </div>
-            <p th:utext='${webUI.renderAsHtml()}' />
-            <div class="row">
-                <div class="col">
-                    <a href="?command=undo">Undo</a>
-                    <a href="?command=hint">Hint</a>
-                </div>
-            </div>
-
-
-            <div class="row">
-                <div class="col-xs-6">
-                    <h2>Hall of fame</h2>
-                    <ol id="scoreList"/>
-                </div>
-            </div>
-
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6">
+            <H1>You</H1>
         </div>
-
+        <div class="col-xs-6">
+            <H1>Computer</H1>
+        </div>
+    </div>
+    <p th:utext='${webUI.renderAsHtml()}'/>
+    <div class="row">
+        <div class="col">
+            <a href="?command=undo">Undo</a>
+            <a href="?command=hint">Hint</a>
+        </div>
+    </div>
+    <div class="row">
+        <p><a class="waves-effect waves-light blue btn" href="/battleships-brehuv-gamemenu">Back to menu</a></p>
     </div>
 
+</div>
 
 
+<script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <script type="text/javascript" >
-        //<![CDATA[
-        $(document).ready(function () {
-            $.ajax({
-                url: "/rest/score/battleships-brehuv",
-            }).done(function (json) {
-                for (var i = 0; i < json.length; i++) {
-                    var score = json[i];
-                    $("#scoreList").append($("<li>" + score.username + " " + score.points + " " + score.playedOn + "</li>"));
-                }
-            });
-        });
-
-        $(document).ready(function () {
-            $('#example').DataTable({
-                columns: [
-                    {data: "player"},
-                    {data: "points"},
-                    {data: "playedOn"}
-                ],
-                ajax: {url: "/rest/score/battleships-brehuv", dataSrc: ''}
-            });
-        });
-        //]]>
-    </script>
 </body>
 </html>
