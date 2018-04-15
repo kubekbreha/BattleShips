@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43c1545f-97d6-4095-b8a6-c622172fa2c8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv-stars.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv-stars.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scripts/battleships-brehuv-stars.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scripts/battleships-brehuv-stars.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControlleRating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControlleRating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scripts/battleships-brehuv-stars.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-rating.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-rating.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -67,11 +67,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="battleships-brehuv-rating.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="battleships-brehuv-rating.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-rating.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+            <state relative-caret-position="463">
+              <caret line="44" column="37" lean-forward="true" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -79,34 +79,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="battleships-brehuv-stars.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv-stars.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="battleships-brehuv-stars.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/battleships-brehuv-stars.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="battleships-brehuv-singleplayer.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-singleplayer.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="battleships-brehuv.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="battleships-brehuv.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+            <state relative-caret-position="645">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BattleshipsBrehuvControlleRating.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControlleRating.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+              <folding>
+                <element signature="e#883#884#0" expanded="true" />
+                <element signature="e#933#934#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameMenu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/consoleui/GameMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="793">
+              <caret line="67" column="65" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -196,13 +195,13 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-setrating.html" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerRating.java" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerSetrating.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControlleRating.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-gamemenu.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv-stars.css" />
         <option value="$PROJECT_DIR$/src/main/resources/static/scripts/battleships-brehuv-stars.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-rating.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-singleplayer.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv.css" />
+        <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControlleRating.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-rating.html" />
       </list>
     </option>
   </component>
@@ -623,12 +622,12 @@
       <workItem from="1523636439350" duration="563000" />
       <workItem from="1523637589434" duration="19801000" />
       <workItem from="1523711000991" duration="2366000" />
-      <workItem from="1523772418640" duration="7014000" />
+      <workItem from="1523772418640" duration="7961000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75322000" />
+    <option name="totallyTimeSpent" value="76269000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -661,7 +660,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="1" weight="0.3282353" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32941177" />
-      <window_info anchor="bottom" id="Run" order="4" visible="true" weight="0.42666668" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.42666668" />
       <window_info anchor="bottom" id="Spring" order="2" weight="0.3282353" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info id="Persistence" order="8" side_tool="true" />
@@ -694,13 +693,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-singleplayer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="56" column="49" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-gamemenu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -901,13 +893,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/consoleui/GameMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/consoleui/SinglePlayerWeb.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/core/board/Board.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -987,13 +972,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControlleRating.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-gamemenu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1031,8 +1009,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/battleships-brehuv-stars.js">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-singleplayer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv-stars.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -1041,27 +1023,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-rating.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/battleships-brehuv-stars.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/battleships-brehuv.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+        <state relative-caret-position="645">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/consoleui/GameMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="793">
+          <caret line="67" column="65" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControlleRating.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#883#884#0" expanded="true" />
+            <element signature="e#933#934#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-singleplayer.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-rating.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        <state relative-caret-position="463">
+          <caret line="44" column="37" lean-forward="true" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
