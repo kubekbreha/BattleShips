@@ -41,3 +41,4 @@ table {
     border-radius: 5px; /* 5px rounded corners */
 }
 
+table { background: url("images/battleships/brehuv/background.jpg") no-repeat; }
