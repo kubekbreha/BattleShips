@@ -1,6 +1,9 @@
 package sk.tuke.gamestudio.game.battleships.brehuv.webui;
 
-import sk.tuke.gamestudio.game.battleships.brehuv.core.board.*;
+import sk.tuke.gamestudio.game.battleships.brehuv.core.board.Board;
+import sk.tuke.gamestudio.game.battleships.brehuv.core.board.Hint;
+import sk.tuke.gamestudio.game.battleships.brehuv.core.board.Tile;
+import sk.tuke.gamestudio.game.battleships.brehuv.core.board.TileState;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.game.GameController;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.history.BoardsHistory;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.player.Computer;
@@ -9,7 +12,7 @@ import sk.tuke.gamestudio.game.battleships.brehuv.core.player.Human;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.player.Player;
 
 
-public class WebUI {
+public class WebUIMultiPlayer {
 
     private Board board;
     private Player player;

@@ -5,9 +5,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.WebApplicationContext;
-import sk.tuke.gamestudio.game.battleships.brehuv.webui.WebUI;
 import sk.tuke.gamestudio.service.ScoreService;
 
 //http://localhost:8080/battleships-brehuv-scoreboard
