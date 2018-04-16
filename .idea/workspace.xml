@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43c1545f-97d6-4095-b8a6-c622172fa2c8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUIMultiPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerMultiPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-multiplayer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/battleships/brehuv/background.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUISinglePlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerScoreboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerScoreboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerSinglePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerSinglePlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUIMultiPlayer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-gamemenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-gamemenu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerScoreboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerScoreboard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerSinglePlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerSinglePlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-rating.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-rating.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-scoreboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-scoreboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUIMultiPlayer$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUIMultiPlayer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/battleships-brehuv-gamemenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/battleships-brehuv-gamemenu.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,6 +72,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="battleships-brehuv-rating.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-rating.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="battleships-brehuv-scoreboard.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-scoreboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="battleships-brehuv-multiplayer.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-multiplayer.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -142,15 +163,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebUIMultiPlayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUIMultiPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BattleshipsBrehuvControllerMultiPlayer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerMultiPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -160,11 +172,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="battleships-brehuv-gamemenu.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="battleships-brehuv-gamemenu.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-gamemenu.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="60" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -251,7 +263,6 @@
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerMenu.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/scoreboard.html" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerScoreboard.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-scoreboard.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-setrating.html" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerRating.java" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerSetrating.java" />
@@ -262,12 +273,13 @@
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/core/game/GameController.java" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControlleRating.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-rating.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-multiplayer.html" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUISinglePlayer.java" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUIMultiPlayer.java" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerMultiPlayer.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-gamemenu.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-rating.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-scoreboard.html" />
       </list>
     </option>
   </component>
@@ -698,12 +710,12 @@
       <workItem from="1523637589434" duration="19801000" />
       <workItem from="1523711000991" duration="2366000" />
       <workItem from="1523772418640" duration="8012000" />
-      <workItem from="1523854319470" duration="10116000" />
+      <workItem from="1523854319470" duration="10665000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86436000" />
+    <option name="totallyTimeSpent" value="86985000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -949,13 +961,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-scoreboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="7" lean-forward="true" selection-end-line="67" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1072,16 +1077,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-rating.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/SpringClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1095,7 +1090,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUIMultiPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1144,13 +1139,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-multiplayer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-singleplayer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1161,9 +1149,36 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-gamemenu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="60" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-multiplayer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-rating.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-scoreboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
