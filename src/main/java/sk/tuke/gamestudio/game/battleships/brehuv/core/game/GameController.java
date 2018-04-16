@@ -1,8 +1,8 @@
 package sk.tuke.gamestudio.game.battleships.brehuv.core.game;
 
 
-
 import sk.tuke.gamestudio.game.battleships.brehuv.core.board.Board;
+import sk.tuke.gamestudio.game.battleships.brehuv.core.board.Hint;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.board.Ship;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.board.TileState;
 
@@ -16,7 +16,7 @@ public class GameController {
     private GameState gameState;
     private Board board;
 
-    public GameController(Board board){
+    public GameController(Board board) {
         this.board = board;
     }
 
@@ -41,12 +41,26 @@ public class GameController {
      */
     public boolean isGameWon(ArrayList<Ship> ships) {
         int sunkedShips = 0;
-        for (Ship ship : ships) {
-            if (ship.isShipSunk(board.getPlayBoard())) {
-                sunkedShips++;
+        int totalShipTiles = 0;
+        for (int i = 0; i < ships.size(); i++){
+            totalShipTiles += ships.get(i).getShipSize();
+        }
+        int touches = 0;
+//        for (Ship ship : ships) {
+//            if (ship.isShipSunk(board.getPlayBoard())) {
+//                sunkedShips++;
+//            }
+//        }
+        for (int row = 0; row < 10; row++) {
+            for (int col = 0; col < 10; col++) {
+                if(board.getPlayBoard()[row][col].getTileState() == TileState.HIT){
+                    touches++;
+                }
             }
         }
-        if (sunkedShips == ships.size()) {
+
+
+        if (touches == totalShipTiles) {
             setGameState(GameState.WON);
             return true;
         } else {
@@ -70,7 +84,7 @@ public class GameController {
         int shipsTileCount = 0;
         for (int row = 0; row < 10; row++) {
             for (int col = 0; col < 10; col++) {
-                if(board.getPlayBoard()[row][col].getTileState() == TileState.SHIP){
+                if (board.getPlayBoard()[row][col].getTileState() == TileState.SHIP) {
                     shipsTileCount++;
                 }
             }

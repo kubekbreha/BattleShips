@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Bttleships</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
@@ -41,17 +40,16 @@
             </div>
 
             <div class="row">
-                <form class="col s12  action="/login"">
+               <form class="col s12"  action="/submitrating" method="post">
                     <div class="row">
                         <div class="input-field col s12">
-                            <textarea id="comment" class="materialize-textarea"></textarea>
+                            <input id="comment" name="username" type="text" th:value="${comment}"/>
                             <label for="comment">Comment</label>
                         </div>
                     </div>
                 </form>
             </div>
-
-            <p><a class="waves-effect waves-light blue btn" >Submit</a></p>
+            <p><a class="waves-effect waves-light blue btn"  type="submit">Submit</a></p>
 
             <p><a class="waves-effect waves-light blue btn" href="/battleships-brehuv-gamemenu">Back to menu</a></p>
             <br></br>

@@ -1,8 +1,6 @@
 package sk.tuke.gamestudio.game.battleships.brehuv.webui;
 
-import sk.tuke.gamestudio.game.battleships.brehuv.core.board.Board;
-import sk.tuke.gamestudio.game.battleships.brehuv.core.board.Hint;
-import sk.tuke.gamestudio.game.battleships.brehuv.core.board.Tile;
+import sk.tuke.gamestudio.game.battleships.brehuv.core.board.*;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.game.GameController;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.history.BoardsHistory;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.player.Computer;
@@ -28,28 +26,32 @@ public class WebUI {
 
 
     public void processCommand(String command, String rowString, String columnString) {
-
         int row = 0, col = 0;
-        if(rowString != null) {
+        if (rowString != null) {
             row = Integer.parseInt(rowString);
         }
 
-        if(columnString != null) {
+        if (columnString != null) {
             col = Integer.parseInt(columnString);
         }
 
 
         if (board == null) {
             setUpGame();
-        }else if(command != null){
+        } else if (command != null) {
             hint.findHint();
-            switch (command){
+            switch (command) {
                 case "undo":
                     if (playerHistory.getHistorySize() != 0) {
                         boardOponent.setPlayBoard(playerHistory.getLast());
                         playerHistory.removeLast();
                         hint.setHintBoard(playerHistory.getLastProbability());
                         playerHistory.removeLastProbability();
+
+                        board.setPlayBoard(playerHistoryOponent.getLast());
+                        playerHistoryOponent.removeLast();
+                        ((Computer) playerOponent).setNotTileHistory(playerHistoryOponent.getLastProbability());
+                        playerHistoryOponent.removeLastProbability();
                     }
                     break;
 
@@ -57,28 +59,42 @@ public class WebUI {
                     showHint = true;
                     break;
             }
-        }else if(rowString != null || columnString != null){
+        } else if (rowString != null || columnString != null) {
+
             playerHistory.addToHistory(boardOponent.getPlayBoard());
             playerHistory.addToProbabilityHistory(hint.getHintBoard());
-            player.shoot(boardOponent.getPlayBoard(), Integer.parseInt(rowString), Integer.parseInt(columnString));
-            hint.moveExecuted(boardOponent.getPlayBoard()[row][col].getTileState(), row, col);
+            playerHistoryOponent.addToHistory(board.getPlayBoard());
+            playerHistoryOponent.addToProbabilityHistory(((Computer) playerOponent).getNotTileHistory());
 
-            playerOponent.shootAI(board.getPlayBoard());
+
+            //play while game not won
+            //cant shoot to same place
+            if (!gameControllerOponent.isGameWon(boardOponent.getShips())
+                    && !gameController.isGameWon(board.getShips()) &&
+                    boardOponent.getPlayBoard()[row][col].getTileState() != TileState.HIT &&
+                            boardOponent.getPlayBoard()[row][col].getTileState() != TileState.MISSED) {
+
+                player.shoot(boardOponent.getPlayBoard(), Integer.parseInt(rowString), Integer.parseInt(columnString));
+                hint.moveExecuted(boardOponent.getPlayBoard()[row][col].getTileState(), row, col);
+
+                playerOponent.shootAI(board.getPlayBoard());
+            }
         }
     }
+
 
     public String renderAsHtml() {
         StringBuilder sb = new StringBuilder();
 
         sb.append("<div class=\"row\"><div class=\"col-xs-6\">");
         //first board
-        showPlayTable(sb, board);
+        showPlayTable(sb, board, false);
         sb.append("</div><div class=\"col-xs-6\">");
         //second board
-        showPlayTable(sb,boardOponent);
+        showPlayTable(sb, boardOponent, true);
         sb.append("</div></div>");
 
-        if(showHint){
+        if (showHint) {
             sb.append("<p>");
             sb.append(String.format("Row: " + (char) (hint.getHintRow() + 'A') + "  Col: " + hint.getHintCol()));
             sb.append("</p>\n");
@@ -89,15 +105,18 @@ public class WebUI {
     }
 
 
-
-    private void showPlayTable(StringBuilder sb, Board board){
+    private void showPlayTable(StringBuilder sb, Board board, boolean clickable) {
         sb.append("<table cellspacing=\"0\">");
         for (int row = 0; row < board.getBoardRows(); row++) {
             sb.append("<tr>\n");
             for (int col = 0; col < board.getBoardCols(); col++) {
                 Tile tile = board.getBoardTile(row, col);
                 sb.append("<td>\n");
-                sb.append("<a  href='" + String.format("?row=%d&column=%d", row, col) + "'>\n");
+
+                if (clickable) {
+                    sb.append("<a  href='" + String.format("?row=%d&column=%d", row, col) + "'>\n");
+                }
+
                 String image = "";
                 switch (tile.getTileState()) {
                     case WATER:
@@ -115,31 +134,30 @@ public class WebUI {
                     default:
                         throw new IllegalArgumentException("Unexpected tile state " + tile.getTileState());
                 }
-                sb.append("<img class='" + "mines-tile"  + "' src='" + String.format("/images/battleships/brehuv/%s.png", image) + "'>\n");
+                sb.append("<img class='" + "mines-tile" + "' src='" + String.format("/images/battleships/brehuv/%s.png", image) + "'>\n");
                 sb.append("</a>\n");
                 sb.append("</td>\n");
             }
             sb.append("</tr>\n");
         }
         sb.append("</table>");
+
     }
-
-
-
-
 
 
     private void setUpGame() {
         board = new Board(10, 10);
-        boardOponent = new  Board(10,10);
+        boardOponent = new Board(10, 10);
         board.setUpBoardRandom();
         boardOponent.setUpBoardRandom();
         hint = new Hint(boardOponent);
         player = new Human();
         playerOponent = new Computer();
         ((Computer) playerOponent).setAiState(new ComputerExpert(10, 10));
-        gameController = new GameController(board);
+        gameController = new GameController(boardOponent);
+        gameControllerOponent = new GameController(board);
         playerHistory = new BoardsHistory();
+        playerHistoryOponent = new BoardsHistory();
     }
 
 
