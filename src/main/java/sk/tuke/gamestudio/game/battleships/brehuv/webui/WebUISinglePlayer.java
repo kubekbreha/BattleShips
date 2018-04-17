@@ -22,8 +22,8 @@ public class WebUISinglePlayer {
     private GameController gameControllerOponent;
     private BoardsHistory playerHistoryOponent;
 
-    private int hintCount = 3;
-    private int undoCount = 3;
+    private int hintCount;
+    private int undoCount;
 
     private boolean showHint;
 
@@ -62,6 +62,10 @@ public class WebUISinglePlayer {
 
                 case "hint":
                     showHint = true;
+                    break;
+
+                case "restart":
+                    setUpGame();
                     break;
             }
         } else if (rowString != null || columnString != null) {
@@ -195,6 +199,8 @@ public class WebUISinglePlayer {
         gameControllerOponent = new GameController(board);
         playerHistory = new BoardsHistory();
         playerHistoryOponent = new BoardsHistory();
+        hintCount = 3;
+        undoCount = 3;
     }
 
 
