@@ -32,6 +32,8 @@
                     <button class="btn-block" onclick="location.href='?command=undo'">Undo</button>
                     <div class="margin"></div>
                     <button class="btn-block" onclick="location.href='?command=hint'">Hint</button>
+                    <p th:utext='${webUI.renderHint()}'/>
+                    <p></p>
                 </div>
             </div>
         </div>
@@ -42,7 +44,6 @@
             <div class="demo-title">
                 <div class="row flex-center">
                     <h2><span class="badge secondary">Computer Board</span></h2>
-
                     <p th:utext='${webUI.renderAsHtml2()}'/>
                 </div>
             </div>

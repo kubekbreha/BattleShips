@@ -72,7 +72,7 @@ public class WebUISinglePlayer {
             if (!gameControllerOponent.isGameWon(boardOponent.getShips())
                     && !gameController.isGameWon(board.getShips()) &&
                     boardOponent.getPlayBoard()[row][col].getTileState() != TileState.HIT &&
-                            boardOponent.getPlayBoard()[row][col].getTileState() != TileState.MISSED) {
+                    boardOponent.getPlayBoard()[row][col].getTileState() != TileState.MISSED) {
 
                 player.shoot(boardOponent.getPlayBoard(), Integer.parseInt(rowString), Integer.parseInt(columnString));
                 hint.moveExecuted(boardOponent.getPlayBoard()[row][col].getTileState(), row, col);
@@ -90,13 +90,6 @@ public class WebUISinglePlayer {
         //first board
         showPlayTable(sb, board, false);
         sb.append("</div></div>");
-
-        if (showHint) {
-            sb.append("<p>");
-            sb.append(String.format("Row: " + (char) (hint.getHintRow() + 'A') + "  Col: " + hint.getHintCol()));
-            sb.append("</p>\n");
-            showHint = false;
-        }
 
         return sb.toString();
     }
@@ -150,6 +143,18 @@ public class WebUISinglePlayer {
         }
         sb.append("</table>");
 
+    }
+
+    public String renderHint() {
+        StringBuilder sb = new StringBuilder();
+        if (showHint) {
+            sb.append("<p>");
+            sb.append(String.format("Row: <span class=\"badge secondary\">" + (char) (hint.getHintRow() + '1') + "</span> " +
+                    " Col: <span class=\"badge secondary\">" + (hint.getHintCol()+1) + "</span>" ));
+            sb.append("</p>\n");
+            showHint = false;
+        }
+        return sb.toString();
     }
 
 
