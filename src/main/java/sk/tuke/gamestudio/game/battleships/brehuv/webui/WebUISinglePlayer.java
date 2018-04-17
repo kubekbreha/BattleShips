@@ -22,6 +22,9 @@ public class WebUISinglePlayer {
     private GameController gameControllerOponent;
     private BoardsHistory playerHistoryOponent;
 
+    private int hintCount = 3;
+    private int undoCount = 3;
+
     private boolean showHint;
 
 
@@ -42,7 +45,7 @@ public class WebUISinglePlayer {
             hint.findHint();
             switch (command) {
                 case "undo":
-                    if (playerHistory.getHistorySize() != 0) {
+                    if (playerHistory.getHistorySize() != 0 && undoCount!=0) {
                         boardOponent.setPlayBoard(playerHistory.getLast());
                         playerHistory.removeLast();
                         hint.setHintBoard(playerHistory.getLastProbability());
@@ -52,6 +55,8 @@ public class WebUISinglePlayer {
                         playerHistoryOponent.removeLast();
                         ((Computer) playerOponent).setNotTileHistory(playerHistoryOponent.getLastProbability());
                         playerHistoryOponent.removeLastProbability();
+                        undoCount--;
+
                     }
                     break;
 
@@ -147,13 +152,32 @@ public class WebUISinglePlayer {
 
     public String renderHint() {
         StringBuilder sb = new StringBuilder();
-        if (showHint) {
+        System.out.println(hintCount);
+        System.out.println(showHint);
+        if (showHint && hintCount != 0) {
             sb.append("<p>");
             sb.append(String.format("Row: <span class=\"badge secondary\">" + (char) (hint.getHintRow() + '1') + "</span> " +
-                    " Col: <span class=\"badge secondary\">" + (hint.getHintCol()+1) + "</span>" ));
+                    " Col: <span class=\"badge secondary\">" + (hint.getHintCol() + 1) + "</span>"));
             sb.append("</p>\n");
             showHint = false;
+            hintCount--;
         }
+        return sb.toString();
+    }
+
+    public String renderHintCount() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("<p>");
+        sb.append(String.format("You have <span class=\"badge danger\">" + hintCount + "</span> hint left." ));
+        sb.append("</p>\n");
+        return sb.toString();
+    }
+
+    public String renderUndoCount() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("<p>");
+        sb.append(String.format("You have <span class=\"badge danger\">" + undoCount + "</span> undo left." ));
+        sb.append("</p>\n");
         return sb.toString();
     }
 
