@@ -12,6 +12,7 @@ import sk.tuke.gamestudio.game.battleships.brehuv.core.player.Player;
 public class WebUISinglePlayer {
 
     private Board board;
+    private Board boardSetup;
     private Player player;
     private GameController gameController;
     private BoardsHistory playerHistory;
@@ -92,7 +93,7 @@ public class WebUISinglePlayer {
     }
 
 
-    public String renderAsHtml1() {
+    public String renderPlayer1Board() {
         StringBuilder sb = new StringBuilder();
 
         sb.append("<div class=\"row\"><div class=\"col-xs-6\">");
@@ -103,7 +104,7 @@ public class WebUISinglePlayer {
         return sb.toString();
     }
 
-    public String renderAsHtml2() {
+    public String renderPlayer2Board() {
         StringBuilder sb = new StringBuilder();
 
         sb.append("<div class=\"row\"><div class=\"col-xs-6\">");
@@ -185,6 +186,25 @@ public class WebUISinglePlayer {
         return sb.toString();
     }
 
+
+    public String renderShipsList() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("<p>");
+        sb.append("</p>\n");
+
+        return sb.toString();
+    }
+
+    public String renderSetupBoard() {
+        boardSetup = new Board(10,10);
+        StringBuilder sb = new StringBuilder();
+        sb.append("<div class=\"row\"><div class=\"col-xs-6\">");
+        //second board
+        showPlayTable(sb, boardSetup, false);
+        sb.append("</div></div>");
+
+        return sb.toString();
+    }
 
     private void setUpGame() {
         board = new Board(10, 10);

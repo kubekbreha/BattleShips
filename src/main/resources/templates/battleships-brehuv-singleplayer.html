@@ -18,7 +18,7 @@
             <div class="demo-title">
                 <div class="row flex-center">
                     <h2><span class="badge secondary">Your Board</span></h2>
-                    <p th:utext='${webUI.renderAsHtml1()}'/>
+                    <p th:utext='${webUI.renderPlayer1Board()}'/>
                 </div>
             </div>
         </div>
@@ -40,6 +40,10 @@
                     <div class="margin"></div>
                     <button class="btn-block" onclick="location.href='/battleships-brehuv-gamemenu'">Menu</button>
                     <p></p>
+                    <!-- conffeti -->
+                    <!--<button id="startConfetti">Start</button>-->
+                    <!--<button id="stopConfetti">Stop</button>-->
+                    <!--<button id="restartConfetti">Restart</button>-->
                 </div>
             </div>
         </div>
@@ -50,12 +54,15 @@
             <div class="demo-title">
                 <div class="row flex-center">
                     <h2><span class="badge secondary">Computer Board</span></h2>
-                    <p th:utext='${webUI.renderAsHtml2()}'/>
+                    <p th:utext='${webUI.renderPlayer2Board()}'/>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="scripts/jquery.confetti.js"></script>
 </body>
 </html>

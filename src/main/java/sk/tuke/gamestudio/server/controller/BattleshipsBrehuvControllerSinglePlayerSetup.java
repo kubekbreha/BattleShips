@@ -10,17 +10,17 @@ import org.springframework.web.context.WebApplicationContext;
 import sk.tuke.gamestudio.game.battleships.brehuv.webui.WebUISinglePlayer;
 import sk.tuke.gamestudio.service.ScoreService;
 
-//http://localhost:8080/battleships-brehuv-singleplayer
+//http://localhost:8080/battleships-brehuv-singleplayer-setup
 @Controller
 @Scope(WebApplicationContext.SCOPE_SESSION)
-public class BattleshipsBrehuvControllerSinglePlayer {
+public class BattleshipsBrehuvControllerSinglePlayerSetup {
 
     private WebUISinglePlayer webUISinglePlayer = new WebUISinglePlayer();
 
     @Autowired
     private ScoreService scoreService;
 
-    @RequestMapping("/battleships-brehuv-singleplayer")
+    @RequestMapping("/battleships-brehuv-singleplayer-setup")
     public String mines(@RequestParam(value = "command", required = false) String command,
                         @RequestParam(value = "row", required = false) String row,
                         @RequestParam(value = "column", required = false) String column, Model model) {
@@ -28,7 +28,6 @@ public class BattleshipsBrehuvControllerSinglePlayer {
 
         model.addAttribute("webUI", webUISinglePlayer);
 
-
-        return "battleships-brehuv-singleplayer"; //same name as the template
+        return "battleships-brehuv-singleplayer-setup"; //same name as the template
     }
 }
