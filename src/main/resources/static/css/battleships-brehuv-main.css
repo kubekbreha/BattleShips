@@ -1,7 +1,6 @@
-/*.main-background{*/
-    /*background: url("../images/battleships/brehuv/geometry.png") no-repeat;*/
-
-/*}*/
+.main-background{
+    background: url("../images/battleships/brehuv/geometry.png") repeat;
+}
 
 .demo-title {
     padding: 2px;

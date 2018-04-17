@@ -1,6 +1,5 @@
 .main-background{
-    background: url("../images/battleships/brehuv/geometry.png") no-repeat;
-
+    background: url("../images/battleships/brehuv/geometry.png") repeat;
 }
 
 .demo-title {
