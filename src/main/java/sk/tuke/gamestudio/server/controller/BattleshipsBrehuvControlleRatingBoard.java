@@ -10,15 +10,14 @@ import sk.tuke.gamestudio.game.battleships.brehuv.core.util.DatabaseUtil;
 import sk.tuke.gamestudio.service.CommentService;
 import sk.tuke.gamestudio.service.RatingService;
 
-//http://localhost:8080/battleships-brehuv-showrating
+//http://localhost:8080/battleships-brehuv-ratingboard
 @Controller
 @Scope(WebApplicationContext.SCOPE_SESSION)
-public class BattleshipsBrehuvControlleShowRating {
+public class BattleshipsBrehuvControlleRatingBoard {
 
-
-    @RequestMapping("/battleships-brehuv-showrating")
+    @RequestMapping("/battleships-brehuv-ratingboard")
     public String mines(Model model) {
-        return "battleships-brehuv-showrating";
+        return "battleships-brehuv-ratingboard";
     }
 
 }

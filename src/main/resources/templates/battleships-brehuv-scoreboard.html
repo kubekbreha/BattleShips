@@ -43,7 +43,7 @@
         }).done(function (json) {
             for (var i = 0; i < json.length; i++) {
                 var score = json[i];
-                $("#scoreList").append($("<li>" + score.username + " " + score.points + " " + score.playedOn + "</li>"));
+                $("#scoreList").append($("<li>" + score.player + "   " + score.points + "   " + score.playedOn + "</li>"));
             }
         });
     });

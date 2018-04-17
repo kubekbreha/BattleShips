@@ -6,6 +6,7 @@
 
 .body {
     margin: 0;
+    background-color: #424242;
 }
 
 
@@ -41,4 +42,8 @@ table {
     border-radius: 5px; /* 5px rounded corners */
 }
 
-table { background: url("images/battleships/brehuv/background.jpg") no-repeat; }
+table {
+    background: url("../images/battleships/brehuv/background.jpg") no-repeat;
+    height: 100%;
+
+}

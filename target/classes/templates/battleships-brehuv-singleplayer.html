@@ -5,40 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
-    <link rel="stylesheet" type="text/css"
-          href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"></link>
-    <link href="css/battleships-brehuv.css" rel="stylesheet"></link>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"
+          type="text/css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css"/>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link href="css/battleships-brehuv-bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/battleships-brehuv-lumen.min.css" rel="stylesheet"/>
+    <link href="css/battleships-brehuv-main.css" rel="stylesheet"/>
 
 </head>
-<body>
+
+<body class="main-background">
 <div class="container">
     <div class="row">
-        <div class="col-xs-6">
-            <H1>You</H1>
+        <div class="col-sm">
+            <div class="card text-white secondary-background mb-xl-3" style="max-width: 480px;">
+                <div class="card-body board-margin">
+                    <p th:utext='${webUI.renderAsHtml1()}'/>
+                </div>
+            </div>
         </div>
-        <div class="col-xs-6">
-            <H1>Computer</H1>
-        </div>
-    </div>
-    <p th:utext='${webUI.renderAsHtml()}'/>
-    <div class="row">
-        <div class="col">
-            <a href="?command=undo">Undo</a>
-            <a href="?command=hint">Hint</a>
-        </div>
-    </div>
-    <div class="row">
-        <p><a class="waves-effect waves-light blue btn" href="/battleships-brehuv-gamemenu">Back to menu</a></p>
-    </div>
 
+        <div class="col-sm">
+            <div class="card text-white secondary-background mb-xl-3" style="max-width: 480px;">
+                <div  class="board-margin card-body">
+                    <p th:utext='${webUI.renderAsHtml2()}'/>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
-<script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--<div class="container">-->
+<!--<div class="row">-->
+<!--<div class="col-xs-6">-->
+<!--<H1>You</H1>-->
+<!--</div>-->
+<!--<div class="col-xs-6">-->
+<!--<H1>Computer</H1>-->
+<!--</div>-->
+<!--</div>-->
+<!--<p th:utext='${webUI.renderAsHtml()}'/>-->
+<!--<div class="row">-->
+<!--<div class="col">-->
+<!--<a href="?command=undo">Undo</a>-->
+<!--<a href="?command=hint">Hint</a>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="row">-->
+<!--<p><a class="waves-effect waves-light blue btn" href="/battleships-brehuv-gamemenu">Back to menu</a></p>-->
+<!--</div>-->
+<!--</div>-->
+
 
 </body>
 </html>

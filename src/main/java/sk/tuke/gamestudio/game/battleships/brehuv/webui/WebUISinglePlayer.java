@@ -83,15 +83,12 @@ public class WebUISinglePlayer {
     }
 
 
-    public String renderAsHtml() {
+    public String renderAsHtml1() {
         StringBuilder sb = new StringBuilder();
 
         sb.append("<div class=\"row\"><div class=\"col-xs-6\">");
         //first board
         showPlayTable(sb, board, false);
-        sb.append("</div><div class=\"col-xs-6\">");
-        //second board
-        showPlayTable(sb, boardOponent, true);
         sb.append("</div></div>");
 
         if (showHint) {
@@ -100,6 +97,17 @@ public class WebUISinglePlayer {
             sb.append("</p>\n");
             showHint = false;
         }
+
+        return sb.toString();
+    }
+
+    public String renderAsHtml2() {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("<div class=\"row\"><div class=\"col-xs-6\">");
+        //second board
+        showPlayTable(sb, boardOponent, true);
+        sb.append("</div></div>");
 
         return sb.toString();
     }
@@ -120,16 +128,16 @@ public class WebUISinglePlayer {
                 String image = "";
                 switch (tile.getTileState()) {
                     case WATER:
-                        image = "water";
+                        image = "8water1";
                         break;
                     case SHIP:
-                        image = "ship";
+                        image = "8ship";
                         break;
                     case MISSED:
-                        image = "missed";
+                        image = "8missed";
                         break;
                     case HIT:
-                        image = "destroyed";
+                        image = "8hitted";
                         break;
                     default:
                         throw new IllegalArgumentException("Unexpected tile state " + tile.getTileState());

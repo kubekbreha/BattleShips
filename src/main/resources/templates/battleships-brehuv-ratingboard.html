@@ -25,8 +25,7 @@
             padding: 20px 2% 0px 2%; border: 1px; margin-top: 100px; ">
             <h1>Ratings</h1>
 
-
-
+            <ol id="commentList"/>
 
             <p><a class="waves-effect waves-light blue btn" href="/battleships-brehuv-gamemenu">Back to menu</a></p>
             <br></br>
@@ -41,7 +40,31 @@
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-<script src="scripts/battleships-brehuv-stars.js"></script>
+<script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function () {
+        $.ajax({
+            url: "/rest/comment/battleships-brehuv",
+        }).done(function (json) {
+            for (var i = 0; i < json.length; i++) {
+                var comment = json[i];
+                $("#commentList").append($("<li>" + comment.player + "   " + comment.comment + "   " + comment.playedOn + "</li>"));
+            }
+        });
+    });
+
+    $(document).ready(function () {
+        $('#example').DataTable({
+            columns: [
+                {data: "player"},
+                {data: "comment"},
+                {data: "commentedOn"}
+            ],
+            ajax: {url: "/rest/comment/battleships-brehuv", dataSrc: ''}
+        });
+    });
+    //]]>
+</script>
 
 </body>
 </html>

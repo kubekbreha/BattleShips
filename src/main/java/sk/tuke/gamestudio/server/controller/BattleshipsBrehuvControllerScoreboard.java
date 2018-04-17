@@ -13,15 +13,8 @@ import sk.tuke.gamestudio.service.ScoreService;
 @Scope(WebApplicationContext.SCOPE_SESSION)
 public class BattleshipsBrehuvControllerScoreboard {
 
-
-    @Autowired
-    private ScoreService scoreService;
-
     @RequestMapping("/battleships-brehuv-scoreboard")
-    public String mines(Model model) {
-
-        model.addAttribute("scores", scoreService.getBestScores("battleships-brehuv"));
-
+    public String mines() {
         return "battleships-brehuv-scoreboard"; //same name as the template
     }
 }
