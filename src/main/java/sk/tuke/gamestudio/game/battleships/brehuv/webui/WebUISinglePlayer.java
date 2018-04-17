@@ -8,6 +8,9 @@ import sk.tuke.gamestudio.game.battleships.brehuv.core.player.ComputerExpert;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.player.Human;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.player.Player;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class WebUISinglePlayer {
 
@@ -25,6 +28,10 @@ public class WebUISinglePlayer {
 
     private int hintCount;
     private int undoCount;
+    private boolean settingUp;
+    private int shipcounter;
+    private final int[] shipSizes = {1, 1, 2, 2, 3, 4};
+    private List<Ship> ships;
 
     private boolean showHint;
 
@@ -71,23 +78,30 @@ public class WebUISinglePlayer {
             }
         } else if (rowString != null || columnString != null) {
 
-            playerHistory.addToHistory(boardOponent.getPlayBoard());
-            playerHistory.addToProbabilityHistory(hint.getHintBoard());
-            playerHistoryOponent.addToHistory(board.getPlayBoard());
-            playerHistoryOponent.addToProbabilityHistory(((Computer) playerOponent).getNotTileHistory());
+            if(!settingUp) {
+                playerHistory.addToHistory(boardOponent.getPlayBoard());
+                playerHistory.addToProbabilityHistory(hint.getHintBoard());
+                playerHistoryOponent.addToHistory(board.getPlayBoard());
+                playerHistoryOponent.addToProbabilityHistory(((Computer) playerOponent).getNotTileHistory());
 
 
-            //play while game not won
-            //cant shoot to same place
-            if (!gameControllerOponent.isGameWon(boardOponent.getShips())
-                    && !gameController.isGameWon(board.getShips()) &&
-                    boardOponent.getPlayBoard()[row][col].getTileState() != TileState.HIT &&
-                    boardOponent.getPlayBoard()[row][col].getTileState() != TileState.MISSED) {
+                //play while game not won
+                //cant shoot to same place
+                if (!gameControllerOponent.isGameWon(boardOponent.getShips())
+                        && !gameController.isGameWon(board.getShips()) &&
+                        boardOponent.getPlayBoard()[row][col].getTileState() != TileState.HIT &&
+                        boardOponent.getPlayBoard()[row][col].getTileState() != TileState.MISSED) {
 
-                player.shoot(boardOponent.getPlayBoard(), Integer.parseInt(rowString), Integer.parseInt(columnString));
-                hint.moveExecuted(boardOponent.getPlayBoard()[row][col].getTileState(), row, col);
+                    player.shoot(boardOponent.getPlayBoard(), Integer.parseInt(rowString), Integer.parseInt(columnString));
+                    hint.moveExecuted(boardOponent.getPlayBoard()[row][col].getTileState(), row, col);
 
-                playerOponent.shootAI(board.getPlayBoard());
+                    playerOponent.shootAI(board.getPlayBoard());
+                }
+            }else{
+                if(shipcounter != shipSizes.length) {
+                    ships.get(shipcounter).placeShip(boardSetup.getPlayBoard(), row, col, 'H');
+                    shipcounter++;
+                }
             }
         }
     }
@@ -157,8 +171,6 @@ public class WebUISinglePlayer {
 
     public String renderHint() {
         StringBuilder sb = new StringBuilder();
-        System.out.println(hintCount);
-        System.out.println(showHint);
         if (showHint && hintCount != 0) {
             sb.append("<p>");
             sb.append(String.format("Row: <span class=\"badge secondary\">" + (char) (hint.getHintRow() + '1') + "</span> " +
@@ -196,13 +208,12 @@ public class WebUISinglePlayer {
     }
 
     public String renderSetupBoard() {
-        boardSetup = new Board(10,10);
+        settingUp = true;
         StringBuilder sb = new StringBuilder();
         sb.append("<div class=\"row\"><div class=\"col-xs-6\">");
         //second board
-        showPlayTable(sb, boardSetup, false);
+        showPlayTable(sb, boardSetup, true);
         sb.append("</div></div>");
-
         return sb.toString();
     }
 
@@ -221,6 +232,12 @@ public class WebUISinglePlayer {
         playerHistoryOponent = new BoardsHistory();
         hintCount = 3;
         undoCount = 3;
+        //setup board setup
+        boardSetup = new Board(10,10);
+        ships = new ArrayList<>();
+        for(int i=0; i<shipSizes.length; i++){
+            ships.add(new Ship(shipSizes[i]));
+        }
     }
 
 
