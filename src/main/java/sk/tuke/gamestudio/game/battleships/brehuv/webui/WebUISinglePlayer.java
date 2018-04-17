@@ -128,16 +128,16 @@ public class WebUISinglePlayer {
                 String image = "";
                 switch (tile.getTileState()) {
                     case WATER:
-                        image = "8water1";
+                        image = "water";
                         break;
                     case SHIP:
-                        image = "8ship";
+                        image = "ship";
                         break;
                     case MISSED:
-                        image = "8missed";
+                        image = "missed";
                         break;
                     case HIT:
-                        image = "8hitted";
+                        image = "hitted";
                         break;
                     default:
                         throw new IllegalArgumentException("Unexpected tile state " + tile.getTileState());

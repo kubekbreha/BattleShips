@@ -2,29 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43c1545f-97d6-4095-b8a6-c622172fa2c8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv-bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv-lumen.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv-star.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/battleships/brehuv/hitted.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUISinglePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUISinglePlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControlleRatingBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControlleRatingBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerScoreboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerScoreboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv-stars.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv-main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv-main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv-main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/battleships/brehuv/8hitted.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/battleships/brehuv/8missed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/battleships/brehuv/8ship.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/battleships/brehuv/8water1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/battleships/brehuv/8water2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/battleships/brehuv/8water3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/battleships/brehuv/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/battleships/brehuv/destroyed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/battleships/brehuv/missed.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/battleships/brehuv/missed.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/battleships/brehuv/ship.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/battleships/brehuv/ship.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/battleships/brehuv/water.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/battleships/brehuv/water.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-gamemenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-gamemenu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-ratingboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-ratingboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-scoreboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-scoreboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-singleplayer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-singleplayer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUISinglePlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUISinglePlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControlleShowRating.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerScoreboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerScoreboard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/battleships-brehuv-stars.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/battleships-brehuv.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/battleships-brehuv.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/battleships-brehuv-main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/battleships-brehuv-main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/battleships/brehuv/8hitted.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/battleships/brehuv/8missed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/battleships/brehuv/8ship.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/battleships/brehuv/8water1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/battleships/brehuv/8water2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/battleships/brehuv/8water3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/battleships/brehuv/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/battleships/brehuv/destroyed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/battleships/brehuv/missed.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/images/battleships/brehuv/missed.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/battleships/brehuv/ship.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/images/battleships/brehuv/ship.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/images/battleships/brehuv/water.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/images/battleships/brehuv/water.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/battleships-brehuv-gamemenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/battleships-brehuv-gamemenu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/battleships-brehuv-scoreboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/battleships-brehuv-scoreboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/battleships-brehuv-showrating.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/battleships-brehuv-singleplayer.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/battleships-brehuv-singleplayer.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -64,12 +70,10 @@
       <file leaf-file-name="battleships-brehuv-singleplayer.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-singleplayer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+            <state relative-caret-position="345">
+              <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1523960789021" expanded="true" signature="1654:2219" ph="..." />
+                <marker date="1523969044805" expanded="true" signature="1366:1446" ph="..." />
               </folding>
             </state>
           </provider>
@@ -78,17 +82,8 @@
       <file leaf-file-name="battleships-brehuv-main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv-main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebUISinglePlayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUISinglePlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="109" column="34" selection-start-line="109" selection-start-column="34" selection-end-line="109" selection-end-column="34" />
+            <state>
+              <caret column="10" selection-start-column="10" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -455,8 +450,8 @@
       <recent name="sk.tuke.gamestudio.server.webservice" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/static/css" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/images/battleships/brehuv" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/css" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/scripts" />
       <recent name="$PROJECT_DIR$/src/main/Resources" />
@@ -592,12 +587,12 @@
       <workItem from="1523711000991" duration="2366000" />
       <workItem from="1523772418640" duration="8012000" />
       <workItem from="1523854319470" duration="16401000" />
-      <workItem from="1523943344242" duration="3835000" />
+      <workItem from="1523943344242" duration="5998000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96556000" />
+    <option name="totallyTimeSpent" value="98719000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -879,6 +874,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="58" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="58" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1003,26 +1001,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUISinglePlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="109" column="34" selection-start-line="109" selection-start-column="34" selection-end-line="109" selection-end-column="34" />
+        <state relative-caret-position="286">
+          <caret line="139" column="33" selection-start-line="139" selection-start-column="33" selection-end-line="139" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv-main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-singleplayer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+        <state relative-caret-position="345">
+          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1523960789021" expanded="true" signature="1654:2219" ph="..." />
+            <marker date="1523969044805" expanded="true" signature="1366:1446" ph="..." />
           </folding>
         </state>
       </provider>
