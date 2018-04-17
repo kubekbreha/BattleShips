@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="43c1545f-97d6-4095-b8a6-c622172fa2c8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv-main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv-main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-singleplayer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-singleplayer.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,23 +39,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="battleships-brehuv-singleplayer.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="battleships-brehuv-singleplayer.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-singleplayer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
-              <folding>
-                <marker date="1523969044805" expanded="true" signature="1366:1446" ph="..." />
-              </folding>
+            <state relative-caret-position="358">
+              <caret line="32" column="46" lean-forward="true" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="battleships-brehuv-main.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="battleships-brehuv-main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv-main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="75" selection-start-line="1" selection-start-column="75" selection-end-line="1" selection-end-column="75" />
+            <state relative-caret-position="135">
+              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -153,8 +151,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-scoreboard.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv.css" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUISinglePlayer.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-singleplayer.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv-main.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-singleplayer.html" />
       </list>
     </option>
   </component>
@@ -558,12 +556,12 @@
       <workItem from="1523711000991" duration="2366000" />
       <workItem from="1523772418640" duration="8012000" />
       <workItem from="1523854319470" duration="16401000" />
-      <workItem from="1523943344242" duration="6244000" />
+      <workItem from="1523943344242" duration="7285000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98965000" />
+    <option name="totallyTimeSpent" value="100006000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -977,20 +975,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-singleplayer.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv-main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
-          <folding>
-            <marker date="1523969044805" expanded="true" signature="1366:1446" ph="..." />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv-main.css">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-singleplayer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="75" selection-start-line="1" selection-start-column="75" selection-end-line="1" selection-end-column="75" />
+        <state relative-caret-position="358">
+          <caret line="32" column="46" lean-forward="true" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
         </state>
       </provider>
     </entry>

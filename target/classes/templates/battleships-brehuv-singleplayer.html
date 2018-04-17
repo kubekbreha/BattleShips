@@ -7,7 +7,6 @@
 
     <link rel="stylesheet" href="https://unpkg.com/papercss@1.4.1/dist/paper.min.css"/>
     <link href="css/battleships-brehuv-main.css" rel="stylesheet"/>
-
 </head>
 
 <body class="main-background">
@@ -18,7 +17,7 @@
         <div class="paper">
             <div class="demo-title">
                 <div class="row flex-center">
-                    <h3>Your Board</h3>
+                    <h2><span class="badge secondary">Your Board</span></h2>
                     <p th:utext='${webUI.renderAsHtml1()}'/>
                 </div>
             </div>
@@ -29,7 +28,10 @@
         <div class="paper">
             <div class="demo-title">
                 <div class="row flex-center">
-                    <p>Hisotry</p>
+                    <h2><span class="badge warning">Hisotry</span></h2>
+                    <button class="btn-block" onclick="location.href='?command=undo'">Undo</button>
+                    <div class="margin"></div>
+                    <button class="btn-block" onclick="location.href='?command=hint'">Hint</button>
                 </div>
             </div>
         </div>
@@ -39,21 +41,14 @@
         <div class="paper">
             <div class="demo-title">
                 <div class="row flex-center">
-                    <h3>Computer Board</h3>
+                    <h2><span class="badge secondary">Computer Board</span></h2>
+
                     <p th:utext='${webUI.renderAsHtml2()}'/>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
-
-
-
-<!--<a href="?command=undo">Undo</a>-->
-<!--<a href="?command=hint">Hint</a>-->
-
 
 </body>
 </html>
