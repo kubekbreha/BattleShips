@@ -17,7 +17,7 @@
         <div class="paper">
             <div class="demo-title">
                 <div class="row flex-center">
-                    <h2><span class="badge secondary">Your Board</span></h2>
+                    <h2><span class="badge warning">Your Board</span></h2>
                     <p th:utext='${webUI.renderSetupBoard()}'/>
                 </div>
             </div>
@@ -34,13 +34,37 @@
                     <div class="margin"></div>
                     <button class="btn-block" onclick="location.href='?command=restart'">Restart</button>
                     <div class="margin"></div>
-                    <button class="btn-block" onclick="location.href='?command=back'">Undo</button>
+                    <button class="btn-block" onclick="loction.href='?command=back'">Undo</button>
                     <p   th:utext='${webUI.orientationButtons()}'  />
                     <p th:utext='${webUI.renderShipsList()}'/>
+                    <div class="margin"></div>
+                    <button class="btn-block" onclick="location.href='?command=subbmitSetup'">Subbmit</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="sm-3 md-3 col">
+        <div class="paper">
+            <div class="demo-title">
+                <div class="row flex-center">
+                    <h2><span class="badge danger">SinglePlayer</span></h2>
+                    <button class="btn-block" onclick="location.href='?command=begginer'">Begginer</button>
+                    <div class="margin"></div>
+                    <button class="btn-block" onclick="location.href='?command=medium'">Medium</button>
+                    <div class="margin"></div>
+                    <button class="btn-block" onclick="location.href='?command=hard'">Hard</button>
+                    <div class="margin"></div>
+                    <button class="btn-block" onclick="location.href='?command=expert'">Expert</button>
+                    <div class="margin"></div>
+                    <h2><span class="badge danger">MultiPlayer</span></h2>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 

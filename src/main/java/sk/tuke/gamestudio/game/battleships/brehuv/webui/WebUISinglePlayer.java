@@ -107,6 +107,10 @@ public class WebUISinglePlayer {
                     for(int i = 0; i < limit; i++){
                         shipSizes.remove(0);
                     }
+
+                case "subbmitSetup":
+
+
                     break;
             }
         } else if (rowString != null || columnString != null) {
@@ -275,12 +279,12 @@ public class WebUISinglePlayer {
 
         StringBuilder sb = new StringBuilder();
         if(orientation == 'H') {
-            sb.append("<button id=\"horiButton\" class=\"buttonMargin\" onclick=\"location.href='?command=horizontal'\">" +
-                    "Horizontal" + "</button> <button id=\"vertButton\" class=\"buttonMargin disabled\" onclick=\"location.href='?command=vertical'\"> " +
+            sb.append("<button id=\"horiButton\" class=\"buttonMargin btn-secondary\" onclick=\"location.href='?command=horizontal'\">" +
+                    "Horizontal" + "</button> <button id=\"vertButton\" class=\"buttonMargin\" onclick=\"location.href='?command=vertical'\"> " +
                     "Vertical" + "</button>");
         }else{
-            sb.append("<button id=\"horiButton\" class=\"buttonMargin disabled\" onclick=\"location.href='?command=horizontal'\">" +
-                    "Horizontal" + "</button> <button id=\"vertButton\" class=\"buttonMargin\" onclick=\"location.href='?command=vertical'\"> " +
+            sb.append("<button id=\"horiButton\" class=\"buttonMargin\" onclick=\"location.href='?command=horizontal'\">" +
+                    "Horizontal" + "</button> <button id=\"vertButton\" class=\"buttonMargin btn-secondary\" onclick=\"location.href='?command=vertical'\"> " +
                     "Vertical" + "</button>");
         }
 
