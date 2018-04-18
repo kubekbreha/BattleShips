@@ -29,7 +29,7 @@ public class Board {
     private int boardRows;
     private int boardCols;
     private ArrayList<Ship> ships;
-    private final int[] shipSizes = {1, 1, 2, 2, 3, 4};
+    private final int[] shipSizes = {4,3,3,2,2};
 
 
     /**

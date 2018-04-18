@@ -30,12 +30,12 @@
             <div class="demo-title">
                 <div class="row flex-center">
                     <h2><span class="badge secondary">List of ships</span></h2>
+                    <button class="btn-block" onclick="location.href='?command=random'">Random</button>
+                    <div class="margin"></div>
                     <button class="btn-block" onclick="location.href='?command=restart'">Restart</button>
                     <div class="margin"></div>
                     <button class="btn-block" onclick="location.href='?command=back'">Undo</button>
                     <p   th:utext='${webUI.orientationButtons()}'  />
-
-
                     <p th:utext='${webUI.renderShipsList()}'/>
                 </div>
             </div>

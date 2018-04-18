@@ -99,6 +99,15 @@ public class WebUISinglePlayer {
                 case "restart":
                     setUpGame();
                     break;
+
+                case "random":
+                    setUpGame();
+                    boardSetup.setUpBoardRandom();
+                    int limit = shipSizes.size();
+                    for(int i = 0; i < limit; i++){
+                        shipSizes.remove(0);
+                    }
+                    break;
             }
         } else if (rowString != null || columnString != null) {
 
