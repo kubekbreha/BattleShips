@@ -30,7 +30,9 @@ public class WebUISinglePlayer {
     private int undoCount;
     private boolean settingUp;
     private int shipcounter;
-    private final int[] shipSizes = {1, 1, 2, 2, 3, 4};
+    //private final int[] shipSizes = {1, 1, 2, 2, 3, 4};
+    private List<Integer> shipSizes;
+
     private List<Ship> ships;
 
     private boolean showHint;
@@ -53,7 +55,7 @@ public class WebUISinglePlayer {
             hint.findHint();
             switch (command) {
                 case "undo":
-                    if (playerHistory.getHistorySize() != 0 && undoCount!=0) {
+                    if (playerHistory.getHistorySize() != 0 && undoCount != 0) {
                         boardOponent.setPlayBoard(playerHistory.getLast());
                         playerHistory.removeLast();
                         hint.setHintBoard(playerHistory.getLastProbability());
@@ -78,7 +80,7 @@ public class WebUISinglePlayer {
             }
         } else if (rowString != null || columnString != null) {
 
-            if(!settingUp) {
+            if (!settingUp) {
                 playerHistory.addToHistory(boardOponent.getPlayBoard());
                 playerHistory.addToProbabilityHistory(hint.getHintBoard());
                 playerHistoryOponent.addToHistory(board.getPlayBoard());
@@ -97,10 +99,12 @@ public class WebUISinglePlayer {
 
                     playerOponent.shootAI(board.getPlayBoard());
                 }
-            }else{
-                if(shipcounter != shipSizes.length) {
-                    ships.get(shipcounter).placeShip(boardSetup.getPlayBoard(), row, col, 'H');
+            } else {
+                if (shipcounter != shipSizes.size()) {
+                    ships.get(0).placeShip(boardSetup.getPlayBoard(), row, col, 'H');
                     shipcounter++;
+                    ships.remove(0);
+                    shipSizes.remove(0);
                 }
             }
         }
@@ -186,7 +190,7 @@ public class WebUISinglePlayer {
     public String renderHintCount() {
         StringBuilder sb = new StringBuilder();
         sb.append("<p>");
-        sb.append(String.format("You have <span class=\"badge danger\">" + hintCount + "</span> hint left." ));
+        sb.append(String.format("You have <span class=\"badge danger\">" + hintCount + "</span> hint left."));
         sb.append("</p>\n");
         return sb.toString();
     }
@@ -194,7 +198,7 @@ public class WebUISinglePlayer {
     public String renderUndoCount() {
         StringBuilder sb = new StringBuilder();
         sb.append("<p>");
-        sb.append(String.format("You have <span class=\"badge danger\">" + undoCount + "</span> undo left." ));
+        sb.append(String.format("You have <span class=\"badge danger\">" + undoCount + "</span> undo left."));
         sb.append("</p>\n");
         return sb.toString();
     }
@@ -202,8 +206,21 @@ public class WebUISinglePlayer {
 
     public String renderShipsList() {
         StringBuilder sb = new StringBuilder();
-        sb.append("<p>");
-        sb.append("</p>\n");
+        sb.append("<table cellspacing=\"0\">");
+        for (int row = 0; row < shipSizes.size(); row++) {
+            sb.append("<tr>\n");
+
+            for (int col = 0; col < 10 ; col++) {
+                sb.append("<td>\n");
+                if(col<shipSizes.get(row)) {
+                    sb.append("<img class='" + "mines-tile" + "' src='" + String.format("/images/battleships/brehuv/ship.png") + "'>\n");
+                }
+                sb.append("</td>\n");
+            }
+
+            sb.append("</tr>\n");
+        }
+        sb.append("</table>");
 
         return sb.toString();
     }
@@ -234,10 +251,18 @@ public class WebUISinglePlayer {
         hintCount = 3;
         undoCount = 3;
         //setup board setup
-        boardSetup = new Board(10,10);
+        boardSetup = new Board(10, 10);
         ships = new ArrayList<>();
-        for(int i=0; i<shipSizes.length; i++){
-            ships.add(new Ship(shipSizes[i]));
+
+
+        shipSizes = new ArrayList<>();
+        shipSizes.add(2);
+        shipSizes.add(2);
+        shipSizes.add(3);
+        shipSizes.add(3);
+        shipSizes.add(4);
+        for (int i = 0; i < shipSizes.size(); i++) {
+            ships.add(new Ship(shipSizes.get(i)));
         }
     }
 

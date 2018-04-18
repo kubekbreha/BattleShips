@@ -30,9 +30,12 @@ public class AITest {
         Player player = new Computer();
         ((Computer) player).setAiState(new ComputerExpert(board.getBoardRows(), board.getBoardCols()));
 
+        int i = 0;
         while (!gameController.isGameWon(ships)){
             player.shootAI(board.getPlayBoard());
+            i++;
         }
+        System.out.println(i);
 
         boolean result = gameController.getGameState() == GameState.WON;
         assertEquals(true, result);
