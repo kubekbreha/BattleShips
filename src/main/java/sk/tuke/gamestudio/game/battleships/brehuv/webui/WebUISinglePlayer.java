@@ -30,8 +30,9 @@ public class WebUISinglePlayer {
     private int undoCount;
     private boolean settingUp;
     private List<Integer> shipSizes;
-
     private List<Ship> ships;
+    private List<Integer> shipSizesBU;
+    private List<Ship> shipsBU;
 
     private boolean showHint;
 
@@ -72,6 +73,16 @@ public class WebUISinglePlayer {
                     showHint = true;
                     break;
 
+                case "back":
+                    if (shipsBU.size() != 0) {
+                        ships.add(0, shipsBU.get(0));
+                        shipSizes.add(0, shipSizesBU.get(0));
+                        shipsBU.remove(0);
+                        shipSizesBU.remove(0);
+                    }
+                    break;
+
+
                 case "restart":
                     setUpGame();
                     break;
@@ -100,6 +111,8 @@ public class WebUISinglePlayer {
             } else {
                 if (ships.size() != 0) {
                     ships.get(0).placeShip(boardSetup.getPlayBoard(), row, col, 'H');
+                    shipsBU.add(0, ships.get(0));
+                    shipSizesBU.add(0, shipSizes.get(0));
                     ships.remove(0);
                     shipSizes.remove(0);
                 }
@@ -207,9 +220,9 @@ public class WebUISinglePlayer {
         for (int row = 0; row < shipSizes.size(); row++) {
             sb.append("<tr>\n");
 
-            for (int col = 0; col < 10 ; col++) {
+            for (int col = 0; col < 10; col++) {
                 sb.append("<td>\n");
-                if(col<shipSizes.get(row)) {
+                if (col < shipSizes.get(row)) {
                     sb.append("<img class='" + "mines-tile" + "' src='" + String.format("/images/battleships/brehuv/ship.png") + "'>\n");
                 }
                 sb.append("</td>\n");
@@ -261,6 +274,9 @@ public class WebUISinglePlayer {
         for (int i = 0; i < shipSizes.size(); i++) {
             ships.add(new Ship(shipSizes.get(i)));
         }
+        shipSizesBU = new ArrayList<>();
+        shipsBU = new ArrayList<>();
+
     }
 
 
