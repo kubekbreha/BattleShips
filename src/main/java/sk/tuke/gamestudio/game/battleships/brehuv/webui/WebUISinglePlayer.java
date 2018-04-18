@@ -29,8 +29,6 @@ public class WebUISinglePlayer {
     private int hintCount;
     private int undoCount;
     private boolean settingUp;
-    private int shipcounter;
-    //private final int[] shipSizes = {1, 1, 2, 2, 3, 4};
     private List<Integer> shipSizes;
 
     private List<Ship> ships;
@@ -100,9 +98,8 @@ public class WebUISinglePlayer {
                     playerOponent.shootAI(board.getPlayBoard());
                 }
             } else {
-                if (shipcounter != shipSizes.size()) {
+                if (ships.size() != 0) {
                     ships.get(0).placeShip(boardSetup.getPlayBoard(), row, col, 'H');
-                    shipcounter++;
                     ships.remove(0);
                     shipSizes.remove(0);
                 }
