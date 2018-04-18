@@ -171,6 +171,7 @@ public class WebUISinglePlayer {
 
     public String renderHint() {
         StringBuilder sb = new StringBuilder();
+        System.out.println(showHint);
         if (showHint && hintCount != 0) {
             sb.append("<p>");
             sb.append(String.format("Row: <span class=\"badge secondary\">" + (char) (hint.getHintRow() + '1') + "</span> " +
