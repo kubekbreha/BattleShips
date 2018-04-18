@@ -33,6 +33,8 @@ public class WebUISinglePlayer {
     private List<Ship> ships;
     private List<Integer> shipSizesBU;
     private List<Ship> shipsBU;
+    private BoardsHistory setupHistory;
+
 
     private boolean showHint;
 
@@ -75,6 +77,9 @@ public class WebUISinglePlayer {
 
                 case "back":
                     if (shipsBU.size() != 0) {
+                        boardSetup.setPlayBoard(setupHistory.getLast());
+                        setupHistory.removeLast();
+
                         ships.add(0, shipsBU.get(0));
                         shipSizes.add(0, shipSizesBU.get(0));
                         shipsBU.remove(0);
@@ -110,6 +115,7 @@ public class WebUISinglePlayer {
                 }
             } else {
                 if (ships.size() != 0) {
+                    setupHistory.addToHistory(boardSetup.getPlayBoard());
                     ships.get(0).placeShip(boardSetup.getPlayBoard(), row, col, 'H');
                     shipsBU.add(0, ships.get(0));
                     shipSizesBU.add(0, shipSizes.get(0));
@@ -260,10 +266,12 @@ public class WebUISinglePlayer {
         playerHistoryOponent = new BoardsHistory();
         hintCount = 3;
         undoCount = 3;
+
+
         //setup board setup
         boardSetup = new Board(10, 10);
         ships = new ArrayList<>();
-
+        setupHistory = new BoardsHistory();
 
         shipSizes = new ArrayList<>();
         shipSizes.add(2);

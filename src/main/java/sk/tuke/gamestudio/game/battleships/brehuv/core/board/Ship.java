@@ -112,6 +112,8 @@ public class Ship {
         }
     }
 
+
+
     /**
      * Set ship size.
      *
