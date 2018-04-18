@@ -33,7 +33,9 @@
                     <button class="btn-block" onclick="location.href='?command=restart'">Restart</button>
                     <div class="margin"></div>
                     <button class="btn-block" onclick="location.href='?command=back'">Undo</button>
-                    <div class="margin"></div>
+                    <p   th:utext='${webUI.orientationButtons()}'  />
+
+
                     <p th:utext='${webUI.renderShipsList()}'/>
                 </div>
             </div>
@@ -41,5 +43,36 @@
     </div>
 </div>
 
+
+<script>
+    // var hori = localStorage.getItem("hori");
+    //
+    // if (hori !== true){
+    //     document.getElementById("horiButton").classList.remove('disabled');
+    //     document.getElementById("vertButton").classList.add('disabled');
+    // }else{
+    //     document.getElementById("horiButton").classList.add('disabled');
+    //     document.getElementById("vertButton").classList.remove('disabled');
+    // }
+    //
+    //
+    //
+    // document.getElementById("horiButton").addEventListener("click", function() {
+    //     document.getElementById("horiButton").classList.remove('disabled');
+    //     document.getElementById("vertButton").classList.add('disabled');
+    //     var hori = true;
+    //     localStorage.setItem("hori", hori);
+    // });
+    //
+    //
+    // document.getElementById("vertButton").addEventListener("click", function(){
+    //     document.getElementById("horiButton").classList.add('disabled');
+    //     document.getElementById("vertButton").classList.remove('disabled');
+    //     var hori = false;
+    //     localStorage.setItem("hori", hori);
+    // });
+
+
+</script>
 </body>
 </html>

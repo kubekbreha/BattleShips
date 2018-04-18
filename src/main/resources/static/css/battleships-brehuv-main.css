@@ -9,3 +9,12 @@
 .margin{
     margin: 20px;
 }
+
+.buttonMargin{
+    margin: 16px;
+}
+
+#verticalTable {
+    transform:rotate(270deg);
+    margin: 16px;
+}

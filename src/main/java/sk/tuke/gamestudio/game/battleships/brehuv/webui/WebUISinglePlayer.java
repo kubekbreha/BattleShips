@@ -35,6 +35,7 @@ public class WebUISinglePlayer {
     private List<Ship> shipsBU;
     private BoardsHistory setupHistory;
 
+    private char orientation = 'V';
 
     private boolean showHint;
 
@@ -87,6 +88,13 @@ public class WebUISinglePlayer {
                     }
                     break;
 
+                case "horizontal":
+                    orientation = 'H';
+                    break;
+
+                case "vertical":
+                    orientation = 'V';
+                    break;
 
                 case "restart":
                     setUpGame();
@@ -116,7 +124,7 @@ public class WebUISinglePlayer {
             } else {
                 if (ships.size() != 0) {
                     setupHistory.addToHistory(boardSetup.getPlayBoard());
-                    ships.get(0).placeShip(boardSetup.getPlayBoard(), row, col, 'H');
+                    ships.get(0).placeShip(boardSetup.getPlayBoard(), row, col, orientation);
                     shipsBU.add(0, ships.get(0));
                     shipSizesBU.add(0, shipSizes.get(0));
                     ships.remove(0);
@@ -222,6 +230,7 @@ public class WebUISinglePlayer {
 
     public String renderShipsList() {
         StringBuilder sb = new StringBuilder();
+
         sb.append("<table cellspacing=\"0\">");
         for (int row = 0; row < shipSizes.size(); row++) {
             sb.append("<tr>\n");
@@ -233,12 +242,42 @@ public class WebUISinglePlayer {
                 }
                 sb.append("</td>\n");
             }
-
             sb.append("</tr>\n");
         }
         sb.append("</table>");
 
         return sb.toString();
+    }
+
+    private int findBiggestInList(List<Integer> list) {
+        int max = 0;
+
+        for (int i = 0; i < list.size(); i++) {
+            if (max < list.get(i)) {
+                max = list.get(i);
+            }
+        }
+        System.out.println("biggest: " + max);
+
+        return max;
+    }
+
+    public String orientationButtons() {
+
+        StringBuilder sb = new StringBuilder();
+        if(orientation == 'H') {
+            sb.append("<button id=\"horiButton\" class=\"buttonMargin\" onclick=\"location.href='?command=horizontal'\">" +
+                    "Horizontal" + "</button> <button id=\"vertButton\" class=\"buttonMargin disabled\" onclick=\"location.href='?command=vertical'\"> " +
+                    "Vertical" + "</button>");
+        }else{
+            sb.append("<button id=\"horiButton\" class=\"buttonMargin disabled\" onclick=\"location.href='?command=horizontal'\">" +
+                    "Horizontal" + "</button> <button id=\"vertButton\" class=\"buttonMargin\" onclick=\"location.href='?command=vertical'\"> " +
+                    "Vertical" + "</button>");
+        }
+
+        return sb.toString();
+
+
     }
 
     public String renderSetupBoard() {
@@ -250,6 +289,7 @@ public class WebUISinglePlayer {
         sb.append("</div></div>");
         return sb.toString();
     }
+
 
     private void setUpGame() {
         board = new Board(10, 10);
@@ -284,8 +324,5 @@ public class WebUISinglePlayer {
         }
         shipSizesBU = new ArrayList<>();
         shipsBU = new ArrayList<>();
-
     }
-
-
 }
