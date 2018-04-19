@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="https://unpkg.com/papercss@1.4.1/dist/paper.min.css"/>
     <link href="css/battleships-brehuv-main.css" rel="stylesheet"/>
 
+
 </head>
+
 <body class="main-background">
 <div id="top" class="row site">
     <div class="sm-3 md-3 col">
@@ -17,6 +19,7 @@
             <div class="demo-title">
                 <div class="row flex-center">
                     <h2><span class="badge success">Comments</span></h2>
+                    <ol id="commentList"/>
                 </div>
             </div>
         </div>
@@ -25,9 +28,15 @@
         <div class="paper">
             <div class="demo-title">
                 <div class="row flex-center">
-                    <h2><span class="badge secondary"> BattleShips</span></h2>
-                    <a href="/battleships-brehuv-singleplayer-setup" class="acenter btn-block paper-btn">LetsPlay</a>
+                    <h2><span class="badge secondary">BattleShips</span></h2>
+                    <a href="/battleships-brehuv-singleplayer-setup" class="center-centred btn-block paper-btn">LetsPlay</a>
                     <div class="margin"></div>
+                </div>
+                <div>
+                    <h2 class="center-centred"><span class="badge warning">BestScores</span></h2>
+                </div>
+                <div class="row flex-center">
+                    <ol id="scoreList"/>
                 </div>
             </div>
         </div>
@@ -37,8 +46,6 @@
             <div class="demo-title">
                 <div class="row flex-center">
                     <h2><span class="badge success">Rating</span></h2>
-                    <ol id="commentList"/>
-
                 </div>
             </div>
         </div>
@@ -46,10 +53,10 @@
 </div>
 
 
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
-
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<!-- CommentScript -->
 <script type="text/javascript">
     //<![CDATA[
     $(document).ready(function () {
@@ -71,6 +78,33 @@
                 {data: "commentedOn"}
             ],
             ajax: {url: "/rest/comment/battleships-brehuv", dataSrc: ''}
+        });
+    });
+    //]]>
+</script>
+
+<!-- ScoreScript -->
+<script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function () {
+        $.ajax({
+            url: "/rest/score/battleships-brehuv",
+        }).done(function (json) {
+            for (var i = 0; i < json.length; i++) {
+                var score = json[i];
+                $("#scoreList").append($("<li>" + score.player + "   " + score.points + "   " + score.playedOn + "</li>"));
+            }
+        });
+    });
+
+    $(document).ready(function () {
+        $('#example').DataTable({
+            columns: [
+                {data: "player"},
+                {data: "points"},
+                {data: "playedOn"}
+            ],
+            ajax: {url: "/rest/score/battleships-brehuv", dataSrc: ''}
         });
     });
     //]]>

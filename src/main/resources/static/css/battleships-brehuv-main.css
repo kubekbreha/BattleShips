@@ -7,7 +7,8 @@
 }
 
 .margin{
-    margin: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .buttonMargin{
@@ -20,6 +21,6 @@
 }
 
 
-.acenter {
+.center-centred {
     text-align: center;
 }
