@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+
     <link rel="stylesheet" href="https://unpkg.com/papercss@1.4.1/dist/paper.min.css"/>
     <link href="css/battleships-brehuv-main.css" rel="stylesheet"/>
-
+    <link href="css/battleships-brehuv-star.css" rel="stylesheet"/>
 
 </head>
 
@@ -22,6 +24,7 @@
                     <table>
                         <thead>
                         <tr>
+                            <th>#</th>
                             <th>Name</th>
                             <th>Comment</th>
                         </tr>
@@ -48,6 +51,7 @@
                     <table>
                         <thead>
                         <tr>
+                            <th>#</th>
                             <th>Name</th>
                             <th>Points</th>
                             <th>Played on</th>
@@ -62,8 +66,34 @@
     <div class="sm-3 md-3 col">
         <div class="paper">
             <div class="demo-title">
+
                 <div class="row flex-center">
                     <h2><span class="badge success">Rating</span></h2>
+                </div>
+
+                <div class="row flex-center">
+                    <div class="row">
+                        <fieldset class="rating">
+                            <input type="radio" id="5star" name="rating" value="5"/>
+                            <label class="full" for="5star" title="Excellent"></label>
+
+
+                            <input type="radio" id="4star" name="rating" value="4"/>
+                            <label class="full" for="4star" title="Pretty good"></label>
+
+
+                            <input type="radio" id="3star" name="rating" value="3"/>
+                            <label class="full" for="3star" title="Ok"></label>
+
+                            <input type="radio" id="2star" name="rating" value="2"/>
+                            <label class="full" for="2star" title="Bad"></label>
+
+
+                            <input type="radio" id="1star" name="rating" value="1"/>
+                            <label class="full" for="1star" title="Umm"></label>
+                        </fieldset>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -82,7 +112,7 @@
         }).done(function (json) {
             for (var i = 0; i < json.length; i++) {
                 var comment = json[i];
-                $("#commentList").append($("<tr><td>" + comment.player + "</td><td>" + comment.comment + "</td></tr>"));
+                $("#commentList").append($("<tr><td>" + (i + 1) + "</td><td>" + comment.player + "</td><td>" + comment.comment + "</td></tr>"));
                 // <td>" + comment.commentedOn + "</td>
             }
         });
@@ -110,7 +140,7 @@
         }).done(function (json) {
             for (var i = 0; i < json.length; i++) {
                 var score = json[i];
-                $("#scoreList").append($("<tr>\n<td>" + score.player + "</td>\n<td>" + score.points + "</td>\n<td>" + milisToDate(score.playedOn) + "</td>\n</tr>\n"));
+                $("#scoreList").append($("<tr><td>" + (i + 1) + "</td><td>" + score.player + "</td><td>" + score.points + "</td><td>" + milisToDate(score.playedOn) + "</td></tr>"));
             }
         });
     });
@@ -125,12 +155,33 @@
             ajax: {url: "/rest/score/battleships-brehuv", dataSrc: ''}
         });
     });
+
     //]]>
 
     function milisToDate(time) {
         var date = new Date(time);
-        return date.getDay().toString() +"."+ date.getMonth().toString()+"."+ date.getFullYear().toString()
-            +" ("+ date.getHours().toString() +":"+date.getMinutes().toString() + ")";
+        return date.getDay().toString() + "." + date.getMonth().toString() + "." + date.getFullYear().toString()
+            + " (" + date.getHours().toString() + ":" + date.getMinutes().toString() + ")";
+    }
+</script>
+
+<!-- RatingScript -->
+<script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function () {
+        $.ajax({
+            url: "/rest/rating/battleships-brehuv/jakubbrehuv",
+        }).done(function (json) {
+            var score = json;
+            document.getElementById(score + "star").checked = true;
+        });
+    });
+    //]]>
+
+    function milisToDate(time) {
+        var date = new Date(time);
+        return date.getDay().toString() + "." + date.getMonth().toString() + "." + date.getFullYear().toString()
+            + " (" + date.getHours().toString() + ":" + date.getMinutes().toString() + ")";
     }
 </script>
 </body>
