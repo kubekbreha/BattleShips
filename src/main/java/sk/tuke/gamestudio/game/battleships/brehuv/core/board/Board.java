@@ -248,6 +248,17 @@ public class Board {
         }
     }
 
+
+    /**
+     * Add ship to ship list.
+     *
+     * @param ship which will be added.
+     */
+    public void addShipToShips(Ship ship){
+        ships.add(ship);
+    }
+
+
     /**
      * Place ship to board based on user input.
      *

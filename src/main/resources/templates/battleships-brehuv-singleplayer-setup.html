@@ -34,11 +34,12 @@
                     <div class="margin"></div>
                     <button class="btn-block" onclick="location.href='?command=restart'">Restart</button>
                     <div class="margin"></div>
-                    <button class="btn-block" onclick="loction.href='?command=back'">Undo</button>
+                    <button class="btn-block" onclick="location.href='?command=back'">Undo</button>
+
                     <p   th:utext='${webUI.orientationButtons()}'  />
                     <p th:utext='${webUI.renderShipsList()}'/>
                     <div class="margin"></div>
-                    <button class="btn-block" onclick="location.href='?command=subbmitSetup'">Subbmit</button>
+                    <button class="btn-block" href="/battleships-brehuv-singleplayer"><a href="/battleships-brehuv-singleplayer">Subbmit</a></button>
                 </div>
             </div>
         </div>

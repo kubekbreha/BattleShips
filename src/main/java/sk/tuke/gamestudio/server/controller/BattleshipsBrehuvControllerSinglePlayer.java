@@ -15,7 +15,7 @@ import sk.tuke.gamestudio.service.ScoreService;
 @Scope(WebApplicationContext.SCOPE_SESSION)
 public class BattleshipsBrehuvControllerSinglePlayer {
 
-    private WebUISinglePlayer webUISinglePlayer = new WebUISinglePlayer();
+    private WebUISinglePlayer webUISinglePlayer = BattleshipsBrehuvControllerSinglePlayerSetup.getUIClass();
 
     @Autowired
     private ScoreService scoreService;

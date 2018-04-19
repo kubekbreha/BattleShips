@@ -3,10 +3,7 @@ package sk.tuke.gamestudio.game.battleships.brehuv.webui;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.board.*;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.game.GameController;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.history.BoardsHistory;
-import sk.tuke.gamestudio.game.battleships.brehuv.core.player.Computer;
-import sk.tuke.gamestudio.game.battleships.brehuv.core.player.ComputerExpert;
-import sk.tuke.gamestudio.game.battleships.brehuv.core.player.Human;
-import sk.tuke.gamestudio.game.battleships.brehuv.core.player.Player;
+import sk.tuke.gamestudio.game.battleships.brehuv.core.player.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +11,6 @@ import java.util.List;
 
 public class WebUISinglePlayer {
 
-    private Board board;
     private Board boardSetup;
     private Player player;
     private GameController gameController;
@@ -51,10 +47,17 @@ public class WebUISinglePlayer {
         }
 
 
-        if (board == null) {
-            setUpGame();
+        if (boardSetup == null) {
+            initShips();
+            boardSetup = new Board(10, 10);
+            boardOponent = new Board(10, 10);
+            boardOponent.setUpBoardRandom();
+            gameController = new GameController(boardOponent);
+            gameControllerOponent = new GameController(boardSetup);
         } else if (command != null) {
-            hint.findHint();
+            if (hint != null) {
+                hint.findHint();
+            }
             switch (command) {
                 case "undo":
                     if (playerHistory.getHistorySize() != 0 && undoCount != 0) {
@@ -63,7 +66,7 @@ public class WebUISinglePlayer {
                         hint.setHintBoard(playerHistory.getLastProbability());
                         playerHistory.removeLastProbability();
 
-                        board.setPlayBoard(playerHistoryOponent.getLast());
+                        boardSetup.setPlayBoard(playerHistoryOponent.getLast());
                         playerHistoryOponent.removeLast();
                         ((Computer) playerOponent).setNotTileHistory(playerHistoryOponent.getLastProbability());
                         playerHistoryOponent.removeLastProbability();
@@ -77,6 +80,7 @@ public class WebUISinglePlayer {
                     break;
 
                 case "back":
+                    System.out.println("back");
                     if (shipsBU.size() != 0) {
                         boardSetup.setPlayBoard(setupHistory.getLast());
                         setupHistory.removeLast();
@@ -97,54 +101,104 @@ public class WebUISinglePlayer {
                     break;
 
                 case "restart":
-                    setUpGame();
+                    //setUpGame();
                     break;
 
                 case "random":
-                    setUpGame();
+                    //setUpGame();
                     boardSetup.setUpBoardRandom();
                     int limit = shipSizes.size();
-                    for(int i = 0; i < limit; i++){
+                    for (int i = 0; i < limit; i++) {
                         shipSizes.remove(0);
                     }
 
-                case "subbmitSetup":
+
+                case "begginer":
+                    System.out.println("begginer");
+//                    hint = new Hint(boardOponent);
+                    player = new Human();
+                    playerOponent = new Computer();
+                    ((Computer) playerOponent).setAiState(new ComputerBegginer());
 
 
+//                    playerHistory = new BoardsHistory();
+//                    playerHistoryOponent = new BoardsHistory();
+//                    hintCount = 3;
+//                    undoCount = 3;
+
+
+                    break;
+
+                case "medium":
+                    ((Computer) playerOponent).setAiState(new ComputerMedium());
+
+                    break;
+
+                case "hard":
+                    ((Computer) playerOponent).setAiState(new ComputerHard(10, 10));
+                    break;
+
+                case "expert":
+                    ((Computer) playerOponent).setAiState(new ComputerExpert(10, 10));
                     break;
             }
         } else if (rowString != null || columnString != null) {
 
             if (!settingUp) {
-                playerHistory.addToHistory(boardOponent.getPlayBoard());
-                playerHistory.addToProbabilityHistory(hint.getHintBoard());
-                playerHistoryOponent.addToHistory(board.getPlayBoard());
-                playerHistoryOponent.addToProbabilityHistory(((Computer) playerOponent).getNotTileHistory());
+                if (playerHistory != null) {
+                    playerHistory.addToHistory(boardOponent.getPlayBoard());
+                    playerHistory.addToProbabilityHistory(hint.getHintBoard());
+                    playerHistoryOponent.addToHistory(boardSetup.getPlayBoard());
+                    playerHistoryOponent.addToProbabilityHistory(((Computer) playerOponent).getNotTileHistory());
+                }
 
 
-                //play while game not won
-                //cant shoot to same place
                 if (!gameControllerOponent.isGameWon(boardOponent.getShips())
-                        && !gameController.isGameWon(board.getShips()) &&
+                        && !gameController.isGameWon(boardSetup.getShips()) &&
                         boardOponent.getPlayBoard()[row][col].getTileState() != TileState.HIT &&
                         boardOponent.getPlayBoard()[row][col].getTileState() != TileState.MISSED) {
 
                     player.shoot(boardOponent.getPlayBoard(), Integer.parseInt(rowString), Integer.parseInt(columnString));
-                    hint.moveExecuted(boardOponent.getPlayBoard()[row][col].getTileState(), row, col);
 
-                    playerOponent.shootAI(board.getPlayBoard());
+                    if (hint != null) {
+                        hint.moveExecuted(boardOponent.getPlayBoard()[row][col].getTileState(), row, col);
+                    }
+
+                    playerOponent.shootAI(boardSetup.getPlayBoard());
                 }
             } else {
                 if (ships.size() != 0) {
                     setupHistory.addToHistory(boardSetup.getPlayBoard());
                     ships.get(0).placeShip(boardSetup.getPlayBoard(), row, col, orientation);
+                    boardSetup.addShipToShips(ships.get(0));
                     shipsBU.add(0, ships.get(0));
                     shipSizesBU.add(0, shipSizes.get(0));
                     ships.remove(0);
                     shipSizes.remove(0);
                 }
+                if(ships.size() == 0){
+                    settingUp = false;
+                }
             }
         }
+    }
+
+
+    private void initShips() {
+        ships = new ArrayList<>();
+        setupHistory = new BoardsHistory();
+
+        shipSizes = new ArrayList<>();
+        shipSizes.add(2);
+        shipSizes.add(2);
+        shipSizes.add(3);
+        shipSizes.add(3);
+        shipSizes.add(4);
+        for (int i = 0; i < shipSizes.size(); i++) {
+            ships.add(new Ship(shipSizes.get(i)));
+        }
+        shipSizesBU = new ArrayList<>();
+        shipsBU = new ArrayList<>();
     }
 
 
@@ -153,7 +207,7 @@ public class WebUISinglePlayer {
 
         sb.append("<div class=\"row\"><div class=\"col-xs-6\">");
         //first board
-        showPlayTable(sb, board, false);
+        showPlayTable(sb, boardSetup, false);
         sb.append("</div></div>");
 
         return sb.toString();
@@ -212,7 +266,6 @@ public class WebUISinglePlayer {
 
     public String renderHint() {
         StringBuilder sb = new StringBuilder();
-        System.out.println(showHint);
         if (showHint && hintCount != 0) {
             sb.append("<p>");
             sb.append(String.format("Row: <span class=\"badge secondary\">" + (char) (hint.getHintRow() + '1') + "</span> " +
@@ -278,11 +331,11 @@ public class WebUISinglePlayer {
     public String orientationButtons() {
 
         StringBuilder sb = new StringBuilder();
-        if(orientation == 'H') {
+        if (orientation == 'H') {
             sb.append("<button id=\"horiButton\" class=\"buttonMargin btn-secondary\" onclick=\"location.href='?command=horizontal'\">" +
                     "Horizontal" + "</button> <button id=\"vertButton\" class=\"buttonMargin\" onclick=\"location.href='?command=vertical'\"> " +
                     "Vertical" + "</button>");
-        }else{
+        } else {
             sb.append("<button id=\"horiButton\" class=\"buttonMargin\" onclick=\"location.href='?command=horizontal'\">" +
                     "Horizontal" + "</button> <button id=\"vertButton\" class=\"buttonMargin btn-secondary\" onclick=\"location.href='?command=vertical'\"> " +
                     "Vertical" + "</button>");
@@ -301,41 +354,5 @@ public class WebUISinglePlayer {
         showPlayTable(sb, boardSetup, true);
         sb.append("</div></div>");
         return sb.toString();
-    }
-
-
-    private void setUpGame() {
-        board = new Board(10, 10);
-        boardOponent = new Board(10, 10);
-        board.setUpBoardRandom();
-        boardOponent.setUpBoardRandom();
-        hint = new Hint(boardOponent);
-        player = new Human();
-        playerOponent = new Computer();
-        ((Computer) playerOponent).setAiState(new ComputerExpert(10, 10));
-        gameController = new GameController(boardOponent);
-        gameControllerOponent = new GameController(board);
-        playerHistory = new BoardsHistory();
-        playerHistoryOponent = new BoardsHistory();
-        hintCount = 3;
-        undoCount = 3;
-
-
-        //setup board setup
-        boardSetup = new Board(10, 10);
-        ships = new ArrayList<>();
-        setupHistory = new BoardsHistory();
-
-        shipSizes = new ArrayList<>();
-        shipSizes.add(2);
-        shipSizes.add(2);
-        shipSizes.add(3);
-        shipSizes.add(3);
-        shipSizes.add(4);
-        for (int i = 0; i < shipSizes.size(); i++) {
-            ships.add(new Ship(shipSizes.get(i)));
-        }
-        shipSizesBU = new ArrayList<>();
-        shipsBU = new ArrayList<>();
     }
 }
