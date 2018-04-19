@@ -37,6 +37,8 @@
             <div class="demo-title">
                 <div class="row flex-center">
                     <h2><span class="badge success">Rating</span></h2>
+                    <ol id="commentList"/>
+
                 </div>
             </div>
         </div>
@@ -46,8 +48,32 @@
 
 
 
-<!--<p><a class="waves-effect waves-light blue btn" href="/battleships-brehuv-singleplayer">Singleplayer</a></p>-->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function () {
+        $.ajax({
+            url: "/rest/comment/battleships-brehuv",
+        }).done(function (json) {
+            for (var i = 0; i < json.length; i++) {
+                var comment = json[i];
+                $("#commentList").append($("<li>" + comment.player + "   " + comment.comment + "   " + comment.playedOn + "</li>"));
+            }
+        });
+    });
 
-
+    $(document).ready(function () {
+        $('#example').DataTable({
+            columns: [
+                {data: "player"},
+                {data: "comment"},
+                {data: "commentedOn"}
+            ],
+            ajax: {url: "/rest/comment/battleships-brehuv", dataSrc: ''}
+        });
+    });
+    //]]>
+</script>
 </body>
 </html>
