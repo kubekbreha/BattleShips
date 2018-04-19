@@ -24,17 +24,12 @@
                 </div>
 
                 <div class="row">
-                    <form name="f" th:action="@{/battleships-brehuv-gamemenu}" method="post">
-                        <input placeholder="Your comment" class="input-size" name="comment" />
+                    <form class="input-size" name="f" th:action="@{/battleships-brehuv-gamemenu}" method="post">
+                        <input placeholder="Your comment" class="input-size" name="comment"/>
                         <div class="margin"/>
-                        <button class="btn-block" type="submit">Post</button>
+                        <button class="btn-block input-size" type="submit">Post</button>
                     </form>
                 </div>
-
-                <!--<div class="row flex-center">-->
-                <!--<button class="btn-block" id="postComment">Post</button>-->
-                <!--<div class="margin"></div>-->
-                <!--</div>-->
 
                 <div class="row flex-center">
                     <table>
@@ -89,25 +84,33 @@
 
                 <div class="row flex-center">
                     <div class="row">
-                        <fieldset class="rating">
-                            <input type="radio" id="5star" name="rating" value="5"/>
-                            <label class="full" for="5star" title="Excellent"></label>
+                        <form id="outer-form" class="form-horizontal form" th:action="@{/battleships-brehuv-gamemenu}" method="post">
+                            <fieldset class="rating" th:action="@{/battleships-brehuv-gamemenu}" method="post">
+
+                                <input type="radio" id="5star" name="rating" value="5"/>
+                                <label class="full" for="5star" title="Excellent"></label>
 
 
-                            <input type="radio" id="4star" name="rating" value="4"/>
-                            <label class="full" for="4star" title="Pretty good"></label>
+                                <input type="radio" id="4star" name="rating" value="4"/>
+                                <label class="full" for="4star" title="Pretty good"></label>
 
 
-                            <input type="radio" id="3star" name="rating" value="3"/>
-                            <label class="full" for="3star" title="Ok"></label>
+                                <input type="radio" id="3star" name="rating" value="3"/>
+                                <label class="full" for="3star" title="Ok"></label>
 
-                            <input type="radio" id="2star" name="rating" value="2"/>
-                            <label class="full" for="2star" title="Bad"></label>
+                                <input type="radio" id="2star" name="rating" value="2"/>
+                                <label class="full" for="2star" title="Bad"></label>
 
 
-                            <input type="radio" id="1star" name="rating" value="1"/>
-                            <label class="full" for="1star" title="Umm"></label>
-                        </fieldset>
+                                <input type="radio" id="1star" name="rating" value="1"/>
+                                <label class="full" for="1star" title="Umm"></label>
+
+                                <div class="margin"/>
+                                <button class="btn-block" type="submit">Rate</button>
+
+                            </fieldset>
+                        </form>
+
 
                     </div>
                 </div>

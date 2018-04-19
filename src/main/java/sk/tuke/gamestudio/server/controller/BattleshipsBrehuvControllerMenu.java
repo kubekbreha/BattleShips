@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.WebApplicationContext;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.util.DatabaseUtil;
 import sk.tuke.gamestudio.service.CommentService;
+import sk.tuke.gamestudio.service.RatingService;
 
 //http://localhost:8080/battleships-brehuv-gamemenu
 @Controller
@@ -18,6 +19,9 @@ public class BattleshipsBrehuvControllerMenu {
 
     @Autowired
     private CommentService commentService;
+
+    @Autowired
+    private RatingService ratingService;
 
     @RequestMapping("/battleships-brehuv-gamemenu")
     public String mines(@RequestParam(value = "mode", required = false) String mode, Model model) {
@@ -36,8 +40,13 @@ public class BattleshipsBrehuvControllerMenu {
 
 
     @PostMapping("/battleships-brehuv-gamemenu")
-    public String mines (@RequestParam String comment) {
-        DatabaseUtil.addComment(comment, commentService);
+    public String mines (@RequestParam(value = "comment", required = false) String comment, @RequestParam(value = "rating", required = false) String rating) {
+        if(comment != null) {
+            DatabaseUtil.addComment(comment, commentService);
+        }
+        if(rating != null){
+            DatabaseUtil.setRating(Integer.parseInt(rating), ratingService);
+        }
         return "battleships-brehuv-gamemenu";
     }
 }
