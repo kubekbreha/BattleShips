@@ -111,37 +111,43 @@ public class WebUISinglePlayer {
                     for (int i = 0; i < limit; i++) {
                         shipSizes.remove(0);
                     }
-
+                    break;
 
                 case "begginer":
-                    System.out.println("begginer");
-//                    hint = new Hint(boardOponent);
                     player = new Human();
                     playerOponent = new Computer();
                     ((Computer) playerOponent).setAiState(new ComputerBegginer());
-
-
-//                    playerHistory = new BoardsHistory();
-//                    playerHistoryOponent = new BoardsHistory();
-//                    hintCount = 3;
-//                    undoCount = 3;
-
-
                     break;
 
                 case "medium":
+                    player = new Human();
+                    playerOponent = new Computer();
                     ((Computer) playerOponent).setAiState(new ComputerMedium());
-
                     break;
 
                 case "hard":
+                    hint = new Hint(boardOponent);
+                    player = new Human();
+                    playerOponent = new Computer();
+                    playerHistory = new BoardsHistory();
+                    playerHistoryOponent = new BoardsHistory();
+                    hintCount = 3;
+                    undoCount = 3;
                     ((Computer) playerOponent).setAiState(new ComputerHard(10, 10));
                     break;
 
                 case "expert":
+                    hint = new Hint(boardOponent);
+                    player = new Human();
+                    playerOponent = new Computer();
+                    playerHistory = new BoardsHistory();
+                    playerHistoryOponent = new BoardsHistory();
+                    hintCount = 3;
+                    undoCount = 3;
                     ((Computer) playerOponent).setAiState(new ComputerExpert(10, 10));
                     break;
             }
+
         } else if (rowString != null || columnString != null) {
 
             if (!settingUp) {
@@ -176,10 +182,12 @@ public class WebUISinglePlayer {
                     ships.remove(0);
                     shipSizes.remove(0);
                 }
-                if(ships.size() == 0){
-                    settingUp = false;
-                }
+
             }
+
+        }
+        if(ships.size() == 0){
+            settingUp = false;
         }
     }
 

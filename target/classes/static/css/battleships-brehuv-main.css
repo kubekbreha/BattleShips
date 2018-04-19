@@ -18,3 +18,8 @@
     transform:rotate(270deg);
     margin: 16px;
 }
+
+
+.acenter {
+    text-align: center;
+}
