@@ -19,7 +19,15 @@
             <div class="demo-title">
                 <div class="row flex-center">
                     <h2><span class="badge success">Comments</span></h2>
-                    <ol id="commentList"/>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Comment</th>
+                        </tr>
+                        </thead>
+                        <tbody id="commentList"/>
+                    </table>
                 </div>
             </div>
         </div>
@@ -29,14 +37,24 @@
             <div class="demo-title">
                 <div class="row flex-center">
                     <h2><span class="badge secondary">BattleShips</span></h2>
-                    <a href="/battleships-brehuv-singleplayer-setup" class="center-centred btn-block paper-btn">LetsPlay</a>
+                    <a href="/battleships-brehuv-singleplayer-setup"
+                       class="center-centred btn-block paper-btn">LetsPlay</a>
                     <div class="margin"></div>
                 </div>
                 <div>
                     <h2 class="center-centred"><span class="badge warning">BestScores</span></h2>
                 </div>
                 <div class="row flex-center">
-                    <ol id="scoreList"/>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Points</th>
+                            <th>Played on</th>
+                        </tr>
+                        </thead>
+                        <tbody id="scoreList"/>
+                    </table>
                 </div>
             </div>
         </div>
@@ -55,7 +73,6 @@
 
 <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-
 <!-- CommentScript -->
 <script type="text/javascript">
     //<![CDATA[
@@ -65,7 +82,8 @@
         }).done(function (json) {
             for (var i = 0; i < json.length; i++) {
                 var comment = json[i];
-                $("#commentList").append($("<li>" + comment.player + "   " + comment.comment + "   " + comment.playedOn + "</li>"));
+                $("#commentList").append($("<tr><td>" + comment.player + "</td><td>" + comment.comment + "</td></tr>"));
+                // <td>" + comment.commentedOn + "</td>
             }
         });
     });
@@ -92,7 +110,7 @@
         }).done(function (json) {
             for (var i = 0; i < json.length; i++) {
                 var score = json[i];
-                $("#scoreList").append($("<li>" + score.player + "   " + score.points + "   " + score.playedOn + "</li>"));
+                $("#scoreList").append($("<tr>\n<td>" + score.player + "</td>\n<td>" + score.points + "</td>\n<td>" + milisToDate(score.playedOn) + "</td>\n</tr>\n"));
             }
         });
     });
@@ -108,6 +126,12 @@
         });
     });
     //]]>
+
+    function milisToDate(time) {
+        var date = new Date(time);
+        return date.getDay().toString() +"."+ date.getMonth().toString()+"."+ date.getFullYear().toString()
+            +" ("+ date.getHours().toString() +":"+date.getMinutes().toString() + ")";
+    }
 </script>
 </body>
 </html>
