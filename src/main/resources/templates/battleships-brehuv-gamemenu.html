@@ -21,6 +21,18 @@
             <div class="demo-title">
                 <div class="row flex-center">
                     <h2><span class="badge success">Comments</span></h2>
+                </div>
+
+                <div class="row">
+                    <input placeholder="Your comment" class="input-size" type="text" id="commentInput"/>
+                </div>
+
+                <div class="row flex-center">
+                    <button class="btn-block" id="postComment">Post</button>
+                    <div class="margin"></div>
+                </div>
+
+                <div class="row flex-center">
                     <table>
                         <thead>
                         <tr>
@@ -131,6 +143,30 @@
     //]]>
 </script>
 
+
+<!--<script type="text/javascript">-->
+    <!--document.getElementById("postComment").onclick = function () {-->
+        <!--var d = new Date();-->
+        <!--$.ajax({-->
+            <!--type: "POST",-->
+            <!--url: '/rest/comment',-->
+            <!--data: {-->
+                <!--"player": "jakubbrehuv",-->
+                <!--"game": "battleships-brehuv",-->
+                <!--"comment": "Best Game ever",-->
+                <!--"commentedOn": d.getTime()-->
+            <!--},-->
+            <!--success: function () {-->
+                <!--console.log("succesfully send");-->
+            <!--},-->
+            <!--error: function () {-->
+                <!--console.log("failed send");-->
+            <!--}-->
+        <!--});-->
+    <!--};-->
+<!--</script>-->
+
+
 <!-- ScoreScript -->
 <script type="text/javascript">
     //<![CDATA[
@@ -165,17 +201,22 @@
     }
 </script>
 
+
 <!-- RatingScript -->
 <script type="text/javascript">
     //<![CDATA[
     $(document).ready(function () {
         $.ajax({
+
+            //todo: get user name from login
             url: "/rest/rating/battleships-brehuv/jakubbrehuv",
+
         }).done(function (json) {
             var score = json;
             document.getElementById(score + "star").checked = true;
         });
     });
+
     //]]>
 
     function milisToDate(time) {
