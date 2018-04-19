@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <title>Bttleships</title>
 
@@ -24,13 +24,17 @@
                 </div>
 
                 <div class="row">
-                    <input placeholder="Your comment" class="input-size" type="text" id="commentInput"/>
+                    <form name="f" th:action="@{/battleships-brehuv-gamemenu}" method="post">
+                        <input placeholder="Your comment" class="input-size" name="comment" />
+                        <div class="margin"/>
+                        <button class="btn-block" type="submit">Post</button>
+                    </form>
                 </div>
 
-                <div class="row flex-center">
-                    <button class="btn-block" id="postComment">Post</button>
-                    <div class="margin"></div>
-                </div>
+                <!--<div class="row flex-center">-->
+                <!--<button class="btn-block" id="postComment">Post</button>-->
+                <!--<div class="margin"></div>-->
+                <!--</div>-->
 
                 <div class="row flex-center">
                     <table>
@@ -141,31 +145,6 @@
         });
     });
     //]]>
-</script>
-
-
-<script type="text/javascript">
-    document.getElementById("postComment").onclick = function () {
-        var d = new Date();
-        $.ajax({
-            type: "POST",
-            url: '/rest/comment',
-            data: {
-                "player": "jakubbrehuv",
-                "game": "battleships-brehuv",
-                "comment": "Best Game ever",
-                "commentedOn": d.getTime()
-            },
-            success: function () {
-                console.log("succesfully send");
-            },
-            error: function () {
-                console.log("failed send");
-            }
-        });
-
-    };
-
 </script>
 
 
