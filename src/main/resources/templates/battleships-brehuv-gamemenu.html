@@ -32,16 +32,8 @@
                 </div>
 
                 <div class="row flex-center">
-                    <table>
-                        <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Comment</th>
-                        </tr>
-                        </thead>
-                        <tbody id="commentList"/>
-                    </table>
+                    <p id="commentList"></p>
+
                 </div>
             </div>
         </div>
@@ -131,8 +123,15 @@
         }).done(function (json) {
             for (var i = 0; i < json.length; i++) {
                 var comment = json[i];
-                $("#commentList").append($("<tr><td>" + (i + 1) + "</td><td>" + comment.player + "</td><td>" + comment.comment + "</td></tr>"));
-                // <td>" + comment.commentedOn + "</td>
+                $("#commentList").append($(
+
+                    "<div class=\"card\" style=\"width: 16rem;\">\n" +
+                    "<div class=\"card-body\">\n" +
+                    "<h5 class=\"card-subtitle\">"+ comment.player + "</h5>\n" +
+                    "<p class=\"card-text\"> "+ comment.comment+ "</p>\n" +
+                    "</div>\n" + "</div>\n"
+
+                ));
             }
         });
     });
@@ -161,6 +160,7 @@
             for (var i = 0; i < json.length; i++) {
                 var score = json[i];
                 $("#scoreList").append($("<tr><td>" + (i + 1) + "</td><td>" + score.player + "</td><td>" + score.points + "</td><td>" + milisToDate(score.playedOn) + "</td></tr>"));
+
             }
         });
     });
