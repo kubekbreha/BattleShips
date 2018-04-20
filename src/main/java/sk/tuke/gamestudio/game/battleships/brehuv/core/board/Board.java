@@ -98,7 +98,11 @@ public class Board {
      * @param board which will be set.
      */
     public void setPlayBoard(Tile[][] board) {
-        this.playBoard = board;
+        for (int i = 0; i < 10; i++ ){
+            for (int j = 0; j < 10; j++ ){
+                playBoard[i][j] = board[i][j];
+            }
+        }
     }
 
     /**

@@ -11,6 +11,9 @@ import java.util.List;
 
 public class WebUISinglePlayer {
 
+    private Board boardRestartBU;
+    private Board boardRestartOponentBU;
+
     private Board boardSetup;
     private Player player;
     private GameController gameController;
@@ -30,6 +33,9 @@ public class WebUISinglePlayer {
     private List<Integer> shipSizesBU;
     private List<Ship> shipsBU;
     private BoardsHistory setupHistory;
+
+    private boolean hardAI = false;
+    private boolean expertAI = false;
 
     private char orientation = 'V';
 
@@ -60,18 +66,19 @@ public class WebUISinglePlayer {
             }
             switch (command) {
                 case "undo":
-                    if (playerHistory.getHistorySize() != 0 && undoCount != 0) {
-                        boardOponent.setPlayBoard(playerHistory.getLast());
-                        playerHistory.removeLast();
-                        hint.setHintBoard(playerHistory.getLastProbability());
-                        playerHistory.removeLastProbability();
+                    if(playerHistory != null) {
+                        if (playerHistory.getHistorySize() != 0 && undoCount != 0) {
+                            boardOponent.setPlayBoard(playerHistory.getLast());
+                            playerHistory.removeLast();
+                            hint.setHintBoard(playerHistory.getLastProbability());
+                            playerHistory.removeLastProbability();
 
-                        boardSetup.setPlayBoard(playerHistoryOponent.getLast());
-                        playerHistoryOponent.removeLast();
-                        ((Computer) playerOponent).setNotTileHistory(playerHistoryOponent.getLastProbability());
-                        playerHistoryOponent.removeLastProbability();
-                        undoCount--;
-
+                            boardSetup.setPlayBoard(playerHistoryOponent.getLast());
+                            playerHistoryOponent.removeLast();
+                            ((Computer) playerOponent).setNotTileHistory(playerHistoryOponent.getLastProbability());
+                            playerHistoryOponent.removeLastProbability();
+                            undoCount--;
+                        }
                     }
                     break;
 
@@ -100,17 +107,42 @@ public class WebUISinglePlayer {
                     orientation = 'V';
                     break;
 
-                case "restart":
-                    //setUpGame();
+                case "restart_game":
+                    initShips();
+                    boardSetup = new Board(10, 10);
+                    boardSetup.setUpBoardRandom();
+                    boardSetup.setPlayBoard(boardRestartBU.getPlayBoard());
+                    boardOponent.setPlayBoard(boardRestartOponentBU.getPlayBoard());
+                    hint = new Hint(boardOponent);
+                    hintCount = 3;
+                    undoCount = 3;
+                    playerOponent = new Computer();
+                    playerHistory = new BoardsHistory();
+                    playerHistoryOponent = new BoardsHistory();
+                    if(hardAI){
+                        ((Computer) playerOponent).setAiState(new ComputerHard(10, 10));
+                    }
+                    if(expertAI){
+                        ((Computer) playerOponent).setAiState(new ComputerExpert(10, 10));
+                    }
                     break;
 
+                case "restart":
+                    boardSetup = new Board(10, 10);
+                    break;
+
+
                 case "random":
-                    //setUpGame();
+                    initShips();
+                    boardSetup = new Board(10, 10);
+                    gameControllerOponent = new GameController(boardSetup);
                     boardSetup.setUpBoardRandom();
                     int limit = shipSizes.size();
                     for (int i = 0; i < limit; i++) {
                         shipSizes.remove(0);
+                        ships.remove(0);
                     }
+                    settingUp = false;
                     break;
 
                 case "begginer":
@@ -125,7 +157,16 @@ public class WebUISinglePlayer {
                     ((Computer) playerOponent).setAiState(new ComputerMedium());
                     break;
 
+                case "subbmit":
+                    boardRestartBU = new Board(10 ,10);
+                    boardRestartBU.setPlayBoard(boardSetup.getPlayBoard());
+                    boardRestartOponentBU = new Board(10 ,10);
+                    boardRestartOponentBU.setPlayBoard(boardOponent.getPlayBoard());
+                    settingUp = false;
+                    break;
+
                 case "hard":
+                    hardAI = true;
                     hint = new Hint(boardOponent);
                     player = new Human();
                     playerOponent = new Computer();
@@ -137,6 +178,7 @@ public class WebUISinglePlayer {
                     break;
 
                 case "expert":
+                    expertAI = true;
                     hint = new Hint(boardOponent);
                     player = new Human();
                     playerOponent = new Computer();
