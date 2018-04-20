@@ -20,7 +20,7 @@
         <div class="paper">
             <div class="demo-title">
                 <div class="row flex-center">
-                    <h2><span class="badge success">Comments</span></h2>
+                    <h2><span class="badge secondary">Comments</span></h2>
                 </div>
 
                 <div class="row">
@@ -42,7 +42,7 @@
         <div class="paper">
             <div class="demo-title">
                 <div class="row flex-center">
-                    <h2><span class="badge secondary">BattleShips</span></h2>
+                    <h2><span class="badge success">BattleShips</span></h2>
                     <a href="/battleships-brehuv-singleplayer-setup"
                        class="center-centred btn-block paper-btn">LetsPlay</a>
                     <div class="margin"></div>
@@ -71,7 +71,7 @@
             <div class="demo-title">
 
                 <div class="row flex-center">
-                    <h2><span class="badge success">Rating</span></h2>
+                    <h2><span class="badge danger">Rating</span></h2>
                 </div>
 
                 <div class="row flex-center">
@@ -123,14 +123,20 @@
         }).done(function (json) {
             for (var i = 0; i < json.length; i++) {
                 var comment = json[i];
+                // $("#commentList").append($(
+                //
+                //     "<div class=\"card\" style=\"width: 16rem;\">\n" +
+                //     "<div class=\"card-body\">\n" +
+                //     "<h5 class=\"card-subtitle\">"+ comment.player + "</h5>\n" +
+                //     "<p class=\"card-text\"> "+ comment.comment+ "</p>\n" +
+                //     "</div>\n" + "</div>\n"
+                //
+                // ));
+
                 $("#commentList").append($(
-
-                    "<div class=\"card\" style=\"width: 16rem;\">\n" +
-                    "<div class=\"card-body\">\n" +
-                    "<h5 class=\"card-subtitle\">"+ comment.player + "</h5>\n" +
-                    "<p class=\"card-text\"> "+ comment.comment+ "</p>\n" +
-                    "</div>\n" + "</div>\n"
-
+                    "<div class=\"mini-margin input-size row flex-spaces\">\n" +
+                    "<div class=\"input-size alert \"><span class=\"badge secondary\">"+ comment.player +"</span> : "+comment.comment +"</div>\n"+
+                    "</div>\n"
                 ));
             }
         });
