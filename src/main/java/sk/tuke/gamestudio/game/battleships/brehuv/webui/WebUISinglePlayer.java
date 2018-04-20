@@ -34,6 +34,8 @@ public class WebUISinglePlayer {
     private List<Ship> shipsBU;
     private BoardsHistory setupHistory;
 
+    private boolean begginerAI = false;
+    private boolean mediumAI = false;
     private boolean hardAI = false;
     private boolean expertAI = false;
 
@@ -146,12 +148,22 @@ public class WebUISinglePlayer {
                     break;
 
                 case "begginer":
+                    begginerAI = true;
+                    mediumAI = false;
+                    hardAI = false;
+                    expertAI = false;
+
                     player = new Human();
                     playerOponent = new Computer();
                     ((Computer) playerOponent).setAiState(new ComputerBegginer());
                     break;
 
                 case "medium":
+                    begginerAI = false;
+                    mediumAI = true;
+                    hardAI = false;
+                    expertAI = false;
+
                     player = new Human();
                     playerOponent = new Computer();
                     ((Computer) playerOponent).setAiState(new ComputerMedium());
@@ -166,7 +178,11 @@ public class WebUISinglePlayer {
                     break;
 
                 case "hard":
+                    begginerAI = false;
+                    mediumAI = false;
                     hardAI = true;
+                    expertAI = false;
+
                     hint = new Hint(boardOponent);
                     player = new Human();
                     playerOponent = new Computer();
@@ -178,7 +194,11 @@ public class WebUISinglePlayer {
                     break;
 
                 case "expert":
+                    begginerAI = false;
+                    mediumAI = false;
+                    hardAI = false;
                     expertAI = true;
+
                     hint = new Hint(boardOponent);
                     player = new Human();
                     playerOponent = new Computer();
@@ -392,7 +412,7 @@ public class WebUISinglePlayer {
 
     public String renderUndoHint() {
         StringBuilder sb = new StringBuilder();
-        if(expertAI || hardAI) {
+        if (expertAI || hardAI) {
             sb.append("<p>");
             sb.append(String.format("You have <span class=\"badge danger\">" + undoCount + "</span> undo left."));
             sb.append("</p>\n");
@@ -403,10 +423,48 @@ public class WebUISinglePlayer {
             sb.append("</p>\n");
             sb.append("<button class=\"btn-block\" onclick=\"location.href='?command=hint'\">Hint</button>\n");
             sb.append(renderHint());
-        }else{
+        } else {
             sb.append("");
         }
 
         return sb.toString();
+    }
+
+
+    public String renderAIButtons() {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("<div class=\"\"></div>\n");
+        if (begginerAI) {
+            sb.append("<button id=\"buttonBegginer\" class=\"btn-secondary btn-block\" onclick=\"location.href='?command=begginer'\">Begginer</button>\n");
+        } else {
+            sb.append("<button id=\"buttonBegginer\" class=\"btn-block\" onclick=\"location.href='?command=begginer'\">Begginer</button>\n");
+        }
+
+        sb.append("<div class=\"margin\"></div>\n");
+        if (mediumAI) {
+            sb.append("<button id=\"buttonMedium\" class=\"btn-secondary btn-block\" onclick=\"location.href='?command=medium'\">Medium</button>\n");
+        } else {
+            sb.append("<button id=\"buttonMedium\" class=\"btn-block\" onclick=\"location.href='?command=medium'\">Medium</button>\n");
+        }
+
+        sb.append("<div class=\"margin\"></div>\n");
+        if (hardAI) {
+            sb.append("<button id=\"buttonHard\" class=\"btn-secondary btn-block\" onclick=\"location.href='?command=hard'\">Hard</button>\n");
+        } else {
+            sb.append("<button id=\"buttonHard\" class=\"btn-block\" onclick=\"location.href='?command=hard'\">Hard</button>\n");
+        }
+
+        sb.append("<div class=\"margin\"></div>\n");
+        if (expertAI) {
+            sb.append("<button id=\"buttonExpert\" class=\"btn-secondary btn-block\" onclick=\"location.href='?command=expert'\">Expert</button>\n");
+        }else{
+            sb.append("<button id=\"buttonExpert\" class=\"btn-block\" onclick=\"location.href='?command=expert'\">Expert</button>\n");
+        }
+
+        sb.append("<div class=\"margin\"></div>\n");
+
+        return sb.toString();
+
     }
 }

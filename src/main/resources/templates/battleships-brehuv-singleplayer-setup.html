@@ -36,10 +36,10 @@
                     <div class="margin"></div>
                     <button class="btn-block" onclick="location.href='?command=back'">Undo</button>
 
-                    <p   th:utext='${webUI.orientationButtons()}'  />
+                    <p th:utext='${webUI.orientationButtons()}'/>
                     <p th:utext='${webUI.renderShipsList()}'/>
                     <div class="margin"></div>
-                    <a href="/battleships-brehuv-singleplayer?command=subbmit"
+                    <a id="subbmitSetup" onclick="subbmitSetup()"
                        class="center-centred btn-block paper-btn">Subbmit</a>
                 </div>
             </div>
@@ -51,23 +51,43 @@
             <div class="demo-title">
                 <div class="row flex-center">
                     <h2><span class="badge danger">SinglePlayer</span></h2>
-                    <button class="btn-block" onclick="location.href='?command=begginer'">Begginer</button>
-                    <div class="margin"></div>
-                    <button class="btn-block" onclick="location.href='?command=medium'">Medium</button>
-                    <div class="margin"></div>
-                    <button class="btn-block" onclick="location.href='?command=hard'">Hard</button>
-                    <div class="margin"></div>
-                    <button class="btn-block" onclick="location.href='?command=expert'">Expert</button>
+                </div>
+
+                <div class="row flex-center">
+                    <p th:utext='${webUI.renderAIButtons()}'/>
+                </div>
+
+                <div class="row flex-center">
                     <div class="margin"></div>
                     <h2><span class="badge danger">MultiPlayer</span></h2>
-
-
                 </div>
+
+
             </div>
         </div>
     </div>
-
 </div>
+
+
+<script>
+    var begginer = document.getElementById('buttonBegginer');
+    var begB = begginer.classList.contains("btn-secondary");
+
+    var medium = document.getElementById('buttonMedium');
+    var medB = medium.classList.contains("btn-secondary");
+
+    var hard = document.getElementById('buttonHard');
+    var harB = hard.classList.contains("btn-secondary");
+
+    var expert = document.getElementById('buttonExpert');
+    var exB = expert.classList.contains("btn-secondary");
+
+    function subbmitSetup() {
+        if(begB || medB || harB || exB){
+            window.location.replace('/battleships-brehuv-singleplayer?command=subbmit');
+        }
+    }
+</script>
 
 </body>
 </html>
