@@ -106,6 +106,41 @@
 
                     </div>
                 </div>
+
+                <div class="row flex-center">
+                    <h2><span class="badge danger">Average rating</span></h2>
+                </div>
+
+                <div class="row flex-center">
+                    <div class="row">
+                        <form id="outer-formAverage" class="form-horizontal form" >
+                            <fieldset class="rating" >
+
+                                <input type="radio" id="5starAverage" name="rating" value="5"/>
+                                <label class="full" for="5starAverage" title="Excellent"></label>
+
+
+                                <input type="radio" id="4starAverage" name="rating" value="4"/>
+                                <label class="full" for="4starAverage" title="Pretty good"></label>
+
+
+                                <input type="radio" id="3starAverage" name="rating" value="3"/>
+                                <label class="full" for="3starAverage" title="Ok"></label>
+
+                                <input type="radio" id="2starAverage" name="rating" value="2"/>
+                                <label class="full" for="2starAverage" title="Bad"></label>
+
+
+                                <input type="radio" id="1starAverage" name="rating" value="1"/>
+                                <label class="full" for="1starAverage" title="Umm"></label>
+
+                            </fieldset>
+                        </form>
+
+
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -204,6 +239,30 @@
         }).done(function (json) {
             var score = json;
             document.getElementById(score + "star").checked = true;
+        });
+    });
+
+    //]]>
+
+    function milisToDate(time) {
+        var date = new Date(time);
+        return date.getDay().toString() + "." + date.getMonth().toString() + "." + date.getFullYear().toString()
+            + " (" + date.getHours().toString() + ":" + date.getMinutes().toString() + ")";
+    }
+</script>
+
+
+<!-- Average -->
+<script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function () {
+        $.ajax({
+
+            url: "/rest/rating/battleships-brehuv",
+
+        }).done(function (json) {
+            var score = json;
+            document.getElementById(score + "starAverage").checked = true;
         });
     });
 
