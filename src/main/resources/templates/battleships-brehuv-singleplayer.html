@@ -28,13 +28,10 @@
         <div class="paper">
             <div class="demo-title">
                 <div class="row flex-center">
-                    <h2><span class="badge warning">Hisotry</span></h2>
-                    <p th:utext='${webUI.renderUndoCount()}'/>
-                    <button class="btn-block" onclick="location.href='?command=undo'">Undo</button>
-                    <div class="margin"></div>
-                    <p th:utext='${webUI.renderHintCount()}'/>
-                    <button class="btn-block" onclick="location.href='?command=hint'">Hint</button>
-                    <p th:utext='${webUI.renderHint()}'/>
+                    <h2><span class="badge warning">Gamemenu</span></h2>
+
+                    <p th:utext='${webUI.renderUndoHint()}'/>
+
                     <div class="margin"></div>
                     <button class="btn-block" onclick="location.href='?command=restart_game'">Restart</button>
                     <div class="margin"></div>

@@ -66,7 +66,7 @@ public class WebUISinglePlayer {
             }
             switch (command) {
                 case "undo":
-                    if(playerHistory != null) {
+                    if (playerHistory != null) {
                         if (playerHistory.getHistorySize() != 0 && undoCount != 0) {
                             boardOponent.setPlayBoard(playerHistory.getLast());
                             playerHistory.removeLast();
@@ -119,10 +119,10 @@ public class WebUISinglePlayer {
                     playerOponent = new Computer();
                     playerHistory = new BoardsHistory();
                     playerHistoryOponent = new BoardsHistory();
-                    if(hardAI){
+                    if (hardAI) {
                         ((Computer) playerOponent).setAiState(new ComputerHard(10, 10));
                     }
-                    if(expertAI){
+                    if (expertAI) {
                         ((Computer) playerOponent).setAiState(new ComputerExpert(10, 10));
                     }
                     break;
@@ -158,9 +158,9 @@ public class WebUISinglePlayer {
                     break;
 
                 case "subbmit":
-                    boardRestartBU = new Board(10 ,10);
+                    boardRestartBU = new Board(10, 10);
                     boardRestartBU.setPlayBoard(boardSetup.getPlayBoard());
-                    boardRestartOponentBU = new Board(10 ,10);
+                    boardRestartOponentBU = new Board(10, 10);
                     boardRestartOponentBU.setPlayBoard(boardOponent.getPlayBoard());
                     settingUp = false;
                     break;
@@ -228,7 +228,7 @@ public class WebUISinglePlayer {
             }
 
         }
-        if(ships.size() == 0){
+        if (ships.size() == 0) {
             settingUp = false;
         }
     }
@@ -327,23 +327,6 @@ public class WebUISinglePlayer {
         return sb.toString();
     }
 
-    public String renderHintCount() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("<p>");
-        sb.append(String.format("You have <span class=\"badge danger\">" + hintCount + "</span> hint left."));
-        sb.append("</p>\n");
-        return sb.toString();
-    }
-
-    public String renderUndoCount() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("<p>");
-        sb.append(String.format("You have <span class=\"badge danger\">" + undoCount + "</span> undo left."));
-        sb.append("</p>\n");
-        return sb.toString();
-    }
-
-
     public String renderShipsList() {
         StringBuilder sb = new StringBuilder();
 
@@ -403,6 +386,27 @@ public class WebUISinglePlayer {
         //second board
         showPlayTable(sb, boardSetup, true);
         sb.append("</div></div>");
+        return sb.toString();
+    }
+
+
+    public String renderUndoHint() {
+        StringBuilder sb = new StringBuilder();
+        if(expertAI || hardAI) {
+            sb.append("<p>");
+            sb.append(String.format("You have <span class=\"badge danger\">" + undoCount + "</span> undo left."));
+            sb.append("</p>\n");
+            sb.append("<button class=\"btn-block\" onclick=\"location.href='?command=undo'\">Undo</button> \n");
+            sb.append("<div class=\"margin\"></div>\n");
+            sb.append("<p>");
+            sb.append(String.format("You have <span class=\"badge danger\">" + hintCount + "</span> hint left."));
+            sb.append("</p>\n");
+            sb.append("<button class=\"btn-block\" onclick=\"location.href='?command=hint'\">Hint</button>\n");
+            sb.append(renderHint());
+        }else{
+            sb.append("");
+        }
+
         return sb.toString();
     }
 }
