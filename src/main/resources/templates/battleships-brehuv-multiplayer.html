@@ -5,35 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
-    <link rel="stylesheet" type="text/css"
-          href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"></link>
-    <link href="css/battleships-brehuv.css" rel="stylesheet"></link>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
-
+    <link rel="stylesheet" href="https://unpkg.com/papercss@1.4.1/dist/paper.min.css"/>
+    <link href="css/battleships-brehuv-main.css" rel="stylesheet"/>
 </head>
-<body>
-<div class="container">
-    <div class="row">
-        <div class="col-xs-6">
-            <H1>Player1</H1>
-        </div>
-        <div class="col-xs-6">
-            <H1>Player@</H1>
+
+<body class="main-background">
+
+
+<div id="top" class="row site">
+    <div class="sm-5 md-5 col">
+        <div class="paper">
+            <div class="demo-title">
+                <div class="row flex-center">
+                    <h2><span class="badge secondary">Your Board</span></h2>
+                    <p th:utext='${webUI.renderPlayer1Board()}'/>
+                </div>
+            </div>
         </div>
     </div>
-    <p th:utext='${webUI.renderAsHtml()}'/>
 
-    <div class="row">
-        <p><a class="waves-effect waves-light blue btn" href="/battleships-brehuv-gamemenu">Back to menu</a></p>
+    <div class="sm-2 md-2 col">
+        <div class="paper">
+            <div class="demo-title">
+                <div class="row flex-center">
+                    <h2><span class="badge warning">Gamemenu</span></h2>
+
+                    <div class="margin"></div>
+                    <button class="btn-block" onclick="location.href='/battleships-brehuv-gamemenu'">Menu</button>
+                    <p></p>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <div class="sm-5 md-5 col">
+        <div class="paper">
+            <div class="demo-title">
+                <div class="row flex-center">
+                    <h2><span class="badge secondary">Oponent Board</span></h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
-<script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="scripts/jquery.confetti.js"></script>
 </body>
 </html>

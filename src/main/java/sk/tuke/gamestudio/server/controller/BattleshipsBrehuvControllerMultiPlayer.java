@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.WebApplicationContext;
+import sk.tuke.gamestudio.game.battleships.brehuv.webui.WebUIMultiPlayer;
 import sk.tuke.gamestudio.game.battleships.brehuv.webui.WebUISinglePlayer;
 import sk.tuke.gamestudio.service.ScoreService;
 
@@ -15,7 +16,7 @@ import sk.tuke.gamestudio.service.ScoreService;
 @Scope(WebApplicationContext.SCOPE_SESSION)
 public class BattleshipsBrehuvControllerMultiPlayer {
 
-    private WebUISinglePlayer webUISinglePlayer = new WebUISinglePlayer();
+    private WebUIMultiPlayer webUIMultiPlayer = new WebUIMultiPlayer();
 
     @Autowired
     private ScoreService scoreService;
@@ -24,9 +25,9 @@ public class BattleshipsBrehuvControllerMultiPlayer {
     public String mines(@RequestParam(value = "command", required = false) String command,
                         @RequestParam(value = "row", required = false) String row,
                         @RequestParam(value = "column", required = false) String column, Model model) {
-        webUISinglePlayer.processCommand(command, row, column);
+        webUIMultiPlayer.processCommand(command, row, column);
 
-        model.addAttribute("webUI", webUISinglePlayer);
+        model.addAttribute("webUI", webUIMultiPlayer);
 
         model.addAttribute("scores", scoreService.getBestScores("battleships-brehuv"));
 
