@@ -276,7 +276,7 @@ public class WebUISinglePlayer {
 
         sb.append("<div class=\"row\"><div class=\"col-xs-6\">");
         //first board
-        showPlayTable(sb, boardSetup, false);
+        WebRenderUtil.showPlayTable(sb, boardSetup, false);
         sb.append("</div></div>");
 
         return sb.toString();
@@ -287,51 +287,12 @@ public class WebUISinglePlayer {
 
         sb.append("<div class=\"row\"><div class=\"col-xs-6\">");
         //second board
-        showPlayTable(sb, boardOponent, true);
+        WebRenderUtil.showPlayTable(sb, boardOponent, true);
         sb.append("</div></div>");
 
         return sb.toString();
     }
 
-
-    private void showPlayTable(StringBuilder sb, Board board, boolean clickable) {
-        sb.append("<table cellspacing=\"0\">");
-        for (int row = 0; row < board.getBoardRows(); row++) {
-            sb.append("<tr>\n");
-            for (int col = 0; col < board.getBoardCols(); col++) {
-                Tile tile = board.getBoardTile(row, col);
-                sb.append("<td>\n");
-
-                if (clickable) {
-                    sb.append("<a  href='" + String.format("?row=%d&column=%d", row, col) + "'>\n");
-                }
-
-                String image = "";
-                switch (tile.getTileState()) {
-                    case WATER:
-                        image = "water";
-                        break;
-                    case SHIP:
-                        image = "ship";
-                        break;
-                    case MISSED:
-                        image = "missed";
-                        break;
-                    case HIT:
-                        image = "hitted";
-                        break;
-                    default:
-                        throw new IllegalArgumentException("Unexpected tile state " + tile.getTileState());
-                }
-                sb.append("<img class='" + "mines-tile" + "' src='" + String.format("/images/battleships/brehuv/%s.png", image) + "'>\n");
-                sb.append("</a>\n");
-                sb.append("</td>\n");
-            }
-            sb.append("</tr>\n");
-        }
-        sb.append("</table>");
-
-    }
 
     public String renderHint() {
         StringBuilder sb = new StringBuilder();
@@ -403,7 +364,7 @@ public class WebUISinglePlayer {
         StringBuilder sb = new StringBuilder();
         sb.append("<div class=\"row\"><div class=\"col-xs-6\">");
         //second board
-        showPlayTable(sb, boardSetup, true);
+        WebRenderUtil.showPlayTable(sb, boardSetup, true);
         sb.append("</div></div>");
         return sb.toString();
     }
