@@ -89,7 +89,6 @@ public class WebUISinglePlayer {
                     break;
 
                 case "back":
-                    System.out.println("back");
                     if (shipsBU.size() != 0) {
                         boardSetup.setPlayBoard(setupHistory.getLast());
                         setupHistory.removeLast();
@@ -461,8 +460,6 @@ public class WebUISinglePlayer {
         }else{
             sb.append("<button id=\"buttonExpert\" class=\"btn-block\" onclick=\"location.href='?command=expert'\">Expert</button>\n");
         }
-
-        sb.append("<div class=\"margin\"></div>\n");
 
         return sb.toString();
 

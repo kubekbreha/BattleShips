@@ -41,6 +41,7 @@
                     <div class="margin"></div>
                     <a id="subbmitSetup" onclick="subbmitSetup()"
                        class="center-centred btn-block paper-btn">Subbmit</a>
+
                 </div>
             </div>
         </div>
@@ -69,6 +70,20 @@
 </div>
 
 
+<div class="row flex-spaces child-borders modal_button " >
+    <label id="modalBut" for="modal-1"></label>
+</div>
+<input class="modal-state" id="modal-1" type="checkbox"/>
+<div class="modal">
+    <label class="modal-bg" for="modal-1"></label>
+    <div class="modal-body">
+        <label class="btn-close" for="modal-1">X</label>
+        <h4 class="modal-title">Please pick a game mode</h4>
+        <p class="modal-text">You can need to setup your board and pick game mode in order to play.</p>
+    </div>
+</div>
+
+
 <script>
     var begginer = document.getElementById('buttonBegginer');
     var begB = begginer.classList.contains("btn-secondary");
@@ -85,6 +100,9 @@
     function subbmitSetup() {
         if(begB || medB || harB || exB){
             window.location.replace('/battleships-brehuv-singleplayer?command=subbmit');
+        }else{
+            var dialog = document.getElementById("modalBut");
+                dialog.click();
         }
     }
 </script>
