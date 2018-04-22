@@ -11,6 +11,9 @@ import java.util.List;
 
 public class WebUISinglePlayer {
 
+    private int ERROR = 0;
+    //8 placement error
+
     private Board boardRestartBU;
     private Board boardRestartOponentBU;
 
@@ -257,6 +260,7 @@ public class WebUISinglePlayer {
                         shipSizes.remove(0);
                     } else {
                         setupHistory.removeLast();
+                        ERROR = 8; //placement error
                     }
                 }
 
@@ -439,6 +443,17 @@ public class WebUISinglePlayer {
         }
 
         return sb.toString();
+    }
 
+
+    public String renderPlacementError(){
+        StringBuilder sb = new StringBuilder();
+
+        if(ERROR == 8){
+            sb.append("<div class=\"alert alert-danger\">You can't place ship on this position.</div>");
+            ERROR = 0;
+        }
+
+        return sb.toString();
     }
 }

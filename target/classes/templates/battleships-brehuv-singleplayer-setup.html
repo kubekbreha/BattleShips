@@ -18,6 +18,7 @@
             <div class="demo-title">
                 <div class="row flex-center">
                     <h2><span class="badge warning">Your Board</span></h2>
+                    <p th:utext='${webUI.renderPlacementError()}'/>
                     <p th:utext='${webUI.renderSetupBoard()}'/>
                 </div>
             </div>
@@ -83,6 +84,8 @@
         <p class="modal-text">You can need to setup your board and pick game mode in order to play.</p>
     </div>
 </div>
+
+
 
 
 <script>
