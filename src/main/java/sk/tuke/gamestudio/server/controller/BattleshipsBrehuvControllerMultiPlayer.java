@@ -22,7 +22,7 @@ public class BattleshipsBrehuvControllerMultiPlayer {
     private ScoreService scoreService;
 
     @RequestMapping("/battleships-brehuv-multiplayer")
-    public String mines(@RequestParam(value = "command", required = false) String command,
+    public String battleships(@RequestParam(value = "command", required = false) String command,
                         @RequestParam(value = "row", required = false) String row,
                         @RequestParam(value = "column", required = false) String column, Model model) {
         webUIMultiPlayer.processCommand(command, row, column);

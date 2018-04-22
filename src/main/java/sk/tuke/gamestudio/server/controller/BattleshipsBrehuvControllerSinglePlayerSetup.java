@@ -21,7 +21,7 @@ public class BattleshipsBrehuvControllerSinglePlayerSetup {
     private ScoreService scoreService;
 
     @RequestMapping("/battleships-brehuv-singleplayer-setup")
-    public String mines(@RequestParam(value = "command", required = false) String command,
+    public String battleships(@RequestParam(value = "command", required = false) String command,
                         @RequestParam(value = "row", required = false) String row,
                         @RequestParam(value = "column", required = false) String column, Model model) {
         webUISinglePlayer.processCommand(command, row, column);

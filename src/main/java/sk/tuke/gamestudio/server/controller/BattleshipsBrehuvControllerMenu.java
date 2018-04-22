@@ -24,7 +24,7 @@ public class BattleshipsBrehuvControllerMenu {
     private RatingService ratingService;
 
     @RequestMapping("/battleships-brehuv-gamemenu")
-    public String mines(@RequestParam(value = "mode", required = false) String mode, Model model) {
+    public String battleships(@RequestParam(value = "mode", required = false) String mode, Model model) {
         if(mode != null) {
             if (mode.equals("singleplayer")) {
                 return "battleships-brehuv-singleplayer"; //same name as the template
@@ -40,7 +40,7 @@ public class BattleshipsBrehuvControllerMenu {
 
 
     @PostMapping("/battleships-brehuv-gamemenu")
-    public String mines (@RequestParam(value = "comment", required = false) String comment, @RequestParam(value = "rating", required = false) String rating) {
+    public String battleships (@RequestParam(value = "comment", required = false) String comment, @RequestParam(value = "rating", required = false) String rating) {
         if(comment != null) {
             DatabaseUtil.addComment(comment, commentService);
         }
