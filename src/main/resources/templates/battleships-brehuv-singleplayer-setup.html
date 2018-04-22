@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="https://unpkg.com/papercss@1.4.1/dist/paper.min.css"/>
     <link href="css/battleships-brehuv-main.css" rel="stylesheet"/>
+
 </head>
 
 <body class="main-background">
@@ -87,6 +88,7 @@
 
 
 
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 
 <script>
     var begginer = document.getElementById('buttonBegginer');
@@ -102,13 +104,19 @@
     var exB = expert.classList.contains("btn-secondary");
 
     function subbmitSetup() {
-        if(begB || medB || harB || exB){
-            window.location.replace('/battleships-brehuv-singleplayer?command=subbmit');
+        if((begB || medB || harB || exB)){
+            if( $('.shipsList').length ) {
+                var dialog = document.getElementById("modalBut");
+                dialog.click();
+            }else{
+                window.location.replace('/battleships-brehuv-singleplayer?command=subbmit');
+            }
         }else{
             var dialog = document.getElementById("modalBut");
-                dialog.click();
+            dialog.click();
         }
     }
+
 </script>
 
 </body>

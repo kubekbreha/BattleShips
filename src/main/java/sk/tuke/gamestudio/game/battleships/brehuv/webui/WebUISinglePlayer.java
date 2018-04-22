@@ -335,7 +335,7 @@ public class WebUISinglePlayer {
             sb.append("<tr>\n");
 
             for (int col = 0; col < 10; col++) {
-                sb.append("<td>\n");
+                sb.append("<td  class=\"shipsList\">\n");
                 if (col < shipSizes.get(row)) {
                     sb.append("<img class='" + "mines-tile" + "' src='" + String.format("/images/battleships/brehuv/ship.png") + "'>\n");
                 }
