@@ -82,6 +82,15 @@
         </dependency>
 
 
+        <!-- GitHub Firebase Rest -->
+        <!-- https://github.com/j-fischer/rest-on-fire -->
+        <dependency>
+            <groupId>com.github.j-fischer</groupId>
+            <artifactId>rest-on-fire</artifactId>
+            <version>0.7.0</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
