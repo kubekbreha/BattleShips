@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43c1545f-97d6-4095-b8a6-c622172fa2c8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUISinglePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUISinglePlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerMultiPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerMultiPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-singleplayer-setup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-singleplayer-setup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUISinglePlayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerMultiPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerMultiPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/battleships-brehuv-singleplayer-setup.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/battleships-brehuv-singleplayer-setup.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,8 +41,8 @@
       <file leaf-file-name="WebUISinglePlayer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUISinglePlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="235" column="21" lean-forward="true" selection-start-line="235" selection-start-column="21" selection-end-line="235" selection-end-column="21" />
+            <state relative-caret-position="403">
+              <caret line="137" column="36" selection-start-line="137" selection-start-column="36" selection-end-line="137" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -104,7 +97,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>findBiggestInList</find>
       <find>shipsTmp</find>
       <find>setUpGame</find>
       <find>shoot</find>
@@ -134,6 +126,7 @@
       <find>mine</find>
       <find>setupHistory</find>
       <find>place</find>
+      <find>init</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -668,7 +661,7 @@
       <workItem from="1524205348988" duration="10943000" />
       <workItem from="1524246496558" duration="4943000" />
       <workItem from="1524283080312" duration="3573000" />
-      <workItem from="1524347647136" duration="3233000" />
+      <workItem from="1524347647136" duration="3374000" />
     </task>
     <servers />
   </component>
@@ -693,7 +686,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183660000" />
+    <option name="totallyTimeSpent" value="183801000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1126,8 +1119,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUISinglePlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="235" column="21" lean-forward="true" selection-start-line="235" selection-start-column="21" selection-end-line="235" selection-end-column="21" />
+        <state relative-caret-position="403">
+          <caret line="137" column="36" selection-start-line="137" selection-start-column="36" selection-end-line="137" selection-end-column="36" />
         </state>
       </provider>
     </entry>

@@ -134,6 +134,13 @@ public class WebUISinglePlayer {
 
                 case "restart":
                     boardSetup = new Board(10, 10);
+                    int limit = shipSizes.size();
+                    for (int i = 0; i < limit; i++) {
+                        shipSizes.remove(0);
+                        ships.remove(0);
+                    }
+                    initShips();
+
                     break;
 
 
@@ -142,8 +149,8 @@ public class WebUISinglePlayer {
                     boardSetup = new Board(10, 10);
                     gameControllerOponent = new GameController(boardSetup);
                     boardSetup.setUpBoardRandom();
-                    int limit = shipSizes.size();
-                    for (int i = 0; i < limit; i++) {
+                    int limit2 = shipSizes.size();
+                    for (int i = 0; i < limit2; i++) {
                         shipSizes.remove(0);
                         ships.remove(0);
                     }
@@ -241,14 +248,14 @@ public class WebUISinglePlayer {
                 if (ships.size() != 0) {
                     setupHistory.addToHistory(boardSetup.getPlayBoard());
 
-                    if(ships.get(0).placeShip(boardSetup.getPlayBoard(), row, col, orientation)){
+                    if (ships.get(0).placeShip(boardSetup.getPlayBoard(), row, col, orientation)) {
 
                         boardSetup.addShipToShips(ships.get(0));
                         shipsBU.add(0, ships.get(0));
                         shipSizesBU.add(0, shipSizes.get(0));
                         ships.remove(0);
                         shipSizes.remove(0);
-                    }else{
+                    } else {
                         setupHistory.removeLast();
                     }
                 }
@@ -427,7 +434,7 @@ public class WebUISinglePlayer {
         sb.append("<div class=\"margin\"></div>\n");
         if (expertAI) {
             sb.append("<button id=\"buttonExpert\" class=\"btn-secondary btn-block\" onclick=\"location.href='?command=expert'\">Expert</button>\n");
-        }else{
+        } else {
             sb.append("<button id=\"buttonExpert\" class=\"btn-block\" onclick=\"location.href='?command=expert'\">Expert</button>\n");
         }
 
