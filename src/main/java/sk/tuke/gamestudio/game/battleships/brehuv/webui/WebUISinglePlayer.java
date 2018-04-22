@@ -89,14 +89,18 @@ public class WebUISinglePlayer {
                     break;
 
                 case "back":
+                    System.out.println(shipsBU.size());
+                    System.out.println(setupHistory.getHistorySize());
                     if (shipsBU.size() != 0) {
-                        boardSetup.setPlayBoard(setupHistory.getLast());
-                        setupHistory.removeLast();
+
 
                         ships.add(0, shipsBU.get(0));
                         shipSizes.add(0, shipSizesBU.get(0));
                         shipsBU.remove(0);
                         shipSizesBU.remove(0);
+
+                        boardSetup.setPlayBoard(setupHistory.getLast());
+                        setupHistory.removeLast();
                     }
                     break;
 
@@ -236,12 +240,17 @@ public class WebUISinglePlayer {
             } else {
                 if (ships.size() != 0) {
                     setupHistory.addToHistory(boardSetup.getPlayBoard());
-                    ships.get(0).placeShip(boardSetup.getPlayBoard(), row, col, orientation);
-                    boardSetup.addShipToShips(ships.get(0));
-                    shipsBU.add(0, ships.get(0));
-                    shipSizesBU.add(0, shipSizes.get(0));
-                    ships.remove(0);
-                    shipSizes.remove(0);
+
+                    if(ships.get(0).placeShip(boardSetup.getPlayBoard(), row, col, orientation)){
+
+                        boardSetup.addShipToShips(ships.get(0));
+                        shipsBU.add(0, ships.get(0));
+                        shipSizesBU.add(0, shipSizes.get(0));
+                        ships.remove(0);
+                        shipSizes.remove(0);
+                    }else{
+                        setupHistory.removeLast();
+                    }
                 }
 
             }

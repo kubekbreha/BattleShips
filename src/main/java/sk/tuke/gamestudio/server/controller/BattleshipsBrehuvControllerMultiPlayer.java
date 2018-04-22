@@ -13,7 +13,7 @@ import sk.tuke.gamestudio.service.ScoreService;
 
 //http://localhost:8080/battleships-brehuv-multiplayer
 @Controller
-@Scope(WebApplicationContext.SCOPE_SESSION)
+@Scope(WebApplicationContext.SCOPE_REQUEST)
 public class BattleshipsBrehuvControllerMultiPlayer {
 
     private WebUIMultiPlayer webUIMultiPlayer = new WebUIMultiPlayer();
