@@ -72,24 +72,7 @@
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
-
-
-        <!-- Firebase - Jersey REST clinet -->
-        <dependency>
-            <groupId>com.sun.jersey</groupId>
-            <artifactId>jersey-client</artifactId>
-            <version>1.19</version>
-        </dependency>
-
-
-        <!-- GitHub Firebase Rest -->
-        <!-- https://github.com/j-fischer/rest-on-fire -->
-        <dependency>
-            <groupId>com.github.j-fischer</groupId>
-            <artifactId>rest-on-fire</artifactId>
-            <version>0.7.0</version>
-        </dependency>
-
+        
 
     </dependencies>
 
