@@ -42,6 +42,8 @@ public class WebUISinglePlayer {
     private boolean hardAI = false;
     private boolean expertAI = false;
 
+    private boolean gameFinished = false;
+
     private char orientation = 'V';
 
     private boolean showHint;
@@ -58,13 +60,14 @@ public class WebUISinglePlayer {
         }
 
 
-        if (boardSetup == null) {
+        if (boardSetup == null || gameFinished) {
             initShips();
             boardSetup = new Board(10, 10);
             boardOponent = new Board(10, 10);
             boardOponent.setUpBoardRandom();
             gameController = new GameController(boardOponent);
             gameControllerOponent = new GameController(boardSetup);
+            gameFinished = false;
         } else if (command != null) {
             if (hint != null) {
                 hint.findHint();
@@ -485,7 +488,7 @@ public class WebUISinglePlayer {
             sb.append("<button onclick=\"location.href='/battleships-brehuv-singleplayer-setup'\" class=\"btn-block\">Try again.</button>\n");
             sb.append("</div>\n");
             sb.append("</div>\n");
-
+            gameFinished = true;
         }else if( gameController.isGameWon(boardSetup.getShips())){
             sb.append("<h4 class=\"modal-title\">You WIN!</h4>");
             sb.append("<p class=\"modal-text\">Congratulations, you are the best.</p>");
@@ -494,6 +497,7 @@ public class WebUISinglePlayer {
             sb.append("<button onclick=\"location.href='/battleships-brehuv-singleplayer-setup'\" class=\"btn-block\">New game.</button>\n");
             sb.append("</div>\n");
             sb.append("</div>\n");
+            gameFinished = true;
         }
         return sb.toString();
     }
