@@ -446,14 +446,45 @@ public class WebUISinglePlayer {
     }
 
 
-    public String renderPlacementError(){
+    public String renderPlacementError() {
         StringBuilder sb = new StringBuilder();
 
-        if(ERROR == 8){
+        if (ERROR == 8) {
             sb.append("<div class=\"alert alert-danger\">You can't place ship on this position.</div>");
             ERROR = 0;
         }
 
+        return sb.toString();
+    }
+
+
+    public String runConffeti() {
+        StringBuilder sb = new StringBuilder();
+
+        if (gameControllerOponent.isGameWon(boardOponent.getShips())
+                || gameController.isGameWon(boardSetup.getShips())) {
+            sb.append("<div id=\"confetti-wrapper\"/>");
+            sb.append("<script>");
+            sb.append("var dialog = document.getElementById(\"modalBut\");");
+            sb.append("dialog.click();");
+            sb.append("</script>");
+        }
+        return sb.toString();
+    }
+
+
+
+
+
+    public String renderWhoWins() {
+        StringBuilder sb = new StringBuilder();
+        if (gameControllerOponent.isGameWon(boardOponent.getShips())) {
+            sb.append("<h4 class=\"modal-title\">You LOSE.</h4>");
+            sb.append("<p class=\"modal-text\">Try again ?</p>");
+        }else if( gameController.isGameWon(boardSetup.getShips())){
+            sb.append("<h4 class=\"modal-title\">TOu WIN!</h4>");
+            sb.append("<p class=\"modal-text\">Congratulations, you are the best.</p>");
+        }
         return sb.toString();
     }
 }
