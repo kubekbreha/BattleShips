@@ -79,7 +79,11 @@ public class WebUISinglePlayer {
             gameController = new GameController(boardOponent);
             gameControllerOponent = new GameController(boardSetup);
             gameFinished = false;
+            hint = new Hint(boardOponent);
             shootScore = 0;
+            playerOponent = new Computer();
+            playerHistory = new BoardsHistory();
+            playerHistoryOponent = new BoardsHistory();
         } else if (command != null) {
             if (hint != null) {
                 hint.findHint();
@@ -198,6 +202,16 @@ public class WebUISinglePlayer {
                     break;
 
                 case "subbmit":
+                    if (hardAI) {
+                        ((Computer) playerOponent).setAiState(new ComputerHard(10, 10));
+                    }
+                    if (expertAI) {
+                        ((Computer) playerOponent).setAiState(new ComputerExpert(10, 10));
+                    }
+                    playerHistory = new BoardsHistory();
+                    playerHistoryOponent = new BoardsHistory();
+                    boardOponent = new Board(10, 10);
+                    boardOponent.setUpBoardRandom();
                     boardRestartBU = new Board(10, 10);
                     boardRestartBU.setPlayBoard(boardSetup.getPlayBoard());
                     boardRestartOponentBU = new Board(10, 10);
@@ -498,7 +512,7 @@ public class WebUISinglePlayer {
         if (gameControllerOponent.isGameWon(boardOponent.getShips())) {
             sb.append("<h4 class=\"modal-title\">You LOSE.</h4>");
             sb.append("<div class=\"row\">\n");
-            sb.append("<div class=\"col-6 col\">");
+            sb.append("<div class=\"col-12 col\">");
             sb.append("<button onclick=\"location.href='/battleships-brehuv-singleplayer-setup'\" class=\"btn-block\">Try again.</button>\n");
             sb.append("<div class=\"margin\"></div>");
             sb.append("<button onclick=\"location.href='/battleships-brehuv-gamemenu'\" class=\"btn-block\">Back to menu.</button>\n");
@@ -512,7 +526,7 @@ public class WebUISinglePlayer {
             sb.append("<div class=\"row\">\n");
             sb.append("<div class=\"col-12 col\">");
             sb.append("<button onclick=\"location.href='/battleships-brehuv-singleplayer-setup'\" class=\"btn-block\">New game.</button>\n");
-            sb.append("<div class=\"margin\"></div>");
+            sb.append("<div class=\"margin\"></div>\n");
             sb.append("<button onclick=\"location.href='/battleships-brehuv-gamemenu'\" class=\"btn-block\">Back to menu.</button>\n");
             sb.append("</div>\n");
             sb.append("</div>\n");
@@ -520,5 +534,10 @@ public class WebUISinglePlayer {
             DatabaseUtil.addScore(shootScore, scoreService);
         }
         return sb.toString();
+    }
+
+
+    public void setGameFinished(boolean gameFinished) {
+        this.gameFinished = gameFinished;
     }
 }

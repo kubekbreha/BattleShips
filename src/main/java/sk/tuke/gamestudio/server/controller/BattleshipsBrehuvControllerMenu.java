@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.WebApplicationContext;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.util.DatabaseUtil;
+import sk.tuke.gamestudio.game.battleships.brehuv.webui.WebUISinglePlayer;
 import sk.tuke.gamestudio.service.CommentService;
 import sk.tuke.gamestudio.service.RatingService;
 
@@ -16,6 +17,8 @@ import sk.tuke.gamestudio.service.RatingService;
 @Controller
 @Scope(WebApplicationContext.SCOPE_SESSION)
 public class BattleshipsBrehuvControllerMenu {
+
+    private WebUISinglePlayer webUISinglePlayer = BattleshipsBrehuvControllerSinglePlayerSetup.getUIClass();
 
     @Autowired
     private CommentService commentService;
@@ -34,6 +37,8 @@ public class BattleshipsBrehuvControllerMenu {
                 return "battleships-brehuv-gamemenu"; //same name as the template
             }
         }
+        webUISinglePlayer.setGameFinished(true);
+
         return "battleships-brehuv-gamemenu";
     }
 
