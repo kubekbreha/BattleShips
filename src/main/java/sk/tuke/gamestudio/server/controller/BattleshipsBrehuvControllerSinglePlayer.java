@@ -1,6 +1,7 @@
 package sk.tuke.gamestudio.server.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,9 +18,6 @@ public class BattleshipsBrehuvControllerSinglePlayer {
 
     private WebUISinglePlayer webUISinglePlayer = BattleshipsBrehuvControllerSinglePlayerSetup.getUIClass();
 
-    @Autowired
-    private ScoreService scoreService;
-
     @RequestMapping("/battleships-brehuv-singleplayer")
     public String battleships(@RequestParam(value = "command", required = false) String command,
                         @RequestParam(value = "row", required = false) String row,
@@ -27,7 +25,6 @@ public class BattleshipsBrehuvControllerSinglePlayer {
         webUISinglePlayer.processCommand(command, row, column);
 
         model.addAttribute("webUI", webUISinglePlayer);
-
 
         return "battleships-brehuv-singleplayer"; //same name as the template
     }

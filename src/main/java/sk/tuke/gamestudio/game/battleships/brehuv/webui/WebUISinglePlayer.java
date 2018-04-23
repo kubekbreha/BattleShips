@@ -1,15 +1,24 @@
 package sk.tuke.gamestudio.game.battleships.brehuv.webui;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import sk.tuke.gamestudio.entity.Score;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.board.*;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.game.GameController;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.history.BoardsHistory;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.player.*;
+import sk.tuke.gamestudio.game.battleships.brehuv.core.util.DatabaseUtil;
+import sk.tuke.gamestudio.service.RatingService;
+import sk.tuke.gamestudio.service.ScoreService;
+import sk.tuke.gamestudio.service.ScoreServiceRestClient;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class WebUISinglePlayer {
+
+    private ScoreService scoreService = new ScoreServiceRestClient();
 
     private int ERROR = 0;
     //8 placement error
@@ -48,6 +57,8 @@ public class WebUISinglePlayer {
 
     private boolean showHint;
 
+    private int shootScore = 0;
+
 
     public void processCommand(String command, String rowString, String columnString) {
         int row = 0, col = 0;
@@ -68,6 +79,7 @@ public class WebUISinglePlayer {
             gameController = new GameController(boardOponent);
             gameControllerOponent = new GameController(boardSetup);
             gameFinished = false;
+            shootScore = 0;
         } else if (command != null) {
             if (hint != null) {
                 hint.findHint();
@@ -242,7 +254,9 @@ public class WebUISinglePlayer {
                         boardOponent.getPlayBoard()[row][col].getTileState() != TileState.HIT &&
                         boardOponent.getPlayBoard()[row][col].getTileState() != TileState.MISSED) {
 
+
                     player.shoot(boardOponent.getPlayBoard(), Integer.parseInt(rowString), Integer.parseInt(columnString));
+                    shootScore++;
 
                     if (hint != null) {
                         hint.moveExecuted(boardOponent.getPlayBoard()[row][col].getTileState(), row, col);
@@ -493,7 +507,8 @@ public class WebUISinglePlayer {
             gameFinished = true;
         }else if( gameController.isGameWon(boardSetup.getShips())){
             sb.append("<h4 class=\"modal-title\">You WIN!</h4>");
-            sb.append("<p class=\"modal-text\">Congratulations, you are the best.</p>");
+            sb.append("<p class=\"modal-text\">Congratulations, you are the best. </p>");
+            sb.append("<p class=\"modal-text\">Your score is "+ shootScore +". </p>");
             sb.append("<div class=\"row\">\n");
             sb.append("<div class=\"col-12 col\">");
             sb.append("<button onclick=\"location.href='/battleships-brehuv-singleplayer-setup'\" class=\"btn-block\">New game.</button>\n");
@@ -502,6 +517,7 @@ public class WebUISinglePlayer {
             sb.append("</div>\n");
             sb.append("</div>\n");
             gameFinished = true;
+            DatabaseUtil.addScore(shootScore, scoreService);
         }
         return sb.toString();
     }
