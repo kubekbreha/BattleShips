@@ -76,7 +76,8 @@
 
                 <div class="row flex-center">
                     <div class="row">
-                        <form id="outer-form" class="form-horizontal form" th:action="@{/battleships-brehuv-gamemenu}" method="post">
+                        <form id="outer-form" class="form-horizontal form" th:action="@{/battleships-brehuv-gamemenu}"
+                              method="post">
                             <fieldset class="rating" th:action="@{/battleships-brehuv-gamemenu}" method="post">
 
                                 <input type="radio" id="5star" name="rating" value="5"/>
@@ -113,8 +114,8 @@
 
                 <div class="row flex-center">
                     <div class="row">
-                        <form id="outer-formAverage" class="form-horizontal form" >
-                            <fieldset class="rating" >
+                        <form id="outer-formAverage" class="form-horizontal form">
+                            <fieldset class="rating">
 
                                 <input type="radio" id="5starAverage" name="rating" value="5"/>
                                 <label class="full" for="5starAverage" title="Excellent"></label>
@@ -170,9 +171,10 @@
 
                 $("#commentList").append($(
                     "<div class=\"mini-margin input-size row flex-spaces\">\n" +
-                    "<div class=\"input-size alert \"><span class=\"badge secondary\">"+ comment.player +"</span> : "+comment.comment +"</div>\n"+
+                    "<div class=\"input-size alert \"><span class=\"badge secondary\">" + comment.player + "</span> : " + comment.comment + "</div>\n" +
                     "</div>\n"
                 ));
+                if (i === 4) break;
             }
         });
     });
@@ -194,14 +196,20 @@
 <!-- ScoreScript -->
 <script type="text/javascript">
     //<![CDATA[
+    var scoreAr = [];
     $(document).ready(function () {
         $.ajax({
             url: "/rest/score/battleships-brehuv",
         }).done(function (json) {
             for (var i = 0; i < json.length; i++) {
                 var score = json[i];
-                $("#scoreList").append($("<tr><td>" + (i + 1) + "</td><td>" + score.player + "</td><td>" + score.points + "</td><td>" + milisToDate(score.playedOn) + "</td></tr>"));
-
+                scoreAr.push(json[i]);
+            }
+            var order  = 0;
+            for (var i = json.length-1; i >= 0; i--) {
+                $("#scoreList").append($("<tr><td>" + (order + 1) + "</td><td>" + scoreAr[i].player + "</td><td>" + scoreAr[i].points + "</td><td>" + milisToDate(scoreAr[i].playedOn) + "</td></tr>"));
+                order++;
+                if(order === 5) break;
             }
         });
     });
