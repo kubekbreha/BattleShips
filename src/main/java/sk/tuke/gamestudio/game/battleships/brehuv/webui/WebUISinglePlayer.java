@@ -486,6 +486,8 @@ public class WebUISinglePlayer {
             sb.append("<div class=\"row\">\n");
             sb.append("<div class=\"col-6 col\">");
             sb.append("<button onclick=\"location.href='/battleships-brehuv-singleplayer-setup'\" class=\"btn-block\">Try again.</button>\n");
+            sb.append("<div class=\"margin\"></div>");
+            sb.append("<button onclick=\"location.href='/battleships-brehuv-gamemenu'\" class=\"btn-block\">Back to menu.</button>\n");
             sb.append("</div>\n");
             sb.append("</div>\n");
             gameFinished = true;
@@ -495,6 +497,8 @@ public class WebUISinglePlayer {
             sb.append("<div class=\"row\">\n");
             sb.append("<div class=\"col-12 col\">");
             sb.append("<button onclick=\"location.href='/battleships-brehuv-singleplayer-setup'\" class=\"btn-block\">New game.</button>\n");
+            sb.append("<div class=\"margin\"></div>");
+            sb.append("<button onclick=\"location.href='/battleships-brehuv-gamemenu'\" class=\"btn-block\">Back to menu.</button>\n");
             sb.append("</div>\n");
             sb.append("</div>\n");
             gameFinished = true;
