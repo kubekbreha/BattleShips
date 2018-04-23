@@ -480,10 +480,20 @@ public class WebUISinglePlayer {
         StringBuilder sb = new StringBuilder();
         if (gameControllerOponent.isGameWon(boardOponent.getShips())) {
             sb.append("<h4 class=\"modal-title\">You LOSE.</h4>");
-            sb.append("<p class=\"modal-text\">Try again ?</p>");
+            sb.append("<div class=\"row\">\n");
+            sb.append("<div class=\"col-6 col\">");
+            sb.append("<button onclick=\"location.href='/battleships-brehuv-singleplayer-setup'\" class=\"btn-block\">Try again.</button>\n");
+            sb.append("</div>\n");
+            sb.append("</div>\n");
+
         }else if( gameController.isGameWon(boardSetup.getShips())){
-            sb.append("<h4 class=\"modal-title\">TOu WIN!</h4>");
+            sb.append("<h4 class=\"modal-title\">You WIN!</h4>");
             sb.append("<p class=\"modal-text\">Congratulations, you are the best.</p>");
+            sb.append("<div class=\"row\">\n");
+            sb.append("<div class=\"col-12 col\">");
+            sb.append("<button onclick=\"location.href='/battleships-brehuv-singleplayer-setup'\" class=\"btn-block\">New game.</button>\n");
+            sb.append("</div>\n");
+            sb.append("</div>\n");
         }
         return sb.toString();
     }
