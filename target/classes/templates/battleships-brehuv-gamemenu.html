@@ -46,6 +46,19 @@
                        class="center-centred btn-block paper-btn">LetsPlay</a>
                     <div class="margin"></div>
                 </div>
+                <div class="row flex-center">
+                    <div class="sm-6 md-6 col">
+                        <a href="/battleships-brehuv-login"
+                           class="center-centred btn-block paper-btn">Login</a>
+                    </div>
+
+                    <div class="sm-6 md-6 col">
+                        <a href="/battleships-brehuv-register"
+                           class="center-centred btn-block paper-btn">Register</a>
+                    </div>
+
+
+                </div>
                 <div>
                     <h2 class="center-centred"><span class="badge warning">BestScores</span></h2>
                 </div>
@@ -184,11 +197,11 @@
                 var score = json[i];
                 scoreAr.push(json[i]);
             }
-            var order  = 0;
-            for (var i = json.length-1; i >= 0; i--) {
+            var order = 0;
+            for (var i = json.length - 1; i >= 0; i--) {
                 $("#scoreList").append($("<tr><td>" + (order + 1) + "</td><td>" + scoreAr[i].player + "</td><td>" + scoreAr[i].points + "</td><td>" + milisToDate(scoreAr[i].playedOn) + "</td></tr>"));
                 order++;
-                if(order === 5) break;
+                if (order === 5) break;
             }
         });
     });
