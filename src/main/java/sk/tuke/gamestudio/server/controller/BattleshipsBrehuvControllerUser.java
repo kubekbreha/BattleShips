@@ -4,50 +4,64 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import sk.tuke.gamestudio.entity.User;
 import sk.tuke.gamestudio.service.UserService;
 
+import javax.validation.Valid;
+
 //http://localhost:8080/user
 @Controller
-@Scope(value = WebApplicationContext.SCOPE_SESSION)
-class BattleshipsBrehuvControllerUser {
+//@Scope(value = WebApplicationContext.SCOPE_SESSION)
+class UserController extends WebMvcConfigurerAdapter {
     @Autowired
     private UserService userService;
 
     private User loggedUser;
+    private User formUser = new User();
+    private boolean alreadyRegistered = false;
 
 
-    @RequestMapping("/user")
-    public String user(Model model) {
-        return "login";
-    }
 
-
-    @RequestMapping("/battleships-brehuv-login")
-    public String login(@RequestParam(value = "user", required = false) User user, Model model) {
-
-            user = userService.login(user.getUsername(), user.getPassword());
-            loggedUser = user;
-
-        return "test-login";
-    }
-
-
-    @RequestMapping("/battleships-brehuv-register")
-    public String register(User user, Model model) {
-        //user = userService.register(user.getUsername(), user.getPasswd());
-        //loggedUser = user;
-        return "battleships-brehuv-register";
-    }
-
-
-    @RequestMapping("/battleships-brehuv-logout")
+    @RequestMapping("/logout")
     public String logout() {
         loggedUser = null;
-        return "battleships-brehuv-gamemenu";
+        formUser = new User();
+        alreadyRegistered = false;
+        return "index";
+    }
+
+    @RequestMapping(value="/login", method=RequestMethod.POST)
+    public String loginSubmit(@Valid @ModelAttribute User user, BindingResult bindingResult, Model model) {
+        if (bindingResult.hasErrors()) {
+            System.err.println("FORM HAS ERRORS");
+            model.addAttribute("user", formUser);
+            return "test-login";
+        }
+        user = userService.login(user.getUsername(), user.getPassword());
+        loggedUser = user;
+        model.addAttribute("user", formUser);
+        return loggedUser == null ? "test-login" : "index";
+    }
+
+    @RequestMapping(value="/register", method=RequestMethod.POST)
+    public String registerSubmit(@Valid @ModelAttribute User user, BindingResult bindingResult, Model model) {
+        if (bindingResult.hasErrors()) {
+            System.err.println("FORM HAS ERRORS");
+            model.addAttribute("user", formUser);
+            return "register";
+        }
+        user = userService.register(user.getUsername(), user.getPassword());
+        loggedUser = user;
+        model.addAttribute("user", formUser);
+        if(loggedUser == null) {
+            this.alreadyRegistered = true;
+        }
+        return loggedUser == null ? "register" : "index";
     }
 
     public User getLoggedUser() {
@@ -56,5 +70,22 @@ class BattleshipsBrehuvControllerUser {
 
     public boolean isLogged() {
         return loggedUser != null;
+    }
+
+    public boolean isAlreadyRegistered() {
+        return alreadyRegistered;
+    }
+
+    @RequestMapping(value="/login", method=RequestMethod.GET)
+    public String loginShow(@ModelAttribute User user, BindingResult bindingResult, Model model) {
+        model.addAttribute("user", formUser);
+        return "test-login";
+    }
+
+    @RequestMapping(value="/register", method=RequestMethod.GET)
+    public String registerShow(@ModelAttribute User user, BindingResult bindingResult, Model model) {
+        model.addAttribute("user", formUser);
+        this.alreadyRegistered = false;
+        return "register";
     }
 }
