@@ -53,7 +53,7 @@ class UserController extends WebMvcConfigurerAdapter {
         if (bindingResult.hasErrors()) {
             System.err.println("FORM HAS ERRORS");
             model.addAttribute("user", formUser);
-            return "register";
+            return "test-register";
         }
         user = userService.register(user.getUsername(), user.getPassword());
         loggedUser = user;
@@ -61,7 +61,7 @@ class UserController extends WebMvcConfigurerAdapter {
         if(loggedUser == null) {
             this.alreadyRegistered = true;
         }
-        return loggedUser == null ? "register" : "index";
+        return loggedUser == null ? "test-register" : "index";
     }
 
     public User getLoggedUser() {
@@ -86,6 +86,6 @@ class UserController extends WebMvcConfigurerAdapter {
     public String registerShow(@ModelAttribute User user, BindingResult bindingResult, Model model) {
         model.addAttribute("user", formUser);
         this.alreadyRegistered = false;
-        return "register";
+        return "test-register";
     }
 }
