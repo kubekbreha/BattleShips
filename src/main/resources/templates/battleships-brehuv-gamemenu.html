@@ -33,7 +33,6 @@
 
                 <div class="row flex-center">
                     <p id="commentList"></p>
-
                 </div>
             </div>
         </div>
@@ -169,17 +168,6 @@
             }
         });
     });
-
-    $(document).ready(function () {
-        $('#example').DataTable({
-            columns: [
-                {data: "player"},
-                {data: "comment"},
-                {data: "commentedOn"}
-            ],
-            ajax: {url: "/rest/comment/battleships-brehuv", dataSrc: ''}
-        });
-    });
     //]]>
 </script>
 
@@ -202,17 +190,6 @@
                 order++;
                 if(order === 5) break;
             }
-        });
-    });
-
-    $(document).ready(function () {
-        $('#example').DataTable({
-            columns: [
-                {data: "player"},
-                {data: "points"},
-                {data: "playedOn"}
-            ],
-            ajax: {url: "/rest/score/battleships-brehuv", dataSrc: ''}
         });
     });
 

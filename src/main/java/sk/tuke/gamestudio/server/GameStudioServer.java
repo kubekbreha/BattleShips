@@ -14,16 +14,28 @@ import sk.tuke.gamestudio.service.ScoreServiceJPA;
 @SpringBootApplication
 @EntityScan({"sk.tuke.gamestudio.entity"})
 public class GameStudioServer {
-	public static void main(String[] args) {
-		SpringApplication.run(GameStudioServer.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(GameStudioServer.class, args);
+    }
 
-	@Bean
-	public ScoreService scoreService() {return new ScoreServiceJPA();}
+    @Bean
+    public ScoreService scoreService() {
+        return new ScoreServiceJPA();
+    }
 
-	@Bean
-	public RatingService ratingService() {return new RatingServiceJPA();}
+    @Bean
+    public RatingService ratingService() {
+        return new RatingServiceJPA();
+    }
 
-	@Bean
-	public CommentService commentService() {return new CommentServiceJPA();}
+    @Bean
+    public CommentService commentService() {
+        return new CommentServiceJPA();
+    }
+
+    @Bean
+    public UserService userService() {
+        return new UserServiceJPA();
+    }
+
 }
