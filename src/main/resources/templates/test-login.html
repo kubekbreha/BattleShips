@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Gamestudio</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/css/stylesheet.css" />
+</head>
+<body>
+
+
+<h2>Please log in</h2>
+<form action="/battleships-brehuv-login?user=user" method="post">
+    Login: <input name="username" type="text" th:value="${user?.username}"/> <br/>
+    Password: <input name="password" type="password" th:value="${user?.password}"/> <br/>
+    <input type="submit" value="OK"/>
+</form>
+
+<h2>or</h2>
+
+<h2>register</h2>
+<form action="/register" method="post">
+    Login: <input name="username" type="text" th:value="${user?.username}"/> <br/>
+    Password: <input name="passwd" type="password"/> <br/>
+    Verify password: <input name="verifiedPasswd" type="password"/> <br/>
+    <input type="submit" value="OK"/>
+</form>
+
+</body>
+</html>

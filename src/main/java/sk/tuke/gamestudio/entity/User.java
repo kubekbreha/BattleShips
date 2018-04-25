@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "player")
 @NamedQuery(name = "User.login",
-        query = "SELECT u FROM User u WHERE u.username=:username AND u.passwd=:passwd")
+        query = "SELECT u FROM User u WHERE u.username=:username AND u.password=:password")
 public class User {
 
     @Id
@@ -15,7 +15,7 @@ public class User {
     @Column(unique = true)
     private String username;
 
-    private String passwd;
+    private String password;
 
     @Transient
     private String verifiedPasswd;
@@ -23,9 +23,9 @@ public class User {
     public User() {
     }
 
-    public User(String username, String passwd) {
+    public User(String username, String password) {
         this.username = username;
-        this.passwd = passwd;
+        this.password = password;
     }
 
     public int getId() {
@@ -40,12 +40,12 @@ public class User {
         this.username = username;
     }
 
-    public String getPasswd() {
-        return passwd;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPasswd(String passwd) {
-        this.passwd = passwd;
+    public void setPassword(String passwd) {
+        this.password = passwd;
     }
 
     @Override
@@ -53,7 +53,7 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
-                ", passwd='" + passwd + '\'' +
+                ", passwd='" + password + '\'' +
                 '}';
     }
 }

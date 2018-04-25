@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.WebApplicationContext;
 import sk.tuke.gamestudio.entity.User;
 import sk.tuke.gamestudio.service.UserService;
@@ -26,10 +27,12 @@ class BattleshipsBrehuvControllerUser {
 
 
     @RequestMapping("/battleships-brehuv-login")
-    public String login(User user, Model model) {
-        //user = userService.login(user.getUsername(), user.getPasswd());
-        //loggedUser = user;
-        return "battleships-brehuv-login";
+    public String login(@RequestParam(value = "user", required = false) User user, Model model) {
+
+            user = userService.login(user.getUsername(), user.getPassword());
+            loggedUser = user;
+
+        return "test-login";
     }
 
 
