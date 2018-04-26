@@ -20,28 +20,35 @@
     <div style=" margin:0 auto;" class="sm-6 md-6 col center-centred">
         <div class="paper">
             <div class="demo-title">
+
                 <div class="row flex-center">
                     <h2><span class="badge secondary">Login</span></h2>
                     <div class="margin"></div>
                 </div>
 
-                <div class="col sm-12">
-                    <div class="form-group">
-                        <input class="input-block" placeholder="Username" type="text" id="usernameInput"/>
-                    </div>
-                </div>
-
-                <div class="col sm-12">
-                    <div class="form-group">
-                        <input class="input-block" placeholder="Password" type="text" id="passwordInput"/>
-                    </div>
-                </div>
-
-                <div class="margin"></div>
-
                 <div class="row flex-center">
-                    <a href="/battleships-brehuv-login"
-                       class="center-centred btn-block paper-btn  btn-primary">Login</a>
+                        <form class="input-size " id="loginForm " action="#" th:action="@{/battleships-brehuv-login}" th:object="${user}"
+                              method="post">
+
+                            <input placeholder="Username" class="input-size input login-input" name="username"
+                                   th:field="*{username}"/>
+                            <div class="label error-message" th:if="${#fields.hasErrors('username')}"
+                                 th:errors="*{username}">Username Error
+                            </div>
+                            <br/>
+
+                            <input placeholder="Password" class="input-size input login-input" name="password"
+                                   type="password" th:field="*{password}"/>
+                            <div class="label error-message" th:if="${#fields.hasErrors('password')}"
+                                 th:errors="*{password}">Password Error
+                            </div>
+                            <br/>
+
+                            <div style="width: 100%; text-align: center">
+                                <input class="btn-block paper-btn buttons input-size loginButton" type="submit" value="Log in"/>
+                            </div>
+
+                        </form>
                 </div>
 
                 <div class="row flex-center">

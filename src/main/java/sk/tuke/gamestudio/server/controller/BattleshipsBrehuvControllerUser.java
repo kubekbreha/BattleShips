@@ -32,20 +32,20 @@ class UserController extends WebMvcConfigurerAdapter {
         loggedUser = null;
         formUser = new User();
         alreadyRegistered = false;
-        return "index";
+        return "battleships-brehuv-gamemenu";
     }
 
-    @RequestMapping(value="/login", method=RequestMethod.POST)
+    @RequestMapping(value="/battleships-brehuv-login", method=RequestMethod.POST)
     public String loginSubmit(@Valid @ModelAttribute User user, BindingResult bindingResult, Model model) {
         if (bindingResult.hasErrors()) {
             System.err.println("FORM HAS ERRORS");
             model.addAttribute("user", formUser);
-            return "test-login";
+            return "battleships-brehuv-login";
         }
         user = userService.login(user.getUsername(), user.getPassword());
         loggedUser = user;
         model.addAttribute("user", formUser);
-        return loggedUser == null ? "test-login" : "index";
+        return loggedUser == null ? "battleships-brehuv-login" : "battleships-brehuv-gamemenu";
     }
 
     @RequestMapping(value="/register", method=RequestMethod.POST)
@@ -61,7 +61,7 @@ class UserController extends WebMvcConfigurerAdapter {
         if(loggedUser == null) {
             this.alreadyRegistered = true;
         }
-        return loggedUser == null ? "test-register" : "index";
+        return loggedUser == null ? "test-register" : "battleships-brehuv-gamemenu";
     }
 
     public User getLoggedUser() {
@@ -76,10 +76,10 @@ class UserController extends WebMvcConfigurerAdapter {
         return alreadyRegistered;
     }
 
-    @RequestMapping(value="/login", method=RequestMethod.GET)
+    @RequestMapping(value="/battleships-brehuv-login", method=RequestMethod.GET)
     public String loginShow(@ModelAttribute User user, BindingResult bindingResult, Model model) {
         model.addAttribute("user", formUser);
-        return "test-login";
+        return "battleships-brehuv-login";
     }
 
     @RequestMapping(value="/register", method=RequestMethod.GET)
