@@ -4,7 +4,8 @@
     <list default="true" id="43c1545f-97d6-4095-b8a6-c622172fa2c8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/test-login.html" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,25 +76,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="test-login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/test-login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="23" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="35" selection-end-column="23" />
-              <folding>
-                <element signature="n#style#0;n#h3#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#form#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#5;n#form#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="battleships-brehuv-login.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="battleships-brehuv-login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="47" column="65" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="65" />
+            <state relative-caret-position="164">
+              <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="49" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -102,18 +89,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="battleships-brehuv-main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/battleships-brehuv-main.css">
+      <file leaf-file-name="battleships-brehuv-register.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-134" />
+            <state relative-caret-position="320">
+              <caret line="45" column="76" selection-start-line="45" selection-start-column="76" selection-end-line="45" selection-end-column="76" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="BattleshipsBrehuvControllerUser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerUser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="50" column="65" lean-forward="true" selection-start-line="50" selection-start-column="65" selection-end-line="50" selection-end-column="65" />
+            <state relative-caret-position="121">
+              <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -163,8 +157,8 @@
       <find>setup</find>
       <find>boardOponent</find>
       <find>commentList</find>
-      <find>index</find>
       <find>login</find>
+      <find>index</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -222,15 +216,15 @@
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/GameStudioServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvUserController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-gamemenu.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-register.html" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/webservice/UserServiceRest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/test-login.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/test-register.html" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/UserServiceJPA.java" />
         <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/entity/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerUser.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-login.html" />
+        <option value="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerUser.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-register.html" />
       </list>
     </option>
   </component>
@@ -681,7 +675,7 @@
       <workItem from="1524474552940" duration="9873000" />
       <workItem from="1524635168800" duration="1158000" />
       <workItem from="1524649094483" duration="11381000" />
-      <workItem from="1524763131190" duration="1355000" />
+      <workItem from="1524763131190" duration="2609000" />
     </task>
     <servers />
   </component>
@@ -706,7 +700,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213016000" />
+    <option name="totallyTimeSpent" value="214270000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -727,7 +721,7 @@
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.13858365" />
+      <window_info anchor="right" id="Database" order="5" weight="0.13858365" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -738,7 +732,7 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Java Enterprise" order="1" weight="0.3282353" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.21025641" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.3548718" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32941177" />
       <window_info anchor="bottom" id="Spring" order="2" weight="0.3282353" />
       <window_info anchor="bottom" id="Terminal" order="11" />
@@ -762,13 +756,14 @@
     <layout-to-restore>
       <window_info id="Persistence" order="8" side_tool="true" />
       <window_info id="Designer" order="3" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.23897436" />
       <window_info anchor="bottom" id="Analysis" order="10" />
       <window_info anchor="right" id="Palette" order="8" />
       <window_info anchor="bottom" id="Spring" order="2" weight="0.3282353" />
-      <window_info anchor="bottom" id="Database Console" order="13" weight="0.23897436" />
-      <window_info anchor="bottom" id="Run" order="4" visible="true" weight="0.18153846" />
+      <window_info id="Image Layers" order="7" />
+      <window_info anchor="bottom" id="Run" order="4" visible="true" weight="0.21025641" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="9" sideWeight="0.503937" side_tool="true" visible="true" weight="0.18045112" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
@@ -780,23 +775,22 @@
       <window_info anchor="bottom" id="Messages" order="5" sideWeight="0.49679488" weight="0.22153845" />
       <window_info anchor="bottom" id="TODO" order="16" weight="0.32941177" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Java Enterprise" order="1" weight="0.3282353" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32941177" />
       <window_info anchor="right" id="Maven Projects" order="10" weight="0.32975295" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2735043" />
-      <window_info anchor="right" id="Database" order="5" weight="0.13858365" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.32820514" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2826618" />
+      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.13858365" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info id="Web" order="1" side_tool="true" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
-      <window_info anchor="right" id="Coverage" order="9" sideWeight="0.503937" side_tool="true" visible="true" weight="0.18045112" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.32820514" />
-      <window_info anchor="right" id="Bean Validation" order="1" weight="0.32975295" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.40307692" />
+      <window_info anchor="right" id="Bean Validation" order="1" weight="0.32975295" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -968,13 +962,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://74af1ce3-3eb3-4e3d-af1f-a0955eba5533/database/gamestudio/schema/public/table/player">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1094,18 +1081,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/test-register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#form#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#6;n#form#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1177,12 +1152,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerUser.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/test-register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="50" column="65" lean-forward="true" selection-start-line="50" selection-start-column="65" selection-end-line="50" selection-end-column="65" />
+        <state relative-caret-position="45">
+          <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#form#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#6;n#form#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1192,13 +1180,24 @@
         <state relative-caret-position="-134" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-login.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/server/controller/BattleshipsBrehuvControllerUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="47" column="65" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="65" />
+        <state relative-caret-position="121">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/battleships-brehuv-register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="45" column="76" selection-start-line="45" selection-start-column="76" selection-end-line="45" selection-end-column="76" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

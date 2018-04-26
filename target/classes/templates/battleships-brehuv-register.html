@@ -25,34 +25,41 @@
                     <div class="margin"></div>
                 </div>
 
-                <div class="col sm-12">
-                    <div class="form-group">
-                        <input class="input-block" placeholder="Username" type="text" id="usernameInput"/>
-                    </div>
-                </div>
-
-                <div class="col sm-12">
-                    <div class="form-group">
-                        <input class="input-block" placeholder="Password" type="text" id="passwordInput"/>
-                    </div>
-                </div>
-
-                <div class="col sm-12">
-                    <div class="form-group">
-                        <input class="input-block" placeholder="Password again" type="text" id="passwordInputAgain"/>
-                    </div>
-                </div>
-
-                <div class="margin"></div>
 
                 <div class="row flex-center">
-                    <a href="/battleships-brehuv-register"
-                       class="center-centred btn-block paper-btn  btn-primary">Register</a>
-                </div>
+                    <form class="input-size " id="registerForm" action="#" th:action="@{/register}" th:object="${user}"
+                          method="post">
 
-                <div class="row flex-center">
-                    <a href="/battleships-brehuv-login"
-                       class="center-centred btn-block paper-btn">Login</a>
+                        <input class="input-size input login-input" name="username" th:field="*{username}"/>
+                        <div class="label error-message" th:if="${#fields.hasErrors('username')}"
+                             th:errors="*{username}">Username Error
+                        </div>
+                        <div class="label error-message" th:if="${@userController.alreadyRegistered}">This username is
+                            already in our database
+                        </div>
+                        <br/>
+
+                        <input class="input-size input login-input" name="password" type="password"
+                               th:field="*{password}"/>
+                        <div class="label error-message" th:if="${#fields.hasErrors('password')}"
+                             th:errors="*{password}">Password Error
+                        </div>
+                        <br/>
+
+
+                        <div class="input-size register-link">
+                            Already registered? <a href="/battleships-brehuv-login"
+                                                   style="text-decoration:underline !important;">Log in</a>
+                        </div>
+                        <br/>
+
+                        <div style="width: 100%; text-align: center">
+                            <input class="center-centred btn-block paper-btn buttons loginButton" type="submit"
+                                   value="Register"/>
+                        </div>
+                        <br/>
+
+                    </form>
                 </div>
 
                 <div class="row flex-center">
