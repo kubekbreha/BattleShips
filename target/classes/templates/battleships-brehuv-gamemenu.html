@@ -46,19 +46,11 @@
                        class="center-centred btn-block paper-btn">LetsPlay</a>
                     <div class="margin"></div>
                 </div>
+
                 <div class="row flex-center">
-                    <div class="sm-6 md-6 col">
-                        <a href="/battleships-brehuv-login"
-                           class="center-centred btn-block paper-btn">Login</a>
-                    </div>
-
-                    <div class="sm-6 md-6 col">
-                        <a href="/battleships-brehuv-register"
-                           class="center-centred btn-block paper-btn">Register</a>
-                    </div>
-
-
+                    <p th:utext='${webUI.renderLogin()}'/>
                 </div>
+
                 <div>
                     <h2 class="center-centred"><span class="badge warning">BestScores</span></h2>
                 </div>

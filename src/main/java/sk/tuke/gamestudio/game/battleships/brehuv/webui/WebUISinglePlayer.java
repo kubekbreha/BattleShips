@@ -8,6 +8,8 @@ import sk.tuke.gamestudio.game.battleships.brehuv.core.game.GameController;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.history.BoardsHistory;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.player.*;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.util.DatabaseUtil;
+import sk.tuke.gamestudio.server.controller.BattleshipsBrehuvControllerMenu;
+import sk.tuke.gamestudio.server.controller.BattleshipsBrehuvControllerUser;
 import sk.tuke.gamestudio.service.RatingService;
 import sk.tuke.gamestudio.service.ScoreService;
 import sk.tuke.gamestudio.service.ScoreServiceRestClient;
@@ -533,6 +535,23 @@ public class WebUISinglePlayer {
             gameFinished = true;
             DatabaseUtil.addScore(shootScore, scoreService);
         }
+        return sb.toString();
+    }
+
+    public String renderLogin(){
+        StringBuilder sb = new StringBuilder();
+        if(BattleshipsBrehuvControllerUser.) {
+            sb.append("<div class=\"sm-6 md-6 col\">\n");
+            sb.append("<a href=\"/battleships-brehuv-login\"");
+            sb.append("class=\"center-centred btn-block paper-btn\">Login</a>\n");
+            sb.append("</div>\n");
+
+            sb.append("<div class=\"sm-6 md-6 col\">\n");
+            sb.append("<a href=\"/battleships-brehuv-register\"");
+            sb.append("class=\"center-centred btn-block paper-btn\">Register</a>\n");
+            sb.append("</div>\n");
+        }
+
         return sb.toString();
     }
 

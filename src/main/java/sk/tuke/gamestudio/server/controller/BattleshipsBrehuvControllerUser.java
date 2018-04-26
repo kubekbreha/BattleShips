@@ -17,7 +17,7 @@ import javax.validation.Valid;
 //http://localhost:8080/user
 @Controller
 //@Scope(value = WebApplicationContext.SCOPE_SESSION)
-class UserController extends WebMvcConfigurerAdapter {
+public class BattleshipsBrehuvControllerUser extends WebMvcConfigurerAdapter {
     @Autowired
     private UserService userService;
 
@@ -67,8 +67,8 @@ class UserController extends WebMvcConfigurerAdapter {
         return loggedUser;
     }
 
-    public boolean isLogged() {
-        return loggedUser != null;
+    public static boolean isLogged() {
+        return User != null;
     }
 
     public boolean isAlreadyRegistered() {

@@ -28,6 +28,8 @@ public class BattleshipsBrehuvControllerMenu {
 
     @RequestMapping("/battleships-brehuv-gamemenu")
     public String battleships(@RequestParam(value = "mode", required = false) String mode, Model model) {
+        model.addAttribute("webUI", webUISinglePlayer);
+
         if(mode != null) {
             if (mode.equals("singleplayer")) {
                 return "battleships-brehuv-singleplayer"; //same name as the template
@@ -38,6 +40,7 @@ public class BattleshipsBrehuvControllerMenu {
             }
         }
         webUISinglePlayer.setGameFinished(true);
+
 
         return "battleships-brehuv-gamemenu";
     }
