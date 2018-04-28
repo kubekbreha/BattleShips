@@ -37,6 +37,7 @@
             </div>
         </div>
     </div>
+
     <div class="sm-6 md-6 col">
         <div class="paper">
             <div class="demo-title">
@@ -45,31 +46,30 @@
                     <a href="/battleships-brehuv-singleplayer-setup"
                        class="center-centred btn-block paper-btn">LetsPlay</a>
                     <div class="margin"></div>
-                </div>
 
-                <div class="row flex-center">
-                    <p th:utext='${webUI.renderLogin()}'/>
                 </div>
+                <div th:utext='${webUI.renderLogin()}'/>
+            </div>
 
-                <div>
-                    <h2 class="center-centred"><span class="badge warning">BestScores</span></h2>
-                </div>
-                <div class="row flex-center">
-                    <table>
-                        <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Points</th>
-                            <th>Played on</th>
-                        </tr>
-                        </thead>
-                        <tbody id="scoreList"/>
-                    </table>
-                </div>
+            <div>
+                <h2 class="center-centred"><span class="badge warning">BestScores</span></h2>
+            </div>
+            <div class="row flex-center">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Points</th>
+                        <th>Played on</th>
+                    </tr>
+                    </thead>
+                    <tbody id="scoreList"/>
+                </table>
             </div>
         </div>
     </div>
+
     <div class="sm-3 md-3 col">
         <div class="paper">
             <div class="demo-title">
@@ -255,5 +255,7 @@
             + " (" + date.getHours().toString() + ":" + date.getMinutes().toString() + ")";
     }
 </script>
+
+
 </body>
 </html>

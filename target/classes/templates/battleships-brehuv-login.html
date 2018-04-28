@@ -68,11 +68,21 @@
         </div>
     </div>
 
+    <div>
+        <p th:utext='${user.userLogged()}'/>
+    </div>
+
 </div>
 
 
 <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+<script>
+    var logged = document.getElementById('logged');
+    var loggedB = logged.classList.contains("logged");
+    if(loggedB) window.location.replace('/battleships-brehuv-gamemenu');
+</script>
 
 </body>
 </html>

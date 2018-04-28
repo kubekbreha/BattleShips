@@ -10,6 +10,7 @@ import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import sk.tuke.gamestudio.entity.User;
+import sk.tuke.gamestudio.game.battleships.brehuv.webui.WebUISinglePlayer;
 import sk.tuke.gamestudio.service.UserService;
 
 import javax.validation.Valid;
@@ -18,20 +19,24 @@ import javax.validation.Valid;
 @Controller
 //@Scope(value = WebApplicationContext.SCOPE_SESSION)
 public class BattleshipsBrehuvControllerUser extends WebMvcConfigurerAdapter {
+
     @Autowired
     private UserService userService;
 
-    private User loggedUser;
+    private WebUISinglePlayer webUISinglePlayer = BattleshipsBrehuvControllerSinglePlayerSetup.getUIClass();
+
+    private static User loggedUser;
     private User formUser = new User();
     private boolean alreadyRegistered = false;
 
 
     @RequestMapping("/battleships-brehuv-logout")
-    public String logout() {
+    public String logout( Model model) {
+        model.addAttribute("webUI", webUISinglePlayer);
         loggedUser = null;
         formUser = new User();
         alreadyRegistered = false;
-        return "battleships-brehuv-gamemenu";
+        return "battleships-brehuv-logout";
     }
 
     @RequestMapping(value="/battleships-brehuv-login", method=RequestMethod.POST)
@@ -43,8 +48,9 @@ public class BattleshipsBrehuvControllerUser extends WebMvcConfigurerAdapter {
         }
         user = userService.login(user.getUsername(), user.getPassword());
         loggedUser = user;
+
         model.addAttribute("user", formUser);
-        return loggedUser == null ? "battleships-brehuv-login" : "battleships-brehuv-gamemenu";
+        return loggedUser == null ? "battleships-brehuv-login" : "battleships-brehuv-login";
     }
 
     @RequestMapping(value="/battleships-brehuv-register", method=RequestMethod.POST)
@@ -52,7 +58,7 @@ public class BattleshipsBrehuvControllerUser extends WebMvcConfigurerAdapter {
         if (bindingResult.hasErrors()) {
             System.err.println("FORM HAS ERRORS");
             model.addAttribute("user", formUser);
-            return "battleships-brehuv-login";
+            return "battleships-brehuv-gamemenu";
         }
         user = userService.register(user.getUsername(), user.getPassword());
         loggedUser = user;
@@ -68,7 +74,7 @@ public class BattleshipsBrehuvControllerUser extends WebMvcConfigurerAdapter {
     }
 
     public static boolean isLogged() {
-        return User != null;
+        return loggedUser != null;
     }
 
     public boolean isAlreadyRegistered() {

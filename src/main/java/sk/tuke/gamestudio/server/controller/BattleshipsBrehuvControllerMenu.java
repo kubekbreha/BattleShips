@@ -48,7 +48,8 @@ public class BattleshipsBrehuvControllerMenu {
 
 
     @PostMapping("/battleships-brehuv-gamemenu")
-    public String battleships (@RequestParam(value = "comment", required = false) String comment, @RequestParam(value = "rating", required = false) String rating) {
+    public String battleships (@RequestParam(value = "comment", required = false) String comment, @RequestParam(value = "rating", required = false) String rating, Model model) {
+        model.addAttribute("webUI", webUISinglePlayer);
         if(comment != null) {
             DatabaseUtil.addComment(comment, commentService);
         }

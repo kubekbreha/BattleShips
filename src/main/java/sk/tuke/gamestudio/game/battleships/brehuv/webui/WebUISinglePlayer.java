@@ -506,9 +506,6 @@ public class WebUISinglePlayer {
     }
 
 
-
-
-
     public String renderWhoWins() {
         StringBuilder sb = new StringBuilder();
         if (gameControllerOponent.isGameWon(boardOponent.getShips())) {
@@ -521,10 +518,10 @@ public class WebUISinglePlayer {
             sb.append("</div>\n");
             sb.append("</div>\n");
             gameFinished = true;
-        }else if( gameController.isGameWon(boardSetup.getShips())){
+        } else if (gameController.isGameWon(boardSetup.getShips())) {
             sb.append("<h4 class=\"modal-title\">You WIN!</h4>");
             sb.append("<p class=\"modal-text\">Congratulations, you are the best. </p>");
-            sb.append("<p class=\"modal-text\">Your score is "+ shootScore +". </p>");
+            sb.append("<p class=\"modal-text\">Your score is " + shootScore + ". </p>");
             sb.append("<div class=\"row\">\n");
             sb.append("<div class=\"col-12 col\">");
             sb.append("<button onclick=\"location.href='/battleships-brehuv-singleplayer-setup'\" class=\"btn-block\">New game.</button>\n");
@@ -538,9 +535,12 @@ public class WebUISinglePlayer {
         return sb.toString();
     }
 
-    public String renderLogin(){
+
+    public String renderLogin() {
         StringBuilder sb = new StringBuilder();
-        if(BattleshipsBrehuvControllerUser.) {
+
+        if (!BattleshipsBrehuvControllerUser.isLogged()) {
+            sb.append("<div class=\"row flex-center\">\n");
             sb.append("<div class=\"sm-6 md-6 col\">\n");
             sb.append("<a href=\"/battleships-brehuv-login\"");
             sb.append("class=\"center-centred btn-block paper-btn\">Login</a>\n");
@@ -549,6 +549,16 @@ public class WebUISinglePlayer {
             sb.append("<div class=\"sm-6 md-6 col\">\n");
             sb.append("<a href=\"/battleships-brehuv-register\"");
             sb.append("class=\"center-centred btn-block paper-btn\">Register</a>\n");
+            sb.append("</div>\n");
+            sb.append("</div>\n");
+        } else {
+
+            sb.append("<div class=\"row flex-center\">\n");
+            sb.append("<p class=\"logged\" id=\"logged\"> Welcome user! </p>\n");
+            sb.append("</div>\n");
+            sb.append("<div class=\"row flex-center\">\n");
+            sb.append("<a href=\"/battleships-brehuv-logout\"");
+            sb.append("class=\"center-centred btn-block paper-btn\">Log out</a>\n");
             sb.append("</div>\n");
         }
 

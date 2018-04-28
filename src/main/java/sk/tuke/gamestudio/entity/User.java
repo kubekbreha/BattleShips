@@ -1,5 +1,7 @@
 package sk.tuke.gamestudio.entity;
 
+import sk.tuke.gamestudio.server.controller.BattleshipsBrehuvControllerUser;
+
 import javax.persistence.*;
 
 @Entity
@@ -60,4 +62,20 @@ public class User {
                 ", passwd='" + password + '\'' +
                 '}';
     }
+
+
+    public String userLogged() {
+        StringBuilder sb = new StringBuilder();
+        try {
+            if (BattleshipsBrehuvControllerUser.isLogged()) {
+                sb.append("<div id=\"logged\" class=\"logged\"></div>");
+                return sb.toString();
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return "";
+    }
+
+
 }

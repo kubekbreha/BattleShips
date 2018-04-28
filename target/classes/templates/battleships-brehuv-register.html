@@ -34,9 +34,7 @@
                         <div class="label error-message" th:if="${#fields.hasErrors('username')}"
                              th:errors="*{username}">Username Error
                         </div>
-                        <div class="label error-message" th:if="${@userController.alreadyRegistered}">This username is
-                            already in our database
-                        </div>
+
                         <br/>
 
                         <input class="input-size input login-input" name="password" type="password"
