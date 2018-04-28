@@ -106,11 +106,11 @@ public class DatabaseUtil {
      *
      * @param score what will be added.
      */
-    public static void addScore(int score, ScoreService scoreService) {
+    public static void addScore(int score, ScoreService scoreService, String userName) {
         try {
             scoreService.addScore(new Score(
                     Board.GAME_NAME,
-                    System.getProperty("user.name"),
+                    System.getProperty(userName),
                     score,
                     new Date()
             ));

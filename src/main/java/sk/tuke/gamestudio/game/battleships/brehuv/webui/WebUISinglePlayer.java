@@ -530,7 +530,7 @@ public class WebUISinglePlayer {
             sb.append("</div>\n");
             sb.append("</div>\n");
             gameFinished = true;
-            DatabaseUtil.addScore(shootScore, scoreService);
+            DatabaseUtil.addScore(shootScore, scoreService , BattleshipsBrehuvControllerUser.getLoggedUser().getUsername() );
         }
         return sb.toString();
     }

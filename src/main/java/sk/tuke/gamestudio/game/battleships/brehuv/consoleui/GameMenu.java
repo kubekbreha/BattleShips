@@ -81,8 +81,6 @@ public class GameMenu {
                 showMenu();
                 break;
 
-            case 8:
-                DatabaseUtil.addScore(55 , scoreService);
         }
     }
 }
