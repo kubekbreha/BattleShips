@@ -554,7 +554,7 @@ public class WebUISinglePlayer {
         } else {
 
             sb.append("<div class=\"row flex-center\">\n");
-            sb.append("<p class=\"logged\" id=\"logged\"> Welcome user! </p>\n");
+            sb.append("<p class=\"logged\" id=\"logged\"> Welcome " + BattleshipsBrehuvControllerUser.getLoggedUser().getUsername() + "! </p>\n");
             sb.append("</div>\n");
             sb.append("<div class=\"row flex-center\">\n");
             sb.append("<a href=\"/battleships-brehuv-logout\"");

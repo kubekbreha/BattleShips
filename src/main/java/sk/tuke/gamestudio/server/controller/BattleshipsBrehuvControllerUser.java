@@ -69,7 +69,7 @@ public class BattleshipsBrehuvControllerUser extends WebMvcConfigurerAdapter {
         return loggedUser == null ? "battleships-brehuv-login" : "battleships-brehuv-gamemenu";
     }
 
-    public User getLoggedUser() {
+    public static User getLoggedUser() {
         return loggedUser;
     }
 
