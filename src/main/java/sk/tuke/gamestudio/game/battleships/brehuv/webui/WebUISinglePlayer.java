@@ -62,6 +62,7 @@ public class WebUISinglePlayer {
     private int shootScore = 0;
 
 
+
     public void processCommand(String command, String rowString, String columnString) {
         int row = 0, col = 0;
         if (rowString != null) {
@@ -211,6 +212,7 @@ public class WebUISinglePlayer {
                     if (expertAI) {
                         ((Computer) playerOponent).setAiState(new ComputerExpert(10, 10));
                     }
+
                     playerHistory = new BoardsHistory();
                     playerHistoryOponent = new BoardsHistory();
                     boardOponent = new Board(10, 10);
@@ -540,11 +542,15 @@ public class WebUISinglePlayer {
             sb.append("</div>\n");
             sb.append("</div>\n");
             gameFinished = true;
+
+
+
             if(BattleshipsBrehuvControllerUser.isLogged()) {
                 DatabaseUtil.addScore(shootScore, scoreService, BattleshipsBrehuvControllerUser.getLoggedUser().getUsername());
-            }else{
-                DatabaseUtil.addScore(shootScore, scoreService, "Anonymus");
+            }else {
+                System.out.println("User not logged");
             }
+
         }
         return sb.toString();
     }

@@ -110,7 +110,7 @@ public class DatabaseUtil {
         try {
             scoreService.addScore(new Score(
                     Board.GAME_NAME,
-                    System.getProperty(userName),
+                    userName,
                     score,
                     new Date()
             ));

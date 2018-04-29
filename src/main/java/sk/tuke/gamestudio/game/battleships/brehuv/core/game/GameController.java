@@ -59,11 +59,6 @@ public class GameController {
             }
         }
 
-        System.out.println("----------");
-        System.out.println("Touches: " + touches);
-        System.out.println("Ships size: " + totalShipTiles);
-
-
         if (touches == totalShipTiles) {
             setGameState(GameState.WON);
             return true;
