@@ -52,9 +52,14 @@ public class BattleshipsBrehuvControllerMenu {
         model.addAttribute("webUI", webUISinglePlayer);
         if(comment != null && BattleshipsBrehuvControllerUser.isLogged()) {
             DatabaseUtil.addComment(comment, commentService, BattleshipsBrehuvControllerUser.getLoggedUser().getUsername());
+        }else{
+            webUISinglePlayer.showNeedToLogIn();
         }
+
         if(rating != null  && BattleshipsBrehuvControllerUser.isLogged()){
             DatabaseUtil.setRating(Integer.parseInt(rating), ratingService, BattleshipsBrehuvControllerUser.getLoggedUser().getUsername());
+        }else{
+            webUISinglePlayer.showNeedToLogIn();
         }
         return "battleships-brehuv-gamemenu";
     }
