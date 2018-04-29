@@ -55,9 +55,11 @@ public class BattleshipsBrehuvControllerUser extends WebMvcConfigurerAdapter {
 
     @RequestMapping(value="/battleships-brehuv-register", method=RequestMethod.POST)
     public String registerSubmit(@Valid @ModelAttribute User user, BindingResult bindingResult, Model model) {
+        System.out.println("Currently in register.");
+        model.addAttribute("user", formUser);
+
         if (bindingResult.hasErrors()) {
             System.err.println("FORM HAS ERRORS");
-            model.addAttribute("user", formUser);
             return "battleships-brehuv-gamemenu";
         }
         user = userService.register(user.getUsername(), user.getPassword());
@@ -66,7 +68,7 @@ public class BattleshipsBrehuvControllerUser extends WebMvcConfigurerAdapter {
         if(loggedUser == null) {
             this.alreadyRegistered = true;
         }
-        return loggedUser == null ? "battleships-brehuv-login" : "battleships-brehuv-gamemenu";
+        return loggedUser == null ? "battleships-brehuv-register" : "battleships-brehuv-register";
     }
 
     public static User getLoggedUser() {
