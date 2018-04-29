@@ -78,4 +78,16 @@ public class User {
     }
 
 
+    public String userRegistered() {
+        StringBuilder sb = new StringBuilder();
+        try {
+            if (BattleshipsBrehuvControllerUser.isLogged()) {
+                sb.append("<div id=\"registered\" class=\"registered\"></div>");
+                return sb.toString();
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return "";
+    }
 }

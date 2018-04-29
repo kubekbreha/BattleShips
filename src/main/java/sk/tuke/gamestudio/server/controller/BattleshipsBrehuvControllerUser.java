@@ -53,9 +53,9 @@ public class BattleshipsBrehuvControllerUser extends WebMvcConfigurerAdapter {
         return loggedUser == null ? "battleships-brehuv-login" : "battleships-brehuv-login";
     }
 
+
     @RequestMapping(value="/battleships-brehuv-register", method=RequestMethod.POST)
     public String registerSubmit(@Valid @ModelAttribute User user, BindingResult bindingResult, Model model) {
-        System.out.println("Currently in register.");
         model.addAttribute("user", formUser);
 
         if (bindingResult.hasErrors()) {

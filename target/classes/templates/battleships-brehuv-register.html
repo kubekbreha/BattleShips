@@ -67,12 +67,19 @@
             </div>
         </div>
     </div>
-
+    <div>
+        <p th:utext='${user.userRegistered()}'/>
+    </div>
 </div>
 
 
 <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script>
+    var registered = document.getElementById('registered');
+    var registeredB = registered.classList.contains("registered");
+    if(registeredB) window.location.replace('/battleships-brehuv-gamemenu');
+</script>
 
 </body>
 </html>
