@@ -355,11 +355,28 @@ public class Board {
      *
      * @return integer count of ship tiles.
      */
-    private int getShipTilesCount() {
+    public int getShipTilesCount() {
         int shipTileCount = 0;
         for (int i = 0; i < boardRows; i++) {
             for (int j = 0; j < boardRows; j++) {
                 if (playBoard[i][j].getTileState() == TileState.SHIP) {
+                    shipTileCount++;
+                }
+            }
+        }
+        return shipTileCount;
+    }
+
+    /**
+     * Count ship tiles in board.
+     *
+     * @return integer count of ship tiles.
+     */
+    public int getHittedTilesCount() {
+        int shipTileCount = 0;
+        for (int i = 0; i < boardRows; i++) {
+            for (int j = 0; j < boardRows; j++) {
+                if (playBoard[i][j].getTileState() == TileState.HIT) {
                     shipTileCount++;
                 }
             }

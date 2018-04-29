@@ -172,6 +172,7 @@ public class WebUISinglePlayer {
                     initShips();
                     boardSetup = new Board(10, 10);
                     gameControllerOponent = new GameController(boardSetup);
+                    gameController = new GameController(boardOponent);
                     boardSetup.setUpBoardRandom();
                     int limit2 = shipSizes.size();
                     for (int i = 0; i < limit2; i++) {
@@ -219,6 +220,8 @@ public class WebUISinglePlayer {
                     boardRestartOponentBU = new Board(10, 10);
                     boardRestartOponentBU.setPlayBoard(boardOponent.getPlayBoard());
                     settingUp = false;
+                    gameControllerOponent = new GameController(boardSetup);
+                    gameController = new GameController(boardOponent);
                     break;
 
                 case "hard":
@@ -264,9 +267,16 @@ public class WebUISinglePlayer {
                     playerHistoryOponent.addToProbabilityHistory(((Computer) playerOponent).getNotTileHistory());
                 }
 
+                System.out.println();
 
-                if (!gameControllerOponent.isGameWon(boardOponent.getShips())
-                        && !gameController.isGameWon(boardSetup.getShips()) &&
+                //System.out.println(gameControllerOponent.isGameWon(boardSetup.getShips()));
+                System.out.println(gameController.isGameWon(boardOponent.getShips()));
+
+
+
+
+                if (!gameControllerOponent.isGameWon(boardSetup.getShips())
+                        && !gameController.isGameWon(boardOponent.getShips()) &&
                         boardOponent.getPlayBoard()[row][col].getTileState() != TileState.HIT &&
                         boardOponent.getPlayBoard()[row][col].getTileState() != TileState.MISSED) {
 
@@ -494,8 +504,8 @@ public class WebUISinglePlayer {
     public String runConffeti() {
         StringBuilder sb = new StringBuilder();
 
-        if (gameControllerOponent.isGameWon(boardOponent.getShips())
-                || gameController.isGameWon(boardSetup.getShips())) {
+        if (gameControllerOponent.isGameWon(boardSetup.getShips())
+                || gameController.isGameWon(boardOponent.getShips())) {
             sb.append("<div id=\"confetti-wrapper\"/>");
             sb.append("<script>");
             sb.append("var dialog = document.getElementById(\"modalBut\");");
@@ -508,7 +518,7 @@ public class WebUISinglePlayer {
 
     public String renderWhoWins() {
         StringBuilder sb = new StringBuilder();
-        if (gameControllerOponent.isGameWon(boardOponent.getShips())) {
+        if (gameControllerOponent.isGameWon(boardSetup.getShips())) {
             sb.append("<h4 class=\"modal-title\">You LOSE.</h4>");
             sb.append("<div class=\"row\">\n");
             sb.append("<div class=\"col-12 col\">");
@@ -518,7 +528,7 @@ public class WebUISinglePlayer {
             sb.append("</div>\n");
             sb.append("</div>\n");
             gameFinished = true;
-        } else if (gameController.isGameWon(boardSetup.getShips())) {
+        } else if (gameController.isGameWon(boardOponent.getShips())) {
             sb.append("<h4 class=\"modal-title\">You WIN!</h4>");
             sb.append("<p class=\"modal-text\">Congratulations, you are the best. </p>");
             sb.append("<p class=\"modal-text\">Your score is " + shootScore + ". </p>");
@@ -530,11 +540,23 @@ public class WebUISinglePlayer {
             sb.append("</div>\n");
             sb.append("</div>\n");
             gameFinished = true;
-            DatabaseUtil.addScore(shootScore, scoreService , BattleshipsBrehuvControllerUser.getLoggedUser().getUsername() );
+            if(BattleshipsBrehuvControllerUser.isLogged()) {
+                DatabaseUtil.addScore(shootScore, scoreService, BattleshipsBrehuvControllerUser.getLoggedUser().getUsername());
+            }else{
+                DatabaseUtil.addScore(shootScore, scoreService, "Anonymus");
+            }
         }
         return sb.toString();
     }
 
+
+    public String debugJS(){
+        StringBuilder sb = new StringBuilder();
+        if(BattleshipsBrehuvControllerUser.isLogged()) {
+            sb.append("console.log(\"" + BattleshipsBrehuvControllerUser.getLoggedUser().getUsername() + "\")");
+        }
+        return sb.toString();
+    }
 
     public String renderLogin() {
         StringBuilder sb = new StringBuilder();
