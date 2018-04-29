@@ -65,7 +65,7 @@ public class GameMenu {
             case 5:
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
                 String comment = Util.readLine(bufferedReader);
-                DatabaseUtil.addComment(comment, commentService);
+                DatabaseUtil.addComment(comment, commentService, "jakubbrehuv");
                 showMenu();
                 break;
 
@@ -77,7 +77,7 @@ public class GameMenu {
             case 7:
                 bufferedReader = new BufferedReader(new InputStreamReader(System.in));
                 int rating = Util.readLine(bufferedReader).charAt(0) - '0';
-                DatabaseUtil.setRating(rating, ratingService);
+                DatabaseUtil.setRating(rating, ratingService, "jakubbrehuv");
                 showMenu();
                 break;
 

@@ -69,11 +69,11 @@ public class DatabaseUtil {
     /**
      * Add new rating to database.
      */
-    public static void setRating(int ratingValue, RatingService ratingService) {
+    public static void setRating(int ratingValue, RatingService ratingService, String userName) {
         try {
             ratingService.setRating(new Rating(
                     Board.GAME_NAME,
-                    System.getProperty("user.name"),
+                    userName,
                     ratingValue,
                     new Date()
             ));
@@ -86,11 +86,11 @@ public class DatabaseUtil {
     /**
      * Add comment to game.
      */
-    public static void addComment(String commentText, CommentService commentService) {
+    public static void addComment(String commentText, CommentService commentService, String userName) {
         try {
             commentService.addComment(new Comment(
                     Board.GAME_NAME,
-                    System.getProperty("user.name"),
+                    userName,
                     commentText,
                     new Date()
             ));

@@ -50,11 +50,11 @@ public class BattleshipsBrehuvControllerMenu {
     @PostMapping("/battleships-brehuv-gamemenu")
     public String battleships (@RequestParam(value = "comment", required = false) String comment, @RequestParam(value = "rating", required = false) String rating, Model model) {
         model.addAttribute("webUI", webUISinglePlayer);
-        if(comment != null) {
-            DatabaseUtil.addComment(comment, commentService);
+        if(comment != null && BattleshipsBrehuvControllerUser.isLogged()) {
+            DatabaseUtil.addComment(comment, commentService, BattleshipsBrehuvControllerUser.getLoggedUser().getUsername());
         }
-        if(rating != null){
-            DatabaseUtil.setRating(Integer.parseInt(rating), ratingService);
+        if(rating != null  && BattleshipsBrehuvControllerUser.isLogged()){
+            DatabaseUtil.setRating(Integer.parseInt(rating), ratingService, BattleshipsBrehuvControllerUser.getLoggedUser().getUsername());
         }
         return "battleships-brehuv-gamemenu";
     }
