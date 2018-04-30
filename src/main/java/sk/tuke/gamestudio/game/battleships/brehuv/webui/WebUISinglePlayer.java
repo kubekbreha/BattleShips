@@ -61,6 +61,8 @@ public class WebUISinglePlayer {
 
     private int shootScore = 0;
 
+    private boolean showNeedToLogIn = false;
+
 
     public void processCommand(String command, String rowString, String columnString) {
         int row = 0, col = 0;
@@ -314,6 +316,9 @@ public class WebUISinglePlayer {
         }
     }
 
+    public void setShowNeedToLogIn(boolean showNeedToLogIn) {
+        this.showNeedToLogIn = showNeedToLogIn;
+    }
 
     private void initShips() {
         ships = new ArrayList<>();
@@ -593,25 +598,18 @@ public class WebUISinglePlayer {
     public String showNeedToLogIn() {
         StringBuilder sb = new StringBuilder();
 
-//        sb.append("<div class=\"row flex-spaces child-borders modal_button \">\n");
-//        sb.append("<label id=\"modalBut\" for=\"modal-1\"></label>\n");
-//        sb.append("</div>\n");
-//        sb.append("<input class=\"modal-state\" id=\"modal-1\" type=\"checkbox\"/>''");
-//        sb.append("<div class=\"modal\">\n");
-//        sb.append("<label class=\"modal-bg\" for=\"modal-1\"></label>\n");
-//        sb.append("<div class=\"modal-body\">\n");
-//        sb.append("<label class=\"btn-close\" for=\"modal-1\">X</label>\n");
-//        sb.append("<h4 class=\"modal-title\">You LOSE.</h4>");
-//        sb.append("<div class=\"row\">\n");
-//        sb.append("<div class=\"col-12 col\">");
-//        sb.append("<button onclick=\"location.href='/battleships-brehuv-singleplayer-setup'\" class=\"btn-block\">Try again.</button>\n");
-//        sb.append("<div class=\"margin\"></div>");
-//        sb.append("<button onclick=\"location.href='/battleships-brehuv-gamemenu'\" class=\"btn-block\">Back to menu.</button>\n");
-//        sb.append("</div>\n");
-//        sb.append("</div>\n");
-////        sb.append("<p>In order to do that you need to LogIn.</p>\n");
-//        sb.append("</div>\n");
-//        sb.append("</div>\n");
+        sb.append("<div class=\"row flex-center\">\n");
+        sb.append("<p class=\"logged\" id=\"logged\">Need to log in on order to do that.</p>\n");
+        sb.append("</div>\n");
+
+        if(showNeedToLogIn) {
+            sb.append("<script>\n");
+            sb.append("var dialog = document.getElementById(\"modalBut\");");
+            sb.append("dialog.click();");
+            sb.append("</script>\n");
+        }
+
+        showNeedToLogIn = false;
 
         return sb.toString();
     }

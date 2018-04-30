@@ -152,7 +152,22 @@
 </div>
 
 
-<div th:utext='${webUI.showNeedToLogIn()}'/>
+
+<div class="row flex-spaces child-borders modal_button ">
+    <label id="modalBut" for="modal-1"></label>
+</div>
+<input class="modal-state" id="modal-1" type="checkbox"/>
+<div class="modal">
+    <label class="modal-bg" for="modal-1"></label>
+    <div class="modal-body">
+        <label class="btn-close" for="modal-1">X</label>
+        <br></br>
+        <p th:utext='${webUI.showNeedToLogIn()}'/>
+
+    </div>
+</div>
+
+
 <div th:utext='${webUI.showLoggedUser()}'/>
 
 <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>

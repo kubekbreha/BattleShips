@@ -41,7 +41,6 @@ public class BattleshipsBrehuvControllerMenu {
         }
         webUISinglePlayer.setGameFinished(true);
 
-
         return "battleships-brehuv-gamemenu";
     }
 
@@ -53,13 +52,13 @@ public class BattleshipsBrehuvControllerMenu {
         if(comment != null && BattleshipsBrehuvControllerUser.isLogged()) {
             DatabaseUtil.addComment(comment, commentService, BattleshipsBrehuvControllerUser.getLoggedUser().getUsername());
         }else{
-            webUISinglePlayer.showNeedToLogIn();
+            webUISinglePlayer.setShowNeedToLogIn(true);
         }
 
         if(rating != null  && BattleshipsBrehuvControllerUser.isLogged()){
             DatabaseUtil.setRating(Integer.parseInt(rating), ratingService, BattleshipsBrehuvControllerUser.getLoggedUser().getUsername());
         }else{
-            webUISinglePlayer.showNeedToLogIn();
+            webUISinglePlayer.setShowNeedToLogIn(true);
         }
         return "battleships-brehuv-gamemenu";
     }
