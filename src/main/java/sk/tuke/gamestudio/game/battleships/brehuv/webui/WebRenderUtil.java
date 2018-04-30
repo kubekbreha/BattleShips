@@ -6,7 +6,7 @@ import sk.tuke.gamestudio.game.battleships.brehuv.core.board.Tile;
 public class WebRenderUtil {
 
 
-    static void showPlayTable(StringBuilder sb, Board board, boolean clickable) {
+    static void showPlayTable(StringBuilder sb, Board board, boolean clickable, boolean debug) {
         sb.append("<table cellspacing=\"0\">");
         for (int row = 0; row < board.getBoardRows(); row++) {
             sb.append("<tr>\n");
@@ -24,7 +24,11 @@ public class WebRenderUtil {
                         image = "water";
                         break;
                     case SHIP:
-                        image = "ship";
+                        if(debug) {
+                            image = "ship";
+                        }else{
+                            image = "water";
+                        }
                         break;
                     case MISSED:
                         image = "missed";

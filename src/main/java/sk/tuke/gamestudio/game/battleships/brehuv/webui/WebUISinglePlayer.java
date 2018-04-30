@@ -343,7 +343,7 @@ public class WebUISinglePlayer {
 
         sb.append("<div class=\"row\"><div class=\"col-xs-6\">");
         //first board
-        WebRenderUtil.showPlayTable(sb, boardSetup, false);
+        WebRenderUtil.showPlayTable(sb, boardSetup, false, true);
         sb.append("</div></div>");
 
         return sb.toString();
@@ -354,7 +354,7 @@ public class WebUISinglePlayer {
 
         sb.append("<div class=\"row\"><div class=\"col-xs-6\">");
         //second board
-        WebRenderUtil.showPlayTable(sb, boardOponent, true);
+        WebRenderUtil.showPlayTable(sb, boardOponent, true, false);
         sb.append("</div></div>");
 
         return sb.toString();
@@ -431,7 +431,7 @@ public class WebUISinglePlayer {
         StringBuilder sb = new StringBuilder();
         sb.append("<div class=\"row\"><div class=\"col-xs-6\">");
         //second board
-        WebRenderUtil.showPlayTable(sb, boardSetup, true);
+        WebRenderUtil.showPlayTable(sb, boardSetup, true, true);
         sb.append("</div></div>");
         return sb.toString();
     }

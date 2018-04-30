@@ -71,7 +71,7 @@ public class WebUIMultiPlayer {
 
         sb.append("<div class=\"row\"><div class=\"col-xs-6\">");
         //first board
-        WebRenderUtil.showPlayTable(sb, boardSetup, false);
+        //WebRenderUtil.showPlayTable(sb, boardSetup, false);
         sb.append("</div></div>");
 
         return sb.toString();
@@ -82,7 +82,7 @@ public class WebUIMultiPlayer {
 
         sb.append("<div class=\"row\"><div class=\"col-xs-6\">");
         //second board
-        WebRenderUtil.showPlayTable(sb, boardOponent, true);
+        //WebRenderUtil.showPlayTable(sb, boardOponent, true);
         sb.append("</div></div>");
 
         return sb.toString();
