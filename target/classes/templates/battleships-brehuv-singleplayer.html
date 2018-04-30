@@ -60,11 +60,12 @@
 <div class="row flex-spaces child-borders modal_button ">
     <label id="modalBut" for="modal-1"></label>
 </div>
+
 <input class="modal-state" id="modal-1" type="checkbox"/>
 <div class="modal">
     <label class="modal-bg" for="modal-1"></label>
     <div class="modal-body">
-        <label class="btn-close" for="modal-1">X</label>
+        <label class="btn-close"  onclick="location.href='/battleships-brehuv-gamemenu'" for="modal-1">X</label>
         <p th:utext='${webUI.renderWhoWins()}'/>
 
     </div>
@@ -72,6 +73,8 @@
 
 
 <div th:utext='${webUI.runConffeti()}'/>
+
+
 
 <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="scripts/jquery.confetti.js"></script>

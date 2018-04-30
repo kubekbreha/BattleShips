@@ -518,7 +518,7 @@ public class WebUISinglePlayer {
     public String renderWhoWins() {
         StringBuilder sb = new StringBuilder();
         if (gameControllerOponent.isGameWon(boardSetup.getShips())) {
-            sb.append("<h4 class=\"modal-title\">You LOSE.</h4>");
+            sb.append("<h4 class=\"modal-title  modal-if\">You LOSE.</h4>");
             sb.append("<div class=\"row\">\n");
             sb.append("<div class=\"col-12 col\">");
             sb.append("<button onclick=\"location.href='/battleships-brehuv-singleplayer-setup'\" class=\"btn-block\">Try again.</button>\n");
@@ -528,7 +528,7 @@ public class WebUISinglePlayer {
             sb.append("</div>\n");
             gameFinished = true;
         } else if (gameController.isGameWon(boardOponent.getShips())) {
-            sb.append("<h4 class=\"modal-title\">You WIN!</h4>");
+            sb.append("<h4 class=\"modal-title modal-if\">You WIN!</h4>");
             sb.append("<p class=\"modal-text\">Congratulations, you are the best. </p>");
             sb.append("<p class=\"modal-text\">Your score is " + shootScore + ". </p>");
             sb.append("<div class=\"row\">\n");
@@ -540,16 +540,16 @@ public class WebUISinglePlayer {
             sb.append("</div>\n");
             gameFinished = true;
 
-
             if (BattleshipsBrehuvControllerUser.isLogged()) {
                 DatabaseUtil.addScore(shootScore, scoreService, BattleshipsBrehuvControllerUser.getLoggedUser().getUsername());
             } else {
                 System.out.println("User not logged");
             }
-
         }
         return sb.toString();
     }
+
+
 
 
     public String debugJS() {
@@ -593,26 +593,34 @@ public class WebUISinglePlayer {
     public String showNeedToLogIn() {
         StringBuilder sb = new StringBuilder();
 
-        sb.append("<div class=\"row flex-spaces child-borders modal_button \">\n");
-        sb.append("<label id=\"modalBut\" for=\"modal-1\"></label>\n");
-        sb.append("</div>\n");
-        sb.append("<input class=\"modal-state\" id=\"modal-1\" type=\"checkbox\"/>''");
-        sb.append("<div class=\"modal\">\n");
-        sb.append("<label class=\"modal-bg\" for=\"modal-1\"></label>\n");
-        sb.append("<div class=\"modal-body\">\n");
-        sb.append("<label class=\"btn-close\" for=\"modal-1\">X</label>\n");
-        sb.append("<h4 class=\"modal-title\">You LOSE.</h4>");
-        sb.append("<div class=\"row\">\n");
-        sb.append("<div class=\"col-12 col\">");
-        sb.append("<button onclick=\"location.href='/battleships-brehuv-singleplayer-setup'\" class=\"btn-block\">Try again.</button>\n");
-        sb.append("<div class=\"margin\"></div>");
-        sb.append("<button onclick=\"location.href='/battleships-brehuv-gamemenu'\" class=\"btn-block\">Back to menu.</button>\n");
-        sb.append("</div>\n");
-        sb.append("</div>\n");
-//        sb.append("<p>In order to do that you need to LogIn.</p>\n");
-        sb.append("</div>\n");
-        sb.append("</div>\n");
+//        sb.append("<div class=\"row flex-spaces child-borders modal_button \">\n");
+//        sb.append("<label id=\"modalBut\" for=\"modal-1\"></label>\n");
+//        sb.append("</div>\n");
+//        sb.append("<input class=\"modal-state\" id=\"modal-1\" type=\"checkbox\"/>''");
+//        sb.append("<div class=\"modal\">\n");
+//        sb.append("<label class=\"modal-bg\" for=\"modal-1\"></label>\n");
+//        sb.append("<div class=\"modal-body\">\n");
+//        sb.append("<label class=\"btn-close\" for=\"modal-1\">X</label>\n");
+//        sb.append("<h4 class=\"modal-title\">You LOSE.</h4>");
+//        sb.append("<div class=\"row\">\n");
+//        sb.append("<div class=\"col-12 col\">");
+//        sb.append("<button onclick=\"location.href='/battleships-brehuv-singleplayer-setup'\" class=\"btn-block\">Try again.</button>\n");
+//        sb.append("<div class=\"margin\"></div>");
+//        sb.append("<button onclick=\"location.href='/battleships-brehuv-gamemenu'\" class=\"btn-block\">Back to menu.</button>\n");
+//        sb.append("</div>\n");
+//        sb.append("</div>\n");
+////        sb.append("<p>In order to do that you need to LogIn.</p>\n");
+//        sb.append("</div>\n");
+//        sb.append("</div>\n");
 
+        return sb.toString();
+    }
+
+    public String showLoggedUser() {
+        StringBuilder sb = new StringBuilder();
+        if(BattleshipsBrehuvControllerUser.isLogged()) {
+            sb.append("<div id=\"user-name\" class=\"" + BattleshipsBrehuvControllerUser.getLoggedUser().getUsername() + "\"></div>");
+        }
         return sb.toString();
     }
 

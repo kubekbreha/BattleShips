@@ -153,7 +153,7 @@
 
 
 <div th:utext='${webUI.showNeedToLogIn()}'/>
-
+<div th:utext='${webUI.showLoggedUser()}'/>
 
 <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
@@ -215,10 +215,12 @@
 <script type="text/javascript">
     //<![CDATA[
     $(document).ready(function () {
+        var elm = document.getElementById('user-name').className;
+        console.log(elm);
         $.ajax({
 
             //todo: get user name from login
-            url: "/rest/rating/battleships-brehuv/jakubbrehuv",
+            url: "/rest/rating/battleships-brehuv/" + elm,
 
         }).done(function (json) {
             var score = json;
