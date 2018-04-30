@@ -115,8 +115,6 @@ public class WebUISinglePlayer {
                     break;
 
                 case "back":
-                    System.out.println(shipsBU.size());
-                    System.out.println(setupHistory.getHistorySize());
                     if (shipsBU.size() != 0) {
 
 
@@ -270,11 +268,6 @@ public class WebUISinglePlayer {
                     playerHistoryOponent.addToProbabilityHistory(((Computer) playerOponent).getNotTileHistory());
                 }
 
-                System.out.println();
-
-                //System.out.println(gameControllerOponent.isGameWon(boardSetup.getShips()));
-                System.out.println(gameController.isGameWon(boardOponent.getShips()));
-
 
                 if (!gameControllerOponent.isGameWon(boardSetup.getShips())
                         && !gameController.isGameWon(boardOponent.getShips()) &&
@@ -403,7 +396,6 @@ public class WebUISinglePlayer {
                 max = list.get(i);
             }
         }
-        System.out.println("biggest: " + max);
 
         return max;
     }
@@ -553,9 +545,6 @@ public class WebUISinglePlayer {
         }
         return sb.toString();
     }
-
-
-
 
     public String debugJS() {
         StringBuilder sb = new StringBuilder();
