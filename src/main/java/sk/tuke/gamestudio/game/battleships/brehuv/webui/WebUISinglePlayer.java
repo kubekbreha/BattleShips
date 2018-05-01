@@ -352,6 +352,7 @@ public class WebUISinglePlayer {
         }
         sb.append("</div></div>");
         showHint = false;
+        showHint = false;
 
         return sb.toString();
     }
@@ -531,7 +532,15 @@ public class WebUISinglePlayer {
         } else if (gameController.isGameWon(boardOponent.getShips())) {
             sb.append("<h4 class=\"modal-title modal-if\">You WIN!</h4>");
             sb.append("<p class=\"modal-text\">Congratulations, you are the best. </p>");
-            sb.append("<p class=\"modal-text\">Your score is " + shootScore + ". </p>");
+            if(begginerAI) {
+                sb.append("<p class=\"modal-text\">Your score is " + shootScore * 2 + ". </p>");
+            }else if(mediumAI){
+                sb.append("<p class=\"modal-text\">Your score is " + (int)(shootScore * 1.6F) + ". </p>");
+            }else if(hardAI){
+                sb.append("<p class=\"modal-text\">Your score is " + (int)(shootScore * 1.3F) + ". </p>");
+            }else if(expertAI){
+                sb.append("<p class=\"modal-text\">Your score is " + shootScore + ". </p>");
+            }
             sb.append("<div class=\"row\">\n");
             sb.append("<div class=\"col-12 col\">");
             sb.append("<button onclick=\"location.href='/battleships-brehuv-singleplayer-setup'\" class=\"btn-block\">New game.</button>\n");
@@ -542,7 +551,15 @@ public class WebUISinglePlayer {
             gameFinished = true;
 
             if (BattleshipsBrehuvControllerUser.isLogged()) {
-                DatabaseUtil.addScore(shootScore, scoreService, BattleshipsBrehuvControllerUser.getLoggedUser().getUsername());
+                if(expertAI) {
+                    DatabaseUtil.addScore(shootScore, scoreService, BattleshipsBrehuvControllerUser.getLoggedUser().getUsername());
+                }else if (hardAI){
+                    DatabaseUtil.addScore((int) (shootScore*(1.3F)), scoreService, BattleshipsBrehuvControllerUser.getLoggedUser().getUsername());
+                }else if (mediumAI){
+                    DatabaseUtil.addScore((int) (shootScore*(1.6F)), scoreService, BattleshipsBrehuvControllerUser.getLoggedUser().getUsername());
+                }else if (begginerAI){
+                    DatabaseUtil.addScore((int) (shootScore*(2F)), scoreService, BattleshipsBrehuvControllerUser.getLoggedUser().getUsername());
+                }
             } else {
                 System.out.println("User not logged");
             }
