@@ -1,6 +1,7 @@
 # Battle Ship
 
 This is console game which will be hosted on web.
+You can find presentation video on [this](https://www.youtube.com/watch?v=A_AKI0MGDlw) link.
 
 ## About 
 

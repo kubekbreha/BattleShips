@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43c1545f-97d6-4095-b8a6-c622172fa2c8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/74af1ce3-3eb3-4e3d-af1f-a0955eba5533.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/74af1ce3-3eb3-4e3d-af1f-a0955eba5533.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUISinglePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUISinglePlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUISinglePlayer.class" beforeDir="false" />
-    </list>
+    <list default="true" id="43c1545f-97d6-4095-b8a6-c622172fa2c8" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -79,8 +74,8 @@
       <file leaf-file-name="WebUISinglePlayer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUISinglePlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="549" column="34" lean-forward="true" selection-start-line="549" selection-start-column="34" selection-end-line="549" selection-end-column="34" />
+            <state relative-caret-position="318">
+              <caret line="545" column="129" lean-forward="true" selection-start-line="545" selection-start-column="129" selection-end-line="545" selection-end-column="129" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#24441#24442#0" expanded="true" />
@@ -696,7 +691,7 @@
       <workItem from="1524778402129" duration="1945000" />
       <workItem from="1524833374834" duration="3722000" />
       <workItem from="1524858441930" duration="15667000" />
-      <workItem from="1525107684554" duration="11540000" />
+      <workItem from="1525107684554" duration="11558000" />
     </task>
     <servers />
   </component>
@@ -721,7 +716,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="258021000" />
+    <option name="totallyTimeSpent" value="258039000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -753,7 +748,7 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Java Enterprise" order="1" weight="0.3282353" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.23589744" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.23589744" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32941177" />
       <window_info anchor="bottom" id="Spring" order="2" weight="0.3282353" />
       <window_info anchor="bottom" id="Terminal" order="11" />
@@ -1179,8 +1174,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sk/tuke/gamestudio/game/battleships/brehuv/webui/WebUISinglePlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="549" column="34" lean-forward="true" selection-start-line="549" selection-start-column="34" selection-end-line="549" selection-end-column="34" />
+        <state relative-caret-position="318">
+          <caret line="545" column="129" lean-forward="true" selection-start-line="545" selection-start-column="129" selection-end-line="545" selection-end-column="129" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#24441#24442#0" expanded="true" />
