@@ -48,7 +48,7 @@
     </role>
     <schema id="10" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2018-04-29.16:30:43.704</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2018-04-30.22:08:08.607</IntrospectionTimestamp>
       <IntrospectionStateNumber>660</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
@@ -75,185 +75,139 @@
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <table id="17" parent="10" name="comment">
-      <ObjectId>32824</ObjectId>
-      <StateNumber>636</StateNumber>
-    </table>
-    <table id="18" parent="10" name="player">
+    <table id="17" parent="10" name="player">
       <ObjectId>32814</ObjectId>
       <StateNumber>615</StateNumber>
     </table>
-    <table id="19" parent="10" name="rating">
+    <table id="18" parent="10" name="rating">
       <ObjectId>16402</ObjectId>
       <StateNumber>559</StateNumber>
     </table>
-    <table id="20" parent="10" name="score">
+    <table id="19" parent="10" name="score">
       <ObjectId>32856</ObjectId>
       <StateNumber>660</StateNumber>
     </table>
-    <column id="21" parent="17" name="indent">
-      <Position>1</Position>
-      <DataType>integer|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>636</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="22" parent="17" name="comment">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>636</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="23" parent="17" name="commented_on">
-      <Position>3</Position>
-      <DataType>timestamp|0s</DataType>
-      <StateNumber>636</StateNumber>
-      <TypeId>1114</TypeId>
-    </column>
-    <column id="24" parent="17" name="game">
-      <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>636</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="25" parent="17" name="player">
-      <Position>5</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>636</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <index id="26" parent="17" name="comment_pkey">
-      <ObjectId>32830</ObjectId>
-      <ColNames>indent</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="27" parent="17" name="comment_pkey">
-      <ObjectId>32831</ObjectId>
-      <ColNames>indent</ColNames>
-      <UnderlyingIndexName>comment_pkey</UnderlyingIndexName>
-      <Primary>1</Primary>
-    </key>
-    <column id="28" parent="18" name="id">
+    <column id="20" parent="17" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>615</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="29" parent="18" name="password">
+    <column id="21" parent="17" name="password">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>615</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="30" parent="18" name="username">
+    <column id="22" parent="17" name="username">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>615</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="31" parent="18" name="player_pkey">
+    <index id="23" parent="17" name="player_pkey">
       <ObjectId>32820</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="32" parent="18" name="uk_o39xn8lmj05iew7d2tgw836jy">
+    <index id="24" parent="17" name="uk_o39xn8lmj05iew7d2tgw836jy">
       <ObjectId>32822</ObjectId>
       <ColNames>username</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="33" parent="18" name="player_pkey">
+    <key id="25" parent="17" name="player_pkey">
       <ObjectId>32821</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>player_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="34" parent="18" name="uk_o39xn8lmj05iew7d2tgw836jy">
+    <key id="26" parent="17" name="uk_o39xn8lmj05iew7d2tgw836jy">
       <ObjectId>32823</ObjectId>
       <ColNames>username</ColNames>
       <UnderlyingIndexName>uk_o39xn8lmj05iew7d2tgw836jy</UnderlyingIndexName>
     </key>
-    <column id="35" parent="19" name="indent">
+    <column id="27" parent="18" name="indent">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>559</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="36" parent="19" name="game">
+    <column id="28" parent="18" name="game">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>559</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="37" parent="19" name="player">
+    <column id="29" parent="18" name="player">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>559</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="38" parent="19" name="rated_on">
+    <column id="30" parent="18" name="rated_on">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <StateNumber>559</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="39" parent="19" name="rating">
+    <column id="31" parent="18" name="rating">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>559</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="40" parent="19" name="rating_pkey">
+    <index id="32" parent="18" name="rating_pkey">
       <ObjectId>16408</ObjectId>
       <ColNames>indent</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="41" parent="19" name="rating_pkey">
+    <key id="33" parent="18" name="rating_pkey">
       <ObjectId>16409</ObjectId>
       <ColNames>indent</ColNames>
       <UnderlyingIndexName>rating_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="42" parent="20" name="ident">
+    <column id="34" parent="19" name="ident">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>660</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="43" parent="20" name="game">
+    <column id="35" parent="19" name="game">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>660</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="44" parent="20" name="played_on">
+    <column id="36" parent="19" name="played_on">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
       <StateNumber>660</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="45" parent="20" name="player">
+    <column id="37" parent="19" name="player">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>660</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="46" parent="20" name="points">
+    <column id="38" parent="19" name="points">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>660</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="47" parent="20" name="score_pkey">
+    <index id="39" parent="19" name="score_pkey">
       <ObjectId>32862</ObjectId>
       <ColNames>ident</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="48" parent="20" name="score_pkey">
+    <key id="40" parent="19" name="score_pkey">
       <ObjectId>32863</ObjectId>
       <ColNames>ident</ColNames>
       <UnderlyingIndexName>score_pkey</UnderlyingIndexName>

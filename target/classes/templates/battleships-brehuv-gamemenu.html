@@ -161,16 +161,21 @@
     <div class="modal-body">
         <label class="btn-close" for="modal-1">X</label>
         <br></br>
-        <p th:utext='${webUI.showNeedToLogIn()}'/>
-            <a href="/battleships-brehuv-login" class="center-centred btn-block paper-btn">Login</a>
+        <div class="row flex-center">
+            <p class="logged" id="logged">Need to log in on order to do that.</p>
+        </div>
+        <a href="battleships-brehuv-login" class="center-centred btn-block paper-btn">Login</a>
     </div>
 </div>
 
 
 <div th:utext='${webUI.showLoggedUser()}'/>
+<div th:utext='${webUI.showNeedToLogIn()}'/>
 
 <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+
 <!-- CommentScript -->
 <script type="text/javascript">
     //<![CDATA[

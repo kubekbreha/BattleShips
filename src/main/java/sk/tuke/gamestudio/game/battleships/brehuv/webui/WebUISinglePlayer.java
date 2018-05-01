@@ -1,16 +1,11 @@
 package sk.tuke.gamestudio.game.battleships.brehuv.webui;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import sk.tuke.gamestudio.entity.Score;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.board.*;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.game.GameController;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.history.BoardsHistory;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.player.*;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.util.DatabaseUtil;
-import sk.tuke.gamestudio.server.controller.BattleshipsBrehuvControllerMenu;
 import sk.tuke.gamestudio.server.controller.BattleshipsBrehuvControllerUser;
-import sk.tuke.gamestudio.service.RatingService;
 import sk.tuke.gamestudio.service.ScoreService;
 import sk.tuke.gamestudio.service.ScoreServiceRestClient;
 
@@ -561,7 +556,7 @@ public class WebUISinglePlayer {
             sb.append("<div class=\"row flex-center\">\n");
             sb.append("<div class=\"sm-6 md-6 col\">\n");
             sb.append("<a href=\"/battleships-brehuv-login\"");
-            sb.append("class=\"center-centred btn-block paper-btn\">Login</a>\n");
+            sb.append("id=\"login-if\" class=\"login-if center-centred btn-block paper-btn\">Login</a>\n");
             sb.append("</div>\n");
 
             sb.append("<div class=\"sm-6 md-6 col\">\n");
@@ -587,18 +582,19 @@ public class WebUISinglePlayer {
     public String showNeedToLogIn() {
         StringBuilder sb = new StringBuilder();
 
-        sb.append("<div class=\"row flex-center\">\n");
-        sb.append("<p class=\"logged\" id=\"logged\">Need to log in on order to do that.</p>\n");
-        sb.append("</div>\n");
 
         if(showNeedToLogIn) {
+            System.out.println("Need to login");
             sb.append("<script>\n");
-            sb.append("var dialog = document.getElementById(\"modalBut\");");
-            sb.append("dialog.click();");
+            sb.append("var dialog = document.getElementById(\"modalBut\");\n");
+            sb.append("var testElement = document.getElementById('login-if');\n");
+            sb.append("if (testElement.classList.contains('login-if')) { dialog.click(); }\n");
             sb.append("</script>\n");
+            showNeedToLogIn = false;
+        }else{
+            return "";
         }
 
-        showNeedToLogIn = false;
 
         return sb.toString();
     }
