@@ -58,6 +58,9 @@ public class WebUISinglePlayer {
 
     private boolean showNeedToLogIn = false;
 
+    private int hintRow = 0;
+    private int hintCol = 0;
+
 
     public void processCommand(String command, String rowString, String columnString) {
         int row = 0, col = 0;
@@ -331,7 +334,7 @@ public class WebUISinglePlayer {
 
         sb.append("<div class=\"row\"><div class=\"col-xs-6\">");
         //first board
-        WebRenderUtil.showPlayTable(sb, boardSetup, false, true);
+        WebRenderUtil.showPlayTable(sb, boardSetup, false, true, 20, 20);
         sb.append("</div></div>");
 
         return sb.toString();
@@ -342,8 +345,13 @@ public class WebUISinglePlayer {
 
         sb.append("<div class=\"row\"><div class=\"col-xs-6\">");
         //second board
-        WebRenderUtil.showPlayTable(sb, boardOponent, true, false);
+        if(showHint) {
+            WebRenderUtil.showPlayTable(sb, boardOponent, true, false, hintRow, hintCol);
+        }else{
+            WebRenderUtil.showPlayTable(sb, boardOponent, true, false, 20, 20);
+        }
         sb.append("</div></div>");
+        showHint = false;
 
         return sb.toString();
     }
@@ -356,7 +364,8 @@ public class WebUISinglePlayer {
             sb.append(String.format("Row: <span class=\"badge secondary\">" + (char) (hint.getHintRow() + '1') + "</span> " +
                     " Col: <span class=\"badge secondary\">" + (hint.getHintCol() + 1) + "</span>"));
             sb.append("</p>\n");
-            showHint = false;
+            hintCol = hint.getHintCol();
+            hintRow = hint.getHintRow();
             hintCount--;
         }
         return sb.toString();
@@ -418,7 +427,7 @@ public class WebUISinglePlayer {
         StringBuilder sb = new StringBuilder();
         sb.append("<div class=\"row\"><div class=\"col-xs-6\">");
         //second board
-        WebRenderUtil.showPlayTable(sb, boardSetup, true, true);
+        WebRenderUtil.showPlayTable(sb, boardSetup, true, true ,20, 20);
         sb.append("</div></div>");
         return sb.toString();
     }

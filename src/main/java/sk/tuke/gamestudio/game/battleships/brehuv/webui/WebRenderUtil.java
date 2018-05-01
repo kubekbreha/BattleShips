@@ -6,7 +6,7 @@ import sk.tuke.gamestudio.game.battleships.brehuv.core.board.Tile;
 public class WebRenderUtil {
 
 
-    static void showPlayTable(StringBuilder sb, Board board, boolean clickable, boolean debug) {
+    static void showPlayTable(StringBuilder sb, Board board, boolean clickable, boolean debug, int hintRow, int hintCol) {
         sb.append("<table cellspacing=\"0\">");
         for (int row = 0; row < board.getBoardRows(); row++) {
             sb.append("<tr>\n");
@@ -36,10 +36,15 @@ public class WebRenderUtil {
                     case HIT:
                         image = "hitted";
                         break;
+
                     default:
                         throw new IllegalArgumentException("Unexpected tile state " + tile.getTileState());
                 }
-                sb.append("<img class='" + "mines-tile" + "' src='" + String.format("/images/battleships/brehuv/%s.png", image) + "'>\n");
+                if(hintCol==col && hintRow==row ){
+                    sb.append("<img class='" + "mines-tile" + "' src='" + String.format("/images/battleships/brehuv/%s.png", "hint") + "'>\n");
+                }else{
+                    sb.append("<img class='" + "mines-tile" + "' src='" + String.format("/images/battleships/brehuv/%s.png", image) + "'>\n");
+                }
                 sb.append("</a>\n");
                 sb.append("</td>\n");
             }
