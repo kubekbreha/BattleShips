@@ -8,8 +8,21 @@ public class WebRenderUtil {
 
     static void showPlayTable(StringBuilder sb, Board board, boolean clickable, boolean debug, int hintRow, int hintCol) {
         sb.append("<table cellspacing=\"0\">");
+        sb.append("<thead>\n");
+        sb.append("<tr>\n");
+        sb.append("<th>"+"</th>");
+
+        for (int i = 1 ; i<11 ; i++){
+                sb.append("<th>"+i+"</th>");
+        }
+        sb.append("</tr>\n");
+        sb.append("</thead>\n");
+        sb.append("<tbody>\n");
         for (int row = 0; row < board.getBoardRows(); row++) {
+
             sb.append("<tr>\n");
+            sb.append("<td>"+(char)('A'+row)+"</td>\n");
+
             for (int col = 0; col < board.getBoardCols(); col++) {
                 Tile tile = board.getBoardTile(row, col);
                 sb.append("<td>\n");
@@ -50,6 +63,7 @@ public class WebRenderUtil {
             }
             sb.append("</tr>\n");
         }
+        sb.append("</tbody>\n");
         sb.append("</table>");
     }
 
