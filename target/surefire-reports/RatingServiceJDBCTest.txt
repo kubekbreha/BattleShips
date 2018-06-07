@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: RatingServiceJDBCTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.012 sec <<< FAILURE! - in RatingServiceJDBCTest
+testAddRating(RatingServiceJDBCTest)  Time elapsed: 0.01 sec  <<< ERROR!
+java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost/gamestudio
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at RatingServiceJDBCTest.setUp(RatingServiceJDBCTest.java:26)
+

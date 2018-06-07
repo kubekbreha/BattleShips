@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: ScoreServiceTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.001 sec <<< FAILURE! - in ScoreServiceTest
+testGetBestScores(ScoreServiceTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ScoreServiceTest.testGetBestScores(ScoreServiceTest.java:34)
+
+testAddScore(ScoreServiceTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ScoreServiceTest.testAddScore(ScoreServiceTest.java:25)
+
+testDbInit(ScoreServiceTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at ScoreServiceTest.testDbInit(ScoreServiceTest.java:19)
+

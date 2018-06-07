@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: CommentServiceJDBCTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.002 sec <<< FAILURE! - in CommentServiceJDBCTest
+testDbInit(CommentServiceJDBCTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost/gamestudio
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at CommentServiceJDBCTest.setUp(CommentServiceJDBCTest.java:26)
+
+testAddComment(CommentServiceJDBCTest)  Time elapsed: 0 sec  <<< ERROR!
+java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost/gamestudio
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at CommentServiceJDBCTest.setUp(CommentServiceJDBCTest.java:26)
+

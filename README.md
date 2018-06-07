@@ -3,6 +3,10 @@
 This is console game which will be hosted on web.
 You can find presentation video on [this](https://www.youtube.com/watch?v=A_AKI0MGDlw) link.
 
+## Screenshots
+
+ <img src="readmeImages/1.png" width="300"/> <img src="readmeImages/2.png" width="300"/> <img src="readmeImages/3.png" width="300" />
+
 ## About 
 
 On start of this game you need to pick game mode.
@@ -39,6 +43,12 @@ After some player sunk every ship of oposite player game state is changed form `
  to `WIN` or `LOSE`. 
 Function which take care about checking if game is win is called `isGameVon()`.
 This function check if all ship tiles are in `HIT` state.
+
+## How to run it
+
+In order to play this game you need to run `GameStudioServer` class and after that
+ you can see game here -> `http://localhost:8080/battleships-brehuv-gamemenu` If you want
+  to use score and comments you need to add your own database credentials to `application.properties` file.
 
 ### Class Diagram
 

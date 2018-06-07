@@ -1,5 +1,6 @@
 package sk.tuke.gamestudio.game.battleships.brehuv.webui;
 
+import jdk.nashorn.internal.parser.JSONParser;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.board.*;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.game.GameController;
 import sk.tuke.gamestudio.game.battleships.brehuv.core.history.BoardsHistory;
@@ -19,7 +20,7 @@ public class WebUISinglePlayer {
 
     private int ERROR = 0;
     //8 placement error
-
+    JSONParser sd ;
     private Board boardRestartBU;
     private Board boardRestartOponentBU;
 

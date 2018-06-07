@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: CommentServiceTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0 sec <<< FAILURE! - in CommentServiceTest
+testDbInit(CommentServiceTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at CommentServiceTest.testDbInit(CommentServiceTest.java:18)
+
+testAddComment(CommentServiceTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at CommentServiceTest.testAddComment(CommentServiceTest.java:24)
+

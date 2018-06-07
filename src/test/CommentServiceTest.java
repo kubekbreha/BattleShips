@@ -11,6 +11,7 @@ import static sk.tuke.gamestudio.game.battleships.brehuv.core.board.Board.GAME_N
  * Created by Kubo Brehuv with <3 (10.3.2018)
  */
 public class CommentServiceTest {
+
     protected CommentService commentService;
 
     @Test

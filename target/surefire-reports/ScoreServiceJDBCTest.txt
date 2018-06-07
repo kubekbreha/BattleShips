@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: ScoreServiceJDBCTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.002 sec <<< FAILURE! - in ScoreServiceJDBCTest
+testGetBestScores(ScoreServiceJDBCTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost/gamestudio
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at ScoreServiceJDBCTest.setUp(ScoreServiceJDBCTest.java:26)
+
+testAddScore(ScoreServiceJDBCTest)  Time elapsed: 0 sec  <<< ERROR!
+java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost/gamestudio
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at ScoreServiceJDBCTest.setUp(ScoreServiceJDBCTest.java:26)
+
+testDbInit(ScoreServiceJDBCTest)  Time elapsed: 0 sec  <<< ERROR!
+java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost/gamestudio
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at ScoreServiceJDBCTest.setUp(ScoreServiceJDBCTest.java:26)
+
