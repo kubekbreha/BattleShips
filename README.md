@@ -5,7 +5,7 @@ You can find presentation video on [this](https://www.youtube.com/watch?v=A_AKI0
 
 ## Screenshots
 
- <img src="readmeImages/1.png" width="300"/> <img src="readmeImages/2.png" width="300"/> <img src="readmeImages/3.png" width="300" />
+ <img src="readmeImages/1.png" width="280"/> <img src="readmeImages/2.png" width="280"/> <img src="readmeImages/3.png" width="280" />
 
 ## About 
 
