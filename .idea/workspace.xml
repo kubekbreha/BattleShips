@@ -89,8 +89,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="165">
-                <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+              <first_editor relative-caret-position="849">
+                <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
               </first_editor>
               <second_editor />
             </state>
@@ -328,234 +328,6 @@
             <path>
               <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
               <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="readmeImages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gamestudio" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gamestudio" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gamestudio" type="462c0819:PsiDirectoryNode" />
-              <item name="brehuv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gamestudio" type="462c0819:PsiDirectoryNode" />
-              <item name="brehuv" type="462c0819:PsiDirectoryNode" />
-              <item name="consoleui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gamestudio" type="462c0819:PsiDirectoryNode" />
-              <item name="brehuv" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gamestudio" type="462c0819:PsiDirectoryNode" />
-              <item name="brehuv" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="board" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gamestudio" type="462c0819:PsiDirectoryNode" />
-              <item name="brehuv" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gamestudio" type="462c0819:PsiDirectoryNode" />
-              <item name="brehuv" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="history" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gamestudio" type="462c0819:PsiDirectoryNode" />
-              <item name="brehuv" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="player" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gamestudio" type="462c0819:PsiDirectoryNode" />
-              <item name="brehuv" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gamestudio" type="462c0819:PsiDirectoryNode" />
-              <item name="brehuv" type="462c0819:PsiDirectoryNode" />
-              <item name="webui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gamestudio" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gamestudio" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gamestudio" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="webservice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gamestudio" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="brehuv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BattleShips" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BattleShips" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -835,7 +607,7 @@
       <workItem from="1527057410994" duration="1000" />
       <workItem from="1527148677662" duration="15000" />
       <workItem from="1528268433492" duration="93000" />
-      <workItem from="1528398599251" duration="917000" />
+      <workItem from="1528398599251" duration="1017000" />
     </task>
     <servers />
   </component>
@@ -863,7 +635,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="261316000" />
+    <option name="totallyTimeSpent" value="261416000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -876,7 +648,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
@@ -1334,8 +1105,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="165">
-            <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+          <first_editor relative-caret-position="849">
+            <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
           </first_editor>
           <second_editor />
         </state>
@@ -1370,6 +1141,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>jquery</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1393,11 +1165,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring|gamestudio</last-edited>
+          <last-edited>gamestudio</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

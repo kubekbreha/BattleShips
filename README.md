@@ -7,7 +7,7 @@ You can find presentation video on [this](https://www.youtube.com/watch?v=A_AKI0
 
  <img src="readmeImages/1.png" width="280"/> <img src="readmeImages/2.png" width="280"/> <img src="readmeImages/3.png" width="280" />
 
-## About 
+## About
 
 On start of this game you need to pick game mode.
 Game modes consist of   
@@ -24,7 +24,7 @@ You can pick from these:
 Game is is  `NOTSETTEDUP` state.
 Next step is to generate play board which can be generated randomly or by user.
 
-1. Randomly: compputer get shop size from list of ships and put ship 
+1. Randomly: compputer get shop size from list of ships and put ship
             randomly to playboard.
 2. By user: user set position and orientation of ship which will be placed to playboard.            
 
@@ -35,12 +35,12 @@ During playing versus computer user can go some step back or can use hint
 which will tell him where is best position to shoot.
 
 If ship tile is hit tile state change form `SHIP` to `HIT`.
-If water tile is hit tile state change form `WATER` to `MISSED`. 
+If water tile is hit tile state change form `WATER` to `MISSED`.
 
 Game is in `PLAYING` state util one of the players win.
-Player will if he sunk every ship of other player. 
+Player will if he sunk every ship of other player.
 After some player sunk every ship of oposite player game state is changed form `PLAYING`
- to `WIN` or `LOSE`. 
+ to `WIN` or `LOSE`.
 Function which take care about checking if game is win is called `isGameVon()`.
 This function check if all ship tiles are in `HIT` state.
 
@@ -61,3 +61,7 @@ In order to play this game you need to run `GameStudioServer` class and after th
 ## Built With
 
 * [Maven](https://maven.apache.org/) - Dependency Management
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/kubekbreha/BattleShips/blob/master/LICENCE) file for details
